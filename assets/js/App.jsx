@@ -70,6 +70,7 @@ const App = () => {
       <a
         href="https://3d.nicovideo.jp/works/td41391"
         target="_blank"
+        rel="noopener noreferrer"
         style={{ wordWrap: "break-word" }}
       >
         https://3d.nicovideo.jp/works/td41391
