@@ -178,7 +178,6 @@ i.fab {
  */
 
 .c-unchan {
-
 }
 
 .c-unchan--fixedBottom {
@@ -202,7 +201,7 @@ i.fab {
   border-radius: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to bottom,#f083ba, #c26795);
+  background-image: linear-gradient(to bottom, #f083ba, #c26795);
 }
 
 .c-unchan__toguro,
@@ -262,7 +261,6 @@ i.fab {
   transform: translateX(165%);
 }
 
-
 .c-unchan__mouth {
   position: absolute;
   width: 100%;
@@ -305,7 +303,7 @@ i.fab {
   overflow: hidden;
 }
 
-.c-unchan__mouth__inner div{
+.c-unchan__mouth__inner div {
   width: 70px;
   height: 145px;
   position: absolute;
@@ -340,13 +338,13 @@ i.fab {
 }
 
 .c-unchan__tsuno__inner::before {
- content: '';
- position: absolute;
- bottom: 70%;
- width: 100%;
- height: 100%;
- border-radius: 100%;
- box-shadow: 0 300px 0 300px #f083ba;
+  content: "";
+  position: absolute;
+  bottom: 70%;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 300px 0 300px #f083ba;
 }
 
 @keyframes unchan-show-toguro {
@@ -387,17 +385,39 @@ i.fab {
 https://www.tam-tam.co.jp/tipsnote/html_css/post11618.html
  */
 @keyframes purupuru {
-  0% {transform: skew(0deg, 0deg);}
-  1.5% {transform: skew(5deg, 4.2deg);}
-  3% {transform: skew(-4deg, -3deg);}
-  4.5% {transform: skew(3deg, 2.2deg);}
-  6% {transform: skew(-2deg, -1.5deg);}
-  7.5% {transform: skew(0.9deg, 0.9deg);}
-  9% {transform: skew(-0.6deg, -0.6deg);}
-  10.5% {transform: skew(0.3deg, 0.3deg);}
-  12% {transform: skew(-0.2deg, -0.2deg);}
-  12.5% {transform: skew(0.1deg, 0.1deg);}
-  15% {transform: skew(0deg, 0deg);}
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  1.5% {
+    transform: skew(5deg, 4.2deg);
+  }
+  3% {
+    transform: skew(-4deg, -3deg);
+  }
+  4.5% {
+    transform: skew(3deg, 2.2deg);
+  }
+  6% {
+    transform: skew(-2deg, -1.5deg);
+  }
+  7.5% {
+    transform: skew(0.9deg, 0.9deg);
+  }
+  9% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  10.5% {
+    transform: skew(0.3deg, 0.3deg);
+  }
+  12% {
+    transform: skew(-0.2deg, -0.2deg);
+  }
+  12.5% {
+    transform: skew(0.1deg, 0.1deg);
+  }
+  15% {
+    transform: skew(0deg, 0deg);
+  }
 }
 
 /*
