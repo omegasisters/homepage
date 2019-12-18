@@ -56,7 +56,7 @@ php -S 0.0.0.0:8000 -t ../
 同じローカルネットワークであればホストの IP アドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
 サーバーは ctrl+c で停止できます。
 
-## Tips: ローカルプレビュー(Elixir編)
+## Tips: ローカルプレビュー(Elixir 編)
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -65,7 +65,8 @@ elixir --no-halt --app inets -e ":inets.start(:httpd,[{:server_name,'localhost'}
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。
 
-## Tips: コード整形(Node.js環境必須)
+## Tips: コード整形(Node.js 環境必須)
+
 ```
 yarn format
 ```
