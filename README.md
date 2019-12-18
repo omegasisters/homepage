@@ -15,7 +15,9 @@ git clone https://github.com/omegasisters/homepage.git
 cd homepage
 python3 -m http.server -d ..
 ```
+
 エラーが出る場合は、以下を試してみてください。
+
 ```
 git clone https://github.com/omegasisters/homepage.git
 python3 -m http.server
@@ -23,9 +25,9 @@ python3 -m http.server
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。これで GitHub Pages で公開された時と同じ状態で開発することが出来ます。
 
-## Tips: ローカルプレビュー(Node.js編)
+## Tips: ローカルプレビュー(Node.js 編)
 
-Node.jsユーザーは
+Node.js ユーザーは
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -34,9 +36,9 @@ yarn
 yarn start
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRMも見れるよ
+サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRM も見れるよ
 
-## Tips: ローカルプレビュー(PHP編)
+## Tips: ローカルプレビュー(PHP 編)
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -45,11 +47,11 @@ php -S 0.0.0.0:8000 -t ../
 ```
 
 サーバーが起動したら、次にブラウザーで http://0.0.0.0:8000/homepage を開いてください。
-同じローカルネットワークであればホストのIPアドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
-サーバーはctrl+cで停止できます。
+同じローカルネットワークであればホストの IP アドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
+サーバーは ctrl+c で停止できます。
 
-## Tips: コード整形(Node.js環境必須)
+## Tips: コード整形(Node.js 環境必須)
+
 ```
 yarn format
 ```
-
