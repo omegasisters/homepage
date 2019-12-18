@@ -69,10 +69,24 @@ i.fab {
   font-size: 140px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+  opacity: 0;
+  animation: logo 1s ease 1s forwards;
 }
 @media screen and (max-width: 700px) {
   .hero .logo {
     font-size: 80px;
+  }
+}
+
+@keyframes logo {
+  from {
+    opacity: 0;
+    margin-bottom: 64px;
+  }
+
+  to {
+    opacity: 1;
+    margin-bottom: 0;
   }
 }
 
