@@ -36,7 +36,20 @@ yarn start
 
 サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRMも見れるよ
 
+## Tips: ローカルプレビュー(PHP編)
+
+```
+git clone https://github.com/omegasisters/homepage.git
+cd homepage
+php -S 0.0.0.0:8000 -t ../
+```
+
+サーバーが起動したら、次にブラウザーで http://0.0.0.0:8000/homepage を開いてください。
+同じローカルネットワークであればホストのIPアドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
+サーバーはctrl+cで停止できます。
+
 ## Tips: コード整形(Node.js環境必須)
 ```
 yarn format
 ```
+
