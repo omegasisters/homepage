@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 175">
+    <defs>
+        <style>
+            .a{fill:#f55}
+            .c{fill:#fff}
+        </style>
+    </defs>
+    <polygon class="a" points="14 0 21 0 21 7 35 7 35 14 42 14 42 21 56 21 56 14 63 14 63 7 77 7 77 0 84 0 84 21 77 21 77 28 57 28 57 35 41 35 41 28 21 28 21 21 14 21 14 0"/>
+    <path class="a" d="M28,105h7v7H28v7H21v-7h7Zm14,0H56v7H42Zm21,0H77v14H63ZM35,140h7v7H56v-7h7v7H77v7H21v-7H35Zm21,21h7v14H56Zm-34,7H34v7H22Z" transform="translate(0 0)"/>
+    <path d="M42,70v7H35v7H28V70Zm23,0H56V84h7V77h7V70Z" transform="translate(0 0)"/>
+    <path d="M28,28H41v7H57V28H70v7H84v7h7V56h7V70h7V91H98v7H91v7H84V98H77v7H63V97h7V91h7V84H70V70H42V63H35v7H28V84H21v7h7v7h7v7H28V98H21v7H14V98H7V91H0V77H7V56h7V42h7V35h7ZM22,42H21V56h7V42Zm14,0H35v7h7V42Z" transform="translate(0 0)" style="fill:#5af"/>
+    <path class="c" d="M28,56H21V42h7ZM42,42H35v7h7Z" transform="translate(0 0)"/>
+    <path class="c" d="M21,126v7H14v-7Zm14,35H28v7H42v-7h7v7h7V154H35Zm0-98v7h7V63Zm42,70h7v-7H77Zm-7,0h7v14H63v-7H56v7H42v-7H35v7H14v-7h7v-7h7v-7H21v-7h7v-7h7V98H28V91H21V84H35V77h7V70H56V84h7V77h7v7h7v7H70v6H63v22H77v7H70ZM56,105H42v7H56Z" transform="translate(0 0)"/>
+</svg>

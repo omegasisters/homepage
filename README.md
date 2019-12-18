@@ -15,6 +15,11 @@ git clone https://github.com/omegasisters/homepage.git
 cd homepage
 python3 -m http.server -d ..
 ```
+エラーが出る場合は、以下を試してみてください。
+```
+git clone https://github.com/omegasisters/homepage.git
+python3 -m http.server
+```
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。これで GitHub Pages で公開された時と同じ状態で開発することが出来ます。
 
@@ -42,3 +47,9 @@ php -S 0.0.0.0:8000 -t ../
 サーバーが起動したら、次にブラウザーで http://0.0.0.0:8000/homepage を開いてください。
 同じローカルネットワークであればホストのIPアドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
 サーバーはctrl+cで停止できます。
+
+## Tips: コード整形(Node.js環境必須)
+```
+yarn format
+```
+
