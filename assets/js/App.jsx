@@ -67,10 +67,7 @@ const App = () => {
   return (
     <div style={{ width: "100%" }}>
       <p>おとひめ.vrm</p>
-      <a
-        href="https://3d.nicovideo.jp/works/td41391"
-        style={{ wordWrap: "break-word" }}
-      >
+      <a href="https://3d.nicovideo.jp/works/td41391" target="_blank">
         https://3d.nicovideo.jp/works/td41391
       </a>
       <br />
