@@ -67,7 +67,11 @@ const App = () => {
   return (
     <div style={{ width: "100%" }}>
       <p>おとひめ.vrm</p>
-      <a href="https://3d.nicovideo.jp/works/td41391" target="_blank">
+      <a
+        href="https://3d.nicovideo.jp/works/td41391"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         https://3d.nicovideo.jp/works/td41391
       </a>
       <br />
