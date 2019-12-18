@@ -1,3 +1,5 @@
+locale: "ja-JP"
+lang: "ja-JP"
 title: おめシスのホームページ
 description: 第１回おめシスのホームページをプルリクだけで更新していったらどうなるの？企画
 plugins:
