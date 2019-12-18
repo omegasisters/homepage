@@ -27,7 +27,7 @@ python3 -m http.server
 
 ## Tips: ローカルプレビュー(Node.js 編)
 
-Node.js ユーザーは
+[こちら](https://nodejs.org/ja/download/)から Node.js をインストールします。
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -36,7 +36,13 @@ yarn
 yarn start
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRM も見れるよ
+サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRM も見れるよ。
+
+`yarn dev`コマンドで Browser Sync サーバーを立ち上げることも出来ます。
+
+```
+yarn dev
+```
 
 ## Tips: ローカルプレビュー(PHP 編)
 
