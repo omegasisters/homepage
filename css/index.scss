@@ -119,16 +119,16 @@ i.fab {
   }
 
   .profile {
-    padding: 20px;
+    margin: 5px;
+    padding: 30px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 4px;
-    margin-bottom: 10px;
     text-align: center;
 
     @include mobile {
+      padding: 20px;
       display: flex;
       flex-wrap: wrap;
-      margin-right: 10px;
       justify-content: center;
     }
 
@@ -144,7 +144,6 @@ i.fab {
     img {
       border-radius: 100%;
       width: 120px;
-      margin-right: 20px;
       align-self: center;
     }
   }
