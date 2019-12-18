@@ -63,6 +63,10 @@ i.fab {
   z-index: -1;
 }
 
+.hero .hero__logo {
+  opacity: 0;
+  animation: logo 1s ease 1s forwards;
+}
 .hero .logo {
   margin: 0;
   padding: 0;
@@ -85,6 +89,18 @@ i.fab {
 
   .hero .logo-sub {
     margin-top: 1.5rem;
+  }
+}
+
+@keyframes logo {
+  from {
+    opacity: 0;
+    margin-bottom: 64px;
+  }
+
+  to {
+    opacity: 1;
+    margin-bottom: 0;
   }
 }
 
