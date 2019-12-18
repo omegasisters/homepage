@@ -38,8 +38,6 @@ i.fab {
 
 .hero {
   height: 100vh;
-  background: url(../images/background.gif) center no-repeat fixed;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +46,23 @@ i.fab {
 .hero a {
   color: white;
 }
+
+/* 背景画像にblurをかける */
+.hero:before {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/background.gif) center no-repeat fixed;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: -1;
+}
+
 .hero .logo {
   margin: 0;
   padding: 0;
