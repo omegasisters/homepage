@@ -63,14 +63,16 @@ i.fab {
   z-index: -1;
 }
 
+.hero .hero__logo {
+  opacity: 0;
+  animation: logo 1s ease 1s forwards;
+}
 .hero .logo {
   margin: 0;
   padding: 0;
   font-size: 140px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
-  opacity: 0;
-  animation: logo 1s ease 1s forwards;
 }
 .hero .logo-sub {
   text-align: center;
