@@ -4,7 +4,8 @@
   "description": "https://omegasisters.github.io/homepage",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "format": "prettier --write \"**/*.{css,html,json,md}\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "homepage": "https://github.com/omegasisters/homepage",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }

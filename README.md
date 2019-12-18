@@ -34,4 +34,9 @@ yarn
 yarn start
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRMも見れるよ   
+サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRMも見れるよ
+
+## Tips: コード整形(Node.js環境必須)
+```
+yarn format
+```
