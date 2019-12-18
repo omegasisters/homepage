@@ -20,7 +20,7 @@ body {
 }
 
 html {
-  background: url(../images/background.gif) center;
+  background: url(../images/background.gif) center no-repeat fixed;
   background-size: cover;
 }
 
@@ -40,4 +40,14 @@ html {
 
 i {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    padding: 20px;
+  }
+
+  .section {
+    padding: 15px 0;
+  }
 }
