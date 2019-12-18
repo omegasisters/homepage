@@ -6,8 +6,4 @@ app.listen(4000, () => {
   console.log("Running at Port 4000...");
 });
 
-app.use(express.static(path.join(__dirname, "./")));
-
-app.use((_, res) => {
-  res.sendStatus(404);
-});
+app.use("/homepage", express.static(path.join(__dirname, "./")));
