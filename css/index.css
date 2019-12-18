@@ -104,7 +104,7 @@ i.fab {
 .links {
   padding: 230px 80px;
   background: url(../images/omesis.png) top center no-repeat,
-    linear-gradient(to left, blue, red);
+    linear-gradient(to left, #de7072, #7995f7);
   background-size: cover;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -117,7 +117,7 @@ i.fab {
 @media screen and (max-width: 700px) {
   .links {
     padding: 40px;
-    background: linear-gradient(to left, blue, red);
+    background: linear-gradient(to left, #de7072, #7995f7);
   }
 }
 
@@ -162,7 +162,7 @@ i.fab {
 }
 
 .share-button {
-  background: linear-gradient(to right, #3b26b1, #962c6a);
+  background: linear-gradient(to left, #3b26b1, #962c6a);
   border-radius: 24px;
   box-shadow: 0 0 8px #00000050;
   padding: 16px 24px;
