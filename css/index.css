@@ -156,3 +156,234 @@ i.fab {
 .share-button:hover {
   box-shadow: 0 0 24px #00000050;
 }
+
+/*
+うんちゃん
+ */
+
+.c-unchan {
+
+}
+
+.c-unchan--fixedBottom {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 133px;
+}
+
+.c-unchan__inner {
+  padding-bottom: 100%;
+  animation: purupuru 7s 5s linear infinite;
+}
+
+.c-unchan__toguro {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 30%;
+  border-radius: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to bottom,#f083ba, #c26795);
+}
+
+.c-unchan__toguro,
+.c-unchan__tsuno {
+  animation-name: unchan-show-toguro;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.c-unchan__eye,
+.c-unchan__mouth {
+  animation: unchan-show-other 1.75s 2.2s ease-out backwards;
+}
+
+.c-unchan__toguro--top {
+  bottom: 50%;
+  width: 60%;
+  z-index: 3;
+  animation-delay: 1.1s;
+}
+
+.c-unchan__toguro--middle {
+  bottom: 25%;
+  width: 85%;
+  z-index: 2;
+  animation-delay: 1.05s;
+}
+
+.c-unchan__toguro--bottom {
+  bottom: 0;
+  z-index: 1;
+  animation-delay: 1s;
+}
+
+.c-unchan__eye {
+  position: absolute;
+  width: 6%;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.c-unchan__eye div {
+  padding-bottom: 100%;
+  background-color: #1a1a1a;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.c-unchan__eye--left {
+  transform: translateX(-165%);
+}
+
+.c-unchan__eye--right {
+  transform: translateX(165%);
+}
+
+
+.c-unchan__mouth {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -2px;
+  left: 0;
+  z-index: 5;
+}
+
+.c-unchan__mouth::before,
+.c-unchan__mouth::after {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: #1a1a1a;
+  bottom: 25px;
+  margin: auto;
+  z-index: 2;
+}
+
+.c-unchan__mouth::before {
+  left: 36px;
+}
+
+.c-unchan__mouth::after {
+  right: 36px;
+}
+
+.c-unchan__mouth__inner {
+  width: 55px;
+  height: 30px;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.c-unchan__mouth__inner div{
+  width: 70px;
+  height: 145px;
+  position: absolute;
+  bottom: -42px;
+  left: -107px;
+  border-radius: 150px 0 0 150px;
+  border-top: 25px solid #1a1a1a;
+  border-left: 25px solid #1a1a1a;
+  border-bottom: 25px solid #1a1a1a;
+  transform: translate(100px) rotate(-90deg) scale(0.5) scaleX(0.8) scaleY(1.2);
+  z-index: 4;
+}
+
+.c-unchan__tsuno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation-delay: 1.1s;
+}
+
+.c-unchan__tsuno__inner {
+  width: 35px;
+  height: 77px;
+  position: absolute;
+  top: -8px;
+  left: 48px;
+  overflow: hidden;
+  transform: rotate(-70deg);
+  border-radius: 100%;
+}
+
+.c-unchan__tsuno__inner::before {
+ content: '';
+ position: absolute;
+ bottom: 70%;
+ width: 100%;
+ height: 100%;
+ border-radius: 100%;
+ box-shadow: 0 300px 0 300px #f083ba;
+}
+
+@keyframes unchan-show-toguro {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes unchan-show-other {
+  0% {
+    will-change: opacity;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .c-unchan--fixedBottom {
+    transform: scale(0.5);
+    transform-origin: right bottom;
+  }
+}
+
+/*
+https://www.tam-tam.co.jp/tipsnote/html_css/post11618.html
+ */
+@keyframes purupuru {
+  0% {transform: skew(0deg, 0deg);}
+  1.5% {transform: skew(5deg, 4.2deg);}
+  3% {transform: skew(-4deg, -3deg);}
+  4.5% {transform: skew(3deg, 2.2deg);}
+  6% {transform: skew(-2deg, -1.5deg);}
+  7.5% {transform: skew(0.9deg, 0.9deg);}
+  9% {transform: skew(-0.6deg, -0.6deg);}
+  10.5% {transform: skew(0.3deg, 0.3deg);}
+  12% {transform: skew(-0.2deg, -0.2deg);}
+  12.5% {transform: skew(0.1deg, 0.1deg);}
+  15% {transform: skew(0deg, 0deg);}
+}
+
+/*
+うんちゃんここまで
+ */
