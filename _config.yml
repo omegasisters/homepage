@@ -1,0 +1,15 @@
+title: おめシスのホームページ
+description: 第１回おめシスのホームページをプルリクだけで更新していったらどうなるの？企画
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+include:
+  - _pages
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
