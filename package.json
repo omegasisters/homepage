@@ -1,24 +1,26 @@
 {
   "name": "omegasisters-homepage",
-  "version": "0.0.1",
   "description": "https://omegasisters.github.io/homepage",
-  "main": "index.js",
+  "version": "0.0.1",
   "scripts": {
-    "start": "node index.js",
-    "format": "prettier --write \"**/*.{css,html,json,md}\""
+    "dev": "browser-sync start --server .",
+    "format": "prettier --write \"**/*.{css,html,json,md}\"",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omegasisters/homepage.git"
-  },
-  "bugs": {
-    "url": "https://github.com/omegasisters/homepage/issues"
-  },
-  "homepage": "https://github.com/omegasisters/homepage",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "prettier": "^1.19.1"
+  },
+  "main": "server.js",
+  "bugs": {
+    "url": "https://github.com/omegasisters/homepage/issues"
+  },
+  "homepage": "https://github.com/omegasisters/homepage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omegasisters/homepage.git"
   }
 }

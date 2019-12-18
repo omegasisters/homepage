@@ -27,7 +27,7 @@ python3 -m http.server
 
 ## Tips: ローカルプレビュー(Node.js 編)
 
-Node.js ユーザーは
+[こちら](https://nodejs.org/ja/download/)から Node.js をインストールします。
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -36,7 +36,13 @@ yarn
 yarn start
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRM も見れるよ
+サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRM も見れるよ。
+
+`yarn dev`コマンドで Browser Sync サーバーを立ち上げることも出来ます。
+
+```
+yarn dev
+```
 
 ## Tips: ローカルプレビュー(PHP 編)
 
@@ -50,8 +56,16 @@ php -S 0.0.0.0:8000 -t ../
 同じローカルネットワークであればホストの IP アドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
 サーバーは ctrl+c で停止できます。
 
-## Tips: コード整形(Node.js 環境必須)
+## Tips: ローカルプレビュー(Elixir編)
 
+```
+git clone https://github.com/omegasisters/homepage.git
+elixir --no-halt --app inets -e ":inets.start(:httpd,[{:server_name,'localhost'},{:document_root,'.'},{:server_root,'.'},{:port,8000},{:mime_types,[{'html','text/html'},{'css','text/css'}]}])"
+```
+
+サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。
+
+## Tips: コード整形(Node.js環境必須)
 ```
 yarn format
 ```
