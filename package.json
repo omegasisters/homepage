@@ -1,0 +1,20 @@
+{
+  "name": "omegasisters-homepage",
+  "version": "0.0.1",
+  "description": "https://omegasisters.github.io/homepage",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omegasisters/homepage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omegasisters/homepage/issues"
+  },
+  "homepage": "https://github.com/omegasisters/homepage",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
