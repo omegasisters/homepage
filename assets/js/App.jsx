@@ -52,7 +52,7 @@ const App = () => {
 
   const resize = () => {
     const renderer = rendererRef.current;
-    const width = window.innerWidth - 300;
+    const width = window.innerWidth - (window.innerWidth / 10) * 2;
     const height = width / 1.7;
     renderer.setSize(width, height);
   };
@@ -65,9 +65,12 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <p>おとひめ.vrm</p>
-      <a href="https://3d.nicovideo.jp/works/td41391">
+      <a
+        href="https://3d.nicovideo.jp/works/td41391"
+        style={{ wordWrap: "break-word" }}
+      >
         https://3d.nicovideo.jp/works/td41391
       </a>
       <br />
