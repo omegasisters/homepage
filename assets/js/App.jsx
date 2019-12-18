@@ -67,7 +67,7 @@ const App = () => {
   return (
     <div>
       <p>おとひめ.vrm</p>
-      <a href="https://3d.nicovideo.jp/works/td41391">
+      <a href="https://3d.nicovideo.jp/works/td41391" target="_blank">
         https://3d.nicovideo.jp/works/td41391
       </a>
       <br />
