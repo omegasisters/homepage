@@ -11,9 +11,9 @@ https://omegasisters.github.io/homepage
 VRM モデルも含めて完全な状態でプレビューしたい場合は以下の方法を試してください。
 
 ```
-git clone https://github.com/omegasisters/homepage/
+git clone https://github.com/omegasisters/homepage.git
 cd homepage
 python3 -m http.server -d ..
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。 GitHub Pages で公開された場合と同じ状態で開発することが出来ます。
+サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。これで GitHub Pages で公開された時と同じ状態で開発することが出来ます。
