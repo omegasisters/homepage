@@ -48,19 +48,25 @@ i.fab {
 }
 
 /* 背景画像にblurをかける */
-.hero:before {
-  display: block;
-  width: 100%;
-  height: 100vh;
-  background: url(../images/background.gif) center no-repeat fixed;
-  background-size: cover;
-  content: "";
-  position: absolute;
-  left: 0;
+figure.hero__bg {
+  width: calc(100vw + 15px);
+  height: calc(100vh + 15px);
+  position: fixed;
+  left: -7.5px;
   right: 0;
+  top: -7.5px;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hero__inner__bg {
+  width: 100%;
+  height: 100%;
+  background: url(../images/background.gif) center no-repeat;
+  background-size: cover;
   -webkit-filter: blur(5px);
   filter: blur(5px);
-  z-index: -1;
 }
 
 .hero .hero__logo {
