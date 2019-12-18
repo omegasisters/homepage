@@ -70,9 +70,21 @@ i.fab {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
 }
+.hero .logo-sub {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+}
 @media screen and (max-width: 700px) {
   .hero .logo {
     font-size: 80px;
+  }
+
+  .hero .logo-sub {
+    margin-top: 1.5rem;
   }
 }
 
