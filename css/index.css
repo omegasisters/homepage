@@ -158,9 +158,10 @@ i.fab {
   margin-bottom: 7px;
 }
 .profiles .profile img {
+  align-self: center;
   border-radius: 100%;
   width: 120px;
-  align-self: center;
+  height: 120px;
 }
 
 .share-button {
