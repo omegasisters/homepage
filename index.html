@@ -206,7 +206,11 @@
         <div id="react"></div>
       </div>
 
-      <div id="top-to-unchan" class="c-unchan c-unchan--fixedBottom">
+      <div
+        id="top-to-unchan"
+        class="c-unchan c-unchan--fixedBottom"
+        title="トップに戻る"
+      >
         <div class="c-unchan__inner">
           <div class="c-unchan__tsuno">
             <div class="c-unchan__tsuno__inner"></div>
@@ -251,20 +255,12 @@
         src="./assets/js/ytplaylist.js"
         defer
       ></script>
+      <script
+        type="text/javascript"
+        src="./assets/js/scroll-to-top.js"
+        defer
+      ></script>
       <script type="text/babel" src="./assets/js/App.jsx" defer></script>
-      <script>
-        document.getElementById(
-          "top-to-unchan"
-        ).onclick = function scroll2Top() {
-          if (document.scrollingElement.scrollTop < 10) {
-            document.scrollingElement.scrollTop = 0;
-          } else {
-            document.scrollingElement.scrollTop =
-              document.scrollingElement.scrollTop / 1.1;
-            setTimeout(scroll2Top, 10);
-          }
-        };
-      </script>
     </div>
   </body>
 </html>
