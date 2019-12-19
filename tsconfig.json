@@ -15,11 +15,7 @@
     "strict": true,
     "target": "es5",
     "paths": {
-      "/web_modules/*.js": [
-        "node_modules/@types/*",
-        "node_modules/*",
-        "public/web_modules/*"
-      ]
+      "/homepage/web_modules/*.js": ["node_modules/@types/*", "node_modules/*"]
     }
   },
   "include": ["preact"],
