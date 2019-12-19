@@ -1,0 +1,860 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_3pJu1WSGq7DWM-gSnMqPCJQZ0A\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:23:34.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【ドッキリ】ぴょこぴょこが少しずつ大きくなったらいつ気づくのか！？",
+        "description": "おめがってる！！初ドッキリ！！リオちゃんに仕掛けました！！笑\nめっちゃ楽しかったー！꒰*´꒳`*꒱\n\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "6ypI7knvORA"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/zq6Vy7ILagu9LlNn9ywEvr3e2D8\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:23:10.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【ドッキリ】バーチャルYouTuberならゲームにでてきても気付かれない説【スパイダーマン】",
+        "description": "リオちゃんにドッキリを仕掛けました！\nバーチャルYouTuberってバーチャルじゃないですか。ゲームもバーチャルだし、ゲームにレイが出てきてもリオちゃんは気付かないはず・・・？結果は如何に！？\n\n▼スパイダーマン | PS4\nhttps://amzn.to/2Rd1mr9\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pXcCAJ_pDw4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pXcCAJ_pDw4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pXcCAJ_pDw4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pXcCAJ_pDw4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pXcCAJ_pDw4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "pXcCAJ_pDw4"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/V-sMLoJAQaTRq4IXRXJQCXJkl_s\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:26:32.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "人を怒らせる方法「バーチャルYouTuber編」",
+        "description": "おめがってるー！！今日の動画は人を怒らせる専門家に来てもらいました！\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n▼音源利用\nMusic is VFR\nhttp://musicisvfr.com/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/A6wnT5pduXE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/A6wnT5pduXE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/A6wnT5pduXE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/A6wnT5pduXE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/A6wnT5pduXE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "A6wnT5pduXE"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/9-wG3IfUS4rdOAAFh4pCJBqFtXc\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:27:19.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【実写ゲーム実況】モノマネしながらクラッシュアイスゲームやってみた【ゴリラ】",
+        "description": "おめがってるー！！\nモノマネしながら、クラッシュアイス遊んでみたよー！！\n\n▼クラッシュアイスゲームはこちら\nhttps://amzn.to/2Hs1Cw3\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n\n【Twitter】\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Dts34CM-r3Y"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/h9McG2EUhnC_0EIS7AlRiyrAZTI\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:32:16.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "ガンプラを3Dスキャンしてガンプラファイトやってみた",
+        "description": "おめがった！！！\n自作ガンプラ作って戦わせるのって…夢だよねぇぇ꒰*´꒳`*꒱\n\n\n▼今日作ったもの\nパーフェクトジオングのガンプラ\nhttps://amzn.to/2MzpNMF\n\nガンダムのガンプラ\nhttps://amzn.to/2MyXbTJ\n\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/K5vEgW2xf7s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/K5vEgW2xf7s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/K5vEgW2xf7s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/K5vEgW2xf7s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/K5vEgW2xf7s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "K5vEgW2xf7s"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/ENCqkihMsMMmHA3wDv6wOyK9hxs\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2018-11-16T11:20:40.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【質問コーナー】おめシスがまじめに質問に答えました",
+        "description": "おめシスは質問に答えてただけなんです…なんでこんなことに？\n\n▼ おめシス初心者にオススメの再生リスト\nhttps://www.youtube.com/watch?v=6ypI7knvORA&list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja\n\n▼ 質問募集した動画\nみなさん質問ありがとうございました！\nhttps://youtu.be/bd3DA66WuiI\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n7u7lYbQhDg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n7u7lYbQhDg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n7u7lYbQhDg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/n7u7lYbQhDg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/n7u7lYbQhDg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "n7u7lYbQhDg"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/dO0nzifvrq3KcjVK3TzVqmDKWZ8\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:24:09.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【検証】バーチャルなうんちを作っても動画は削除されないのか",
+        "description": "おめがってるー！！今日はおめシスの社会派企画です！！はたして動画は生き残ることができるのか！？\n\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mIz56iZT31Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mIz56iZT31Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mIz56iZT31Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mIz56iZT31Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mIz56iZT31Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "mIz56iZT31Q"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/Hfj_yB9hbW9Dt7z8gE6mUVxrSoI\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:22:41.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【衝撃】VRでバッティング練習したらリアルでも打てるようになるの？",
+        "description": "社会派Vtuberで知られているおめシスが、今回はVRでバッティング練習したら、リアルでも打てるようになるのか検証してきました。\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/77CbFiqV-hE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/77CbFiqV-hE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/77CbFiqV-hE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/77CbFiqV-hE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/77CbFiqV-hE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "77CbFiqV-hE"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/nT6hlPXcAU_3MmzkDbK2y_V5ObQ\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:27:19.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【コエステ】声をAIで作るアプリでアニメを作ってみた【おめシス昔ばなし】",
+        "description": "おめがってる･･･！\n声を自動生成して、オリジナルアニメを作ったよ！！꒰*´꒳`*꒱\n\nチャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n* コエステ\nhttps://coestation.jp/\n【Twitter】\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ZUWbTBidx9g"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_GKndhOjJwg8Sjew4OFeuEAxARU\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:33:15.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【うさぎ男】2人で遊べるバカゲーが楽しすぎた【Super Bunny Man #1】",
+        "description": "おめがってるーー！\n今回は、めちゃめちゃ面白いゲームを二人でやったよー！！\n笑いすぎたｗｗ\n\n■ Super Bunny Man 実況 #2 はこちら\nhttps://www.youtube.com/watch?v=6aL18oW8wPs\n\n■ Super Bunny Man 実況 再生リストはこちらから\nhttps://www.youtube.com/playlist?list=PLjUYRJfqz5Wte8bY7uHfbPnps6TgYwzll\n\nチャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n【Twitter】\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fEnUaxBUG2A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fEnUaxBUG2A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fEnUaxBUG2A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/fEnUaxBUG2A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/fEnUaxBUG2A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "fEnUaxBUG2A"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/M8LMTSM29HGsZS-WZmWfpoGUI3I\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS40NzZCMERDMjVEN0RFRThB",
+      "snippet": {
+        "publishedAt": "2018-12-03T21:19:39.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【ドッキリ】手榴弾をこっそり味方に投げ続けた結果ｗｗ",
+        "description": "味方のリオちゃんにバレないように手榴弾を投げ続けてみました。いつバレるのか・・・！？\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n▼スパチャありがとう！！(順不同・敬称略)\n[Tack O][makerSat][アムロ・レイ][S Y][まいまいかぶり][オトシン][tee][のとようへい][ばし][腕][ゾっちゃんさん][Q][Tomiku][こげぱん][mo ke][二十円][matabin][ゲシュルト][kimneet_][龍華][たらこスパ][Worigo Tou][おめが団ナナイ][トビクルカミィ][おふろ][•ᴗ•][かか][hiperry][のの][うつうつ][まちゃ。][ナシロNashiro][ことぶき茶漬け][りんりん太子][。 nahairo][レィンレィン][5656 kuma][にるにる][流.][hey hachiro][ひつまぶされ][花咲。][ミズキ-ソブレロ][ヌマ猫_vtuber好き][けいたれっと][おもち][KIRI TAM][ゆき_だるま。][西野順哉][おめがシスターズ [Ω Sisters]][宿六][ひょうちーΩ][δしまだ][アクセル。][妖精の灯り][だしまき][ゆずもち][佐々木徹史][Seea][ShLSh][クリスん][猫翁御子][Bose/ボーズ][クマオ*][DarjeeRing.ch][Tom SongAzer][しゅばし][ただのしかばね][みずくん][大葉大葉][にじはしそら][くろまくちゃんねる][へりせん][ことり][N N][You][gummy][うたまろ]\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2W2_0S4Glvg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2W2_0S4Glvg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2W2_0S4Glvg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2W2_0S4Glvg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2W2_0S4Glvg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "2W2_0S4Glvg"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/IVZk1izpCJT9anJrc9astl4fG8k\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5EMEEwRUY5M0RDRTU3NDJC",
+      "snippet": {
+        "publishedAt": "2018-12-23T11:13:09.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【ドッキリ】撮影中にうんちをもらした結果ｗｗ",
+        "description": "おめシスです！チャンネル登録よろしくお願いします！\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AlN9TZ8dOlY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AlN9TZ8dOlY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AlN9TZ8dOlY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/AlN9TZ8dOlY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/AlN9TZ8dOlY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "AlN9TZ8dOlY"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/Sfvc8X8lyaF0aPshIIxyGTVdm0k\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45ODRDNTg0QjA4NkFBNkQy",
+      "snippet": {
+        "publishedAt": "2019-02-27T11:23:12.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "大接戦！ボウリングを縦向きでやったら楽しすぎた！！",
+        "description": "ボウリングを縦向きでやってみた結果…！？チャンネル登録よろしくね！\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zwOR_bb3iDk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zwOR_bb3iDk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zwOR_bb3iDk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zwOR_bb3iDk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zwOR_bb3iDk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 12,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "zwOR_bb3iDk"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/vVS1bRp9uwnNVbAfK5gZQrYgzQs\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4zMDg5MkQ5MEVDMEM1NTg2",
+      "snippet": {
+        "publishedAt": "2019-05-13T10:55:13.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【ドッキリ】マイクラで他人のフリして荒らしてみたｗｗｗ",
+        "description": "リオちゃんにドッキリです！わっくわっくが止まらな～い！\n\n▼マインクラフトクラシック\nhttps://classic.minecraft.net\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/WNrRF36Z3ag/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/WNrRF36Z3ag/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/WNrRF36Z3ag/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/WNrRF36Z3ag/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/WNrRF36Z3ag/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 13,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "WNrRF36Z3ag"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/mCNxBxKS3xnngJH94u7FObRqi0g\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41Mzk2QTAxMTkzNDk4MDhF",
+      "snippet": {
+        "publishedAt": "2019-06-26T21:54:27.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "絶対に笑ってはいけない裁判所！！！！",
+        "description": "裁判所は１番笑っちゃいけないところなんです！！！！\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n▼みんなスパチャありがとう！(順不同、敬称略)\n[らむたら][血を穿つ群青][こけこけこけっこ][DarjeeRing.ch][バーチャル関西人 飛高 あのん][ナシロNashiro][しびとにゃん][osamukd][のとようへい][よしお \\\\祝 //][アカスィー][δしまだ][こげぱん][るーべっと][matabin][仮面の投稿者_月川][ひろ][Luke Ω][メディアン][yaki nikku][tae Ω][れんこんsmrsshgoo][yuu takezawa][ふぁず][おもち。][ゴルゴンゾーラ][OIBoRe虹野][まちゃ。][えぬ][ことぶき茶漬け][ode to joy][バーチャルゴリ][マジレスユニコーンガンダム][三代目孝の人][腕][ルクサード][Edge][akira][お茶][ひるね][仁太ん][ひらい][ピートモス][倫][鈴木悠生][あとりあ][市ヶ谷有咲][くずいぬ][ギンジ][毎日がハム曜日][HIMAGO][おふろ][Reirio Kinon][すこちん][よーこよーこ][薄荷さんの端末][みずくん][5656 kuma][すこりーぬ][ひつまぶされ][selt0161][悟][さほりん][二十円][つばき三零][まつむら][カモシカか?もしかして][ちびザル][レィンレィン][ぺこち][のこΩ][げつΩ][るーこと][げるんGELN][Bose/ボーズ][ガスピー][ビタみんΩ][にるにる][Ahy eon][大吾郎][上野][Yohei hmy][オタレオ][あるか][吉尾健吾]\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9QhH-WT9uhk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9QhH-WT9uhk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9QhH-WT9uhk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9QhH-WT9uhk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9QhH-WT9uhk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 14,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "9QhH-WT9uhk"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_XX2vThO0vzRiU3Gtcd9BOvPMvM\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5EQUE1NTFDRjcwMDg0NEMz",
+      "snippet": {
+        "publishedAt": "2019-08-12T12:22:42.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【検証】かき氷をVRで見ながら食べたら味が変わる説",
+        "description": "社会派Vチューバーのおめシスは今日は視覚と食の不思議に迫る！！！\n青い食べ物でおいしそうに見えるのって、ブルーハワイとガリガリ君ぐらいだよね。\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6uirskrr6mU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6uirskrr6mU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6uirskrr6mU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6uirskrr6mU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6uirskrr6mU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 15,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "6uirskrr6mU"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/orN4dwGImpUVqQ28lPMtrAv6iuI\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41QTY1Q0UxMTVCODczNThE",
+      "snippet": {
+        "publishedAt": "2019-10-15T10:02:48.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "踏んだレゴを当てるゲームが過酷すぎたwww",
+        "description": "レゴブロックって踏んだら痛いじゃないですか。なので、クイズにしました。\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM / SE\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/\nOtoLogic by https://otologic.jp/free/license.html\n\n画像素材：PIXTA",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dGflJW97Sfg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dGflJW97Sfg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dGflJW97Sfg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dGflJW97Sfg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dGflJW97Sfg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 16,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "dGflJW97Sfg"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/Us4ZV8tQZ9sq_jvWfAlDQndRWFY\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yMUQyQTQzMjRDNzMyQTMy",
+      "snippet": {
+        "publishedAt": "2019-10-22T08:50:33.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【あるある】映画館によくいるやばいやつ",
+        "description": "ポップコーン食べてるときに、急に静かなシーンが来たら噛まずに待機するよね。\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 17,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "68xnCUR5vn0"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/45obxChx1axpYruEZSANGAyplo0\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45RTgxNDRBMzUwRjQ0MDhC",
+      "snippet": {
+        "publishedAt": "2019-11-06T20:11:15.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【いつ気付く？】撮影中にだんだん頭身が変わるドッキリ",
+        "description": "ついにおめシスの第8の能力「頭身の変更」を使った企画です！！！！果たしていつ気付くのか・・・！？\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n▼スパチャありがとう！！(順不同・敬称略)\n[Phai][PoC][のこΩ][みずΩ][KAiTo][ラミアス39][八ツ尾半][君山銀針][こげぱん][しびとにゃん][きみΩ][ひょうちーΩ][ぴねかっと][ode to joy][ぺこち][字伏][5656 kuma][ナギ][ちびザル][るーべっと][ふぁず][おめが団ナナイ][冷凍ゐかん][KAZUTO_sun][となりのコアラ][osamukd][OIBoRe虹野][NKN][ヤマダ来栖][めんぼう][にるにる][ダイマジン][ぬりかべ][セキちゅん][yuu takezawa][億恭介][Worigo Tou][チーズバーグディッシュ][qq q][しょうちゃん][chilo papa][SSあゆさん][Bose/ボーズ][【陰キャ】ふくもと][緒方光][バーチャル関西人 飛高 あのん][みそえふ][Testa Me][違和ナミ][ひらい][ナベさんさん][やわらー][よしお][TenQ11][谷内俊彦][なぎなぎ][めーかー わっふる][きっこ][こけこけこけっこ][mai sho][ナシロNashiro][Luke Ω][アマユキ_天雪狼][フィットネスめがね][まちゃ。][72清流][HIMAGO][げつΩ][えのき][もにぎり][Takeshi Kurosawa][tae Ω][つーたに][Terry Cope][ギンジ][Soy Sauce][ガスピー][ま.サン][くずいぬ][Himhim1219][ヒルヴィカンガスプル][clome _][。もんさん][antlion][・ HOROTI][いち][∞johny∞][りんりん太子][[] 鴬 []][KID君][ひるね][2 B][洒落げな椅子][ぐっさん][薄荷さんの端末][Juta Yamano][阪下ハナコ][おふろ][Good Night][Yohei hmy]\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_ugJVKCHk20/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_ugJVKCHk20/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_ugJVKCHk20/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_ugJVKCHk20/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_ugJVKCHk20/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 18,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "_ugJVKCHk20"
+        }
+      }
+    }
+  ]
+}

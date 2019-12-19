@@ -21,6 +21,7 @@ body {
   line-height: 1.6em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 
 .box {
@@ -43,8 +44,8 @@ i.fas {
   justify-content: center;
   align-items: center;
 }
-.hero,
-.hero a {
+
+a {
   color: white;
 }
 
@@ -117,7 +118,6 @@ figure.hero__bg {
   align-items: center;
   text-align: center;
   background: black;
-  color: white;
   padding: 230px 120px;
 }
 @media screen and (max-width: 700px) {
@@ -129,10 +129,31 @@ figure.hero__bg {
   width: 560px;
   height: 315px;
 }
+
+.playlist {
+  width: 100%;
+  margin-top: 20px;
+}
+.playlist .videos {
+  display: flex;
+  overflow-x: auto;
+}
+.videos .video-link {
+  display: block;
+  margin: 10px;
+}
+.videos .video-link img {
+  width: 400px;
+}
+
 @media screen and (max-width: 700px) {
   .introduction .video {
     width: 100%;
     height: auto;
+  }
+
+  .videos .video-link img {
+    width: 200px;
   }
 }
 
@@ -143,11 +164,6 @@ figure.hero__bg {
   background-size: cover;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  color: white;
-}
-.links,
-.links a {
-  color: white;
 }
 @media screen and (max-width: 700px) {
   .links {
