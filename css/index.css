@@ -368,9 +368,47 @@ a.share-button:hover {
   text-decoration: none;
 }
 
+.fukidashi {
+  display: inline-block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s linear, opacity 0.1s linear;
+  position: absolute;
+  bottom: 140px;
+  left: 0;
+  right: 0;
+  margin: 1.5em auto;
+  padding: 0 5px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  background: #70a6ff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.fukidashi:before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #70a6ff;
+  z-index: 0;
+}
+
 /*
 うんちゃん
- */
+*/
+.c-unchan:hover > .fukidashi {
+  visibility: visible;
+  opacity: 1;
+}
 
 .c-unchan--fixedBottom {
   position: fixed;
