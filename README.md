@@ -106,7 +106,7 @@ yarn start # yarn の場合
 npm run start # npm の場合
 ```
 
-http://localhost:5000 にホストされます。
+http://localhost:3000 にホストされます。
 
 ソースコードを編集する際には、git push する前にビルドを行ってください:
 

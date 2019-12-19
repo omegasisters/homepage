@@ -10,7 +10,7 @@
     "pika:dev": "rm -rf homepage && mkdir -p homepage && cp -r web_modules homepage/web_modules",
     "ts": "rm -rf preact_build && tsc",
     "ts:watch": "tsc -w",
-    "start": "npm run build && concurrently 'npm run ts:watch' 'serve -s ./'",
+    "start": "npm run build && concurrently 'npm run ts:watch' 'npm run dev'",
     "test": "jest"
   },
   "dependencies": {
@@ -25,10 +25,8 @@
     "express": "^4.17.1",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
-    "serve": "^11.2.0",
     "ts-jest": "^24.2.0",
-    "typescript": "^3.6.3",
-    "vfile-message": "^2.0.2"
+    "typescript": "^3.6.3"
   },
   "@pika/web": {
     "webDependencies": [
