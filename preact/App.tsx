@@ -1,5 +1,5 @@
-import { FunctionalComponent, h } from "/web_modules/preact.js";
-import { useEffect, useRef } from "/web_modules/preact/hooks.js";
+import { FunctionalComponent, h } from "/homepage/web_modules/preact.js";
+import { useEffect, useRef } from "/homepage/web_modules/preact/hooks.js";
 
 declare const THREE: any;
 

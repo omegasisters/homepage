@@ -11,6 +11,7 @@
     "build:ts:watch": "tsc -w",
     "start": "npm run build && concurrently 'npm run build:ts:watch' 'serve -s ./'"
   },
+  "origin": "homepage",
   "dependencies": {
     "preact": "^10.1.1"
   },
