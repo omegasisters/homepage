@@ -81,28 +81,31 @@ dotnet run --project ./dotnet/
 yarn format
 ```
 
-## Tips: preact部分の開発方法
-プレビューする際には以下のコマンドを入力してください
+## Tips: preact 部分の開発方法 (Node.js)
+
+プレビューする際には以下のコマンドのどちらかを入力してください:
+
 ```
-yarn start
+yarn start # yarn の場合
+npm run start # npm の場合
 ```
-or
-```
-npm run start
-```
+
 http://localhost:5000 にホストされます。
 
-ソースコードを編集する際には、git push する前に ```yarn build``` ***or*** ```npm  run build```してください
+ソースコードを編集する際には、git push する前にビルドを行ってください:
 
-## Tips: テストする
-以下のコマンドでテストができます
 ```
-yarn test
+yarn build # yarn の場合
+npm run build # npm の場合
 ```
-or
+
+## Tips: テストする (Node.js)
+
+以下のコマンドでテストができます。
+
 ```
-npm run test
+yarn test # yarn の場合
+npm run test # npm の場合
 ```
 
 `__tests__`, `preact` にサンプルテストケースがあります。
-
