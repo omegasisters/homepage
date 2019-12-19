@@ -40,6 +40,7 @@ import ThreeViewer from "./three/viewer.js";
 var App = function () {
     var _a = useState(false), loading = _a[0], setLoading = _a[1];
     var _b = useState(0), progress = _b[0], setProgress = _b[1];
+    var _c = useState("otohime"), modelType = _c[0], setModelType = _c[1];
     var divRef = useRef();
     var viewerRef = useRef(new ThreeViewer());
     var viewer = viewerRef.current;
@@ -66,50 +67,32 @@ var App = function () {
             window.removeEventListener("resize", viewer.resize);
         };
     }, []);
-    var onOtohime = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (loading)
-                        return [2 /*return*/];
-                    setLoading(true);
-                    return [4 /*yield*/, viewer.loadVrm(setProgress)];
-                case 1:
-                    _a.sent();
-                    setLoading(false);
-                    return [2 /*return*/];
-            }
-        });
-    }); };
-    var onCuring = function () { return __awaiter(void 0, void 0, void 0, function () {
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (loading)
-                        return [2 /*return*/];
-                    setLoading(true);
-                    return [4 /*yield*/, viewer.loadFbx(setProgress)];
-                case 1:
-                    _a.sent();
-                    setLoading(false);
-                    return [2 /*return*/];
-            }
-        });
-    }); };
-    return (h("div", { style: { width: "100%" } },
-        h("p", null, "\u304A\u3068\u3072\u3081.vrm"),
-        h("a", { href: "https://3d.nicovideo.jp/works/td41391", target: "_blank", rel: "noopener noreferrer", style: { wordWrap: "break-word" } }, "https://3d.nicovideo.jp/works/td41391"),
-        h("p", null, "\u3046\u3093\u3061\u30AB\u30FC\u30EA\u30F3\u30B0"),
-        h("a", { href: "https://omesis-shop.booth.pm/items/1269953", target: "_blank", rel: "noopener noreferrer", style: { wordWrap: "break-word" } }, "https://omesis-shop.booth.pm/items/1269953"),
-        h("br", null),
-        h("br", null),
-        h("div", { style: { display: "flex", justifyContent: "center" } },
-            h("button", { onClick: onOtohime }, "\u304A\u3068\u3072\u3081"),
-            h("button", { onClick: onCuring }, "\u3046\u3093\u3061\u304B\u30FC\u308A\u3093\u3050")),
-        loading && h("p", null,
+    var onOtohime = function () {
+        if (!isLoading) {
+            viewer.loadVrm(setProgress);
+            setModelType("otohime");
+        }
+    };
+    var onCuring = function () {
+        if (!isLoading) {
+            viewer.loadFbx(setProgress);
+            setModelType("curing");
+        }
+    };
+    return (h("div", { className: "viewer" },
+        h("div", { className: "controller" },
+            h("button", { onClick: onOtohime, className: modelType === "otohime" ? "active" : "" }, "\u304A\u3068\u3072\u3081"),
+            h("button", { onClick: onCuring, className: modelType === "curing" ? "active" : "" }, "\u3046\u3093\u3061\u304B\u30FC\u308A\u3093\u3050")),
+        isLoading && h("p", null,
             "Now Loading ",
             progress,
             "%"),
+        modelType === "otohime" && (h("div", { className: "description" },
+            h("p", null, "\u304A\u3068\u3072\u3081.vrm"),
+            h("a", { href: "https://3d.nicovideo.jp/works/td41391", target: "_blank", rel: "noopener noreferrer" }, "3d.nicovideo.jp/works/td41391"))),
+        modelType === "curing" && (h("div", { className: "description" },
+            h("p", null, "\u3046\u3093\u3061\u30AB\u30FC\u30EA\u30F3\u30B0"),
+            h("a", { href: "https://omesis-shop.booth.pm/items/1269953", target: "_blank", rel: "noopener noreferrer" }, "omesis-shop.booth.pm/items/1269953"))),
         h("div", { ref: divRef })));
 };
 export default App;
