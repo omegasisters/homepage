@@ -59,8 +59,10 @@ build-iPhoneSimulator/
 
 # End of https://www.gitignore.io/api/ruby
 
+#Node.js
 node_modules
+homepage
 
-#dot net 
+#dot net
 bin/
 obj/

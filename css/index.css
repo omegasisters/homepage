@@ -166,7 +166,7 @@ figure.hero__bg {
 }
 
 .links {
-  padding: 50px 80px 230px 80px;
+  padding: 50px 80px 30px 80px;
   background: url(../images/omesis.png) top center no-repeat,
     linear-gradient(to left, #de7072, #7995f7);
   background-size: cover;
@@ -259,6 +259,45 @@ a.share-button:hover {
   .br-sp {
     display: inline;
   }
+}
+
+.viewer {
+  width: 100%;
+}
+.viewer .controller {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.viewer .controller button {
+  cursor: pointer;
+  margin: 5px;
+  padding: 10px;
+  background: transparent;
+  border: rgba(0, 0, 0, 0.5) 1px solid;
+  color: white;
+}
+.viewer .controller button:hover,
+.viewer .controller button.active {
+  box-shadow: 0 0 24px #00000050;
+}
+.viewer .controller button.active {
+  background: #06ffd2;
+  color: black;
+}
+.viewer .description {
+  margin: 5px 0;
+}
+.viewer .description a {
+  word-wrap: break-word;
+}
+
+.c-alpha {
+  margin-top: 200px;
+  font-size: 0.1rem;
+}
+.c-alpha .c-alpha__link {
+  text-decoration: none;
 }
 
 /*

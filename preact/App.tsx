@@ -1,85 +1,80 @@
-import { FunctionalComponent, h } from "/web_modules/preact.js";
-import { useEffect, useRef } from "/web_modules/preact/hooks.js";
+import { FunctionalComponent, h } from "/homepage/web_modules/preact.js";
+import {
+  useEffect,
+  useRef,
+  useState
+} from "/homepage/web_modules/preact/hooks.js";
 
-declare const THREE: any;
+import ThreeViewer from "./three/viewer.js";
 
 const App: FunctionalComponent = () => {
+  const [progress, setProgress] = useState(0);
+  const [modelType, setModelType] = useState('otohime');
+
+  const isLoading = progress > 0 && progress < 100;
+
   const divRef = useRef<HTMLDivElement>();
-  const rendererRef = useRef<any>();
+  const viewerRef = useRef(new ThreeViewer());
+  const viewer = viewerRef.current;
 
   useEffect(() => {
-    const div = divRef.current!;
+    viewer.start(divRef.current!);
+    viewer.loadVrm(setProgress);
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 1.7, 0.1, 1000);
-    camera.position.set(0, 1, -3);
-    const renderer = ((rendererRef as any).current = new THREE.WebGLRenderer());
-    resize();
-    div.appendChild(renderer.domElement);
-
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 1, 0);
-    controls.update();
-
-    renderer.setClearColor(0x00ffff, 1);
-    renderer.gammaOutput = true;
-
-    const ambient = new THREE.AmbientLight("#85b2cd");
-    scene.add(ambient);
-
-    const loader = new THREE.GLTFLoader();
-
-    loader.load(
-      "assets/blob/otohime.vrm",
-      (gltf: any) => {
-        const mesh = gltf.scene;
-        mesh.scale.set(1, 1, 1);
-        scene.add(mesh);
-      },
-      (xhr: any) => {
-        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-      },
-      (error: any) => {
-        console.warn(error);
-      }
-    );
-
-    const render = () => {
-      requestAnimationFrame(render);
-      controls.update();
-      renderer.render(scene, camera);
+    window.addEventListener("resize", viewer.resize);
+    return () => {
+      window.removeEventListener("resize", viewer.resize);
     };
-
-    render();
   }, []);
 
-  const resize = () => {
-    const renderer = rendererRef.current;
-    const width = window.innerWidth - (window.innerWidth / 10) * 2;
-    const height = width / 1.7;
-    renderer.setSize(width, height);
+  const onOtohime = () => {
+    if (!isLoading) {
+      viewer.loadVrm(setProgress);
+      setModelType('otohime');
+    }
   };
 
-  useEffect(() => {
-    window.addEventListener("resize", resize);
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
+  const onCuring = () => {
+    if (!isLoading) {
+      viewer.loadFbx(setProgress);
+      setModelType('curing');
+    }
+  };
 
   return (
-    <div style={{ width: "100%" }}>
-      <p>おとひめ.vrm</p>
-      <a
-        href="https://3d.nicovideo.jp/works/td41391"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ wordWrap: "break-word" }}
-      >
-        https://3d.nicovideo.jp/works/td41391
-      </a>
-      <br />
-      <br />
+    <div className="viewer">
+      <div className="controller">
+        <button onClick={onOtohime} className={modelType === 'otohime' ? 'active' : ''}>おとひめ</button>
+        <button onClick={onCuring} className={modelType === 'curing' ? 'active' : ''}>うんちかーりんぐ</button>
+      </div>
+      {isLoading && <p>Now Loading {progress}%</p>}
+
+      {modelType === 'otohime' && (
+        <div className="description">
+          <p>おとひめ.vrm</p>
+          <a
+            href="https://3d.nicovideo.jp/works/td41391"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            3d.nicovideo.jp/works/td41391
+          </a>
+        </div>
+      )}
+
+      {modelType === 'curing' && (
+        <div className="description">
+          <p>うんちカーリング</p>
+          <a
+            href="https://omesis-shop.booth.pm/items/1269953"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            omesis-shop.booth.pm/items/1269953
+          </a>
+        </div>
+      )}
+
       <div ref={divRef} />
     </div>
   );
