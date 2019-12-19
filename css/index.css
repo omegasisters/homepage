@@ -235,9 +235,19 @@ figure.hero__bg {
     background: linear-gradient(to left, #de7072, #7995f7);
   }
 }
+
 .links a:hover {
   color: #06ffd2;
 }
+
+.links a.omesis_ray:hover {
+  color: #de7072;
+}
+
+.links a.omesis_rio:hover {
+  color: #7995f7;
+}
+
 .profiles {
   display: flex;
   justify-content: center;
