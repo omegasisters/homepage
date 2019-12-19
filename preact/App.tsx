@@ -55,7 +55,8 @@ const App: FunctionalComponent = () => {
         https://omesis-shop.booth.pm/items/1269953
       </a>
       <br />
-      <div style={{ display: "flex" }}>
+      <br />
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <button onClick={onOtohime}>おとひめ</button>
         <button onClick={onCuring}>うんちかーりんぐ</button>
       </div>
