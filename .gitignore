@@ -60,3 +60,7 @@ build-iPhoneSimulator/
 # End of https://www.gitignore.io/api/ruby
 
 node_modules
+
+#dot net 
+bin/
+obj/
