@@ -180,7 +180,7 @@
         <div class="box">
           <h2><i class="fas fa-envelope"></i>Contact</h2>
           <a
-            href="https://upd8.jp/contact_us/index.html"
+            href="https://upd8.jp/contact_us/index.html?sc=%E3%81%8A%E3%82%81%E3%81%8C%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA%20[%CE%A9%20Sisters]"
             target="_blank"
             rel="noopener noreferrer"
             >お問い合わせはこちらから</a
@@ -206,7 +206,11 @@
         <div id="preact"></div>
       </div>
 
-      <div id="top-to-unchan" class="c-unchan c-unchan--fixedBottom">
+      <div
+        id="top-to-unchan"
+        class="c-unchan c-unchan--fixedBottom"
+        title="トップに戻る"
+      >
         <div class="c-unchan__inner">
           <div class="c-unchan__tsuno">
             <div class="c-unchan__tsuno__inner"></div>
@@ -242,20 +246,12 @@
         type="text/javascript"
         src="./assets/js/ytplaylist.js"
         defer
+      ></script>
+      <script
+        type="text/javascript"
+        src="./assets/js/scroll-to-top.js"
+        defer
       ></script>      
-      <script>
-        document.getElementById(
-          "top-to-unchan"
-        ).onclick = function scroll2Top() {
-          if (document.scrollingElement.scrollTop < 10) {
-            document.scrollingElement.scrollTop = 0;
-          } else {
-            document.scrollingElement.scrollTop =
-              document.scrollingElement.scrollTop / 1.1;
-            setTimeout(scroll2Top, 10);
-          }
-        };
-      </script>
     </div>
   </body>
 </html>

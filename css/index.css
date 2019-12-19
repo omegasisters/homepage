@@ -132,7 +132,7 @@ figure.hero__bg {
 
 .playlist {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .playlist .videos {
   display: flex;
@@ -140,10 +140,18 @@ figure.hero__bg {
 }
 .videos .video-link {
   display: block;
-  margin: 10px;
+  margin: 0 10px;
 }
 .videos .video-link img {
   width: 400px;
+}
+.videos::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.videos::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 @media screen and (max-width: 700px) {
