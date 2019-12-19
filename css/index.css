@@ -158,7 +158,7 @@ figure.hero__bg {
 }
 
 .links {
-  padding: 230px 80px;
+  padding: 50px 80px 230px 80px;
   background: url(../images/omesis.png) top center no-repeat,
     linear-gradient(to left, #de7072, #7995f7);
   background-size: cover;
@@ -229,6 +229,28 @@ a.share-button:hover {
   color: white;
   box-shadow: 0 0 24px #00000050;
   background: linear-gradient(to left, #962c6a, #3b26b1);
+}
+.about-us {
+  margin: 0 auto;
+  max-width: 700px;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+.about-us .do-omega {
+  font-weight: bold;
+  margin-top: 1em;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+}
+
+.br-sp {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .br-sp {
+    display: inline;
+  }
 }
 
 /*
