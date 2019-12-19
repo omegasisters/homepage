@@ -36,7 +36,7 @@ yarn
 yarn start
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:4000/homepage を開いてください。VRM も見れるよ。
+サーバーが起動したら、次にブラウザーで http://localhost:5000/ を開いてください。
 
 `yarn dev`コマンドで Browser Sync サーバーを立ち上げることも出来ます。
 
@@ -80,3 +80,12 @@ dotnet run --project ./dotnet/
 ```
 yarn format
 ```
+
+## Tips: preact部分の開発方法
+プレビューする際には以下のコマンドを入力してください
+```
+yarn start
+```
+http://localhost:5000 にホストされます。
+
+ソースコードを編集する際には、git push する前に ```yarn build```してください

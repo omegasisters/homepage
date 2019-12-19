@@ -1,16 +1,19 @@
-// @ts-check
+import { FunctionalComponent, h } from "/web_modules/preact.js";
+import { useEffect, useRef } from "/web_modules/preact/hooks.js";
 
-const App = () => {
-  const divRef = React.useRef();
-  const rendererRef = React.useRef();
+declare const THREE: any;
 
-  React.useEffect(() => {
-    const div = divRef.current;
+const App: FunctionalComponent = () => {
+  const divRef = useRef<HTMLDivElement>();
+  const rendererRef = useRef<any>();
+
+  useEffect(() => {
+    const div = divRef.current!;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, 1.7, 0.1, 1000);
     camera.position.set(0, 1, -3);
-    const renderer = (rendererRef.current = new THREE.WebGLRenderer());
+    const renderer = ((rendererRef as any).current = new THREE.WebGLRenderer());
     resize();
     div.appendChild(renderer.domElement);
 
@@ -28,15 +31,15 @@ const App = () => {
 
     loader.load(
       "assets/blob/otohime.vrm",
-      gltf => {
+      (gltf: any) => {
         const mesh = gltf.scene;
         mesh.scale.set(1, 1, 1);
         scene.add(mesh);
       },
-      xhr => {
+      (xhr: any) => {
         console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
       },
-      error => {
+      (error: any) => {
         console.warn(error);
       }
     );
@@ -57,7 +60,7 @@ const App = () => {
     renderer.setSize(width, height);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", resize);
     return () => {
       window.removeEventListener("resize", resize);
@@ -82,4 +85,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("react"));
+export default App;

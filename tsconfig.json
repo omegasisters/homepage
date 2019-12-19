@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "outDir": "preact_build",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "paths": {
+      "/web_modules/*.js": [
+        "node_modules/@types/*",
+        "node_modules/*",
+        "public/web_modules/*"
+      ]
+    }
+  },
+  "include": ["preact"],
+  "exclude": ["node_modules"]
+}

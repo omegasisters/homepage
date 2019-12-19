@@ -203,7 +203,7 @@
             #おめシスはいいぞ
           </a>
         </div>
-        <div id="react"></div>
+        <div id="preact"></div>
       </div>
 
       <div id="top-to-unchan" class="c-unchan c-unchan--fixedBottom">
@@ -232,15 +232,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/loaders/GLTFLoader.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r110/examples/js/controls/OrbitControls.js"></script>
-      <script
-        crossorigin
-        src="https://unpkg.com/react@16/umd/react.production.min.js"
-      ></script>
-      <script
-        crossorigin
-        src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
-      ></script>
-      <script src="https://unpkg.com/babel-standalone@7.0.0-beta.3/babel.min.js"></script>
+      <script type="module" src="./preact_build/index.js"></script>
       <script
         type="text/javascript"
         src="./assets/js/lazyload.js"
@@ -250,8 +242,7 @@
         type="text/javascript"
         src="./assets/js/ytplaylist.js"
         defer
-      ></script>
-      <script type="text/babel" src="./assets/js/App.jsx" defer></script>
+      ></script>      
       <script>
         document.getElementById(
           "top-to-unchan"
