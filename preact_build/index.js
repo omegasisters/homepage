@@ -4,4 +4,3 @@ var appMount = document.querySelector("#preact");
 if (appMount)
     render(h(App, null), appMount);
 export default App;
-//# sourceMappingURL=index.js.map

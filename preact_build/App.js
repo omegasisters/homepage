@@ -55,4 +55,3 @@ var App = function () {
         h("div", { ref: divRef })));
 };
 export default App;
-//# sourceMappingURL=App.js.map
