@@ -9,19 +9,23 @@
     "build:esm": "rm -rf web_modules && pika-web --dest web_modules --optimize",
     "build:ts": "rm -rf preact_build && tsc",
     "build:ts:watch": "tsc -w",
-    "start": "npm run build && concurrently 'npm run build:ts:watch' 'serve -s ./'"
+    "start": "npm run build && concurrently 'npm run build:ts:watch' 'serve -s ./'",
+    "test": "jest"
   },
   "dependencies": {
     "preact": "^10.1.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "prettier": "^1.19.1",
-    "express": "^4.17.1",
     "@pika/web": "^0.6.1",
+    "@types/jest": "^24.0.24",
+    "browser-sync": "^2.26.7",
     "concurrently": "^5.0.0",
     "copyfiles": "^2.1.1",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
     "serve": "^11.2.0",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.6.3",
     "vfile-message": "^2.0.2"
   },
