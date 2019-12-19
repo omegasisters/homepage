@@ -18,7 +18,7 @@ const App: FunctionalComponent = () => {
 
   useEffect(() => {
     viewer.start(divRef.current!);
-    viewer.loadFbx(setProgress);
+    viewer.loadVrm(setProgress);
 
     window.addEventListener("resize", viewer.resize);
     return () => {
@@ -44,6 +44,15 @@ const App: FunctionalComponent = () => {
         style={{ wordWrap: "break-word" }}
       >
         https://3d.nicovideo.jp/works/td41391
+      </a>
+      <p>うんちカーリング</p>
+      <a
+        href="https://omesis-shop.booth.pm/items/1269953"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ wordWrap: "break-word" }}
+      >
+        https://omesis-shop.booth.pm/items/1269953
       </a>
       <br />
       <div style={{ display: "flex" }}>

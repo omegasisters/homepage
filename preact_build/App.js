@@ -9,7 +9,7 @@ var App = function () {
     var viewer = viewerRef.current;
     useEffect(function () {
         viewer.start(divRef.current);
-        viewer.loadFbx(setProgress);
+        viewer.loadVrm(setProgress);
         window.addEventListener("resize", viewer.resize);
         return function () {
             window.removeEventListener("resize", viewer.resize);
@@ -26,6 +26,8 @@ var App = function () {
     return (h("div", { style: { width: "100%" } },
         h("p", null, "\u304A\u3068\u3072\u3081.vrm"),
         h("a", { href: "https://3d.nicovideo.jp/works/td41391", target: "_blank", rel: "noopener noreferrer", style: { wordWrap: "break-word" } }, "https://3d.nicovideo.jp/works/td41391"),
+        h("p", null, "\u3046\u3093\u3061\u30AB\u30FC\u30EA\u30F3\u30B0"),
+        h("a", { href: "https://omesis-shop.booth.pm/items/1269953", target: "_blank", rel: "noopener noreferrer", style: { wordWrap: "break-word" } }, "https://omesis-shop.booth.pm/items/1269953"),
         h("br", null),
         h("div", { style: { display: "flex" } },
             h("button", { onClick: onOtohime }, "\u304A\u3068\u3072\u3081"),
