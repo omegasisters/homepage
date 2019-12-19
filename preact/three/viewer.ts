@@ -33,57 +33,61 @@ export default class ThreeViewer {
     render();
   };
 
-  loadVrm = (progress: (progress: number) => void) => {
-    if (this.model) {
-      this.scene.remove(this.model);
-      this.model = undefined;
-    }
-    const loader = new THREE.GLTFLoader();
-
-    loader.load(
-      "assets/blob/otohime.vrm",
-      (gltf: any) => {
-        const mesh = (this.model = gltf.scene);
-        mesh.scale.set(1, 1, 1);
-        this.scene.add(mesh);
-      },
-      (xhr: any) => {
-        const now = (xhr.loaded / xhr.total) * 100;
-        progress(now);
-        console.log(now + "% loaded");
-      },
-      (error: any) => {
-        console.warn(error);
+  loadVrm = (progress: (progress: number) => void) =>
+    new Promise(r => {
+      if (this.model) {
+        this.scene.remove(this.model);
+        this.model = undefined;
       }
-    );
-  };
+      const loader = new THREE.GLTFLoader();
 
-  loadFbx = (progress: (progress: number) => void) => {
-    if (this.model) {
-      this.scene.remove(this.model);
-      this.model = undefined;
-    }
-    var loader = new THREE.FBXLoader();
-    loader.load(
-      "assets/blob/unchi_curling.fbx",
-      (object: any) => {
-        this.model = object;
-        object.traverse((child: any) => {
-          if (child.isMesh) {
-            child.castShadow = true;
-            child.receiveShadow = true;
-          }
-        });
+      loader.load(
+        "assets/blob/otohime.vrm",
+        (gltf: any) => {
+          const mesh = (this.model = gltf.scene);
+          mesh.scale.set(1, 1, 1);
+          this.scene.add(mesh);
+          r();
+        },
+        (xhr: any) => {
+          const now = (xhr.loaded / xhr.total) * 100;
+          progress(now);
+          console.log(now + "% loaded");
+        },
+        (error: any) => {
+          console.warn(error);
+        }
+      );
+    });
 
-        this.scene.add(object);
-      },
-      (xhr: any) => {
-        const now = (xhr.loaded / xhr.total) * 100;
-        progress(now);
-        console.log(now + "% loaded");
+  loadFbx = (progress: (progress: number) => void) =>
+    new Promise(r => {
+      if (this.model) {
+        this.scene.remove(this.model);
+        this.model = undefined;
       }
-    );
-  };
+      var loader = new THREE.FBXLoader();
+      loader.load(
+        "assets/blob/unchi_curling.fbx",
+        (object: any) => {
+          this.model = object;
+          object.traverse((child: any) => {
+            if (child.isMesh) {
+              child.castShadow = true;
+              child.receiveShadow = true;
+            }
+          });
+
+          this.scene.add(object);
+          r();
+        },
+        (xhr: any) => {
+          const now = (xhr.loaded / xhr.total) * 100;
+          progress(now);
+          console.log(now + "% loaded");
+        }
+      );
+    });
 
   resize = () => {
     const renderer = this.render;

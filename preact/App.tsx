@@ -8,30 +8,44 @@ import {
 import ThreeViewer from "./three/viewer.js";
 
 const App: FunctionalComponent = () => {
+  const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-
-  const isLoading = progress > 0 && progress < 100;
 
   const divRef = useRef<HTMLDivElement>();
   const viewerRef = useRef(new ThreeViewer());
   const viewer = viewerRef.current;
 
   useEffect(() => {
-    viewer.start(divRef.current!);
-    viewer.loadVrm(setProgress);
+    const promise = async () => {
+      setLoading(true);
+      await viewer.loadVrm(setProgress);
+      setLoading(false);
+    };
 
+    viewer.start(divRef.current!);
+    promise();
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("resize", viewer.resize);
+
     return () => {
       window.removeEventListener("resize", viewer.resize);
     };
   }, []);
 
-  const onOtohime = () => {
-    if (!isLoading) viewer.loadVrm(setProgress);
+  const onOtohime = async () => {
+    if (loading) return;
+    setLoading(true);
+    await viewer.loadVrm(setProgress);
+    setLoading(false);
   };
 
-  const onCuring = () => {
-    if (!isLoading) viewer.loadFbx(setProgress);
+  const onCuring = async () => {
+    if (loading) return;
+    setLoading(true);
+    await viewer.loadFbx(setProgress);
+    setLoading(false);
   };
 
   return (
@@ -60,7 +74,7 @@ const App: FunctionalComponent = () => {
         <button onClick={onOtohime}>おとひめ</button>
         <button onClick={onCuring}>うんちかーりんぐ</button>
       </div>
-      {isLoading && <p>Now Loading {progress}%</p>}
+      {loading && <p>Now Loading {progress}%</p>}
       <div ref={divRef} />
     </div>
   );

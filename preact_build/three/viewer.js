@@ -23,42 +23,48 @@ var ThreeViewer = /** @class */ (function () {
             render();
         };
         this.loadVrm = function (progress) {
-            if (_this.model) {
-                _this.scene.remove(_this.model);
-                _this.model = undefined;
-            }
-            var loader = new THREE.GLTFLoader();
-            loader.load("assets/blob/otohime.vrm", function (gltf) {
-                var mesh = (_this.model = gltf.scene);
-                mesh.scale.set(1, 1, 1);
-                _this.scene.add(mesh);
-            }, function (xhr) {
-                var now = (xhr.loaded / xhr.total) * 100;
-                progress(now);
-                console.log(now + "% loaded");
-            }, function (error) {
-                console.warn(error);
+            return new Promise(function (r) {
+                if (_this.model) {
+                    _this.scene.remove(_this.model);
+                    _this.model = undefined;
+                }
+                var loader = new THREE.GLTFLoader();
+                loader.load("assets/blob/otohime.vrm", function (gltf) {
+                    var mesh = (_this.model = gltf.scene);
+                    mesh.scale.set(1, 1, 1);
+                    _this.scene.add(mesh);
+                    r();
+                }, function (xhr) {
+                    var now = (xhr.loaded / xhr.total) * 100;
+                    progress(now);
+                    console.log(now + "% loaded");
+                }, function (error) {
+                    console.warn(error);
+                });
             });
         };
         this.loadFbx = function (progress) {
-            if (_this.model) {
-                _this.scene.remove(_this.model);
-                _this.model = undefined;
-            }
-            var loader = new THREE.FBXLoader();
-            loader.load("assets/blob/unchi_curling.fbx", function (object) {
-                _this.model = object;
-                object.traverse(function (child) {
-                    if (child.isMesh) {
-                        child.castShadow = true;
-                        child.receiveShadow = true;
-                    }
+            return new Promise(function (r) {
+                if (_this.model) {
+                    _this.scene.remove(_this.model);
+                    _this.model = undefined;
+                }
+                var loader = new THREE.FBXLoader();
+                loader.load("assets/blob/unchi_curling.fbx", function (object) {
+                    _this.model = object;
+                    object.traverse(function (child) {
+                        if (child.isMesh) {
+                            child.castShadow = true;
+                            child.receiveShadow = true;
+                        }
+                    });
+                    _this.scene.add(object);
+                    r();
+                }, function (xhr) {
+                    var now = (xhr.loaded / xhr.total) * 100;
+                    progress(now);
+                    console.log(now + "% loaded");
                 });
-                _this.scene.add(object);
-            }, function (xhr) {
-                var now = (xhr.loaded / xhr.total) * 100;
-                progress(now);
-                console.log(now + "% loaded");
             });
         };
         this.resize = function () {
