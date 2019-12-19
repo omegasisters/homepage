@@ -9,6 +9,7 @@ import ThreeViewer from "./three/viewer.js";
 
 const App: FunctionalComponent = () => {
   const [progress, setProgress] = useState(0);
+  const [modelType, setModelType] = useState('otohime');
 
   const isLoading = progress > 0 && progress < 100;
 
@@ -27,40 +28,53 @@ const App: FunctionalComponent = () => {
   }, []);
 
   const onOtohime = () => {
-    if (!isLoading) viewer.loadVrm(setProgress);
+    if (!isLoading) {
+      viewer.loadVrm(setProgress);
+      setModelType('otohime');
+    }
   };
 
   const onCuring = () => {
-    if (!isLoading) viewer.loadFbx(setProgress);
+    if (!isLoading) {
+      viewer.loadFbx(setProgress);
+      setModelType('curing');
+    }
   };
 
   return (
-    <div style={{ width: "100%" }}>
-      <p>おとひめ.vrm</p>
-      <a
-        href="https://3d.nicovideo.jp/works/td41391"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ wordWrap: "break-word" }}
-      >
-        https://3d.nicovideo.jp/works/td41391
-      </a>
-      <p>うんちカーリング</p>
-      <a
-        href="https://omesis-shop.booth.pm/items/1269953"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ wordWrap: "break-word" }}
-      >
-        https://omesis-shop.booth.pm/items/1269953
-      </a>
-      <br />
-      <br />
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <button onClick={onOtohime}>おとひめ</button>
-        <button onClick={onCuring}>うんちかーりんぐ</button>
+    <div className="viewer">
+      <div className="controller">
+        <button onClick={onOtohime} className={modelType === 'otohime' ? 'active' : ''}>おとひめ</button>
+        <button onClick={onCuring} className={modelType === 'curing' ? 'active' : ''}>うんちかーりんぐ</button>
       </div>
       {isLoading && <p>Now Loading {progress}%</p>}
+
+      {modelType === 'otohime' && (
+        <div className="description">
+          <p>おとひめ.vrm</p>
+          <a
+            href="https://3d.nicovideo.jp/works/td41391"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            3d.nicovideo.jp/works/td41391
+          </a>
+        </div>
+      )}
+
+      {modelType === 'curing' && (
+        <div className="description">
+          <p>うんちカーリング</p>
+          <a
+            href="https://omesis-shop.booth.pm/items/1269953"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            omesis-shop.booth.pm/items/1269953
+          </a>
+        </div>
+      )}
+
       <div ref={divRef} />
     </div>
   );
