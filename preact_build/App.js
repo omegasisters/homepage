@@ -1,6 +1,6 @@
-import { useEffect, useRef } from "../web_modules/preact/hooks.js";
+import { useEffect, useRef } from "./web_modules/preact/hooks.js";
 
-import { h } from "../web_modules/preact.js";
+import { h } from "./web_modules/preact.js";
 
 var App = function() {
   var divRef = useRef();
