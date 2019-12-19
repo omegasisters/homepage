@@ -8,10 +8,9 @@ import {
 import ThreeViewer from "./three/viewer.js";
 
 const App: FunctionalComponent = () => {
+  const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [modelType, setModelType] = useState('otohime');
-
-  const isLoading = progress > 0 && progress < 100;
+  const [modelType, setModelType] = useState<"otohime" | "curing">("otohime");
 
   const divRef = useRef<HTMLDivElement>();
   const viewerRef = useRef(new ThreeViewer());
@@ -19,37 +18,50 @@ const App: FunctionalComponent = () => {
 
   useEffect(() => {
     viewer.start(divRef.current!);
-    viewer.loadVrm(setProgress);
+    onOtohime();
+  }, []);
 
+  useEffect(() => {
     window.addEventListener("resize", viewer.resize);
     return () => {
       window.removeEventListener("resize", viewer.resize);
     };
   }, []);
 
-  const onOtohime = () => {
-    if (!isLoading) {
-      viewer.loadVrm(setProgress);
-      setModelType('otohime');
-    }
+  const onOtohime = async () => {
+    if (loading) return;
+    setModelType("otohime");
+    setLoading(true);
+    await viewer.loadVrm(setProgress);
+    setLoading(false);
   };
 
-  const onCuring = () => {
-    if (!isLoading) {
-      viewer.loadFbx(setProgress);
-      setModelType('curing');
-    }
+  const onCuring = async () => {
+    if (loading) return;
+    setModelType("curing");
+    setLoading(true);
+    await viewer.loadFbx(setProgress);
+    setLoading(false);
   };
 
   return (
     <div className="viewer">
       <div className="controller">
-        <button onClick={onOtohime} className={modelType === 'otohime' ? 'active' : ''}>おとひめ</button>
-        <button onClick={onCuring} className={modelType === 'curing' ? 'active' : ''}>うんちかーりんぐ</button>
+        <button
+          onClick={onOtohime}
+          className={modelType === "otohime" ? "active" : ""}
+        >
+          おとひめ
+        </button>
+        <button
+          onClick={onCuring}
+          className={modelType === "curing" ? "active" : ""}
+        >
+          うんちかーりんぐ
+        </button>
       </div>
-      {isLoading && <p>Now Loading {progress}%</p>}
-
-      {modelType === 'otohime' && (
+      {loading && <p>Now Loading {progress}%</p>}
+      {modelType === "otohime" && (
         <div className="description">
           <p>おとひめ.vrm</p>
           <a
@@ -62,7 +74,7 @@ const App: FunctionalComponent = () => {
         </div>
       )}
 
-      {modelType === 'curing' && (
+      {modelType === "curing" && (
         <div className="description">
           <p>うんちカーリング</p>
           <a
