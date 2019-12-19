@@ -6,7 +6,9 @@ https://omegasisters.github.io/homepage
 
 プルリク待ってます！！！！
 
-## Tips: ローカルプレビュー
+# Tips
+
+## ローカルプレビュー
 
 VRM モデルも含めて完全な状態でプレビューしたい場合は以下の方法を試してください。
 
@@ -25,7 +27,7 @@ python3 -m http.server
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。これで GitHub Pages で公開された時と同じ状態で開発することが出来ます。
 
-## Tips: ローカルプレビュー(Docker 編)
+### Docker 編
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -36,7 +38,7 @@ docker run -p 5000:5000 omegasisters-homepage
 
 サーバーが起動したら、次にブラウザーで http://localhost:5000/ を開いてください。
 
-## Tips: ローカルプレビュー(Node.js 編)
+### Node.js 編
 
 [こちら](https://nodejs.org/ja/download/)から Node.js をインストールします。
 [yarn](https://yarnpkg.com/) を使用する場合はそちらもインストールしてください。
@@ -59,7 +61,7 @@ yarn dev # yarn の場合
 npm run dev # npm の場合
 ```
 
-## Tips: ローカルプレビュー(PHP 編)
+### PHP 編
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -71,7 +73,7 @@ php -S 0.0.0.0:8000 -t ../
 同じローカルネットワークであればホストの IP アドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
 サーバーは ctrl+c で停止できます。
 
-## Tips: ローカルプレビュー(Elixir 編)
+### Elixir 編
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -80,7 +82,7 @@ elixir --no-halt --app inets -e ":inets.start(:httpd,[{:server_name,'localhost'}
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。
 
-## Tips: ローカルプレビュー(.NET Core 編)
+### .NET Core 編
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -90,14 +92,14 @@ dotnet run --project ./dotnet/
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。
 
-## Tips: コード整形(Node.js 環境必須)
+## コード整形(Node.js 環境必須)
 
 ```
 yarn format # yarn の場合
 npm run format # npm の場合
 ```
 
-## Tips: preact 部分の開発方法 (Node.js)
+## preact 部分の開発方法 (Node.js)
 
 プレビューする際には以下のコマンドのどちらかを入力してください:
 
@@ -115,7 +117,7 @@ yarn build # yarn の場合
 npm run build # npm の場合
 ```
 
-## Tips: テストする (Node.js)
+## テストする (Node.js)
 
 以下のコマンドでテストができます。
 
