@@ -8,7 +8,7 @@
     "build": "npm run pika:prd && npm run pika:dev && npm run ts",
     "pika:prd": "pika-web --dest web_modules --optimize",
     "pika:dev": "rm -rf homepage && mkdir -p homepage && cp -r web_modules homepage/web_modules",
-    "ts": "tsc",
+    "ts": "rm -rf preact_build && tsc",
     "ts:watch": "tsc -w",
     "start": "npm run build && concurrently 'npm run ts:watch' 'serve -s ./'",
     "test": "jest"
