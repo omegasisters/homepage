@@ -10,43 +10,38 @@ import ThreeViewer from "./three/viewer.js";
 const App: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [modelType, setModelType] = useState("otohime");
+  const [modelType, setModelType] = useState<"otohime" | "curing">("otohime");
 
   const divRef = useRef<HTMLDivElement>();
   const viewerRef = useRef(new ThreeViewer());
   const viewer = viewerRef.current;
 
   useEffect(() => {
-    const promise = async () => {
-      setLoading(true);
-      await viewer.loadVrm(setProgress);
-      setLoading(false);
-    };
-
     viewer.start(divRef.current!);
-    promise();
+    onOtohime();
   }, []);
 
   useEffect(() => {
     window.addEventListener("resize", viewer.resize);
-
     return () => {
       window.removeEventListener("resize", viewer.resize);
     };
   }, []);
 
-  const onOtohime = () => {
-    if (!isLoading) {
-      viewer.loadVrm(setProgress);
-      setModelType("otohime");
-    }
+  const onOtohime = async () => {
+    if (loading) return;
+    setModelType("otohime");
+    setLoading(true);
+    await viewer.loadVrm(setProgress);
+    setLoading(false);
   };
 
-  const onCuring = () => {
-    if (!isLoading) {
-      viewer.loadFbx(setProgress);
-      setModelType("curing");
-    }
+  const onCuring = async () => {
+    if (loading) return;
+    setModelType("curing");
+    setLoading(true);
+    await viewer.loadFbx(setProgress);
+    setLoading(false);
   };
 
   return (
@@ -65,8 +60,7 @@ const App: FunctionalComponent = () => {
           うんちかーりんぐ
         </button>
       </div>
-      {isLoading && <p>Now Loading {progress}%</p>}
-
+      {loading && <p>Now Loading {progress}%</p>}
       {modelType === "otohime" && (
         <div className="description">
           <p>おとひめ.vrm</p>
