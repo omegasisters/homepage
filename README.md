@@ -28,20 +28,24 @@ python3 -m http.server
 ## Tips: ローカルプレビュー(Node.js 編)
 
 [こちら](https://nodejs.org/ja/download/)から Node.js をインストールします。
+[yarn](https://yarnpkg.com/) を使用する場合はそちらもインストールしてください。
 
 ```
 git clone https://github.com/omegasisters/homepage.git
 cd homepage
-yarn
-yarn start
+
+# 次のいずれかを実行
+yarn && yarn start # yarn の場合
+npm install && npm run start # npm の場合
 ```
 
 サーバーが起動したら、次にブラウザーで http://localhost:5000/ を開いてください。
 
-`yarn dev`コマンドで Browser Sync サーバーを立ち上げることも出来ます。
+次のコマンドで Browser Sync サーバーを立ち上げることも出来ます。
 
 ```
-yarn dev
+yarn dev # yarn の場合
+npm run dev # npm の場合
 ```
 
 ## Tips: ローカルプレビュー(PHP 編)
@@ -78,7 +82,8 @@ dotnet run --project ./dotnet/
 ## Tips: コード整形(Node.js 環境必須)
 
 ```
-yarn format
+yarn format # yarn の場合
+npm run format # npm の場合
 ```
 
 ## Tips: preact 部分の開発方法 (Node.js)
