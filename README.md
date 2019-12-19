@@ -65,7 +65,7 @@ elixir --no-halt --app inets -e ":inets.start(:httpd,[{:server_name,'localhost'}
 
 サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。
 
-## Tips: ローカルプレビュー(dotnet 編)
+## Tips: ローカルプレビュー(.NET Core 編)
 
 ```
 git clone https://github.com/omegasisters/homepage.git
