@@ -86,6 +86,10 @@ yarn format
 ```
 yarn start
 ```
+or
+```
+npm run start
+```
 http://localhost:5000 にホストされます。
 
-ソースコードを編集する際には、git push する前に ```yarn build```してください
+ソースコードを編集する際には、git push する前に ```yarn build``` ***or*** ```npm  run build```してください
