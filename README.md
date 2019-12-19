@@ -93,3 +93,16 @@ npm run start
 http://localhost:5000 にホストされます。
 
 ソースコードを編集する際には、git push する前に ```yarn build``` ***or*** ```npm  run build```してください
+
+## Tips: テストする
+以下のコマンドでテストができます
+```
+yarn test
+```
+or
+```
+npm run test
+```
+
+`__tests__`, `preact` にサンプルテストケースがあります。
+
