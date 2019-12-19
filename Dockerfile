@@ -1,4 +1,4 @@
 FROM node:alpine
 COPY . /
 RUN yarn
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["yarn", "start:docker"]
