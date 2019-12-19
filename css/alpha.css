@@ -1,0 +1,23 @@
+.hero__inner__bg {
+  width: 100%;
+  height: 100%;
+  background: url(../images/alpha/background.jpg) center no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.links {
+  padding: 50px 80px 30px 80px;
+  background: url(../images/alpha/albro.png) top center no-repeat,
+    linear-gradient(to left, #de7072, #7995f7);
+  background-size: cover;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.about-us {
+  margin: 0 auto;
+  max-width: 700px;
+  border: none;
+}

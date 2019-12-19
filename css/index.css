@@ -166,7 +166,7 @@ figure.hero__bg {
 }
 
 .links {
-  padding: 50px 80px 230px 80px;
+  padding: 50px 80px 30px 80px;
   background: url(../images/omesis.png) top center no-repeat,
     linear-gradient(to left, #de7072, #7995f7);
   background-size: cover;
@@ -259,6 +259,14 @@ a.share-button:hover {
   .br-sp {
     display: inline;
   }
+}
+
+.c-alpha {
+  margin-top: 200px;
+  font-size: 0.1rem;
+}
+.c-alpha .c-alpha__link {
+  text-decoration: none;
 }
 
 /*
