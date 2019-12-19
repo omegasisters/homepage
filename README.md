@@ -28,20 +28,24 @@ python3 -m http.server
 ## Tips: ローカルプレビュー(Node.js 編)
 
 [こちら](https://nodejs.org/ja/download/)から Node.js をインストールします。
+[yarn](https://yarnpkg.com/) を使用する場合はそちらもインストールしてください。
 
 ```
 git clone https://github.com/omegasisters/homepage.git
 cd homepage
-yarn
-yarn start
+
+# 次のいずれかを実行
+yarn && yarn start # yarn の場合
+npm install && npm run start # npm の場合
 ```
 
 サーバーが起動したら、次にブラウザーで http://localhost:5000/ を開いてください。
 
-`yarn dev`コマンドで Browser Sync サーバーを立ち上げることも出来ます。
+次のコマンドで Browser Sync サーバーを立ち上げることも出来ます。
 
 ```
-yarn dev
+yarn dev # yarn の場合
+npm run dev # npm の場合
 ```
 
 ## Tips: ローカルプレビュー(PHP 編)
@@ -78,31 +82,35 @@ dotnet run --project ./dotnet/
 ## Tips: コード整形(Node.js 環境必須)
 
 ```
-yarn format
+yarn format # yarn の場合
+npm run format # npm の場合
 ```
 
-## Tips: preact部分の開発方法
-プレビューする際には以下のコマンドを入力してください
+## Tips: preact 部分の開発方法 (Node.js)
+
+プレビューする際には以下のコマンドのどちらかを入力してください:
+
 ```
-yarn start
+yarn start # yarn の場合
+npm run start # npm の場合
 ```
-or
-```
-npm run start
-```
+
 http://localhost:5000 にホストされます。
 
-ソースコードを編集する際には、git push する前に ```yarn build``` ***or*** ```npm  run build```してください
+ソースコードを編集する際には、git push する前にビルドを行ってください:
 
-## Tips: テストする
-以下のコマンドでテストができます
 ```
-yarn test
+yarn build # yarn の場合
+npm run build # npm の場合
 ```
-or
+
+## Tips: テストする (Node.js)
+
+以下のコマンドでテストができます。
+
 ```
-npm run test
+yarn test # yarn の場合
+npm run test # npm の場合
 ```
 
 `__tests__`, `preact` にサンプルテストケースがあります。
-
