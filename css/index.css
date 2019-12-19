@@ -155,7 +155,9 @@ figure.hero__bg {
     background: linear-gradient(to left, #de7072, #7995f7);
   }
 }
-
+.links a:hover {
+  color: #06ffd2;
+}
 .profiles {
   display: flex;
   justify-content: center;
@@ -207,8 +209,10 @@ figure.hero__bg {
   text-decoration: none;
   transition: box-shadow 0.25s;
 }
-.share-button:hover {
+a.share-button:hover {
+  color: white;
   box-shadow: 0 0 24px #00000050;
+  background: linear-gradient(to left, #962c6a, #3b26b1);
 }
 
 /*
