@@ -81,15 +81,20 @@ dotnet run --project ./dotnet/
 yarn format
 ```
 
-## Tips: preact部分の開発方法
+## Tips: preact 部分の開発方法
+
 プレビューする際には以下のコマンドを入力してください
+
 ```
 yarn start
 ```
+
 or
+
 ```
 npm run start
 ```
+
 http://localhost:5000 にホストされます。
 
-ソースコードを編集する際には、git push する前に ```yarn build``` ***or*** ```npm  run build```してください
+ソースコードを編集する際には、git push する前に `yarn build` **_or_** `npm run build`してください
