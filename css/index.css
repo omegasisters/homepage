@@ -29,7 +29,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   .box {
-    padding: 20px;
+    padding: 20px 0;
   }
 }
 
@@ -114,58 +114,56 @@ figure.hero__bg {
 }
 
 @keyframes omega-noise {
-0%{
-  transform: translate3d(calc(-1 * 10px),0,0) scale3d(-1,-1,1);
-  -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-  clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-}
+  0% {
+    transform: translate3d(calc(-1 * 10px), 0, 0) scale3d(-1, -1, 1);
+    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+  }
 
-2%{
-  -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-  clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-}
+  2% {
+    -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+  }
 
-4%{
-  -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-  clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-}
+  4% {
+    -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+  }
 
-5%{
-  -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-  clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-}
+  5% {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+  }
 
-6%{
-  -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-  clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-}
+  6% {
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+  }
 
-7%{
-  -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-  clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-}
+  7% {
+    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+  }
 
-8%{
-  -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-  clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-}
+  8% {
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  }
 
-9%{
-  -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-  clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-}
+  9% {
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+  }
 
-9.9%{
-  transform: translate3d(calc(-1 * 10px),0,0) scale3d(-1,-1,1);
-
-}
-10%, 100%{
-  transform: translate3d(0,0,0) scale3d(1,1,1);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-
+  9.9% {
+    transform: translate3d(calc(-1 * 10px), 0, 0) scale3d(-1, -1, 1);
+  }
+  10%,
+  100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .introduction {
@@ -295,9 +293,10 @@ figure.hero__bg {
   background: linear-gradient(to left, #3b26b1, #962c6a);
   border-radius: 24px;
   box-shadow: 0 0 8px #00000050;
-  padding: 16px 24px;
+  padding: 10px 24px;
   text-decoration: none;
   transition: box-shadow 0.25s;
+  display: inline-block;
 }
 a.share-button:hover {
   color: white;
@@ -383,7 +382,7 @@ a.share-button:hover {
   height: 100px;
   line-height: 100px;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
   background: #70a6ff;

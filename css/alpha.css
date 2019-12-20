@@ -7,13 +7,30 @@
   filter: blur(5px);
 }
 
+@media screen and (max-width: 728px) and (min-width: 701px) {
+  .hero .logo {
+    font-size: 100px;
+  }
+
+  .hero .logo-sub {
+    margin-top: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .hero .logo {
+    font-size: 50px;
+  }
+
+  .hero .logo-sub {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+}
+
 .links {
-  padding: 50px 80px 30px 80px;
   background: url(../images/alpha/albro.png) top center no-repeat,
     linear-gradient(to left, #de7072, #7995f7);
-  background-size: cover;
-  text-align: center;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .about-us {
