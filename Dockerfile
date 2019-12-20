@@ -1,4 +1,7 @@
 FROM node:alpine
-COPY . /
+
+WORKDIR /omegasisters-webpage
+ADD . /omegasisters-webpage
+
 RUN yarn
 ENTRYPOINT ["yarn", "start:docker"]
