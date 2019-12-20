@@ -11,6 +11,9 @@ https://omegasisters.github.io/homepage
 ## ローカルプレビュー
 
 VRM モデルも含めて完全な状態でプレビューしたい場合は以下の方法を試してください。
+GitHub Pages で公開された時と同じ状態で開発することが出来ます。
+
+### Python 編
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -25,7 +28,7 @@ git clone https://github.com/omegasisters/homepage.git
 python3 -m http.server
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。これで GitHub Pages で公開された時と同じ状態で開発することが出来ます。
+サーバーが起動したら、次にブラウザーで http://localhost:8000/homepage/ を開いてください。
 
 ### Docker 編
 
