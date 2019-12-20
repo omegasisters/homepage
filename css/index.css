@@ -71,12 +71,14 @@ figure.hero__bg {
   filter: blur(5px);
 }
 
-.hero .hero__logo {
+.hero .hero__logo,
+.guide_for_scroll {
   opacity: 0;
   animation: logo 1s ease 1s forwards;
 }
 
-.hero .logo {
+.hero .logo,
+.guide_for_scroll {
   margin: 0;
   padding: 0;
   font-size: 140px;
@@ -90,6 +92,15 @@ figure.hero__bg {
   font-size: 30px;
   letter-spacing: 6px;
   text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+}
+.guide_for_scroll{
+  position: absolute;
+  top: 85vh;
+}
+.guide_for_scroll i {
+  font-size: 5rem;
+  font-weight: bold;
+  animation: shake 0.5s ease infinite alternate;
 }
 @media screen and (max-width: 700px) {
   .hero .logo {
@@ -165,7 +176,10 @@ figure.hero__bg {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 }
-
+@keyframes shake {
+  0% {transform: translateY(-5px);}
+  10%{transform: translateY(0px);}
+}
 .introduction {
   display: flex;
   flex-direction: column;
