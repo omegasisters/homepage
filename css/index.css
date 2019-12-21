@@ -93,7 +93,7 @@ figure.hero__bg {
   letter-spacing: 6px;
   text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
 }
-.guide_for_scroll{
+.guide_for_scroll {
   position: absolute;
   top: 85vh;
 }
@@ -177,8 +177,12 @@ figure.hero__bg {
   }
 }
 @keyframes shake {
-  0% {transform: translateY(-5px);}
-  10%{transform: translateY(0px);}
+  0% {
+    transform: translateY(-5px);
+  }
+  10% {
+    transform: translateY(0px);
+  }
 }
 .introduction {
   display: flex;
@@ -266,12 +270,6 @@ figure.hero__bg {
   margin-top: 10px;
   text-align: center;
 }
-@media screen and (max-width: 700px) {
-  .profiles {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 .profiles a.profile {
   display: block;
   text-decoration: none;
@@ -280,14 +278,6 @@ figure.hero__bg {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   text-align: center;
-}
-@media screen and (max-width: 700px) {
-  .profiles a.profile {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 .profiles .profile .image {
   text-align: center;
@@ -300,7 +290,25 @@ figure.hero__bg {
   align-self: center;
   border-radius: 100%;
   width: 120px;
-  height: 120px;
+  max-width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .profiles {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .profiles a.profile {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profiles .profile .image {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
 }
 
 .share-button {
