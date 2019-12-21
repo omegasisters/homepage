@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background: black;
+}
+
 html,
 body {
   width: 100%;
@@ -49,15 +53,10 @@ a {
   color: white;
 }
 
-/* 背景画像にblurをかける */
 figure.hero__bg {
-  width: calc(100vw + 15px);
-  height: calc(100vh + 15px);
+  width: 100%;
+  height: 100%;
   position: fixed;
-  left: -7.5px;
-  right: 0;
-  top: -7.5px;
-  bottom: 0;
   overflow: hidden;
   z-index: -1;
 }
@@ -65,16 +64,17 @@ figure.hero__bg {
 .hero__inner__bg {
   width: 100%;
   height: 100%;
-  background: url(../images/background.gif) center no-repeat;
-  background-size: cover;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  object-fit: cover;
 }
 
 .hero .hero__logo,
 .guide_for_scroll {
   opacity: 0;
   animation: logo 1s ease 1s forwards;
+}
+
+.hero__logo {
+  margin-top: -30vh;
 }
 
 .hero .logo,
@@ -104,11 +104,12 @@ figure.hero__bg {
 }
 @media screen and (max-width: 700px) {
   .hero .logo {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   .hero .logo-sub {
     margin-top: 1.5rem;
+    font-size: 25px;
   }
 }
 
