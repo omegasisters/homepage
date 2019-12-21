@@ -349,6 +349,19 @@ a.share-button:hover {
   }
 }
 
+.exotic {
+  background: radial-gradient(
+      circle at top,
+      rgba(0, 0, 0, 0),
+      #222 50%,
+      #8f8fff 75%,
+      rgba(0, 0, 0, 0) 75%
+    ),
+    radial-gradient(circle at bottom, #222, #222 50%, #de7072 75%, #222 75%);
+  padding-top: 10vh;
+  text-align: center;
+}
+
 .viewer {
   width: 100%;
 }
@@ -364,6 +377,7 @@ a.share-button:hover {
   background: transparent;
   border: rgba(0, 0, 0, 0.5) 1px solid;
   color: white;
+  border-radius: 2px;
 }
 .viewer .controller button:hover,
 .viewer .controller button.active {
@@ -372,6 +386,7 @@ a.share-button:hover {
 .viewer .controller button.active {
   background: #06ffd2;
   color: black;
+  border: none;
 }
 .viewer .description {
   margin: 5px 0;
