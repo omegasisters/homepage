@@ -61,7 +61,6 @@ build-iPhoneSimulator/
 
 #Node.js
 node_modules
-# *.map
 # homepage
 
 #dot net
