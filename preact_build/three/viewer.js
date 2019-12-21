@@ -1,3 +1,7 @@
+import * as THREE from "/homepage/web_modules/three.js";
+import { FBXLoader } from "/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js";
+import { GLTFLoader } from "/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "/homepage/web_modules/three/examples/jsm/controls/OrbitControls.js";
 var ThreeViewer = /** @class */ (function () {
     function ThreeViewer() {
         var _this = this;
@@ -8,7 +12,7 @@ var ThreeViewer = /** @class */ (function () {
             var renderer = (_this.render = new THREE.WebGLRenderer());
             _this.resize();
             div.appendChild(renderer.domElement);
-            var controls = new THREE.OrbitControls(camera, renderer.domElement);
+            var controls = new OrbitControls(camera, renderer.domElement);
             controls.target.set(0, 1, 0);
             controls.update();
             renderer.setClearColor(0x00ffff, 1);
@@ -28,7 +32,7 @@ var ThreeViewer = /** @class */ (function () {
                     _this.scene.remove(_this.model);
                     _this.model = undefined;
                 }
-                var loader = new THREE.GLTFLoader();
+                var loader = new GLTFLoader();
                 loader.load("assets/blob/otohime.vrm", function (gltf) {
                     var mesh = (_this.model = gltf.scene);
                     mesh.scale.set(1, 1, 1);
@@ -49,7 +53,7 @@ var ThreeViewer = /** @class */ (function () {
                     _this.scene.remove(_this.model);
                     _this.model = undefined;
                 }
-                var loader = new THREE.FBXLoader();
+                var loader = new FBXLoader();
                 loader.load("assets/blob/unchi_curling.fbx", function (object) {
                     _this.model = object;
                     object.traverse(function (child) {

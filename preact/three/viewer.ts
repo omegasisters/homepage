@@ -1,4 +1,8 @@
-declare const THREE: any;
+import * as THREE from "/homepage/web_modules/three.js";
+
+import { FBXLoader } from "/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js";
+import { GLTFLoader } from "/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "/homepage/web_modules/three/examples/jsm/controls/OrbitControls.js";
 
 export default class ThreeViewer {
   render: any;
@@ -14,7 +18,7 @@ export default class ThreeViewer {
     this.resize();
     div.appendChild(renderer.domElement);
 
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    const controls = new OrbitControls(camera, renderer.domElement);
     controls.target.set(0, 1, 0);
     controls.update();
 
@@ -39,7 +43,7 @@ export default class ThreeViewer {
         this.scene.remove(this.model);
         this.model = undefined;
       }
-      const loader = new THREE.GLTFLoader();
+      const loader = new GLTFLoader();
 
       loader.load(
         "assets/blob/otohime.vrm",
@@ -66,7 +70,7 @@ export default class ThreeViewer {
         this.scene.remove(this.model);
         this.model = undefined;
       }
-      var loader = new THREE.FBXLoader();
+      var loader = new FBXLoader();
       loader.load(
         "assets/blob/unchi_curling.fbx",
         (object: any) => {
