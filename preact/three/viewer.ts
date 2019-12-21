@@ -2,44 +2,12 @@ import * as THREE from "/homepage/web_modules/three.js";
 
 import { FBXLoader } from "/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js";
 import { GLTFLoader } from "/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js";
-import { OrbitControls } from "/homepage/web_modules/three/examples/jsm/controls/OrbitControls.js";
 
 export default class ThreeViewer {
-  render: THREE.WebGLRenderer = undefined as any;
-  scene: THREE.Scene = undefined as any;
-
   model: any;
   models: { [key: string]: any } = {};
 
-  constructor(private onUpdate: (viewer: ThreeViewer) => void) {}
-
-  start = (div: HTMLDivElement) => {
-    const scene = (this.scene = new THREE.Scene());
-    const camera = new THREE.PerspectiveCamera(75, 1.7, 0.1, 1000);
-    camera.position.set(0, 1, -3);
-    const renderer = (this.render = new THREE.WebGLRenderer({ alpha: true }));
-    this.resize();
-    div.appendChild(renderer.domElement);
-
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 1, 0);
-    controls.update();
-
-    renderer.setClearColor(0x000000, 0);
-    renderer.gammaOutput = true;
-
-    const ambient = new THREE.AmbientLight("#85b2cd");
-    scene.add(ambient);
-
-    const render = () => {
-      requestAnimationFrame(render);
-      controls.update();
-      renderer.render(scene, camera);
-      this.onUpdate(this);
-    };
-
-    render();
-  };
+  constructor(private scene: THREE.Scene) {}
 
   beforeLoad() {
     if (this.model) {
@@ -118,11 +86,4 @@ export default class ThreeViewer {
         }
       );
     });
-
-  resize = () => {
-    const renderer = this.render;
-    const width = window.innerWidth - (window.innerWidth / 10) * 2;
-    const height = width / 1.7;
-    renderer.setSize(width, height);
-  };
 }

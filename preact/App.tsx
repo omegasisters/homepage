@@ -6,6 +6,7 @@ import {
 } from "/homepage/web_modules/preact/hooks.js";
 
 import Rotate from "./three/rotate.js";
+import ThreeScene from "./three/scene.js";
 import ThreeViewer from "./three/viewer.js";
 
 const App: FunctionalComponent = () => {
@@ -15,23 +16,22 @@ const App: FunctionalComponent = () => {
 
   const divRef = useRef<HTMLDivElement>();
   const rotate = useRef(new Rotate()).current;
-
-  const viewer = useRef(
-    new ThreeViewer(viewer => {
-      rotate.model = viewer.model;
-      rotate.update();
+  const scene = useRef(
+    new ThreeScene(() => {
+      rotate.update(viewer.model);
     })
   ).current;
+  const viewer = useRef(new ThreeViewer(scene.scene)).current;
 
   useEffect(() => {
-    viewer.start(divRef.current!);
+    scene.start(divRef.current!);
     onOtohime();
   }, []);
 
   useEffect(() => {
-    window.addEventListener("resize", viewer.resize);
+    window.addEventListener("resize", scene.resize);
     return () => {
-      window.removeEventListener("resize", viewer.resize);
+      window.removeEventListener("resize", scene.resize);
     };
   }, []);
 

@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 import { h } from "/homepage/web_modules/preact.js";
 import { useEffect, useRef, useState } from "/homepage/web_modules/preact/hooks.js";
 import Rotate from "./three/rotate.js";
+import ThreeScene from "./three/scene.js";
 import ThreeViewer from "./three/viewer.js";
 var App = function () {
     var _a = useState(false), loading = _a[0], setLoading = _a[1];
@@ -44,18 +45,18 @@ var App = function () {
     var _c = useState("otohime"), modelType = _c[0], setModelType = _c[1];
     var divRef = useRef();
     var rotate = useRef(new Rotate()).current;
-    var viewer = useRef(new ThreeViewer(function (viewer) {
-        rotate.model = viewer.model;
-        rotate.update();
+    var scene = useRef(new ThreeScene(function () {
+        rotate.update(viewer.model);
     })).current;
+    var viewer = useRef(new ThreeViewer(scene.scene)).current;
     useEffect(function () {
-        viewer.start(divRef.current);
+        scene.start(divRef.current);
         onOtohime();
     }, []);
     useEffect(function () {
-        window.addEventListener("resize", viewer.resize);
+        window.addEventListener("resize", scene.resize);
         return function () {
-            window.removeEventListener("resize", viewer.resize);
+            window.removeEventListener("resize", scene.resize);
         };
     }, []);
     var onOtohime = function () { return __awaiter(void 0, void 0, void 0, function () {

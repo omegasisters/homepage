@@ -5,9 +5,9 @@ var Rotate = /** @class */ (function () {
         this.stop = function () {
             _this.isRotate = false;
         };
-        this.update = function () {
-            if (_this.model && _this.isRotate) {
-                _this.model.rotation.y += 0.01;
+        this.update = function (model) {
+            if (model && _this.isRotate) {
+                model.rotation.y += 0.01;
             }
         };
     }
