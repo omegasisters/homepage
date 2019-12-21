@@ -1,3 +1,4672 @@
-import{a as e}from"../../../../common/_rollupPluginBabelHelpers-f6f769cb.js";import{Vector4 as t,Vector3 as r,Curve as a,Loader as n,LoaderUtils as i,FileLoader as o,TextureLoader as s,RepeatWrapping as l,ClampToEdgeWrapping as u,Texture as c,MeshPhongMaterial as h,MeshLambertMaterial as p,Color as f,sRGBEncoding as v,EquirectangularReflectionMapping as d,Matrix4 as m,Group as g,Bone as y,PropertyBinding as w,Object3D as b,OrthographicCamera as I,PerspectiveCamera as T,PointLight as x,Math as A,SpotLight as E,DirectionalLight as k,VertexColors as D,SkinnedMesh as P,Mesh as N,LineBasicMaterial as S,Line as L,Skeleton as F,AmbientLight as O,BufferGeometry as R,Float32BufferAttribute as C,Uint16BufferAttribute as M,Matrix3 as B,BufferAttribute as U,AnimationClip as j,Euler as z,VectorKeyframeTrack as V,Quaternion as X,QuaternionKeyframeTrack as G,NumberKeyframeTrack as W}from"../../../../three.js";
-/** @license zlib.js 2012 - imaya [ https://github.com/imaya/zlib.js ] The MIT License */var H={},_=void 0,K=H;function Z(e,t){var r,a=e.split("."),n=K;!(a[0]in n)&&n.execScript&&n.execScript("var "+a[0]);for(;a.length&&(r=a.shift());)a.length||t===_?n=n[r]?n[r]:n[r]={}:n[r]=t}var Y="undefined"!=typeof Uint8Array&&"undefined"!=typeof Uint16Array&&"undefined"!=typeof Uint32Array&&"undefined"!=typeof DataView;function q(e){var t,r,a,n,i,o,s,l,u,c,h=e.length,p=0,f=Number.POSITIVE_INFINITY;for(l=0;l<h;++l)e[l]>p&&(p=e[l]),e[l]<f&&(f=e[l]);for(t=1<<p,r=new(Y?Uint32Array:Array)(t),a=1,n=0,i=2;a<=p;){for(l=0;l<h;++l)if(e[l]===a){for(o=0,s=n,u=0;u<a;++u)o=o<<1|1&s,s>>=1;for(c=a<<16|l,u=o;u<t;u+=i)r[u]=c;++n}++a,n<<=1,i<<=1}return[r,p,f]}function $(e,t){switch(this.g=[],this.h=32768,this.d=this.f=this.a=this.l=0,this.input=Y?new Uint8Array(e):e,this.m=!1,this.i=J,this.r=!1,!t&&(t={})||(t.index&&(this.a=t.index),t.bufferSize&&(this.h=t.bufferSize),t.bufferType&&(this.i=t.bufferType),t.resize&&(this.r=t.resize)),this.i){case Q:this.b=32768,this.c=new(Y?Uint8Array:Array)(32768+this.h+258);break;case J:this.b=0,this.c=new(Y?Uint8Array:Array)(this.h),this.e=this.z,this.n=this.v,this.j=this.w;break;default:throw Error("invalid inflate mode")}}var Q=0,J=1,ee={t:Q,s:J};$.prototype.k=function(){for(;!this.m;){var e=we(this,3);switch(1&e&&(this.m=!0),e>>>=1){case 0:var t=this.input,r=this.a,a=this.c,n=this.b,i=t.length,o=_,s=a.length,l=_;if(this.d=this.f=0,r+1>=i)throw Error("invalid uncompressed block header: LEN");if(o=t[r++]|t[r++]<<8,r+1>=i)throw Error("invalid uncompressed block header: NLEN");if(o===~(t[r++]|t[r++]<<8))throw Error("invalid uncompressed block header: length verify");if(r+o>t.length)throw Error("input buffer is broken");switch(this.i){case Q:for(;n+o>a.length;){if(o-=l=s-n,Y)a.set(t.subarray(r,r+l),n),n+=l,r+=l;else for(;l--;)a[n++]=t[r++];this.b=n,a=this.e(),n=this.b}break;case J:for(;n+o>a.length;)a=this.e({p:2});break;default:throw Error("invalid inflate mode")}if(Y)a.set(t.subarray(r,r+o),n),n+=o,r+=o;else for(;o--;)a[n++]=t[r++];this.a=r,this.b=n,this.c=a;break;case 1:this.j(me,ye);break;case 2:var u,c,h,p,f=we(this,5)+257,v=we(this,5)+1,d=we(this,4)+4,m=new(Y?Uint8Array:Array)(ne.length),g=_,y=_,w=_,b=_,I=_;for(I=0;I<d;++I)m[ne[I]]=we(this,3);if(!Y)for(I=d,d=m.length;I<d;++I)m[ne[I]]=0;for(u=q(m),g=new(Y?Uint8Array:Array)(f+v),I=0,p=f+v;I<p;)switch(y=be(this,u)){case 16:for(b=3+we(this,2);b--;)g[I++]=w;break;case 17:for(b=3+we(this,3);b--;)g[I++]=0;w=0;break;case 18:for(b=11+we(this,7);b--;)g[I++]=0;w=0;break;default:w=g[I++]=y}c=q(Y?g.subarray(0,f):g.slice(0,f)),h=q(Y?g.subarray(f):g.slice(f)),this.j(c,h);break;default:throw Error("unknown BTYPE: "+e)}}return this.n()};var te,re,ae=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],ne=Y?new Uint16Array(ae):ae,ie=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258,258,258],oe=Y?new Uint16Array(ie):ie,se=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,0,0],le=Y?new Uint8Array(se):se,ue=[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577],ce=Y?new Uint16Array(ue):ue,he=[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13],pe=Y?new Uint8Array(he):he,fe=new(Y?Uint8Array:Array)(288);for(te=0,re=fe.length;te<re;++te)fe[te]=143>=te?8:255>=te?9:279>=te?7:8;var ve,de,me=q(fe),ge=new(Y?Uint8Array:Array)(30);for(ve=0,de=ge.length;ve<de;++ve)ge[ve]=5;var ye=q(ge);function we(e,t){for(var r,a=e.f,n=e.d,i=e.input,o=e.a,s=i.length;n<t;){if(o>=s)throw Error("input buffer is broken");a|=i[o++]<<n,n+=8}return r=a&(1<<t)-1,e.f=a>>>t,e.d=n-t,e.a=o,r}function be(e,t){for(var r,a,n=e.f,i=e.d,o=e.input,s=e.a,l=o.length,u=t[0],c=t[1];i<c&&!(s>=l);)n|=o[s++]<<i,i+=8;if((a=(r=u[n&(1<<c)-1])>>>16)>i)throw Error("invalid code length: "+a);return e.f=n>>a,e.d=i-a,e.a=s,65535&r}function Ie(e,t){var r,a;switch(this.input=e,this.a=0,!t&&(t={})||(t.index&&(this.a=t.index),t.verify&&(this.A=t.verify)),r=e[this.a++],a=e[this.a++],15&r){case Te:this.method=Te;break;default:throw Error("unsupported compression method")}if(0!=((r<<8)+a)%31)throw Error("invalid fcheck flag:"+((r<<8)+a)%31);if(32&a)throw Error("fdict flag is not supported");this.q=new $(e,{index:this.a,bufferSize:t.bufferSize,bufferType:t.bufferType,resize:t.resize})}$.prototype.j=function(e,t){var r=this.c,a=this.b;this.o=e;for(var n,i,o,s,l=r.length-258;256!==(n=be(this,e));)if(256>n)a>=l&&(this.b=a,r=this.e(),a=this.b),r[a++]=n;else for(s=oe[i=n-257],0<le[i]&&(s+=we(this,le[i])),n=be(this,t),o=ce[n],0<pe[n]&&(o+=we(this,pe[n])),a>=l&&(this.b=a,r=this.e(),a=this.b);s--;)r[a]=r[a++-o];for(;8<=this.d;)this.d-=8,this.a--;this.b=a},$.prototype.w=function(e,t){var r=this.c,a=this.b;this.o=e;for(var n,i,o,s,l=r.length;256!==(n=be(this,e));)if(256>n)a>=l&&(l=(r=this.e()).length),r[a++]=n;else for(s=oe[i=n-257],0<le[i]&&(s+=we(this,le[i])),n=be(this,t),o=ce[n],0<pe[n]&&(o+=we(this,pe[n])),a+s>l&&(l=(r=this.e()).length);s--;)r[a]=r[a++-o];for(;8<=this.d;)this.d-=8,this.a--;this.b=a},$.prototype.e=function(){var e,t,r=new(Y?Uint8Array:Array)(this.b-32768),a=this.b-32768,n=this.c;if(Y)r.set(n.subarray(32768,r.length));else for(e=0,t=r.length;e<t;++e)r[e]=n[e+32768];if(this.g.push(r),this.l+=r.length,Y)n.set(n.subarray(a,a+32768));else for(e=0;32768>e;++e)n[e]=n[a+e];return this.b=32768,n},$.prototype.z=function(e){var t,r,a,n=this.input.length/this.a+1|0,i=this.input,o=this.c;return e&&("number"==typeof e.p&&(n=e.p),"number"==typeof e.u&&(n+=e.u)),2>n?r=(a=(i.length-this.a)/this.o[2]/2*258|0)<o.length?o.length+a:o.length<<1:r=o.length*n,Y?(t=new Uint8Array(r)).set(o):t=o,this.c=t},$.prototype.n=function(){var e,t,r,a,n,i=0,o=this.c,s=this.g,l=new(Y?Uint8Array:Array)(this.l+(this.b-32768));if(0===s.length)return Y?this.c.subarray(32768,this.b):this.c.slice(32768,this.b);for(t=0,r=s.length;t<r;++t)for(a=0,n=(e=s[t]).length;a<n;++a)l[i++]=e[a];for(t=32768,r=this.b;t<r;++t)l[i++]=o[t];return this.g=[],this.buffer=l},$.prototype.v=function(){var e,t=this.b;return Y?this.r?(e=new Uint8Array(t)).set(this.c.subarray(0,t)):e=this.c.subarray(0,t):(this.c.length>t&&(this.c.length=t),e=this.c),this.buffer=e},Ie.prototype.k=function(){var e,t,r=this.input;if(e=this.q.k(),this.a=this.q.a,this.A){t=(r[this.a++]<<24|r[this.a++]<<16|r[this.a++]<<8|r[this.a++])>>>0;var a=e;if("string"==typeof a){var n,i,o=a.split("");for(n=0,i=o.length;n<i;n++)o[n]=(255&o[n].charCodeAt(0))>>>0;a=o}for(var s,l=1,u=0,c=a.length,h=0;0<c;){c-=s=1024<c?1024:c;do{u+=l+=a[h++]}while(--s);l%=65521,u%=65521}if(t!==(u<<16|l)>>>0)throw Error("invalid adler-32 checksum")}return e};var Te=8;Z("Zlib.Inflate",Ie),Z("Zlib.Inflate.prototype.decompress",Ie.prototype.k);var xe,Ae,Ee,ke,De={ADAPTIVE:ee.s,BLOCK:ee.t};if(Object.keys)xe=Object.keys(De);else for(Ae in xe=[],Ee=0,De)xe[Ee++]=Ae;for(Ee=0,ke=xe.length;Ee<ke;++Ee)Z("Zlib.Inflate.BufferType."+(Ae=xe[Ee]),De[Ae]);var Pe=H.Zlib,Ne={findSpan:function(e,t,r){var a=r.length-e-1;if(t>=r[a])return a-1;if(t<=r[e])return e;for(var n=e,i=a,o=Math.floor((n+i)/2);t<r[o]||t>=r[o+1];)t<r[o]?i=o:n=o,o=Math.floor((n+i)/2);return o},calcBasisFunctions:function(e,t,r,a){var n=[],i=[],o=[];n[0]=1;for(var s=1;s<=r;++s){i[s]=t-a[e+1-s],o[s]=a[e+s]-t;for(var l=0,u=0;u<s;++u){var c=o[u+1],h=i[s-u],p=n[u]/(c+h);n[u]=l+c*p,l=h*p}n[s]=l}return n},calcBSplinePoint:function(e,r,a,n){for(var i=this.findSpan(e,n,r),o=this.calcBasisFunctions(i,n,e,r),s=new t(0,0,0,0),l=0;l<=e;++l){var u=a[i-e+l],c=o[l],h=u.w*c;s.x+=u.x*h,s.y+=u.y*h,s.z+=u.z*h,s.w+=u.w*c}return s},calcBasisFunctionDerivatives:function(e,t,r,a,n){for(var i=[],o=0;o<=r;++o)i[o]=0;var s=[];for(o=0;o<=a;++o)s[o]=i.slice(0);var l=[];for(o=0;o<=r;++o)l[o]=i.slice(0);l[0][0]=1;for(var u=i.slice(0),c=i.slice(0),h=1;h<=r;++h){u[h]=t-n[e+1-h],c[h]=n[e+h]-t;for(var p=0,f=0;f<h;++f){var v=c[f+1],d=u[h-f];l[h][f]=v+d;var m=l[f][h-1]/l[h][f];l[f][h]=p+v*m,p=d*m}l[h][h]=p}for(h=0;h<=r;++h)s[0][h]=l[h][r];for(f=0;f<=r;++f){var g=0,y=1,w=[];for(o=0;o<=r;++o)w[o]=i.slice(0);w[0][0]=1;for(var b=1;b<=a;++b){var I=0,T=f-b,x=r-b;f>=b&&(w[y][0]=w[g][0]/l[x+1][T],I=w[y][0]*l[T][x]);var A=f-1<=x?b-1:r-f;for(h=T>=-1?1:-T;h<=A;++h)w[y][h]=(w[g][h]-w[g][h-1])/l[x+1][T+h],I+=w[y][h]*l[T+h][x];f<=x&&(w[y][b]=-w[g][b-1]/l[x+1][f],I+=w[y][b]*l[f][x]),s[b][f]=I;h=g;g=y,y=h}}for(f=r,b=1;b<=a;++b){for(h=0;h<=r;++h)s[b][h]*=f;f*=r-b}return s},calcBSplineDerivatives:function(e,r,a,n,i){for(var o=i<e?i:e,s=[],l=this.findSpan(e,n,r),u=this.calcBasisFunctionDerivatives(l,n,e,o,r),c=[],h=0;h<a.length;++h){var p=(v=a[h].clone()).w;v.x*=p,v.y*=p,v.z*=p,c[h]=v}for(var f=0;f<=o;++f){for(var v=c[l-e].clone().multiplyScalar(u[f][0]),d=1;d<=e;++d)v.add(c[l-e+d].clone().multiplyScalar(u[f][d]));s[f]=v}for(f=o+1;f<=i+1;++f)s[f]=new t(0,0,0);return s},calcKoverI:function(e,t){for(var r=1,a=2;a<=e;++a)r*=a;var n=1;for(a=2;a<=t;++a)n*=a;for(a=2;a<=e-t;++a)n*=a;return r/n},calcRationalCurveDerivatives:function(e){for(var t=e.length,a=[],n=[],i=0;i<t;++i){var o=e[i];a[i]=new r(o.x,o.y,o.z),n[i]=o.w}for(var s=[],l=0;l<t;++l){var u=a[l].clone();for(i=1;i<=l;++i)u.sub(s[l-i].clone().multiplyScalar(this.calcKoverI(l,i)*n[i]));s[l]=u.divideScalar(n[0])}return s},calcNURBSDerivatives:function(e,t,r,a,n){var i=this.calcBSplineDerivatives(e,t,r,a,n);return this.calcRationalCurveDerivatives(i)},calcSurfacePoint:function(e,r,a,n,i,o,s,l){for(var u=this.findSpan(e,o,a),c=this.findSpan(r,s,n),h=this.calcBasisFunctions(u,o,e,a),p=this.calcBasisFunctions(c,s,r,n),f=[],v=0;v<=r;++v){f[v]=new t(0,0,0,0);for(var d=0;d<=e;++d){var m=i[u-e+d][c-r+v].clone(),g=m.w;m.x*=g,m.y*=g,m.z*=g,f[v].add(m.multiplyScalar(h[d]))}}var y=new t(0,0,0,0);for(v=0;v<=r;++v)y.add(f[v].multiplyScalar(p[v]));y.divideScalar(y.w),l.set(y.x,y.y,y.z)}},Se=function(e,r,n,i,o){a.call(this),this.degree=e,this.knots=r,this.controlPoints=[],this.startKnot=i||0,this.endKnot=o||this.knots.length-1;for(var s=0;s<n.length;++s){var l=n[s];this.controlPoints[s]=new t(l.x,l.y,l.z,l.w)}};(Se.prototype=Object.create(a.prototype)).constructor=Se,Se.prototype.getPoint=function(e){var t=this.knots[this.startKnot]+e*(this.knots[this.endKnot]-this.knots[this.startKnot]),a=Ne.calcBSplinePoint(this.degree,this.knots,this.controlPoints,t);return 1!=a.w&&a.divideScalar(a.w),new r(a.x,a.y,a.z)},Se.prototype.getTangent=function(e){var t=this.knots[0]+e*(this.knots[this.knots.length-1]-this.knots[0]),r=Ne.calcNURBSDerivatives(this.degree,this.knots,this.controlPoints,t,1)[1].clone();return r.normalize(),r};var Le=function(){var a,H,_;function K(e){n.call(this,e)}function Z(e,t){this.textureLoader=e,this.manager=t}function Y(){}function q(){}function $(){}function Q(){}function J(e,t){this.dv=new DataView(e),this.offset=0,this.littleEndian=void 0===t||t}function ee(){}function te(e){var t=e.match(/FBXVersion: (\d+)/);if(t)return parseInt(t[1]);throw new Error("THREE.FBXLoader: Cannot find the version number for the file given.")}function re(e){return e/46186158e3}K.prototype=Object.assign(Object.create(n.prototype),{constructor:K,load:function(e,t,r,a){var n=this,s=""===n.path?i.extractUrlBase(e):n.path,l=new o(this.manager);l.setPath(n.path),l.setResponseType("arraybuffer"),l.load(e,(function(r){try{t(n.parse(r,s))}catch(t){setTimeout((function(){a&&a(t),n.manager.itemError(e)}),0)}}),r,a)},parse:function(e,t){if(i="Kaydara FBX Binary  \0",(n=e).byteLength>=i.length&&i===ce(n,0,i.length))a=(new Q).parse(e);else{var r=ce(e);if(!function(e){var t=["K","a","y","d","a","r","a","\\","F","B","X","\\","B","i","n","a","r","y","\\","\\"],r=0;for(var a=0;a<t.length;++a){if((i=void 0,i=e[(n=1)-1],e=e.slice(r+n),r++,i)===t[a])return!1}var n,i;return!0}(r))throw new Error("THREE.FBXLoader: Unknown format.");if(te(r)<7e3)throw new Error("THREE.FBXLoader: FBX version not supported, FileVersion: "+te(r));a=(new $).parse(r)}var n,i;return new Z(new s(this.manager).setPath(this.resourcePath||t).setCrossOrigin(this.crossOrigin),this.manager).parse(a)}}),Z.prototype={constructor:Z,parse:function(){H=this.parseConnections();var e=this.parseImages(),t=this.parseTextures(e),r=this.parseMaterials(t),a=this.parseDeformers(),n=(new Y).parse(a);return this.parseScene(a,n,r),_},parseConnections:function(){var e=new Map;"Connections"in a&&a.Connections.connections.forEach((function(t){var r=t[0],a=t[1],n=t[2];e.has(r)||e.set(r,{parents:[],children:[]});var i={ID:a,relationship:n};e.get(r).parents.push(i),e.has(a)||e.set(a,{parents:[],children:[]});var o={ID:r,relationship:n};e.get(a).children.push(o)}));return e},parseImages:function(){var e={},t={};if("Video"in a.Objects){var r=a.Objects.Video;for(var n in r){var i=r[n];if(e[u=parseInt(n)]=i.RelativeFilename||i.Filename,"Content"in i){var o=i.Content instanceof ArrayBuffer&&i.Content.byteLength>0,s="string"==typeof i.Content&&""!==i.Content;if(o||s){var l=this.parseImage(r[n]);t[i.RelativeFilename||i.Filename]=l}}}}for(var u in e){var c=e[u];void 0!==t[c]?e[u]=t[c]:e[u]=e[u].split("\\").pop()}return e},parseImage:function(e){var t,r=e.Content,a=e.RelativeFilename||e.Filename,n=a.slice(a.lastIndexOf(".")+1).toLowerCase();switch(n){case"bmp":t="image/bmp";break;case"jpg":case"jpeg":t="image/jpeg";break;case"png":t="image/png";break;case"tif":t="image/tiff";break;case"tga":null===this.manager.getHandler(".tga")&&console.warn("FBXLoader: TGA loader not found, skipping ",a),t="image/tga";break;default:return void console.warn('FBXLoader: Image type "'+n+'" is not supported.')}if("string"==typeof r)return"data:"+t+";base64,"+r;var i=new Uint8Array(r);return window.URL.createObjectURL(new Blob([i],{type:t}))},parseTextures:function(e){var t=new Map;if("Texture"in a.Objects){var r=a.Objects.Texture;for(var n in r){var i=this.parseTexture(r[n],e);t.set(parseInt(n),i)}}return t},parseTexture:function(e,t){var r=this.loadTexture(e,t);r.ID=e.id,r.name=e.attrName;var a=e.WrapModeU,n=e.WrapModeV,i=void 0!==a?a.value:0,o=void 0!==n?n.value:0;if(r.wrapS=0===i?l:u,r.wrapT=0===o?l:u,"Scaling"in e){var s=e.Scaling.value;r.repeat.x=s[0],r.repeat.y=s[1]}return r},loadTexture:function(e,t){var r,a,n=this.textureLoader.path,i=H.get(e.id).children;void 0!==i&&i.length>0&&void 0!==t[i[0].ID]&&(0!==(r=t[i[0].ID]).indexOf("blob:")&&0!==r.indexOf("data:")||this.textureLoader.setPath(void 0));var o=e.FileName.slice(-3).toLowerCase();if("tga"===o){var s=this.manager.getHandler(".tga");null===s?(console.warn("FBXLoader: TGA loader not found, creating placeholder texture for",e.RelativeFilename),a=new c):a=s.load(r)}else"psd"===o?(console.warn("FBXLoader: PSD textures are not supported, creating placeholder texture for",e.RelativeFilename),a=new c):a=this.textureLoader.load(r);return this.textureLoader.setPath(n),a},parseMaterials:function(e){var t=new Map;if("Material"in a.Objects){var r=a.Objects.Material;for(var n in r){var i=this.parseMaterial(r[n],e);null!==i&&t.set(parseInt(n),i)}}return t},parseMaterial:function(t,r){var a=t.id,n=t.attrName,i=t.ShadingModel;if("object"===e(i)&&(i=i.value),!H.has(a))return null;var o,s=this.parseParameters(t,r,a);switch(i.toLowerCase()){case"phong":o=new h;break;case"lambert":o=new p;break;default:console.warn('THREE.FBXLoader: unknown material type "%s". Defaulting to MeshPhongMaterial.',i),o=new h}return o.setValues(s),o.name=n,o},parseParameters:function(e,t,r){var a={};e.BumpFactor&&(a.bumpScale=e.BumpFactor.value),e.Diffuse?a.color=(new f).fromArray(e.Diffuse.value):e.DiffuseColor&&"Color"===e.DiffuseColor.type&&(a.color=(new f).fromArray(e.DiffuseColor.value)),e.DisplacementFactor&&(a.displacementScale=e.DisplacementFactor.value),e.Emissive?a.emissive=(new f).fromArray(e.Emissive.value):e.EmissiveColor&&"Color"===e.EmissiveColor.type&&(a.emissive=(new f).fromArray(e.EmissiveColor.value)),e.EmissiveFactor&&(a.emissiveIntensity=parseFloat(e.EmissiveFactor.value)),e.Opacity&&(a.opacity=parseFloat(e.Opacity.value)),a.opacity<1&&(a.transparent=!0),e.ReflectionFactor&&(a.reflectivity=e.ReflectionFactor.value),e.Shininess&&(a.shininess=e.Shininess.value),e.Specular?a.specular=(new f).fromArray(e.Specular.value):e.SpecularColor&&"Color"===e.SpecularColor.type&&(a.specular=(new f).fromArray(e.SpecularColor.value));var n=this;return H.get(r).children.forEach((function(e){var r=e.relationship;switch(r){case"Bump":a.bumpMap=n.getTexture(t,e.ID);break;case"Maya|TEX_ao_map":a.aoMap=n.getTexture(t,e.ID);break;case"DiffuseColor":case"Maya|TEX_color_map":a.map=n.getTexture(t,e.ID),a.map.encoding=v;break;case"DisplacementColor":a.displacementMap=n.getTexture(t,e.ID);break;case"EmissiveColor":a.emissiveMap=n.getTexture(t,e.ID),a.emissiveMap.encoding=v;break;case"NormalMap":case"Maya|TEX_normal_map":a.normalMap=n.getTexture(t,e.ID);break;case"ReflectionColor":a.envMap=n.getTexture(t,e.ID),a.envMap.mapping=d,a.envMap.encoding=v;break;case"SpecularColor":a.specularMap=n.getTexture(t,e.ID),a.specularMap.encoding=v;break;case"TransparentColor":a.alphaMap=n.getTexture(t,e.ID),a.transparent=!0;break;case"AmbientColor":case"ShininessExponent":case"SpecularFactor":case"VectorDisplacementColor":default:console.warn("THREE.FBXLoader: %s map is not supported in three.js, skipping texture.",r)}})),a},getTexture:function(e,t){return"LayeredTexture"in a.Objects&&t in a.Objects.LayeredTexture&&(console.warn("THREE.FBXLoader: layered textures are not supported in three.js. Discarding all but first layer."),t=H.get(t).children[0].ID),e.get(t)},parseDeformers:function(){var e={},t={};if("Deformer"in a.Objects){var r=a.Objects.Deformer;for(var n in r){var i=r[n],o=H.get(parseInt(n));if("Skin"===i.attrType){var s=this.parseSkeleton(o,r);s.ID=n,o.parents.length>1&&console.warn("THREE.FBXLoader: skeleton attached to more than one geometry is not supported."),s.geometryID=o.parents[0].ID,e[n]=s}else if("BlendShape"===i.attrType){var l={id:n};l.rawTargets=this.parseMorphTargets(o,r),l.id=n,o.parents.length>1&&console.warn("THREE.FBXLoader: morph target attached to more than one geometry is not supported."),t[n]=l}}}return{skeletons:e,morphTargets:t}},parseSkeleton:function(e,t){var r=[];return e.children.forEach((function(e){var a=t[e.ID];if("Cluster"===a.attrType){var n={ID:e.ID,indices:[],weights:[],transformLink:(new m).fromArray(a.TransformLink.a)};"Indexes"in a&&(n.indices=a.Indexes.a,n.weights=a.Weights.a),r.push(n)}})),{rawBones:r,bones:[]}},parseMorphTargets:function(e,t){for(var r=[],a=0;a<e.children.length;a++){var n=e.children[a],i=t[n.ID],o={name:i.attrName,initialWeight:i.DeformPercent,id:i.id,fullWeights:i.FullWeights.a};if("BlendShapeChannel"!==i.attrType)return;o.geoID=H.get(parseInt(n.ID)).children.filter((function(e){return void 0===e.relationship}))[0].ID,r.push(o)}return r},parseScene:function(e,t,r){_=new g;var n=this.parseModels(e.skeletons,t,r),i=a.Objects.Model,o=this;n.forEach((function(e){var t=i[e.ID];o.setLookAtProperties(e,t),H.get(e.ID).parents.forEach((function(t){var r=n.get(t.ID);void 0!==r&&r.add(e)})),null===e.parent&&_.add(e)})),this.bindSkeleton(e.skeletons,t,n),this.createAmbientLight(),this.setupMorphMaterials(),_.traverse((function(e){if(e.userData.transformData){e.parent&&(e.userData.transformData.parentMatrixWorld=e.parent.matrix);var t=se(e.userData.transformData);e.applyMatrix(t)}}));var s=(new q).parse();1===_.children.length&&_.children[0].isGroup&&(_.children[0].animations=s,_=_.children[0]),_.animations=s},parseModels:function(e,t,r){var n=new Map,i=a.Objects.Model;for(var o in i){var s=parseInt(o),l=i[o],u=H.get(s),c=this.buildSkeleton(u,e,s,l.attrName);if(!c){switch(l.attrType){case"Camera":c=this.createCamera(u);break;case"Light":c=this.createLight(u);break;case"Mesh":c=this.createMesh(u,t,r);break;case"NurbsCurve":c=this.createCurve(u,t);break;case"LimbNode":case"Root":c=new y;break;case"Null":default:c=new g}c.name=l.attrName?w.sanitizeNodeName(l.attrName):"",c.ID=s}this.getTransformData(c,l),n.set(s,c)}return n},buildSkeleton:function(e,t,r,a){var n=null;return e.parents.forEach((function(e){for(var i in t){var o=t[i];o.rawBones.forEach((function(t,i){if(t.ID===e.ID){var s=n;(n=new y).matrixWorld.copy(t.transformLink),n.name=a?w.sanitizeNodeName(a):"",n.ID=r,o.bones[i]=n,null!==s&&n.add(s)}}))}})),n},createCamera:function(e){var t,r;if(e.children.forEach((function(e){var t=a.Objects.NodeAttribute[e.ID];void 0!==t&&(r=t)})),void 0===r)t=new b;else{var n=0;void 0!==r.CameraProjectionType&&1===r.CameraProjectionType.value&&(n=1);var i=1;void 0!==r.NearPlane&&(i=r.NearPlane.value/1e3);var o=1e3;void 0!==r.FarPlane&&(o=r.FarPlane.value/1e3);var s=window.innerWidth,l=window.innerHeight;void 0!==r.AspectWidth&&void 0!==r.AspectHeight&&(s=r.AspectWidth.value,l=r.AspectHeight.value);var u=s/l,c=45;void 0!==r.FieldOfView&&(c=r.FieldOfView.value);var h=r.FocalLength?r.FocalLength.value:null;switch(n){case 0:t=new T(c,u,i,o),null!==h&&t.setFocalLength(h);break;case 1:t=new I(-s/2,s/2,l/2,-l/2,i,o);break;default:console.warn("THREE.FBXLoader: Unknown camera type "+n+"."),t=new b}}return t},createLight:function(e){var t,r;if(e.children.forEach((function(e){var t=a.Objects.NodeAttribute[e.ID];void 0!==t&&(r=t)})),void 0===r)t=new b;else{var n;n=void 0===r.LightType?0:r.LightType.value;var i=16777215;void 0!==r.Color&&(i=(new f).fromArray(r.Color.value));var o=void 0===r.Intensity?1:r.Intensity.value/100;void 0!==r.CastLightOnObject&&0===r.CastLightOnObject.value&&(o=0);var s=0;void 0!==r.FarAttenuationEnd&&(s=void 0!==r.EnableFarAttenuation&&0===r.EnableFarAttenuation.value?0:r.FarAttenuationEnd.value);switch(n){case 0:t=new x(i,o,s,1);break;case 1:t=new k(i,o);break;case 2:var l=Math.PI/3;void 0!==r.InnerAngle&&(l=A.degToRad(r.InnerAngle.value));var u=0;void 0!==r.OuterAngle&&(u=A.degToRad(r.OuterAngle.value),u=Math.max(u,1)),t=new E(i,o,s,l,u,1);break;default:console.warn("THREE.FBXLoader: Unknown light type "+r.LightType.value+", defaulting to a PointLight."),t=new x(i,o)}void 0!==r.CastShadows&&1===r.CastShadows.value&&(t.castShadow=!0)}return t},createMesh:function(e,t,r){var a,n=null,i=null,o=[];return e.children.forEach((function(e){t.has(e.ID)&&(n=t.get(e.ID)),r.has(e.ID)&&o.push(r.get(e.ID))})),o.length>1?i=o:o.length>0?i=o[0]:(i=new h({color:13421772}),o.push(i)),"color"in n.attributes&&o.forEach((function(e){e.vertexColors=D})),n.FBX_Deformer?(o.forEach((function(e){e.skinning=!0})),(a=new P(n,i)).normalizeSkinWeights()):a=new N(n,i),a},createCurve:function(e,t){var r=e.children.reduce((function(e,r){return t.has(r.ID)&&(e=t.get(r.ID)),e}),null),a=new S({color:3342591,linewidth:1});return new L(r,a)},getTransformData:function(e,t){var r={};"InheritType"in t&&(r.inheritType=parseInt(t.InheritType.value)),r.eulerOrder="RotationOrder"in t?le(t.RotationOrder.value):"ZYX","Lcl_Translation"in t&&(r.translation=t.Lcl_Translation.value),"PreRotation"in t&&(r.preRotation=t.PreRotation.value),"Lcl_Rotation"in t&&(r.rotation=t.Lcl_Rotation.value),"PostRotation"in t&&(r.postRotation=t.PostRotation.value),"Lcl_Scaling"in t&&(r.scale=t.Lcl_Scaling.value),"ScalingOffset"in t&&(r.scalingOffset=t.ScalingOffset.value),"ScalingPivot"in t&&(r.scalingPivot=t.ScalingPivot.value),"RotationOffset"in t&&(r.rotationOffset=t.RotationOffset.value),"RotationPivot"in t&&(r.rotationPivot=t.RotationPivot.value),e.userData.transformData=r},setLookAtProperties:function(e,t){"LookAtProperty"in t&&H.get(e.ID).children.forEach((function(t){if("LookAtProperty"===t.relationship){var n=a.Objects.Model[t.ID];if("Lcl_Translation"in n){var i=n.Lcl_Translation.value;void 0!==e.target?(e.target.position.fromArray(i),_.add(e.target)):e.lookAt((new r).fromArray(i))}}}))},bindSkeleton:function(e,t,r){var a=this.parsePoseNodes();for(var n in e){var i=e[n];H.get(parseInt(i.ID)).parents.forEach((function(e){if(t.has(e.ID)){var n=e.ID;H.get(n).parents.forEach((function(e){r.has(e.ID)&&r.get(e.ID).bind(new F(i.bones),a[e.ID])}))}}))}},parsePoseNodes:function(){var e={};if("Pose"in a.Objects){var t=a.Objects.Pose;for(var r in t)if("BindPose"===t[r].attrType){var n=t[r].PoseNode;Array.isArray(n)?n.forEach((function(t){e[t.Node]=(new m).fromArray(t.Matrix.a)})):e[n.Node]=(new m).fromArray(n.Matrix.a)}}return e},createAmbientLight:function(){if("GlobalSettings"in a&&"AmbientColor"in a.GlobalSettings){var e=a.GlobalSettings.AmbientColor.value,t=e[0],r=e[1],n=e[2];if(0!==t||0!==r||0!==n){var i=new f(t,r,n);_.add(new O(i,1))}}},setupMorphMaterials:function(){var e=this;_.traverse((function(t){t.isMesh&&t.geometry.morphAttributes.position&&t.geometry.morphAttributes.position.length&&(Array.isArray(t.material)?t.material.forEach((function(r,a){e.setupMorphMaterial(t,r,a)})):e.setupMorphMaterial(t,t.material))}))},setupMorphMaterial:function(e,t,r){var a=e.uuid,n=t.uuid,i=!1;if(_.traverse((function(e){e.isMesh&&(Array.isArray(e.material)?e.material.forEach((function(t){t.uuid===n&&e.uuid!==a&&(i=!0)})):e.material.uuid===n&&e.uuid!==a&&(i=!0))})),!0===i){var o=t.clone();o.morphTargets=!0,void 0===r?e.material=o:e.material[r]=o}else t.morphTargets=!0}},Y.prototype={constructor:Y,parse:function(e){var t=new Map;if("Geometry"in a.Objects){var r=a.Objects.Geometry;for(var n in r){var i=H.get(parseInt(n)),o=this.parseGeometry(i,r[n],e);t.set(parseInt(n),o)}}return t},parseGeometry:function(e,t,r){switch(t.attrType){case"Mesh":return this.parseMeshGeometry(e,t,r);case"NurbsCurve":return this.parseNurbsGeometry(t)}},parseMeshGeometry:function(e,t,r){var n=r.skeletons,i=[],o=e.parents.map((function(e){return a.Objects.Model[e.ID]}));if(0!==o.length){var s=e.children.reduce((function(e,t){return void 0!==n[t.ID]&&(e=n[t.ID]),e}),null);e.children.forEach((function(e){void 0!==r.morphTargets[e.ID]&&i.push(r.morphTargets[e.ID])}));var l=o[0],u={};"RotationOrder"in l&&(u.eulerOrder=le(l.RotationOrder.value)),"InheritType"in l&&(u.inheritType=parseInt(l.InheritType.value)),"GeometricTranslation"in l&&(u.translation=l.GeometricTranslation.value),"GeometricRotation"in l&&(u.rotation=l.GeometricRotation.value),"GeometricScaling"in l&&(u.scale=l.GeometricScaling.value);var c=se(u);return this.genGeometry(t,s,i,c)}},genGeometry:function(e,t,r,a){var n=new R;e.attrName&&(n.name=e.attrName);var i=this.parseGeoNode(e,t),o=this.genBuffers(i),s=new C(o.vertex,3);if(a.applyToBufferAttribute(s),n.setAttribute("position",s),o.colors.length>0&&n.setAttribute("color",new C(o.colors,3)),t&&(n.setAttribute("skinIndex",new M(o.weightsIndices,4)),n.setAttribute("skinWeight",new C(o.vertexWeights,4)),n.FBX_Deformer=t),o.normal.length>0){var l=new C(o.normal,3);(new B).getNormalMatrix(a).applyToBufferAttribute(l),n.setAttribute("normal",l)}if(o.uvs.forEach((function(e,t){var r="uv"+(t+1).toString();0===t&&(r="uv"),n.setAttribute(r,new C(o.uvs[t],2))})),i.material&&"AllSame"!==i.material.mappingType){var u=o.materialIndex[0],c=0;if(o.materialIndex.forEach((function(e,t){e!==u&&(n.addGroup(c,t-c,u),u=e,c=t)})),n.groups.length>0){var h=n.groups[n.groups.length-1],p=h.start+h.count;p!==o.materialIndex.length&&n.addGroup(p,o.materialIndex.length-p,u)}0===n.groups.length&&n.addGroup(0,o.materialIndex.length,o.materialIndex[0])}return this.addMorphTargets(n,e,r,a),n},parseGeoNode:function(e,t){var r={};if(r.vertexPositions=void 0!==e.Vertices?e.Vertices.a:[],r.vertexIndices=void 0!==e.PolygonVertexIndex?e.PolygonVertexIndex.a:[],e.LayerElementColor&&(r.color=this.parseVertexColors(e.LayerElementColor[0])),e.LayerElementMaterial&&(r.material=this.parseMaterialIndices(e.LayerElementMaterial[0])),e.LayerElementNormal&&(r.normal=this.parseNormals(e.LayerElementNormal[0])),e.LayerElementUV){r.uv=[];for(var a=0;e.LayerElementUV[a];)r.uv.push(this.parseUVs(e.LayerElementUV[a])),a++}return r.weightTable={},null!==t&&(r.skeleton=t,t.rawBones.forEach((function(e,t){e.indices.forEach((function(a,n){void 0===r.weightTable[a]&&(r.weightTable[a]=[]),r.weightTable[a].push({id:t,weight:e.weights[n]})}))}))),r},genBuffers:function(e){var t={vertex:[],normal:[],colors:[],uvs:[],materialIndex:[],vertexWeights:[],weightsIndices:[]},r=0,a=0,n=!1,i=[],o=[],s=[],l=[],u=[],c=[],h=this;return e.vertexIndices.forEach((function(p,f){var v=!1;p<0&&(p^=-1,v=!0);var d=[],m=[];if(i.push(3*p,3*p+1,3*p+2),e.color){var g=ne(f,r,p,e.color);s.push(g[0],g[1],g[2])}if(e.skeleton){if(void 0!==e.weightTable[p]&&e.weightTable[p].forEach((function(e){m.push(e.weight),d.push(e.id)})),m.length>4){n||(console.warn("THREE.FBXLoader: Vertex has more than 4 skinning weights assigned to vertex. Deleting additional weights."),n=!0);var y=[0,0,0,0],w=[0,0,0,0];m.forEach((function(e,t){var r=e,a=d[t];w.forEach((function(e,t,n){if(r>e){n[t]=r,r=e;var i=y[t];y[t]=a,a=i}}))})),d=y,m=w}for(;m.length<4;)m.push(0),d.push(0);for(var b=0;b<4;++b)u.push(m[b]),c.push(d[b])}if(e.normal){g=ne(f,r,p,e.normal);o.push(g[0],g[1],g[2])}if(e.material&&"AllSame"!==e.material.mappingType)var I=ne(f,r,p,e.material)[0];e.uv&&e.uv.forEach((function(e,t){var a=ne(f,r,p,e);void 0===l[t]&&(l[t]=[]),l[t].push(a[0]),l[t].push(a[1])})),a++,v&&(h.genFace(t,e,i,I,o,s,l,u,c,a),r++,a=0,i=[],o=[],s=[],l=[],u=[],c=[])})),t},genFace:function(e,t,r,a,n,i,o,s,l,u){for(var c=2;c<u;c++)e.vertex.push(t.vertexPositions[r[0]]),e.vertex.push(t.vertexPositions[r[1]]),e.vertex.push(t.vertexPositions[r[2]]),e.vertex.push(t.vertexPositions[r[3*(c-1)]]),e.vertex.push(t.vertexPositions[r[3*(c-1)+1]]),e.vertex.push(t.vertexPositions[r[3*(c-1)+2]]),e.vertex.push(t.vertexPositions[r[3*c]]),e.vertex.push(t.vertexPositions[r[3*c+1]]),e.vertex.push(t.vertexPositions[r[3*c+2]]),t.skeleton&&(e.vertexWeights.push(s[0]),e.vertexWeights.push(s[1]),e.vertexWeights.push(s[2]),e.vertexWeights.push(s[3]),e.vertexWeights.push(s[4*(c-1)]),e.vertexWeights.push(s[4*(c-1)+1]),e.vertexWeights.push(s[4*(c-1)+2]),e.vertexWeights.push(s[4*(c-1)+3]),e.vertexWeights.push(s[4*c]),e.vertexWeights.push(s[4*c+1]),e.vertexWeights.push(s[4*c+2]),e.vertexWeights.push(s[4*c+3]),e.weightsIndices.push(l[0]),e.weightsIndices.push(l[1]),e.weightsIndices.push(l[2]),e.weightsIndices.push(l[3]),e.weightsIndices.push(l[4*(c-1)]),e.weightsIndices.push(l[4*(c-1)+1]),e.weightsIndices.push(l[4*(c-1)+2]),e.weightsIndices.push(l[4*(c-1)+3]),e.weightsIndices.push(l[4*c]),e.weightsIndices.push(l[4*c+1]),e.weightsIndices.push(l[4*c+2]),e.weightsIndices.push(l[4*c+3])),t.color&&(e.colors.push(i[0]),e.colors.push(i[1]),e.colors.push(i[2]),e.colors.push(i[3*(c-1)]),e.colors.push(i[3*(c-1)+1]),e.colors.push(i[3*(c-1)+2]),e.colors.push(i[3*c]),e.colors.push(i[3*c+1]),e.colors.push(i[3*c+2])),t.material&&"AllSame"!==t.material.mappingType&&(e.materialIndex.push(a),e.materialIndex.push(a),e.materialIndex.push(a)),t.normal&&(e.normal.push(n[0]),e.normal.push(n[1]),e.normal.push(n[2]),e.normal.push(n[3*(c-1)]),e.normal.push(n[3*(c-1)+1]),e.normal.push(n[3*(c-1)+2]),e.normal.push(n[3*c]),e.normal.push(n[3*c+1]),e.normal.push(n[3*c+2])),t.uv&&t.uv.forEach((function(t,r){void 0===e.uvs[r]&&(e.uvs[r]=[]),e.uvs[r].push(o[r][0]),e.uvs[r].push(o[r][1]),e.uvs[r].push(o[r][2*(c-1)]),e.uvs[r].push(o[r][2*(c-1)+1]),e.uvs[r].push(o[r][2*c]),e.uvs[r].push(o[r][2*c+1])}))},addMorphTargets:function(e,t,r,n){if(0!==r.length){e.morphTargetsRelative=!0,e.morphAttributes.position=[];var i=this;r.forEach((function(r){r.rawTargets.forEach((function(r){var o=a.Objects.Geometry[r.geoID];void 0!==o&&i.genMorphGeometry(e,t,o,n,r.name)}))}))}},genMorphGeometry:function(e,t,r,a,n){for(var i=void 0!==t.PolygonVertexIndex?t.PolygonVertexIndex.a:[],o=void 0!==r.Vertices?r.Vertices.a:[],s=void 0!==r.Indexes?r.Indexes.a:[],l=3*e.attributes.position.count,u=new Float32Array(l),c=0;c<s.length;c++){var h=3*s[c];u[h]=o[3*c],u[h+1]=o[3*c+1],u[h+2]=o[3*c+2]}var p={vertexIndices:i,vertexPositions:u},f=this.genBuffers(p),v=new C(f.vertex,3);v.name=n||r.attrName,a.applyToBufferAttribute(v),e.morphAttributes.position.push(v)},parseNormals:function(e){var t=e.MappingInformationType,r=e.ReferenceInformationType,a=e.Normals.a,n=[];return"IndexToDirect"===r&&("NormalIndex"in e?n=e.NormalIndex.a:"NormalsIndex"in e&&(n=e.NormalsIndex.a)),{dataSize:3,buffer:a,indices:n,mappingType:t,referenceType:r}},parseUVs:function(e){var t=e.MappingInformationType,r=e.ReferenceInformationType,a=e.UV.a,n=[];return"IndexToDirect"===r&&(n=e.UVIndex.a),{dataSize:2,buffer:a,indices:n,mappingType:t,referenceType:r}},parseVertexColors:function(e){var t=e.MappingInformationType,r=e.ReferenceInformationType,a=e.Colors.a,n=[];return"IndexToDirect"===r&&(n=e.ColorIndex.a),{dataSize:4,buffer:a,indices:n,mappingType:t,referenceType:r}},parseMaterialIndices:function(e){var t=e.MappingInformationType,r=e.ReferenceInformationType;if("NoMappingInformation"===t)return{dataSize:1,buffer:[0],indices:[0],mappingType:"AllSame",referenceType:r};for(var a=e.Materials.a,n=[],i=0;i<a.length;++i)n.push(i);return{dataSize:1,buffer:a,indices:n,mappingType:t,referenceType:r}},parseNurbsGeometry:function(e){if(void 0===Se)return console.error("THREE.FBXLoader: The loader relies on NURBSCurve for any nurbs present in the model. Nurbs will show up as empty geometry."),new R;var r=parseInt(e.Order);if(isNaN(r))return console.error("THREE.FBXLoader: Invalid Order %s given for geometry ID: %s",e.Order,e.id),new R;for(var a,n,i=r-1,o=e.KnotVector.a,s=[],l=e.Points.a,u=0,c=l.length;u<c;u+=4)s.push((new t).fromArray(l,u));if("Closed"===e.Form)s.push(s[0]);else if("Periodic"===e.Form){a=i,n=o.length-1-a;for(u=0;u<i;++u)s.push(s[u])}var h=new Se(i,o,s,a,n).getPoints(7*s.length),p=new Float32Array(3*h.length);h.forEach((function(e,t){e.toArray(p,3*t)}));var f=new R;return f.setAttribute("position",new U(p,3)),f}},q.prototype={constructor:q,parse:function(){var e=[],t=this.parseClips();if(void 0!==t)for(var r in t){var a=t[r],n=this.addClip(a);e.push(n)}return e},parseClips:function(){if(void 0!==a.Objects.AnimationCurve){var e=this.parseAnimationCurveNodes();this.parseAnimationCurves(e);var t=this.parseAnimationLayers(e);return this.parseAnimStacks(t)}},parseAnimationCurveNodes:function(){var e=a.Objects.AnimationCurveNode,t=new Map;for(var r in e){var n=e[r];if(null!==n.attrName.match(/S|R|T|DeformPercent/)){var i={id:n.id,attr:n.attrName,curves:{}};t.set(i.id,i)}}return t},parseAnimationCurves:function(e){var t=a.Objects.AnimationCurve;for(var r in t){var n={id:t[r].id,times:t[r].KeyTime.a.map(re),values:t[r].KeyValueFloat.a},i=H.get(n.id);if(void 0!==i){var o=i.parents[0].ID,s=i.parents[0].relationship;s.match(/X/)?e.get(o).curves.x=n:s.match(/Y/)?e.get(o).curves.y=n:s.match(/Z/)?e.get(o).curves.z=n:s.match(/d|DeformPercent/)&&e.has(o)&&(e.get(o).curves.morph=n)}}},parseAnimationLayers:function(e){var t=a.Objects.AnimationLayer,r=new Map;for(var n in t){var i=[],o=H.get(parseInt(n));if(void 0!==o)o.children.forEach((function(t,r){if(e.has(t.ID)){var n=e.get(t.ID);if(void 0!==n.curves.x||void 0!==n.curves.y||void 0!==n.curves.z){if(void 0===i[r])if(void 0!==(h=H.get(t.ID).parents.filter((function(e){return void 0!==e.relationship}))[0].ID)){var o={modelName:(s=a.Objects.Model[h.toString()]).attrName?w.sanitizeNodeName(s.attrName):"",ID:s.id,initialPosition:[0,0,0],initialRotation:[0,0,0],initialScale:[1,1,1]};_.traverse((function(e){e.ID===s.id&&(o.transform=e.matrix,e.userData.transformData&&(o.eulerOrder=e.userData.transformData.eulerOrder))})),o.transform||(o.transform=new m),"PreRotation"in s&&(o.preRotation=s.PreRotation.value),"PostRotation"in s&&(o.postRotation=s.PostRotation.value),i[r]=o}i[r]&&(i[r][n.attr]=n)}else if(void 0!==n.curves.morph){if(void 0===i[r]){var s,l=H.get(t.ID).parents.filter((function(e){return void 0!==e.relationship}))[0].ID,u=H.get(l).parents[0].ID,c=H.get(u).parents[0].ID,h=H.get(c).parents[0].ID;o={modelName:(s=a.Objects.Model[h]).attrName?w.sanitizeNodeName(s.attrName):"",morphName:a.Objects.Deformer[l].attrName};i[r]=o}i[r][n.attr]=n}}})),r.set(parseInt(n),i)}return r},parseAnimStacks:function(e){var t=a.Objects.AnimationStack,r={};for(var n in t){var i=H.get(parseInt(n)).children;i.length>1&&console.warn("THREE.FBXLoader: Encountered an animation stack with multiple layers, this is currently not supported. Ignoring subsequent layers.");var o=e.get(i[0].ID);r[n]={name:t[n].attrName,layer:o}}return r},addClip:function(e){var t=[],r=this;return e.layer.forEach((function(e){t=t.concat(r.generateTracks(e))})),new j(e.name,-1,t)},generateTracks:function(e){var t=[],a=new r,n=new X,i=new r;if(e.transform&&e.transform.decompose(a,n,i),a=a.toArray(),n=(new z).setFromQuaternion(n,e.eulerOrder).toArray(),i=i.toArray(),void 0!==e.T&&Object.keys(e.T.curves).length>0){var o=this.generateVectorTrack(e.modelName,e.T.curves,a,"position");void 0!==o&&t.push(o)}if(void 0!==e.R&&Object.keys(e.R.curves).length>0){var s=this.generateRotationTrack(e.modelName,e.R.curves,n,e.preRotation,e.postRotation,e.eulerOrder);void 0!==s&&t.push(s)}if(void 0!==e.S&&Object.keys(e.S.curves).length>0){var l=this.generateVectorTrack(e.modelName,e.S.curves,i,"scale");void 0!==l&&t.push(l)}if(void 0!==e.DeformPercent){var u=this.generateMorphTrack(e);void 0!==u&&t.push(u)}return t},generateVectorTrack:function(e,t,r,a){var n=this.getTimesForAllAxes(t),i=this.getKeyframeTrackValues(n,t,r);return new V(e+"."+a,n,i)},generateRotationTrack:function(e,t,r,a,n,i){void 0!==t.x&&(this.interpolateRotations(t.x),t.x.values=t.x.values.map(A.degToRad)),void 0!==t.y&&(this.interpolateRotations(t.y),t.y.values=t.y.values.map(A.degToRad)),void 0!==t.z&&(this.interpolateRotations(t.z),t.z.values=t.z.values.map(A.degToRad));var o=this.getTimesForAllAxes(t),s=this.getKeyframeTrackValues(o,t,r);void 0!==a&&((a=a.map(A.degToRad)).push(i),a=(new z).fromArray(a),a=(new X).setFromEuler(a)),void 0!==n&&((n=n.map(A.degToRad)).push(i),n=(new z).fromArray(n),n=(new X).setFromEuler(n).inverse());for(var l=new X,u=new z,c=[],h=0;h<s.length;h+=3)u.set(s[h],s[h+1],s[h+2],i),l.setFromEuler(u),void 0!==a&&l.premultiply(a),void 0!==n&&l.multiply(n),l.toArray(c,h/3*4);return new G(e+".quaternion",o,c)},generateMorphTrack:function(e){var t=e.DeformPercent.curves.morph,r=t.values.map((function(e){return e/100})),a=_.getObjectByName(e.modelName).morphTargetDictionary[e.morphName];return new W(e.modelName+".morphTargetInfluences["+a+"]",t.times,r)},getTimesForAllAxes:function(e){var t=[];return void 0!==e.x&&(t=t.concat(e.x.times)),void 0!==e.y&&(t=t.concat(e.y.times)),void 0!==e.z&&(t=t.concat(e.z.times)),t=t.sort((function(e,t){return e-t})).filter((function(e,t,r){return r.indexOf(e)==t}))},getKeyframeTrackValues:function(e,t,r){var a=r,n=[],i=-1,o=-1,s=-1;return e.forEach((function(e){if(t.x&&(i=t.x.times.indexOf(e)),t.y&&(o=t.y.times.indexOf(e)),t.z&&(s=t.z.times.indexOf(e)),-1!==i){var r=t.x.values[i];n.push(r),a[0]=r}else n.push(a[0]);if(-1!==o){var l=t.y.values[o];n.push(l),a[1]=l}else n.push(a[1]);if(-1!==s){var u=t.z.values[s];n.push(u),a[2]=u}else n.push(a[2])})),n},interpolateRotations:function(e){for(var t=1;t<e.values.length;t++){var r=e.values[t-1],a=e.values[t]-r,n=Math.abs(a);if(n>=180){for(var i=n/180,o=a/i,s=r+o,l=e.times[t-1],u=(e.times[t]-l)/i,c=l+u,h=[],p=[];c<e.times[t];)h.push(c),c+=u,p.push(s),s+=o;e.times=he(e.times,t,h),e.values=he(e.values,t,p)}}}},$.prototype={constructor:$,getPrevNode:function(){return this.nodeStack[this.currentIndent-2]},getCurrentNode:function(){return this.nodeStack[this.currentIndent-1]},getCurrentProp:function(){return this.currentProp},pushStack:function(e){this.nodeStack.push(e),this.currentIndent+=1},popStack:function(){this.nodeStack.pop(),this.currentIndent-=1},setCurrentProp:function(e,t){this.currentProp=e,this.currentPropName=t},parse:function(e){this.currentIndent=0,this.allNodes=new ee,this.nodeStack=[],this.currentProp=[],this.currentPropName="";var t=this,r=e.split(/[\r\n]+/);return r.forEach((function(e,a){var n=e.match(/^[\s\t]*;/),i=e.match(/^[\s\t]*$/);if(!n&&!i){var o=e.match("^\\t{"+t.currentIndent+"}(\\w+):(.*){",""),s=e.match("^\\t{"+t.currentIndent+"}(\\w+):[\\s\\t\\r\\n](.*)"),l=e.match("^\\t{"+(t.currentIndent-1)+"}}");o?t.parseNodeBegin(e,o):s?t.parseNodeProperty(e,s,r[++a]):l?t.popStack():e.match(/^[^\s\t}]/)&&t.parseNodePropertyContinued(e)}})),this.allNodes},parseNodeBegin:function(e,t){var r=t[1].trim().replace(/^"/,"").replace(/"$/,""),a=t[2].split(",").map((function(e){return e.trim().replace(/^"/,"").replace(/"$/,"")})),n={name:r},i=this.parseNodeAttr(a),o=this.getCurrentNode();0===this.currentIndent?this.allNodes.add(r,n):r in o?("PoseNode"===r?o.PoseNode.push(n):void 0!==o[r].id&&(o[r]={},o[r][o[r].id]=o[r]),""!==i.id&&(o[r][i.id]=n)):"number"==typeof i.id?(o[r]={},o[r][i.id]=n):"Properties70"!==r&&(o[r]="PoseNode"===r?[n]:n),"number"==typeof i.id&&(n.id=i.id),""!==i.name&&(n.attrName=i.name),""!==i.type&&(n.attrType=i.type),this.pushStack(n)},parseNodeAttr:function(e){var t=e[0];""!==e[0]&&(t=parseInt(e[0]),isNaN(t)&&(t=e[0]));var r="",a="";return e.length>1&&(r=e[1].replace(/^(\w+)::/,""),a=e[2]),{id:t,name:r,type:a}},parseNodeProperty:function(e,t,r){var a=t[1].replace(/^"/,"").replace(/"$/,"").trim(),n=t[2].replace(/^"/,"").replace(/"$/,"").trim();"Content"===a&&","===n&&(n=r.replace(/"/g,"").replace(/,$/,"").trim());var i=this.getCurrentNode();if("Properties70"!==i.name){if("C"===a){var o=n.split(",").slice(1),s=parseInt(o[0]),l=parseInt(o[1]),u=n.split(",").slice(3);a="connections",function(e,t){for(var r=0,a=e.length,n=t.length;r<n;r++,a++)e[a]=t[r]}(n=[s,l],u=u.map((function(e){return e.trim().replace(/^"/,"")}))),void 0===i[a]&&(i[a]=[])}"Node"===a&&(i.id=n),a in i&&Array.isArray(i[a])?i[a].push(n):"a"!==a?i[a]=n:i.a=n,this.setCurrentProp(i,a),"a"===a&&","!==n.slice(-1)&&(i.a=ue(n))}else this.parseNodeSpecialProperty(e,a,n)},parseNodePropertyContinued:function(e){var t=this.getCurrentNode();t.a+=e,","!==e.slice(-1)&&(t.a=ue(t.a))},parseNodeSpecialProperty:function(e,t,r){var a=r.split('",').map((function(e){return e.trim().replace(/^\"/,"").replace(/\s/,"_")})),n=a[0],i=a[1],o=a[2],s=a[3],l=a[4];switch(i){case"int":case"enum":case"bool":case"ULongLong":case"double":case"Number":case"FieldOfView":l=parseFloat(l);break;case"Color":case"ColorRGB":case"Vector3D":case"Lcl_Translation":case"Lcl_Rotation":case"Lcl_Scaling":l=ue(l)}this.getPrevNode()[n]={type:i,type2:o,flag:s,value:l},this.setCurrentProp(this.getPrevNode(),n)}},Q.prototype={constructor:Q,parse:function(e){var t=new J(e);t.skip(23);var r=t.getUint32();console.log("THREE.FBXLoader: FBX binary version: "+r);for(var a=new ee;!this.endOfContent(t);){var n=this.parseNode(t,r);null!==n&&a.add(n.name,n)}return a},endOfContent:function(e){return e.size()%16==0?(e.getOffset()+160+16&-16)>=e.size():e.getOffset()+160+16>=e.size()},parseNode:function(e,t){var r={},a=t>=7500?e.getUint64():e.getUint32(),n=t>=7500?e.getUint64():e.getUint32(),i=(t>=7500?e.getUint64():e.getUint32(),e.getUint8()),o=e.getString(i);if(0===a)return null;for(var s=[],l=0;l<n;l++)s.push(this.parseProperty(e));var u=s.length>0?s[0]:"",c=s.length>1?s[1]:"",h=s.length>2?s[2]:"";for(r.singleProperty=1===n&&e.getOffset()===a;a>e.getOffset();){var p=this.parseNode(e,t);null!==p&&this.parseSubNode(o,r,p)}return r.propertyList=s,"number"==typeof u&&(r.id=u),""!==c&&(r.attrName=c),""!==h&&(r.attrType=h),""!==o&&(r.name=o),r},parseSubNode:function(e,t,r){if(!0===r.singleProperty){var a=r.propertyList[0];Array.isArray(a)?(t[r.name]=r,r.a=a):t[r.name]=a}else if("Connections"===e&&"C"===r.name){var n=[];r.propertyList.forEach((function(e,t){0!==t&&n.push(e)})),void 0===t.connections&&(t.connections=[]),t.connections.push(n)}else if("Properties70"===r.name){Object.keys(r).forEach((function(e){t[e]=r[e]}))}else if("Properties70"===e&&"P"===r.name){var i,o=r.propertyList[0],s=r.propertyList[1],l=r.propertyList[2],u=r.propertyList[3];0===o.indexOf("Lcl ")&&(o=o.replace("Lcl ","Lcl_")),0===s.indexOf("Lcl ")&&(s=s.replace("Lcl ","Lcl_")),i="Color"===s||"ColorRGB"===s||"Vector"===s||"Vector3D"===s||0===s.indexOf("Lcl_")?[r.propertyList[4],r.propertyList[5],r.propertyList[6]]:r.propertyList[4],t[o]={type:s,type2:l,flag:u,value:i}}else void 0===t[r.name]?"number"==typeof r.id?(t[r.name]={},t[r.name][r.id]=r):t[r.name]=r:"PoseNode"===r.name?(Array.isArray(t[r.name])||(t[r.name]=[t[r.name]]),t[r.name].push(r)):void 0===t[r.name][r.id]&&(t[r.name][r.id]=r)},parseProperty:function(e){var t=e.getString(1);switch(t){case"C":return e.getBoolean();case"D":return e.getFloat64();case"F":return e.getFloat32();case"I":return e.getInt32();case"L":return e.getInt64();case"R":var r=e.getUint32();return e.getArrayBuffer(r);case"S":r=e.getUint32();return e.getString(r);case"Y":return e.getInt16();case"b":case"c":case"d":case"f":case"i":case"l":var a=e.getUint32(),n=e.getUint32(),i=e.getUint32();if(0===n)switch(t){case"b":case"c":return e.getBooleanArray(a);case"d":return e.getFloat64Array(a);case"f":return e.getFloat32Array(a);case"i":return e.getInt32Array(a);case"l":return e.getInt64Array(a)}void 0===Pe&&console.error("THREE.FBXLoader: External library Inflate.min.js required, obtain or import from https://github.com/imaya/zlib.js");var o=new J(new Pe.Inflate(new Uint8Array(e.getArrayBuffer(i))).decompress().buffer);switch(t){case"b":case"c":return o.getBooleanArray(a);case"d":return o.getFloat64Array(a);case"f":return o.getFloat32Array(a);case"i":return o.getInt32Array(a);case"l":return o.getInt64Array(a)}default:throw new Error("THREE.FBXLoader: Unknown property type "+t)}}},J.prototype={constructor:J,getOffset:function(){return this.offset},size:function(){return this.dv.buffer.byteLength},skip:function(e){this.offset+=e},getBoolean:function(){return 1==(1&this.getUint8())},getBooleanArray:function(e){for(var t=[],r=0;r<e;r++)t.push(this.getBoolean());return t},getUint8:function(){var e=this.dv.getUint8(this.offset);return this.offset+=1,e},getInt16:function(){var e=this.dv.getInt16(this.offset,this.littleEndian);return this.offset+=2,e},getInt32:function(){var e=this.dv.getInt32(this.offset,this.littleEndian);return this.offset+=4,e},getInt32Array:function(e){for(var t=[],r=0;r<e;r++)t.push(this.getInt32());return t},getUint32:function(){var e=this.dv.getUint32(this.offset,this.littleEndian);return this.offset+=4,e},getInt64:function(){var e,t;return this.littleEndian?(e=this.getUint32(),t=this.getUint32()):(t=this.getUint32(),e=this.getUint32()),2147483648&t?(t=4294967295&~t,4294967295===(e=4294967295&~e)&&(t=t+1&4294967295),-(4294967296*t+(e=e+1&4294967295))):4294967296*t+e},getInt64Array:function(e){for(var t=[],r=0;r<e;r++)t.push(this.getInt64());return t},getUint64:function(){var e,t;return this.littleEndian?(e=this.getUint32(),t=this.getUint32()):(t=this.getUint32(),e=this.getUint32()),4294967296*t+e},getFloat32:function(){var e=this.dv.getFloat32(this.offset,this.littleEndian);return this.offset+=4,e},getFloat32Array:function(e){for(var t=[],r=0;r<e;r++)t.push(this.getFloat32());return t},getFloat64:function(){var e=this.dv.getFloat64(this.offset,this.littleEndian);return this.offset+=8,e},getFloat64Array:function(e){for(var t=[],r=0;r<e;r++)t.push(this.getFloat64());return t},getArrayBuffer:function(e){var t=this.dv.buffer.slice(this.offset,this.offset+e);return this.offset+=e,t},getString:function(e){for(var t=[],r=0;r<e;r++)t[r]=this.getUint8();var a=t.indexOf(0);return a>=0&&(t=t.slice(0,a)),i.decodeText(new Uint8Array(t))}},ee.prototype={constructor:ee,add:function(e,t){this[e]=t}};var ae=[];function ne(e,t,r,a){var n;switch(a.mappingType){case"ByPolygonVertex":n=e;break;case"ByPolygon":n=t;break;case"ByVertice":n=r;break;case"AllSame":n=a.indices[0];break;default:console.warn("THREE.FBXLoader: unknown attribute mapping type "+a.mappingType)}"IndexToDirect"===a.referenceType&&(n=a.indices[n]);var i=n*a.dataSize,o=i+a.dataSize;return function(e,t,r,a){for(var n=r,i=0;n<a;n++,i++)e[i]=t[n];return e}(ae,a.buffer,i,o)}var ie=new z,oe=new r;function se(e){var t,r=new m,a=new m,n=new m,i=new m,o=new m,s=new m,l=new m,u=new m,c=new m,h=new m,p=new m,f=e.inheritType?e.inheritType:0;(e.translation&&r.setPosition(oe.fromArray(e.translation)),e.preRotation)&&((t=e.preRotation.map(A.degToRad)).push(e.eulerOrder),a.makeRotationFromEuler(ie.fromArray(t)));e.rotation&&((t=e.rotation.map(A.degToRad)).push(e.eulerOrder),n.makeRotationFromEuler(ie.fromArray(t)));e.postRotation&&((t=e.postRotation.map(A.degToRad)).push(e.eulerOrder),i.makeRotationFromEuler(ie.fromArray(t)));e.scale&&o.scale(oe.fromArray(e.scale)),e.scalingOffset&&l.setPosition(oe.fromArray(e.scalingOffset)),e.scalingPivot&&s.setPosition(oe.fromArray(e.scalingPivot)),e.rotationOffset&&u.setPosition(oe.fromArray(e.rotationOffset)),e.rotationPivot&&c.setPosition(oe.fromArray(e.rotationPivot)),e.parentMatrixWorld&&(h=e.parentMatrixWorld);var v=a.multiply(n).multiply(i),d=new m;h.extractRotation(d);var g,y,w,b,I=new m;if(I.copyPosition(h),w=I.getInverse(I).multiply(h),y=d.getInverse(d).multiply(w),g=o,0===f)b=d.multiply(v).multiply(y).multiply(g);else if(1===f)b=d.multiply(y).multiply(v).multiply(g);else{var T=(new m).copy(o),x=y.multiply(T.getInverse(T));b=d.multiply(v).multiply(x).multiply(g)}var E=r.multiply(u).multiply(c).multiply(a).multiply(n).multiply(i).multiply(c.getInverse(c)).multiply(l).multiply(s).multiply(o).multiply(s.getInverse(s)),k=(new m).copyPosition(E),D=h.multiply(k);return p.copyPosition(D),E=p.multiply(b)}function le(e){var t=["ZYX","YZX","XZY","ZXY","YXZ","XYZ"];return 6===(e=e||0)?(console.warn("THREE.FBXLoader: unsupported Euler Order: Spherical XYZ. Animations and rotations may be incorrect."),t[0]):t[e]}function ue(e){return e.split(",").map((function(e){return parseFloat(e)}))}function ce(e,t,r){return void 0===t&&(t=0),void 0===r&&(r=e.byteLength),i.decodeText(new Uint8Array(e,t,r))}function he(e,t,r){return e.slice(0,t).concat(r).concat(e.slice(t))}return K}();export{Le as FBXLoader};
-//# sourceMappingURL=FBXLoader.js.map
+import { Vector4, Vector3, Curve, Loader, LoaderUtils, FileLoader, TextureLoader, RepeatWrapping, ClampToEdgeWrapping, Texture, MeshPhongMaterial, MeshLambertMaterial, Color, sRGBEncoding, EquirectangularReflectionMapping, Matrix4, Group, Bone, PropertyBinding, Object3D, OrthographicCamera, PerspectiveCamera, PointLight, Math as _Math, SpotLight, DirectionalLight, VertexColors, SkinnedMesh, Mesh, LineBasicMaterial, Line, Skeleton, AmbientLight, BufferGeometry, Float32BufferAttribute, Uint16BufferAttribute, Matrix3, BufferAttribute, AnimationClip, Euler, VectorKeyframeTrack, Quaternion, QuaternionKeyframeTrack, NumberKeyframeTrack } from '../../../../three.js';
+
+/** @license zlib.js 2012 - imaya [ https://github.com/imaya/zlib.js ] The MIT License */var mod={}, l=void 0,aa=mod;function r(c,d){var a=c.split("."),b=aa;!(a[0]in b)&&b.execScript&&b.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)!a.length&&d!==l?b[e]=d:b=b[e]?b[e]:b[e]={};}var t="undefined"!==typeof Uint8Array&&"undefined"!==typeof Uint16Array&&"undefined"!==typeof Uint32Array&&"undefined"!==typeof DataView;function v(c){var d=c.length,a=0,b=Number.POSITIVE_INFINITY,e,f,g,h,k,m,n,p,s,x;for(p=0;p<d;++p)c[p]>a&&(a=c[p]),c[p]<b&&(b=c[p]);e=1<<a;f=new (t?Uint32Array:Array)(e);g=1;h=0;for(k=2;g<=a;){for(p=0;p<d;++p)if(c[p]===g){m=0;n=h;for(s=0;s<g;++s)m=m<<1|n&1,n>>=1;x=g<<16|p;for(s=m;s<e;s+=k)f[s]=x;++h;}++g;h<<=1;k<<=1;}return [f,a,b]}function w(c,d){this.g=[];this.h=32768;this.d=this.f=this.a=this.l=0;this.input=t?new Uint8Array(c):c;this.m=!1;this.i=y;this.r=!1;if(d||!(d={}))d.index&&(this.a=d.index),d.bufferSize&&(this.h=d.bufferSize),d.bufferType&&(this.i=d.bufferType),d.resize&&(this.r=d.resize);switch(this.i){case A:this.b=32768;this.c=new (t?Uint8Array:Array)(32768+this.h+258);break;case y:this.b=0;this.c=new (t?Uint8Array:Array)(this.h);this.e=this.z;this.n=this.v;this.j=this.w;break;default:throw Error("invalid inflate mode");
+}}var A=0,y=1,B={t:A,s:y};
+w.prototype.k=function(){for(;!this.m;){var c=C(this,3);c&1&&(this.m=!0);c>>>=1;switch(c){case 0:var d=this.input,a=this.a,b=this.c,e=this.b,f=d.length,g=l,h=l,k=b.length,m=l;this.d=this.f=0;if(a+1>=f)throw Error("invalid uncompressed block header: LEN");g=d[a++]|d[a++]<<8;if(a+1>=f)throw Error("invalid uncompressed block header: NLEN");h=d[a++]|d[a++]<<8;if(g===~h)throw Error("invalid uncompressed block header: length verify");if(a+g>d.length)throw Error("input buffer is broken");switch(this.i){case A:for(;e+
+g>b.length;){m=k-e;g-=m;if(t)b.set(d.subarray(a,a+m),e),e+=m,a+=m;else for(;m--;)b[e++]=d[a++];this.b=e;b=this.e();e=this.b;}break;case y:for(;e+g>b.length;)b=this.e({p:2});break;default:throw Error("invalid inflate mode");}if(t)b.set(d.subarray(a,a+g),e),e+=g,a+=g;else for(;g--;)b[e++]=d[a++];this.a=a;this.b=e;this.c=b;break;case 1:this.j(ba,ca);break;case 2:for(var n=C(this,5)+257,p=C(this,5)+1,s=C(this,4)+4,x=new (t?Uint8Array:Array)(D.length),S=l,T=l,U=l,u=l,M=l,F=l,z=l,q=l,V=l,q=0;q<s;++q)x[D[q]]=
+C(this,3);if(!t){q=s;for(s=x.length;q<s;++q)x[D[q]]=0;}S=v(x);u=new (t?Uint8Array:Array)(n+p);q=0;for(V=n+p;q<V;)switch(M=E(this,S),M){case 16:for(z=3+C(this,2);z--;)u[q++]=F;break;case 17:for(z=3+C(this,3);z--;)u[q++]=0;F=0;break;case 18:for(z=11+C(this,7);z--;)u[q++]=0;F=0;break;default:F=u[q++]=M;}T=t?v(u.subarray(0,n)):v(u.slice(0,n));U=t?v(u.subarray(n)):v(u.slice(n));this.j(T,U);break;default:throw Error("unknown BTYPE: "+c);}}return this.n()};
+var G=[16,17,18,0,8,7,9,6,10,5,11,4,12,3,13,2,14,1,15],D=t?new Uint16Array(G):G,H=[3,4,5,6,7,8,9,10,11,13,15,17,19,23,27,31,35,43,51,59,67,83,99,115,131,163,195,227,258,258,258],I=t?new Uint16Array(H):H,J=[0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,0,0,0],K=t?new Uint8Array(J):J,L=[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577],da=t?new Uint16Array(L):L,ea=[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,
+13,13],N=t?new Uint8Array(ea):ea,O=new (t?Uint8Array:Array)(288),P,fa;P=0;for(fa=O.length;P<fa;++P)O[P]=143>=P?8:255>=P?9:279>=P?7:8;var ba=v(O),Q=new (t?Uint8Array:Array)(30),R,ga;R=0;for(ga=Q.length;R<ga;++R)Q[R]=5;var ca=v(Q);function C(c,d){for(var a=c.f,b=c.d,e=c.input,f=c.a,g=e.length,h;b<d;){if(f>=g)throw Error("input buffer is broken");a|=e[f++]<<b;b+=8;}h=a&(1<<d)-1;c.f=a>>>d;c.d=b-d;c.a=f;return h}
+function E(c,d){for(var a=c.f,b=c.d,e=c.input,f=c.a,g=e.length,h=d[0],k=d[1],m,n;b<k&&!(f>=g);)a|=e[f++]<<b,b+=8;m=h[a&(1<<k)-1];n=m>>>16;if(n>b)throw Error("invalid code length: "+n);c.f=a>>n;c.d=b-n;c.a=f;return m&65535}
+w.prototype.j=function(c,d){var a=this.c,b=this.b;this.o=c;for(var e=a.length-258,f,g,h,k;256!==(f=E(this,c));)if(256>f)b>=e&&(this.b=b,a=this.e(),b=this.b),a[b++]=f;else{g=f-257;k=I[g];0<K[g]&&(k+=C(this,K[g]));f=E(this,d);h=da[f];0<N[f]&&(h+=C(this,N[f]));b>=e&&(this.b=b,a=this.e(),b=this.b);for(;k--;)a[b]=a[b++-h];}for(;8<=this.d;)this.d-=8,this.a--;this.b=b;};
+w.prototype.w=function(c,d){var a=this.c,b=this.b;this.o=c;for(var e=a.length,f,g,h,k;256!==(f=E(this,c));)if(256>f)b>=e&&(a=this.e(),e=a.length),a[b++]=f;else{g=f-257;k=I[g];0<K[g]&&(k+=C(this,K[g]));f=E(this,d);h=da[f];0<N[f]&&(h+=C(this,N[f]));b+k>e&&(a=this.e(),e=a.length);for(;k--;)a[b]=a[b++-h];}for(;8<=this.d;)this.d-=8,this.a--;this.b=b;};
+w.prototype.e=function(){var c=new (t?Uint8Array:Array)(this.b-32768),d=this.b-32768,a,b,e=this.c;if(t)c.set(e.subarray(32768,c.length));else{a=0;for(b=c.length;a<b;++a)c[a]=e[a+32768];}this.g.push(c);this.l+=c.length;if(t)e.set(e.subarray(d,d+32768));else for(a=0;32768>a;++a)e[a]=e[d+a];this.b=32768;return e};
+w.prototype.z=function(c){var d,a=this.input.length/this.a+1|0,b,e,f,g=this.input,h=this.c;c&&("number"===typeof c.p&&(a=c.p),"number"===typeof c.u&&(a+=c.u));2>a?(b=(g.length-this.a)/this.o[2],f=258*(b/2)|0,e=f<h.length?h.length+f:h.length<<1):e=h.length*a;t?(d=new Uint8Array(e),d.set(h)):d=h;return this.c=d};
+w.prototype.n=function(){var c=0,d=this.c,a=this.g,b,e=new (t?Uint8Array:Array)(this.l+(this.b-32768)),f,g,h,k;if(0===a.length)return t?this.c.subarray(32768,this.b):this.c.slice(32768,this.b);f=0;for(g=a.length;f<g;++f){b=a[f];h=0;for(k=b.length;h<k;++h)e[c++]=b[h];}f=32768;for(g=this.b;f<g;++f)e[c++]=d[f];this.g=[];return this.buffer=e};
+w.prototype.v=function(){var c,d=this.b;t?this.r?(c=new Uint8Array(d),c.set(this.c.subarray(0,d))):c=this.c.subarray(0,d):(this.c.length>d&&(this.c.length=d),c=this.c);return this.buffer=c};function W(c,d){var a,b;this.input=c;this.a=0;if(d||!(d={}))d.index&&(this.a=d.index),d.verify&&(this.A=d.verify);a=c[this.a++];b=c[this.a++];switch(a&15){case ha:this.method=ha;break;default:throw Error("unsupported compression method");}if(0!==((a<<8)+b)%31)throw Error("invalid fcheck flag:"+((a<<8)+b)%31);if(b&32)throw Error("fdict flag is not supported");this.q=new w(c,{index:this.a,bufferSize:d.bufferSize,bufferType:d.bufferType,resize:d.resize});}
+W.prototype.k=function(){var c=this.input,d,a;d=this.q.k();this.a=this.q.a;if(this.A){a=(c[this.a++]<<24|c[this.a++]<<16|c[this.a++]<<8|c[this.a++])>>>0;var b=d;if("string"===typeof b){var e=b.split(""),f,g;f=0;for(g=e.length;f<g;f++)e[f]=(e[f].charCodeAt(0)&255)>>>0;b=e;}for(var h=1,k=0,m=b.length,n,p=0;0<m;){n=1024<m?1024:m;m-=n;do h+=b[p++],k+=h;while(--n);h%=65521;k%=65521;}if(a!==(k<<16|h)>>>0)throw Error("invalid adler-32 checksum");}return d};var ha=8;r("Zlib.Inflate",W);r("Zlib.Inflate.prototype.decompress",W.prototype.k);var X={ADAPTIVE:B.s,BLOCK:B.t},Y,Z,$,ia;if(Object.keys)Y=Object.keys(X);else for(Z in Y=[],$=0,X)Y[$++]=Z;$=0;for(ia=Y.length;$<ia;++$)Z=Y[$],r("Zlib.Inflate.BufferType."+Z,X[Z]);
+var Zlib=mod.Zlib;
+
+/**
+ * @author renej
+ * NURBS utils
+ *
+ * See NURBSCurve and NURBSSurface.
+ *
+ **/
+
+
+/**************************************************************
+ *	NURBS Utils
+ **************************************************************/
+
+var NURBSUtils = {
+
+	/*
+	Finds knot vector span.
+
+	p : degree
+	u : parametric value
+	U : knot vector
+
+	returns the span
+	*/
+	findSpan: function ( p, u, U ) {
+
+		var n = U.length - p - 1;
+
+		if ( u >= U[ n ] ) {
+
+			return n - 1;
+
+		}
+
+		if ( u <= U[ p ] ) {
+
+			return p;
+
+		}
+
+		var low = p;
+		var high = n;
+		var mid = Math.floor( ( low + high ) / 2 );
+
+		while ( u < U[ mid ] || u >= U[ mid + 1 ] ) {
+
+			if ( u < U[ mid ] ) {
+
+				high = mid;
+
+			} else {
+
+				low = mid;
+
+			}
+
+			mid = Math.floor( ( low + high ) / 2 );
+
+		}
+
+		return mid;
+
+	},
+
+
+	/*
+	Calculate basis functions. See The NURBS Book, page 70, algorithm A2.2
+
+	span : span in which u lies
+	u    : parametric point
+	p    : degree
+	U    : knot vector
+
+	returns array[p+1] with basis functions values.
+	*/
+	calcBasisFunctions: function ( span, u, p, U ) {
+
+		var N = [];
+		var left = [];
+		var right = [];
+		N[ 0 ] = 1.0;
+
+		for ( var j = 1; j <= p; ++ j ) {
+
+			left[ j ] = u - U[ span + 1 - j ];
+			right[ j ] = U[ span + j ] - u;
+
+			var saved = 0.0;
+
+			for ( var r = 0; r < j; ++ r ) {
+
+				var rv = right[ r + 1 ];
+				var lv = left[ j - r ];
+				var temp = N[ r ] / ( rv + lv );
+				N[ r ] = saved + rv * temp;
+				saved = lv * temp;
+
+			 }
+
+			 N[ j ] = saved;
+
+		 }
+
+		 return N;
+
+	},
+
+
+	/*
+	Calculate B-Spline curve points. See The NURBS Book, page 82, algorithm A3.1.
+
+	p : degree of B-Spline
+	U : knot vector
+	P : control points (x, y, z, w)
+	u : parametric point
+
+	returns point for given u
+	*/
+	calcBSplinePoint: function ( p, U, P, u ) {
+
+		var span = this.findSpan( p, u, U );
+		var N = this.calcBasisFunctions( span, u, p, U );
+		var C = new Vector4( 0, 0, 0, 0 );
+
+		for ( var j = 0; j <= p; ++ j ) {
+
+			var point = P[ span - p + j ];
+			var Nj = N[ j ];
+			var wNj = point.w * Nj;
+			C.x += point.x * wNj;
+			C.y += point.y * wNj;
+			C.z += point.z * wNj;
+			C.w += point.w * Nj;
+
+		}
+
+		return C;
+
+	},
+
+
+	/*
+	Calculate basis functions derivatives. See The NURBS Book, page 72, algorithm A2.3.
+
+	span : span in which u lies
+	u    : parametric point
+	p    : degree
+	n    : number of derivatives to calculate
+	U    : knot vector
+
+	returns array[n+1][p+1] with basis functions derivatives
+	*/
+	calcBasisFunctionDerivatives: function ( span, u, p, n, U ) {
+
+		var zeroArr = [];
+		for ( var i = 0; i <= p; ++ i )
+			zeroArr[ i ] = 0.0;
+
+		var ders = [];
+		for ( var i = 0; i <= n; ++ i )
+			ders[ i ] = zeroArr.slice( 0 );
+
+		var ndu = [];
+		for ( var i = 0; i <= p; ++ i )
+			ndu[ i ] = zeroArr.slice( 0 );
+
+		ndu[ 0 ][ 0 ] = 1.0;
+
+		var left = zeroArr.slice( 0 );
+		var right = zeroArr.slice( 0 );
+
+		for ( var j = 1; j <= p; ++ j ) {
+
+			left[ j ] = u - U[ span + 1 - j ];
+			right[ j ] = U[ span + j ] - u;
+
+			var saved = 0.0;
+
+			for ( var r = 0; r < j; ++ r ) {
+
+				var rv = right[ r + 1 ];
+				var lv = left[ j - r ];
+				ndu[ j ][ r ] = rv + lv;
+
+				var temp = ndu[ r ][ j - 1 ] / ndu[ j ][ r ];
+				ndu[ r ][ j ] = saved + rv * temp;
+				saved = lv * temp;
+
+			}
+
+			ndu[ j ][ j ] = saved;
+
+		}
+
+		for ( var j = 0; j <= p; ++ j ) {
+
+			ders[ 0 ][ j ] = ndu[ j ][ p ];
+
+		}
+
+		for ( var r = 0; r <= p; ++ r ) {
+
+			var s1 = 0;
+			var s2 = 1;
+
+			var a = [];
+			for ( var i = 0; i <= p; ++ i ) {
+
+				a[ i ] = zeroArr.slice( 0 );
+
+			}
+			a[ 0 ][ 0 ] = 1.0;
+
+			for ( var k = 1; k <= n; ++ k ) {
+
+				var d = 0.0;
+				var rk = r - k;
+				var pk = p - k;
+
+				if ( r >= k ) {
+
+					a[ s2 ][ 0 ] = a[ s1 ][ 0 ] / ndu[ pk + 1 ][ rk ];
+					d = a[ s2 ][ 0 ] * ndu[ rk ][ pk ];
+
+				}
+
+				var j1 = ( rk >= - 1 ) ? 1 : - rk;
+				var j2 = ( r - 1 <= pk ) ? k - 1 : p - r;
+
+				for ( var j = j1; j <= j2; ++ j ) {
+
+					a[ s2 ][ j ] = ( a[ s1 ][ j ] - a[ s1 ][ j - 1 ] ) / ndu[ pk + 1 ][ rk + j ];
+					d += a[ s2 ][ j ] * ndu[ rk + j ][ pk ];
+
+				}
+
+				if ( r <= pk ) {
+
+					a[ s2 ][ k ] = - a[ s1 ][ k - 1 ] / ndu[ pk + 1 ][ r ];
+					d += a[ s2 ][ k ] * ndu[ r ][ pk ];
+
+				}
+
+				ders[ k ][ r ] = d;
+
+				var j = s1;
+				s1 = s2;
+				s2 = j;
+
+			}
+
+		}
+
+		var r = p;
+
+		for ( var k = 1; k <= n; ++ k ) {
+
+			for ( var j = 0; j <= p; ++ j ) {
+
+				ders[ k ][ j ] *= r;
+
+			}
+			r *= p - k;
+
+		}
+
+		return ders;
+
+	},
+
+
+	/*
+		Calculate derivatives of a B-Spline. See The NURBS Book, page 93, algorithm A3.2.
+
+		p  : degree
+		U  : knot vector
+		P  : control points
+		u  : Parametric points
+		nd : number of derivatives
+
+		returns array[d+1] with derivatives
+		*/
+	calcBSplineDerivatives: function ( p, U, P, u, nd ) {
+
+		var du = nd < p ? nd : p;
+		var CK = [];
+		var span = this.findSpan( p, u, U );
+		var nders = this.calcBasisFunctionDerivatives( span, u, p, du, U );
+		var Pw = [];
+
+		for ( var i = 0; i < P.length; ++ i ) {
+
+			var point = P[ i ].clone();
+			var w = point.w;
+
+			point.x *= w;
+			point.y *= w;
+			point.z *= w;
+
+			Pw[ i ] = point;
+
+		}
+		for ( var k = 0; k <= du; ++ k ) {
+
+			var point = Pw[ span - p ].clone().multiplyScalar( nders[ k ][ 0 ] );
+
+			for ( var j = 1; j <= p; ++ j ) {
+
+				point.add( Pw[ span - p + j ].clone().multiplyScalar( nders[ k ][ j ] ) );
+
+			}
+
+			CK[ k ] = point;
+
+		}
+
+		for ( var k = du + 1; k <= nd + 1; ++ k ) {
+
+			CK[ k ] = new Vector4( 0, 0, 0 );
+
+		}
+
+		return CK;
+
+	},
+
+
+	/*
+	Calculate "K over I"
+
+	returns k!/(i!(k-i)!)
+	*/
+	calcKoverI: function ( k, i ) {
+
+		var nom = 1;
+
+		for ( var j = 2; j <= k; ++ j ) {
+
+			nom *= j;
+
+		}
+
+		var denom = 1;
+
+		for ( var j = 2; j <= i; ++ j ) {
+
+			denom *= j;
+
+		}
+
+		for ( var j = 2; j <= k - i; ++ j ) {
+
+			denom *= j;
+
+		}
+
+		return nom / denom;
+
+	},
+
+
+	/*
+	Calculate derivatives (0-nd) of rational curve. See The NURBS Book, page 127, algorithm A4.2.
+
+	Pders : result of function calcBSplineDerivatives
+
+	returns array with derivatives for rational curve.
+	*/
+	calcRationalCurveDerivatives: function ( Pders ) {
+
+		var nd = Pders.length;
+		var Aders = [];
+		var wders = [];
+
+		for ( var i = 0; i < nd; ++ i ) {
+
+			var point = Pders[ i ];
+			Aders[ i ] = new Vector3( point.x, point.y, point.z );
+			wders[ i ] = point.w;
+
+		}
+
+		var CK = [];
+
+		for ( var k = 0; k < nd; ++ k ) {
+
+			var v = Aders[ k ].clone();
+
+			for ( var i = 1; i <= k; ++ i ) {
+
+				v.sub( CK[ k - i ].clone().multiplyScalar( this.calcKoverI( k, i ) * wders[ i ] ) );
+
+			}
+
+			CK[ k ] = v.divideScalar( wders[ 0 ] );
+
+		}
+
+		return CK;
+
+	},
+
+
+	/*
+	Calculate NURBS curve derivatives. See The NURBS Book, page 127, algorithm A4.2.
+
+	p  : degree
+	U  : knot vector
+	P  : control points in homogeneous space
+	u  : parametric points
+	nd : number of derivatives
+
+	returns array with derivatives.
+	*/
+	calcNURBSDerivatives: function ( p, U, P, u, nd ) {
+
+		var Pders = this.calcBSplineDerivatives( p, U, P, u, nd );
+		return this.calcRationalCurveDerivatives( Pders );
+
+	},
+
+
+	/*
+	Calculate rational B-Spline surface point. See The NURBS Book, page 134, algorithm A4.3.
+
+	p1, p2 : degrees of B-Spline surface
+	U1, U2 : knot vectors
+	P      : control points (x, y, z, w)
+	u, v   : parametric values
+
+	returns point for given (u, v)
+	*/
+	calcSurfacePoint: function ( p, q, U, V, P, u, v, target ) {
+
+		var uspan = this.findSpan( p, u, U );
+		var vspan = this.findSpan( q, v, V );
+		var Nu = this.calcBasisFunctions( uspan, u, p, U );
+		var Nv = this.calcBasisFunctions( vspan, v, q, V );
+		var temp = [];
+
+		for ( var l = 0; l <= q; ++ l ) {
+
+			temp[ l ] = new Vector4( 0, 0, 0, 0 );
+			for ( var k = 0; k <= p; ++ k ) {
+
+				var point = P[ uspan - p + k ][ vspan - q + l ].clone();
+				var w = point.w;
+				point.x *= w;
+				point.y *= w;
+				point.z *= w;
+				temp[ l ].add( point.multiplyScalar( Nu[ k ] ) );
+
+			}
+
+		}
+
+		var Sw = new Vector4( 0, 0, 0, 0 );
+		for ( var l = 0; l <= q; ++ l ) {
+
+			Sw.add( temp[ l ].multiplyScalar( Nv[ l ] ) );
+
+		}
+
+		Sw.divideScalar( Sw.w );
+		target.set( Sw.x, Sw.y, Sw.z );
+
+	}
+
+};
+
+/**
+ * @author renej
+ * NURBS curve object
+ *
+ * Derives from Curve, overriding getPoint and getTangent.
+ *
+ * Implementation is based on (x, y [, z=0 [, w=1]]) control points with w=weight.
+ *
+ **/
+
+
+/**************************************************************
+ *	NURBS curve
+ **************************************************************/
+
+var NURBSCurve = function ( degree, knots /* array of reals */, controlPoints /* array of Vector(2|3|4) */, startKnot /* index in knots */, endKnot /* index in knots */ ) {
+
+	Curve.call( this );
+
+	this.degree = degree;
+	this.knots = knots;
+	this.controlPoints = [];
+	// Used by periodic NURBS to remove hidden spans
+	this.startKnot = startKnot || 0;
+	this.endKnot = endKnot || ( this.knots.length - 1 );
+	for ( var i = 0; i < controlPoints.length; ++ i ) {
+
+		// ensure Vector4 for control points
+		var point = controlPoints[ i ];
+		this.controlPoints[ i ] = new Vector4( point.x, point.y, point.z, point.w );
+
+	}
+
+};
+
+
+NURBSCurve.prototype = Object.create( Curve.prototype );
+NURBSCurve.prototype.constructor = NURBSCurve;
+
+
+NURBSCurve.prototype.getPoint = function ( t ) {
+
+	var u = this.knots[ this.startKnot ] + t * ( this.knots[ this.endKnot ] - this.knots[ this.startKnot ] ); // linear mapping t->u
+
+	// following results in (wx, wy, wz, w) homogeneous point
+	var hpoint = NURBSUtils.calcBSplinePoint( this.degree, this.knots, this.controlPoints, u );
+
+	if ( hpoint.w != 1.0 ) {
+
+		// project to 3D space: (wx, wy, wz, w) -> (x, y, z, 1)
+		hpoint.divideScalar( hpoint.w );
+
+	}
+
+	return new Vector3( hpoint.x, hpoint.y, hpoint.z );
+
+};
+
+
+NURBSCurve.prototype.getTangent = function ( t ) {
+
+	var u = this.knots[ 0 ] + t * ( this.knots[ this.knots.length - 1 ] - this.knots[ 0 ] );
+	var ders = NURBSUtils.calcNURBSDerivatives( this.degree, this.knots, this.controlPoints, u, 1 );
+	var tangent = ders[ 1 ].clone();
+	tangent.normalize();
+
+	return tangent;
+
+};
+
+/**
+ * @author Kyle-Larson https://github.com/Kyle-Larson
+ * @author Takahiro https://github.com/takahirox
+ * @author Lewy Blue https://github.com/looeee
+ *
+ * Loader loads FBX file and generates Group representing FBX scene.
+ * Requires FBX file to be >= 7.0 and in ASCII or >= 6400 in Binary format
+ * Versions lower than this may load but will probably have errors
+ *
+ * Needs Support:
+ *  Morph normals / blend shape normals
+ *
+ * FBX format references:
+ * 	https://wiki.blender.org/index.php/User:Mont29/Foundation/FBX_File_Structure
+ * 	http://help.autodesk.com/view/FBX/2017/ENU/?guid=__cpp_ref_index_html (C++ SDK reference)
+ *
+ * 	Binary format specification:
+ *		https://code.blender.org/2013/08/fbx-binary-file-format-specification/
+ */
+
+
+var FBXLoader = ( function () {
+
+	var fbxTree;
+	var connections;
+	var sceneGraph;
+
+	function FBXLoader( manager ) {
+
+		Loader.call( this, manager );
+
+	}
+
+	FBXLoader.prototype = Object.assign( Object.create( Loader.prototype ), {
+
+		constructor: FBXLoader,
+
+		load: function ( url, onLoad, onProgress, onError ) {
+
+			var self = this;
+
+			var path = ( self.path === '' ) ? LoaderUtils.extractUrlBase( url ) : self.path;
+
+			var loader = new FileLoader( this.manager );
+			loader.setPath( self.path );
+			loader.setResponseType( 'arraybuffer' );
+
+			loader.load( url, function ( buffer ) {
+
+				try {
+
+					onLoad( self.parse( buffer, path ) );
+
+				} catch ( error ) {
+
+					setTimeout( function () {
+
+						if ( onError ) onError( error );
+
+						self.manager.itemError( url );
+
+					}, 0 );
+
+				}
+
+			}, onProgress, onError );
+
+		},
+
+		parse: function ( FBXBuffer, path ) {
+
+			if ( isFbxFormatBinary( FBXBuffer ) ) {
+
+				fbxTree = new BinaryParser().parse( FBXBuffer );
+
+			} else {
+
+				var FBXText = convertArrayBufferToString( FBXBuffer );
+
+				if ( ! isFbxFormatASCII( FBXText ) ) {
+
+					throw new Error( 'THREE.FBXLoader: Unknown format.' );
+
+				}
+
+				if ( getFbxVersion( FBXText ) < 7000 ) {
+
+					throw new Error( 'THREE.FBXLoader: FBX version not supported, FileVersion: ' + getFbxVersion( FBXText ) );
+
+				}
+
+				fbxTree = new TextParser().parse( FBXText );
+
+			}
+
+			// console.log( fbxTree );
+
+			var textureLoader = new TextureLoader( this.manager ).setPath( this.resourcePath || path ).setCrossOrigin( this.crossOrigin );
+
+			return new FBXTreeParser( textureLoader, this.manager ).parse( fbxTree );
+
+		}
+
+	} );
+
+	// Parse the FBXTree object returned by the BinaryParser or TextParser and return a Group
+	function FBXTreeParser( textureLoader, manager ) {
+
+		this.textureLoader = textureLoader;
+		this.manager = manager;
+
+	}
+
+	FBXTreeParser.prototype = {
+
+		constructor: FBXTreeParser,
+
+		parse: function () {
+
+			connections = this.parseConnections();
+
+			var images = this.parseImages();
+			var textures = this.parseTextures( images );
+			var materials = this.parseMaterials( textures );
+			var deformers = this.parseDeformers();
+			var geometryMap = new GeometryParser().parse( deformers );
+
+			this.parseScene( deformers, geometryMap, materials );
+
+			return sceneGraph;
+
+		},
+
+		// Parses FBXTree.Connections which holds parent-child connections between objects (e.g. material -> texture, model->geometry )
+		// and details the connection type
+		parseConnections: function () {
+
+			var connectionMap = new Map();
+
+			if ( 'Connections' in fbxTree ) {
+
+				var rawConnections = fbxTree.Connections.connections;
+
+				rawConnections.forEach( function ( rawConnection ) {
+
+					var fromID = rawConnection[ 0 ];
+					var toID = rawConnection[ 1 ];
+					var relationship = rawConnection[ 2 ];
+
+					if ( ! connectionMap.has( fromID ) ) {
+
+						connectionMap.set( fromID, {
+							parents: [],
+							children: []
+						} );
+
+					}
+
+					var parentRelationship = { ID: toID, relationship: relationship };
+					connectionMap.get( fromID ).parents.push( parentRelationship );
+
+					if ( ! connectionMap.has( toID ) ) {
+
+						connectionMap.set( toID, {
+							parents: [],
+							children: []
+						} );
+
+					}
+
+					var childRelationship = { ID: fromID, relationship: relationship };
+					connectionMap.get( toID ).children.push( childRelationship );
+
+				} );
+
+			}
+
+			return connectionMap;
+
+		},
+
+		// Parse FBXTree.Objects.Video for embedded image data
+		// These images are connected to textures in FBXTree.Objects.Textures
+		// via FBXTree.Connections.
+		parseImages: function () {
+
+			var images = {};
+			var blobs = {};
+
+			if ( 'Video' in fbxTree.Objects ) {
+
+				var videoNodes = fbxTree.Objects.Video;
+
+				for ( var nodeID in videoNodes ) {
+
+					var videoNode = videoNodes[ nodeID ];
+
+					var id = parseInt( nodeID );
+
+					images[ id ] = videoNode.RelativeFilename || videoNode.Filename;
+
+					// raw image data is in videoNode.Content
+					if ( 'Content' in videoNode ) {
+
+						var arrayBufferContent = ( videoNode.Content instanceof ArrayBuffer ) && ( videoNode.Content.byteLength > 0 );
+						var base64Content = ( typeof videoNode.Content === 'string' ) && ( videoNode.Content !== '' );
+
+						if ( arrayBufferContent || base64Content ) {
+
+							var image = this.parseImage( videoNodes[ nodeID ] );
+
+							blobs[ videoNode.RelativeFilename || videoNode.Filename ] = image;
+
+						}
+
+					}
+
+				}
+
+			}
+
+			for ( var id in images ) {
+
+				var filename = images[ id ];
+
+				if ( blobs[ filename ] !== undefined ) images[ id ] = blobs[ filename ];
+				else images[ id ] = images[ id ].split( '\\' ).pop();
+
+			}
+
+			return images;
+
+		},
+
+		// Parse embedded image data in FBXTree.Video.Content
+		parseImage: function ( videoNode ) {
+
+			var content = videoNode.Content;
+			var fileName = videoNode.RelativeFilename || videoNode.Filename;
+			var extension = fileName.slice( fileName.lastIndexOf( '.' ) + 1 ).toLowerCase();
+
+			var type;
+
+			switch ( extension ) {
+
+				case 'bmp':
+
+					type = 'image/bmp';
+					break;
+
+				case 'jpg':
+				case 'jpeg':
+
+					type = 'image/jpeg';
+					break;
+
+				case 'png':
+
+					type = 'image/png';
+					break;
+
+				case 'tif':
+
+					type = 'image/tiff';
+					break;
+
+				case 'tga':
+
+					if ( this.manager.getHandler( '.tga' ) === null ) {
+
+						console.warn( 'FBXLoader: TGA loader not found, skipping ', fileName );
+
+					}
+
+					type = 'image/tga';
+					break;
+
+				default:
+
+					console.warn( 'FBXLoader: Image type "' + extension + '" is not supported.' );
+					return;
+
+			}
+
+			if ( typeof content === 'string' ) { // ASCII format
+
+				return 'data:' + type + ';base64,' + content;
+
+			} else { // Binary Format
+
+				var array = new Uint8Array( content );
+				return window.URL.createObjectURL( new Blob( [ array ], { type: type } ) );
+
+			}
+
+		},
+
+		// Parse nodes in FBXTree.Objects.Texture
+		// These contain details such as UV scaling, cropping, rotation etc and are connected
+		// to images in FBXTree.Objects.Video
+		parseTextures: function ( images ) {
+
+			var textureMap = new Map();
+
+			if ( 'Texture' in fbxTree.Objects ) {
+
+				var textureNodes = fbxTree.Objects.Texture;
+				for ( var nodeID in textureNodes ) {
+
+					var texture = this.parseTexture( textureNodes[ nodeID ], images );
+					textureMap.set( parseInt( nodeID ), texture );
+
+				}
+
+			}
+
+			return textureMap;
+
+		},
+
+		// Parse individual node in FBXTree.Objects.Texture
+		parseTexture: function ( textureNode, images ) {
+
+			var texture = this.loadTexture( textureNode, images );
+
+			texture.ID = textureNode.id;
+
+			texture.name = textureNode.attrName;
+
+			var wrapModeU = textureNode.WrapModeU;
+			var wrapModeV = textureNode.WrapModeV;
+
+			var valueU = wrapModeU !== undefined ? wrapModeU.value : 0;
+			var valueV = wrapModeV !== undefined ? wrapModeV.value : 0;
+
+			// http://download.autodesk.com/us/fbx/SDKdocs/FBX_SDK_Help/files/fbxsdkref/class_k_fbx_texture.html#889640e63e2e681259ea81061b85143a
+			// 0: repeat(default), 1: clamp
+
+			texture.wrapS = valueU === 0 ? RepeatWrapping : ClampToEdgeWrapping;
+			texture.wrapT = valueV === 0 ? RepeatWrapping : ClampToEdgeWrapping;
+
+			if ( 'Scaling' in textureNode ) {
+
+				var values = textureNode.Scaling.value;
+
+				texture.repeat.x = values[ 0 ];
+				texture.repeat.y = values[ 1 ];
+
+			}
+
+			return texture;
+
+		},
+
+		// load a texture specified as a blob or data URI, or via an external URL using TextureLoader
+		loadTexture: function ( textureNode, images ) {
+
+			var fileName;
+
+			var currentPath = this.textureLoader.path;
+
+			var children = connections.get( textureNode.id ).children;
+
+			if ( children !== undefined && children.length > 0 && images[ children[ 0 ].ID ] !== undefined ) {
+
+				fileName = images[ children[ 0 ].ID ];
+
+				if ( fileName.indexOf( 'blob:' ) === 0 || fileName.indexOf( 'data:' ) === 0 ) {
+
+					this.textureLoader.setPath( undefined );
+
+				}
+
+			}
+
+			var texture;
+
+			var extension = textureNode.FileName.slice( - 3 ).toLowerCase();
+
+			if ( extension === 'tga' ) {
+
+				var loader = this.manager.getHandler( '.tga' );
+
+				if ( loader === null ) {
+
+					console.warn( 'FBXLoader: TGA loader not found, creating placeholder texture for', textureNode.RelativeFilename );
+					texture = new Texture();
+
+				} else {
+
+					texture = loader.load( fileName );
+
+				}
+
+			} else if ( extension === 'psd' ) {
+
+				console.warn( 'FBXLoader: PSD textures are not supported, creating placeholder texture for', textureNode.RelativeFilename );
+				texture = new Texture();
+
+			} else {
+
+				texture = this.textureLoader.load( fileName );
+
+			}
+
+			this.textureLoader.setPath( currentPath );
+
+			return texture;
+
+		},
+
+		// Parse nodes in FBXTree.Objects.Material
+		parseMaterials: function ( textureMap ) {
+
+			var materialMap = new Map();
+
+			if ( 'Material' in fbxTree.Objects ) {
+
+				var materialNodes = fbxTree.Objects.Material;
+
+				for ( var nodeID in materialNodes ) {
+
+					var material = this.parseMaterial( materialNodes[ nodeID ], textureMap );
+
+					if ( material !== null ) materialMap.set( parseInt( nodeID ), material );
+
+				}
+
+			}
+
+			return materialMap;
+
+		},
+
+		// Parse single node in FBXTree.Objects.Material
+		// Materials are connected to texture maps in FBXTree.Objects.Textures
+		// FBX format currently only supports Lambert and Phong shading models
+		parseMaterial: function ( materialNode, textureMap ) {
+
+			var ID = materialNode.id;
+			var name = materialNode.attrName;
+			var type = materialNode.ShadingModel;
+
+			// Case where FBX wraps shading model in property object.
+			if ( typeof type === 'object' ) {
+
+				type = type.value;
+
+			}
+
+			// Ignore unused materials which don't have any connections.
+			if ( ! connections.has( ID ) ) return null;
+
+			var parameters = this.parseParameters( materialNode, textureMap, ID );
+
+			var material;
+
+			switch ( type.toLowerCase() ) {
+
+				case 'phong':
+					material = new MeshPhongMaterial();
+					break;
+				case 'lambert':
+					material = new MeshLambertMaterial();
+					break;
+				default:
+					console.warn( 'THREE.FBXLoader: unknown material type "%s". Defaulting to MeshPhongMaterial.', type );
+					material = new MeshPhongMaterial();
+					break;
+
+			}
+
+			material.setValues( parameters );
+			material.name = name;
+
+			return material;
+
+		},
+
+		// Parse FBX material and return parameters suitable for a three.js material
+		// Also parse the texture map and return any textures associated with the material
+		parseParameters: function ( materialNode, textureMap, ID ) {
+
+			var parameters = {};
+
+			if ( materialNode.BumpFactor ) {
+
+				parameters.bumpScale = materialNode.BumpFactor.value;
+
+			}
+			if ( materialNode.Diffuse ) {
+
+				parameters.color = new Color().fromArray( materialNode.Diffuse.value );
+
+			} else if ( materialNode.DiffuseColor && materialNode.DiffuseColor.type === 'Color' ) {
+
+				// The blender exporter exports diffuse here instead of in materialNode.Diffuse
+				parameters.color = new Color().fromArray( materialNode.DiffuseColor.value );
+
+			}
+
+			if ( materialNode.DisplacementFactor ) {
+
+				parameters.displacementScale = materialNode.DisplacementFactor.value;
+
+			}
+
+			if ( materialNode.Emissive ) {
+
+				parameters.emissive = new Color().fromArray( materialNode.Emissive.value );
+
+			} else if ( materialNode.EmissiveColor && materialNode.EmissiveColor.type === 'Color' ) {
+
+				// The blender exporter exports emissive color here instead of in materialNode.Emissive
+				parameters.emissive = new Color().fromArray( materialNode.EmissiveColor.value );
+
+			}
+
+			if ( materialNode.EmissiveFactor ) {
+
+				parameters.emissiveIntensity = parseFloat( materialNode.EmissiveFactor.value );
+
+			}
+
+			if ( materialNode.Opacity ) {
+
+				parameters.opacity = parseFloat( materialNode.Opacity.value );
+
+			}
+
+			if ( parameters.opacity < 1.0 ) {
+
+				parameters.transparent = true;
+
+			}
+
+			if ( materialNode.ReflectionFactor ) {
+
+				parameters.reflectivity = materialNode.ReflectionFactor.value;
+
+			}
+
+			if ( materialNode.Shininess ) {
+
+				parameters.shininess = materialNode.Shininess.value;
+
+			}
+
+			if ( materialNode.Specular ) {
+
+				parameters.specular = new Color().fromArray( materialNode.Specular.value );
+
+			} else if ( materialNode.SpecularColor && materialNode.SpecularColor.type === 'Color' ) {
+
+				// The blender exporter exports specular color here instead of in materialNode.Specular
+				parameters.specular = new Color().fromArray( materialNode.SpecularColor.value );
+
+			}
+
+			var self = this;
+			connections.get( ID ).children.forEach( function ( child ) {
+
+				var type = child.relationship;
+
+				switch ( type ) {
+
+					case 'Bump':
+						parameters.bumpMap = self.getTexture( textureMap, child.ID );
+						break;
+
+					case 'Maya|TEX_ao_map':
+						parameters.aoMap = self.getTexture( textureMap, child.ID );
+						break;
+
+					case 'DiffuseColor':
+					case 'Maya|TEX_color_map':
+						parameters.map = self.getTexture( textureMap, child.ID );
+						parameters.map.encoding = sRGBEncoding;
+						break;
+
+					case 'DisplacementColor':
+						parameters.displacementMap = self.getTexture( textureMap, child.ID );
+						break;
+
+					case 'EmissiveColor':
+						parameters.emissiveMap = self.getTexture( textureMap, child.ID );
+						parameters.emissiveMap.encoding = sRGBEncoding;
+						break;
+
+					case 'NormalMap':
+					case 'Maya|TEX_normal_map':
+						parameters.normalMap = self.getTexture( textureMap, child.ID );
+						break;
+
+					case 'ReflectionColor':
+						parameters.envMap = self.getTexture( textureMap, child.ID );
+						parameters.envMap.mapping = EquirectangularReflectionMapping;
+						parameters.envMap.encoding = sRGBEncoding;
+						break;
+
+					case 'SpecularColor':
+						parameters.specularMap = self.getTexture( textureMap, child.ID );
+						parameters.specularMap.encoding = sRGBEncoding;
+						break;
+
+					case 'TransparentColor':
+						parameters.alphaMap = self.getTexture( textureMap, child.ID );
+						parameters.transparent = true;
+						break;
+
+					case 'AmbientColor':
+					case 'ShininessExponent': // AKA glossiness map
+					case 'SpecularFactor': // AKA specularLevel
+					case 'VectorDisplacementColor': // NOTE: Seems to be a copy of DisplacementColor
+					default:
+						console.warn( 'THREE.FBXLoader: %s map is not supported in three.js, skipping texture.', type );
+						break;
+
+				}
+
+			} );
+
+			return parameters;
+
+		},
+
+		// get a texture from the textureMap for use by a material.
+		getTexture: function ( textureMap, id ) {
+
+			// if the texture is a layered texture, just use the first layer and issue a warning
+			if ( 'LayeredTexture' in fbxTree.Objects && id in fbxTree.Objects.LayeredTexture ) {
+
+				console.warn( 'THREE.FBXLoader: layered textures are not supported in three.js. Discarding all but first layer.' );
+				id = connections.get( id ).children[ 0 ].ID;
+
+			}
+
+			return textureMap.get( id );
+
+		},
+
+		// Parse nodes in FBXTree.Objects.Deformer
+		// Deformer node can contain skinning or Vertex Cache animation data, however only skinning is supported here
+		// Generates map of Skeleton-like objects for use later when generating and binding skeletons.
+		parseDeformers: function () {
+
+			var skeletons = {};
+			var morphTargets = {};
+
+			if ( 'Deformer' in fbxTree.Objects ) {
+
+				var DeformerNodes = fbxTree.Objects.Deformer;
+
+				for ( var nodeID in DeformerNodes ) {
+
+					var deformerNode = DeformerNodes[ nodeID ];
+
+					var relationships = connections.get( parseInt( nodeID ) );
+
+					if ( deformerNode.attrType === 'Skin' ) {
+
+						var skeleton = this.parseSkeleton( relationships, DeformerNodes );
+						skeleton.ID = nodeID;
+
+						if ( relationships.parents.length > 1 ) console.warn( 'THREE.FBXLoader: skeleton attached to more than one geometry is not supported.' );
+						skeleton.geometryID = relationships.parents[ 0 ].ID;
+
+						skeletons[ nodeID ] = skeleton;
+
+					} else if ( deformerNode.attrType === 'BlendShape' ) {
+
+						var morphTarget = {
+							id: nodeID,
+						};
+
+						morphTarget.rawTargets = this.parseMorphTargets( relationships, DeformerNodes );
+						morphTarget.id = nodeID;
+
+						if ( relationships.parents.length > 1 ) console.warn( 'THREE.FBXLoader: morph target attached to more than one geometry is not supported.' );
+
+						morphTargets[ nodeID ] = morphTarget;
+
+					}
+
+				}
+
+			}
+
+			return {
+
+				skeletons: skeletons,
+				morphTargets: morphTargets,
+
+			};
+
+		},
+
+		// Parse single nodes in FBXTree.Objects.Deformer
+		// The top level skeleton node has type 'Skin' and sub nodes have type 'Cluster'
+		// Each skin node represents a skeleton and each cluster node represents a bone
+		parseSkeleton: function ( relationships, deformerNodes ) {
+
+			var rawBones = [];
+
+			relationships.children.forEach( function ( child ) {
+
+				var boneNode = deformerNodes[ child.ID ];
+
+				if ( boneNode.attrType !== 'Cluster' ) return;
+
+				var rawBone = {
+
+					ID: child.ID,
+					indices: [],
+					weights: [],
+					transformLink: new Matrix4().fromArray( boneNode.TransformLink.a ),
+					// transform: new Matrix4().fromArray( boneNode.Transform.a ),
+					// linkMode: boneNode.Mode,
+
+				};
+
+				if ( 'Indexes' in boneNode ) {
+
+					rawBone.indices = boneNode.Indexes.a;
+					rawBone.weights = boneNode.Weights.a;
+
+				}
+
+				rawBones.push( rawBone );
+
+			} );
+
+			return {
+
+				rawBones: rawBones,
+				bones: []
+
+			};
+
+		},
+
+		// The top level morph deformer node has type "BlendShape" and sub nodes have type "BlendShapeChannel"
+		parseMorphTargets: function ( relationships, deformerNodes ) {
+
+			var rawMorphTargets = [];
+
+			for ( var i = 0; i < relationships.children.length; i ++ ) {
+
+				var child = relationships.children[ i ];
+
+				var morphTargetNode = deformerNodes[ child.ID ];
+
+				var rawMorphTarget = {
+
+					name: morphTargetNode.attrName,
+					initialWeight: morphTargetNode.DeformPercent,
+					id: morphTargetNode.id,
+					fullWeights: morphTargetNode.FullWeights.a
+
+				};
+
+				if ( morphTargetNode.attrType !== 'BlendShapeChannel' ) return;
+
+				rawMorphTarget.geoID = connections.get( parseInt( child.ID ) ).children.filter( function ( child ) {
+
+					return child.relationship === undefined;
+
+				} )[ 0 ].ID;
+
+				rawMorphTargets.push( rawMorphTarget );
+
+			}
+
+			return rawMorphTargets;
+
+		},
+
+		// create the main Group() to be returned by the loader
+		parseScene: function ( deformers, geometryMap, materialMap ) {
+
+			sceneGraph = new Group();
+
+			var modelMap = this.parseModels( deformers.skeletons, geometryMap, materialMap );
+
+			var modelNodes = fbxTree.Objects.Model;
+
+			var self = this;
+			modelMap.forEach( function ( model ) {
+
+				var modelNode = modelNodes[ model.ID ];
+				self.setLookAtProperties( model, modelNode );
+
+				var parentConnections = connections.get( model.ID ).parents;
+
+				parentConnections.forEach( function ( connection ) {
+
+					var parent = modelMap.get( connection.ID );
+					if ( parent !== undefined ) parent.add( model );
+
+				} );
+
+				if ( model.parent === null ) {
+
+					sceneGraph.add( model );
+
+				}
+
+
+			} );
+
+			this.bindSkeleton( deformers.skeletons, geometryMap, modelMap );
+
+			this.createAmbientLight();
+
+			this.setupMorphMaterials();
+
+			sceneGraph.traverse( function ( node ) {
+
+				if ( node.userData.transformData ) {
+
+					if ( node.parent ) node.userData.transformData.parentMatrixWorld = node.parent.matrix;
+
+					var transform = generateTransform( node.userData.transformData );
+
+					node.applyMatrix( transform );
+
+				}
+
+			} );
+
+			var animations = new AnimationParser().parse();
+
+			// if all the models where already combined in a single group, just return that
+			if ( sceneGraph.children.length === 1 && sceneGraph.children[ 0 ].isGroup ) {
+
+				sceneGraph.children[ 0 ].animations = animations;
+				sceneGraph = sceneGraph.children[ 0 ];
+
+			}
+
+			sceneGraph.animations = animations;
+
+		},
+
+		// parse nodes in FBXTree.Objects.Model
+		parseModels: function ( skeletons, geometryMap, materialMap ) {
+
+			var modelMap = new Map();
+			var modelNodes = fbxTree.Objects.Model;
+
+			for ( var nodeID in modelNodes ) {
+
+				var id = parseInt( nodeID );
+				var node = modelNodes[ nodeID ];
+				var relationships = connections.get( id );
+
+				var model = this.buildSkeleton( relationships, skeletons, id, node.attrName );
+
+				if ( ! model ) {
+
+					switch ( node.attrType ) {
+
+						case 'Camera':
+							model = this.createCamera( relationships );
+							break;
+						case 'Light':
+							model = this.createLight( relationships );
+							break;
+						case 'Mesh':
+							model = this.createMesh( relationships, geometryMap, materialMap );
+							break;
+						case 'NurbsCurve':
+							model = this.createCurve( relationships, geometryMap );
+							break;
+						case 'LimbNode':
+						case 'Root':
+							model = new Bone();
+							break;
+						case 'Null':
+						default:
+							model = new Group();
+							break;
+
+					}
+
+					model.name = node.attrName ? PropertyBinding.sanitizeNodeName( node.attrName ) : '';
+
+					model.ID = id;
+
+				}
+
+				this.getTransformData( model, node );
+				modelMap.set( id, model );
+
+			}
+
+			return modelMap;
+
+		},
+
+		buildSkeleton: function ( relationships, skeletons, id, name ) {
+
+			var bone = null;
+
+			relationships.parents.forEach( function ( parent ) {
+
+				for ( var ID in skeletons ) {
+
+					var skeleton = skeletons[ ID ];
+
+					skeleton.rawBones.forEach( function ( rawBone, i ) {
+
+						if ( rawBone.ID === parent.ID ) {
+
+							var subBone = bone;
+							bone = new Bone();
+
+							bone.matrixWorld.copy( rawBone.transformLink );
+
+							// set name and id here - otherwise in cases where "subBone" is created it will not have a name / id
+
+							bone.name = name ? PropertyBinding.sanitizeNodeName( name ) : '';
+							bone.ID = id;
+
+							skeleton.bones[ i ] = bone;
+
+							// In cases where a bone is shared between multiple meshes
+							// duplicate the bone here and and it as a child of the first bone
+							if ( subBone !== null ) {
+
+								bone.add( subBone );
+
+							}
+
+						}
+
+					} );
+
+				}
+
+			} );
+
+			return bone;
+
+		},
+
+		// create a PerspectiveCamera or OrthographicCamera
+		createCamera: function ( relationships ) {
+
+			var model;
+			var cameraAttribute;
+
+			relationships.children.forEach( function ( child ) {
+
+				var attr = fbxTree.Objects.NodeAttribute[ child.ID ];
+
+				if ( attr !== undefined ) {
+
+					cameraAttribute = attr;
+
+				}
+
+			} );
+
+			if ( cameraAttribute === undefined ) {
+
+				model = new Object3D();
+
+			} else {
+
+				var type = 0;
+				if ( cameraAttribute.CameraProjectionType !== undefined && cameraAttribute.CameraProjectionType.value === 1 ) {
+
+					type = 1;
+
+				}
+
+				var nearClippingPlane = 1;
+				if ( cameraAttribute.NearPlane !== undefined ) {
+
+					nearClippingPlane = cameraAttribute.NearPlane.value / 1000;
+
+				}
+
+				var farClippingPlane = 1000;
+				if ( cameraAttribute.FarPlane !== undefined ) {
+
+					farClippingPlane = cameraAttribute.FarPlane.value / 1000;
+
+				}
+
+
+				var width = window.innerWidth;
+				var height = window.innerHeight;
+
+				if ( cameraAttribute.AspectWidth !== undefined && cameraAttribute.AspectHeight !== undefined ) {
+
+					width = cameraAttribute.AspectWidth.value;
+					height = cameraAttribute.AspectHeight.value;
+
+				}
+
+				var aspect = width / height;
+
+				var fov = 45;
+				if ( cameraAttribute.FieldOfView !== undefined ) {
+
+					fov = cameraAttribute.FieldOfView.value;
+
+				}
+
+				var focalLength = cameraAttribute.FocalLength ? cameraAttribute.FocalLength.value : null;
+
+				switch ( type ) {
+
+					case 0: // Perspective
+						model = new PerspectiveCamera( fov, aspect, nearClippingPlane, farClippingPlane );
+						if ( focalLength !== null ) model.setFocalLength( focalLength );
+						break;
+
+					case 1: // Orthographic
+						model = new OrthographicCamera( - width / 2, width / 2, height / 2, - height / 2, nearClippingPlane, farClippingPlane );
+						break;
+
+					default:
+						console.warn( 'THREE.FBXLoader: Unknown camera type ' + type + '.' );
+						model = new Object3D();
+						break;
+
+				}
+
+			}
+
+			return model;
+
+		},
+
+		// Create a DirectionalLight, PointLight or SpotLight
+		createLight: function ( relationships ) {
+
+			var model;
+			var lightAttribute;
+
+			relationships.children.forEach( function ( child ) {
+
+				var attr = fbxTree.Objects.NodeAttribute[ child.ID ];
+
+				if ( attr !== undefined ) {
+
+					lightAttribute = attr;
+
+				}
+
+			} );
+
+			if ( lightAttribute === undefined ) {
+
+				model = new Object3D();
+
+			} else {
+
+				var type;
+
+				// LightType can be undefined for Point lights
+				if ( lightAttribute.LightType === undefined ) {
+
+					type = 0;
+
+				} else {
+
+					type = lightAttribute.LightType.value;
+
+				}
+
+				var color = 0xffffff;
+
+				if ( lightAttribute.Color !== undefined ) {
+
+					color = new Color().fromArray( lightAttribute.Color.value );
+
+				}
+
+				var intensity = ( lightAttribute.Intensity === undefined ) ? 1 : lightAttribute.Intensity.value / 100;
+
+				// light disabled
+				if ( lightAttribute.CastLightOnObject !== undefined && lightAttribute.CastLightOnObject.value === 0 ) {
+
+					intensity = 0;
+
+				}
+
+				var distance = 0;
+				if ( lightAttribute.FarAttenuationEnd !== undefined ) {
+
+					if ( lightAttribute.EnableFarAttenuation !== undefined && lightAttribute.EnableFarAttenuation.value === 0 ) {
+
+						distance = 0;
+
+					} else {
+
+						distance = lightAttribute.FarAttenuationEnd.value;
+
+					}
+
+				}
+
+				// TODO: could this be calculated linearly from FarAttenuationStart to FarAttenuationEnd?
+				var decay = 1;
+
+				switch ( type ) {
+
+					case 0: // Point
+						model = new PointLight( color, intensity, distance, decay );
+						break;
+
+					case 1: // Directional
+						model = new DirectionalLight( color, intensity );
+						break;
+
+					case 2: // Spot
+						var angle = Math.PI / 3;
+
+						if ( lightAttribute.InnerAngle !== undefined ) {
+
+							angle = _Math.degToRad( lightAttribute.InnerAngle.value );
+
+						}
+
+						var penumbra = 0;
+						if ( lightAttribute.OuterAngle !== undefined ) {
+
+							// TODO: this is not correct - FBX calculates outer and inner angle in degrees
+							// with OuterAngle > InnerAngle && OuterAngle <= Math.PI
+							// while three.js uses a penumbra between (0, 1) to attenuate the inner angle
+							penumbra = _Math.degToRad( lightAttribute.OuterAngle.value );
+							penumbra = Math.max( penumbra, 1 );
+
+						}
+
+						model = new SpotLight( color, intensity, distance, angle, penumbra, decay );
+						break;
+
+					default:
+						console.warn( 'THREE.FBXLoader: Unknown light type ' + lightAttribute.LightType.value + ', defaulting to a PointLight.' );
+						model = new PointLight( color, intensity );
+						break;
+
+				}
+
+				if ( lightAttribute.CastShadows !== undefined && lightAttribute.CastShadows.value === 1 ) {
+
+					model.castShadow = true;
+
+				}
+
+			}
+
+			return model;
+
+		},
+
+		createMesh: function ( relationships, geometryMap, materialMap ) {
+
+			var model;
+			var geometry = null;
+			var material = null;
+			var materials = [];
+
+			// get geometry and materials(s) from connections
+			relationships.children.forEach( function ( child ) {
+
+				if ( geometryMap.has( child.ID ) ) {
+
+					geometry = geometryMap.get( child.ID );
+
+				}
+
+				if ( materialMap.has( child.ID ) ) {
+
+					materials.push( materialMap.get( child.ID ) );
+
+				}
+
+			} );
+
+			if ( materials.length > 1 ) {
+
+				material = materials;
+
+			} else if ( materials.length > 0 ) {
+
+				material = materials[ 0 ];
+
+			} else {
+
+				material = new MeshPhongMaterial( { color: 0xcccccc } );
+				materials.push( material );
+
+			}
+
+			if ( 'color' in geometry.attributes ) {
+
+				materials.forEach( function ( material ) {
+
+					material.vertexColors = VertexColors;
+
+				} );
+
+			}
+
+			if ( geometry.FBX_Deformer ) {
+
+				materials.forEach( function ( material ) {
+
+					material.skinning = true;
+
+				} );
+
+				model = new SkinnedMesh( geometry, material );
+				model.normalizeSkinWeights();
+
+			} else {
+
+				model = new Mesh( geometry, material );
+
+			}
+
+			return model;
+
+		},
+
+		createCurve: function ( relationships, geometryMap ) {
+
+			var geometry = relationships.children.reduce( function ( geo, child ) {
+
+				if ( geometryMap.has( child.ID ) ) geo = geometryMap.get( child.ID );
+
+				return geo;
+
+			}, null );
+
+			// FBX does not list materials for Nurbs lines, so we'll just put our own in here.
+			var material = new LineBasicMaterial( { color: 0x3300ff, linewidth: 1 } );
+			return new Line( geometry, material );
+
+		},
+
+		// parse the model node for transform data
+		getTransformData: function ( model, modelNode ) {
+
+			var transformData = {};
+
+			if ( 'InheritType' in modelNode ) transformData.inheritType = parseInt( modelNode.InheritType.value );
+
+			if ( 'RotationOrder' in modelNode ) transformData.eulerOrder = getEulerOrder( modelNode.RotationOrder.value );
+			else transformData.eulerOrder = 'ZYX';
+
+			if ( 'Lcl_Translation' in modelNode ) transformData.translation = modelNode.Lcl_Translation.value;
+
+			if ( 'PreRotation' in modelNode ) transformData.preRotation = modelNode.PreRotation.value;
+			if ( 'Lcl_Rotation' in modelNode ) transformData.rotation = modelNode.Lcl_Rotation.value;
+			if ( 'PostRotation' in modelNode ) transformData.postRotation = modelNode.PostRotation.value;
+
+			if ( 'Lcl_Scaling' in modelNode ) transformData.scale = modelNode.Lcl_Scaling.value;
+
+			if ( 'ScalingOffset' in modelNode ) transformData.scalingOffset = modelNode.ScalingOffset.value;
+			if ( 'ScalingPivot' in modelNode ) transformData.scalingPivot = modelNode.ScalingPivot.value;
+
+			if ( 'RotationOffset' in modelNode ) transformData.rotationOffset = modelNode.RotationOffset.value;
+			if ( 'RotationPivot' in modelNode ) transformData.rotationPivot = modelNode.RotationPivot.value;
+
+			model.userData.transformData = transformData;
+
+		},
+
+		setLookAtProperties: function ( model, modelNode ) {
+
+			if ( 'LookAtProperty' in modelNode ) {
+
+				var children = connections.get( model.ID ).children;
+
+				children.forEach( function ( child ) {
+
+					if ( child.relationship === 'LookAtProperty' ) {
+
+						var lookAtTarget = fbxTree.Objects.Model[ child.ID ];
+
+						if ( 'Lcl_Translation' in lookAtTarget ) {
+
+							var pos = lookAtTarget.Lcl_Translation.value;
+
+							// DirectionalLight, SpotLight
+							if ( model.target !== undefined ) {
+
+								model.target.position.fromArray( pos );
+								sceneGraph.add( model.target );
+
+							} else { // Cameras and other Object3Ds
+
+								model.lookAt( new Vector3().fromArray( pos ) );
+
+							}
+
+						}
+
+					}
+
+				} );
+
+			}
+
+		},
+
+		bindSkeleton: function ( skeletons, geometryMap, modelMap ) {
+
+			var bindMatrices = this.parsePoseNodes();
+
+			for ( var ID in skeletons ) {
+
+				var skeleton = skeletons[ ID ];
+
+				var parents = connections.get( parseInt( skeleton.ID ) ).parents;
+
+				parents.forEach( function ( parent ) {
+
+					if ( geometryMap.has( parent.ID ) ) {
+
+						var geoID = parent.ID;
+						var geoRelationships = connections.get( geoID );
+
+						geoRelationships.parents.forEach( function ( geoConnParent ) {
+
+							if ( modelMap.has( geoConnParent.ID ) ) {
+
+								var model = modelMap.get( geoConnParent.ID );
+
+								model.bind( new Skeleton( skeleton.bones ), bindMatrices[ geoConnParent.ID ] );
+
+							}
+
+						} );
+
+					}
+
+				} );
+
+			}
+
+		},
+
+		parsePoseNodes: function () {
+
+			var bindMatrices = {};
+
+			if ( 'Pose' in fbxTree.Objects ) {
+
+				var BindPoseNode = fbxTree.Objects.Pose;
+
+				for ( var nodeID in BindPoseNode ) {
+
+					if ( BindPoseNode[ nodeID ].attrType === 'BindPose' ) {
+
+						var poseNodes = BindPoseNode[ nodeID ].PoseNode;
+
+						if ( Array.isArray( poseNodes ) ) {
+
+							poseNodes.forEach( function ( poseNode ) {
+
+								bindMatrices[ poseNode.Node ] = new Matrix4().fromArray( poseNode.Matrix.a );
+
+							} );
+
+						} else {
+
+							bindMatrices[ poseNodes.Node ] = new Matrix4().fromArray( poseNodes.Matrix.a );
+
+						}
+
+					}
+
+				}
+
+			}
+
+			return bindMatrices;
+
+		},
+
+		// Parse ambient color in FBXTree.GlobalSettings - if it's not set to black (default), create an ambient light
+		createAmbientLight: function () {
+
+			if ( 'GlobalSettings' in fbxTree && 'AmbientColor' in fbxTree.GlobalSettings ) {
+
+				var ambientColor = fbxTree.GlobalSettings.AmbientColor.value;
+				var r = ambientColor[ 0 ];
+				var g = ambientColor[ 1 ];
+				var b = ambientColor[ 2 ];
+
+				if ( r !== 0 || g !== 0 || b !== 0 ) {
+
+					var color = new Color( r, g, b );
+					sceneGraph.add( new AmbientLight( color, 1 ) );
+
+				}
+
+			}
+
+		},
+
+		setupMorphMaterials: function () {
+
+			var self = this;
+			sceneGraph.traverse( function ( child ) {
+
+				if ( child.isMesh ) {
+
+					if ( child.geometry.morphAttributes.position && child.geometry.morphAttributes.position.length ) {
+
+						if ( Array.isArray( child.material ) ) {
+
+							child.material.forEach( function ( material, i ) {
+
+								self.setupMorphMaterial( child, material, i );
+
+							} );
+
+						} else {
+
+							self.setupMorphMaterial( child, child.material );
+
+						}
+
+					}
+
+				}
+
+			} );
+
+		},
+
+		setupMorphMaterial: function ( child, material, index ) {
+
+			var uuid = child.uuid;
+			var matUuid = material.uuid;
+
+			// if a geometry has morph targets, it cannot share the material with other geometries
+			var sharedMat = false;
+
+			sceneGraph.traverse( function ( node ) {
+
+				if ( node.isMesh ) {
+
+					if ( Array.isArray( node.material ) ) {
+
+						node.material.forEach( function ( mat ) {
+
+							if ( mat.uuid === matUuid && node.uuid !== uuid ) sharedMat = true;
+
+						} );
+
+					} else if ( node.material.uuid === matUuid && node.uuid !== uuid ) sharedMat = true;
+
+				}
+
+			} );
+
+			if ( sharedMat === true ) {
+
+				var clonedMat = material.clone();
+				clonedMat.morphTargets = true;
+
+				if ( index === undefined ) child.material = clonedMat;
+				else child.material[ index ] = clonedMat;
+
+			} else material.morphTargets = true;
+
+		}
+
+	};
+
+	// parse Geometry data from FBXTree and return map of BufferGeometries
+	function GeometryParser() {}
+
+	GeometryParser.prototype = {
+
+		constructor: GeometryParser,
+
+		// Parse nodes in FBXTree.Objects.Geometry
+		parse: function ( deformers ) {
+
+			var geometryMap = new Map();
+
+			if ( 'Geometry' in fbxTree.Objects ) {
+
+				var geoNodes = fbxTree.Objects.Geometry;
+
+				for ( var nodeID in geoNodes ) {
+
+					var relationships = connections.get( parseInt( nodeID ) );
+					var geo = this.parseGeometry( relationships, geoNodes[ nodeID ], deformers );
+
+					geometryMap.set( parseInt( nodeID ), geo );
+
+				}
+
+			}
+
+			return geometryMap;
+
+		},
+
+		// Parse single node in FBXTree.Objects.Geometry
+		parseGeometry: function ( relationships, geoNode, deformers ) {
+
+			switch ( geoNode.attrType ) {
+
+				case 'Mesh':
+					return this.parseMeshGeometry( relationships, geoNode, deformers );
+
+				case 'NurbsCurve':
+					return this.parseNurbsGeometry( geoNode );
+
+			}
+
+		},
+
+
+		// Parse single node mesh geometry in FBXTree.Objects.Geometry
+		parseMeshGeometry: function ( relationships, geoNode, deformers ) {
+
+			var skeletons = deformers.skeletons;
+			var morphTargets = [];
+
+			var modelNodes = relationships.parents.map( function ( parent ) {
+
+				return fbxTree.Objects.Model[ parent.ID ];
+
+			} );
+
+			// don't create geometry if it is not associated with any models
+			if ( modelNodes.length === 0 ) return;
+
+			var skeleton = relationships.children.reduce( function ( skeleton, child ) {
+
+				if ( skeletons[ child.ID ] !== undefined ) skeleton = skeletons[ child.ID ];
+
+				return skeleton;
+
+			}, null );
+
+			relationships.children.forEach( function ( child ) {
+
+				if ( deformers.morphTargets[ child.ID ] !== undefined ) {
+
+					morphTargets.push( deformers.morphTargets[ child.ID ] );
+
+				}
+
+			} );
+
+			// Assume one model and get the preRotation from that
+			// if there is more than one model associated with the geometry this may cause problems
+			var modelNode = modelNodes[ 0 ];
+
+			var transformData = {};
+
+			if ( 'RotationOrder' in modelNode ) transformData.eulerOrder = getEulerOrder( modelNode.RotationOrder.value );
+			if ( 'InheritType' in modelNode ) transformData.inheritType = parseInt( modelNode.InheritType.value );
+
+			if ( 'GeometricTranslation' in modelNode ) transformData.translation = modelNode.GeometricTranslation.value;
+			if ( 'GeometricRotation' in modelNode ) transformData.rotation = modelNode.GeometricRotation.value;
+			if ( 'GeometricScaling' in modelNode ) transformData.scale = modelNode.GeometricScaling.value;
+
+			var transform = generateTransform( transformData );
+
+			return this.genGeometry( geoNode, skeleton, morphTargets, transform );
+
+		},
+
+		// Generate a BufferGeometry from a node in FBXTree.Objects.Geometry
+		genGeometry: function ( geoNode, skeleton, morphTargets, preTransform ) {
+
+			var geo = new BufferGeometry();
+			if ( geoNode.attrName ) geo.name = geoNode.attrName;
+
+			var geoInfo = this.parseGeoNode( geoNode, skeleton );
+			var buffers = this.genBuffers( geoInfo );
+
+			var positionAttribute = new Float32BufferAttribute( buffers.vertex, 3 );
+
+			preTransform.applyToBufferAttribute( positionAttribute );
+
+			geo.setAttribute( 'position', positionAttribute );
+
+			if ( buffers.colors.length > 0 ) {
+
+				geo.setAttribute( 'color', new Float32BufferAttribute( buffers.colors, 3 ) );
+
+			}
+
+			if ( skeleton ) {
+
+				geo.setAttribute( 'skinIndex', new Uint16BufferAttribute( buffers.weightsIndices, 4 ) );
+
+				geo.setAttribute( 'skinWeight', new Float32BufferAttribute( buffers.vertexWeights, 4 ) );
+
+				// used later to bind the skeleton to the model
+				geo.FBX_Deformer = skeleton;
+
+			}
+
+			if ( buffers.normal.length > 0 ) {
+
+				var normalAttribute = new Float32BufferAttribute( buffers.normal, 3 );
+
+				var normalMatrix = new Matrix3().getNormalMatrix( preTransform );
+				normalMatrix.applyToBufferAttribute( normalAttribute );
+
+				geo.setAttribute( 'normal', normalAttribute );
+
+			}
+
+			buffers.uvs.forEach( function ( uvBuffer, i ) {
+
+				// subsequent uv buffers are called 'uv1', 'uv2', ...
+				var name = 'uv' + ( i + 1 ).toString();
+
+				// the first uv buffer is just called 'uv'
+				if ( i === 0 ) {
+
+					name = 'uv';
+
+				}
+
+				geo.setAttribute( name, new Float32BufferAttribute( buffers.uvs[ i ], 2 ) );
+
+			} );
+
+			if ( geoInfo.material && geoInfo.material.mappingType !== 'AllSame' ) {
+
+				// Convert the material indices of each vertex into rendering groups on the geometry.
+				var prevMaterialIndex = buffers.materialIndex[ 0 ];
+				var startIndex = 0;
+
+				buffers.materialIndex.forEach( function ( currentIndex, i ) {
+
+					if ( currentIndex !== prevMaterialIndex ) {
+
+						geo.addGroup( startIndex, i - startIndex, prevMaterialIndex );
+
+						prevMaterialIndex = currentIndex;
+						startIndex = i;
+
+					}
+
+				} );
+
+				// the loop above doesn't add the last group, do that here.
+				if ( geo.groups.length > 0 ) {
+
+					var lastGroup = geo.groups[ geo.groups.length - 1 ];
+					var lastIndex = lastGroup.start + lastGroup.count;
+
+					if ( lastIndex !== buffers.materialIndex.length ) {
+
+						geo.addGroup( lastIndex, buffers.materialIndex.length - lastIndex, prevMaterialIndex );
+
+					}
+
+				}
+
+				// case where there are multiple materials but the whole geometry is only
+				// using one of them
+				if ( geo.groups.length === 0 ) {
+
+					geo.addGroup( 0, buffers.materialIndex.length, buffers.materialIndex[ 0 ] );
+
+				}
+
+			}
+
+			this.addMorphTargets( geo, geoNode, morphTargets, preTransform );
+
+			return geo;
+
+		},
+
+		parseGeoNode: function ( geoNode, skeleton ) {
+
+			var geoInfo = {};
+
+			geoInfo.vertexPositions = ( geoNode.Vertices !== undefined ) ? geoNode.Vertices.a : [];
+			geoInfo.vertexIndices = ( geoNode.PolygonVertexIndex !== undefined ) ? geoNode.PolygonVertexIndex.a : [];
+
+			if ( geoNode.LayerElementColor ) {
+
+				geoInfo.color = this.parseVertexColors( geoNode.LayerElementColor[ 0 ] );
+
+			}
+
+			if ( geoNode.LayerElementMaterial ) {
+
+				geoInfo.material = this.parseMaterialIndices( geoNode.LayerElementMaterial[ 0 ] );
+
+			}
+
+			if ( geoNode.LayerElementNormal ) {
+
+				geoInfo.normal = this.parseNormals( geoNode.LayerElementNormal[ 0 ] );
+
+			}
+
+			if ( geoNode.LayerElementUV ) {
+
+				geoInfo.uv = [];
+
+				var i = 0;
+				while ( geoNode.LayerElementUV[ i ] ) {
+
+					geoInfo.uv.push( this.parseUVs( geoNode.LayerElementUV[ i ] ) );
+					i ++;
+
+				}
+
+			}
+
+			geoInfo.weightTable = {};
+
+			if ( skeleton !== null ) {
+
+				geoInfo.skeleton = skeleton;
+
+				skeleton.rawBones.forEach( function ( rawBone, i ) {
+
+					// loop over the bone's vertex indices and weights
+					rawBone.indices.forEach( function ( index, j ) {
+
+						if ( geoInfo.weightTable[ index ] === undefined ) geoInfo.weightTable[ index ] = [];
+
+						geoInfo.weightTable[ index ].push( {
+
+							id: i,
+							weight: rawBone.weights[ j ],
+
+						} );
+
+					} );
+
+				} );
+
+			}
+
+			return geoInfo;
+
+		},
+
+		genBuffers: function ( geoInfo ) {
+
+			var buffers = {
+				vertex: [],
+				normal: [],
+				colors: [],
+				uvs: [],
+				materialIndex: [],
+				vertexWeights: [],
+				weightsIndices: [],
+			};
+
+			var polygonIndex = 0;
+			var faceLength = 0;
+			var displayedWeightsWarning = false;
+
+			// these will hold data for a single face
+			var facePositionIndexes = [];
+			var faceNormals = [];
+			var faceColors = [];
+			var faceUVs = [];
+			var faceWeights = [];
+			var faceWeightIndices = [];
+
+			var self = this;
+			geoInfo.vertexIndices.forEach( function ( vertexIndex, polygonVertexIndex ) {
+
+				var endOfFace = false;
+
+				// Face index and vertex index arrays are combined in a single array
+				// A cube with quad faces looks like this:
+				// PolygonVertexIndex: *24 {
+				//  a: 0, 1, 3, -3, 2, 3, 5, -5, 4, 5, 7, -7, 6, 7, 1, -1, 1, 7, 5, -4, 6, 0, 2, -5
+				//  }
+				// Negative numbers mark the end of a face - first face here is 0, 1, 3, -3
+				// to find index of last vertex bit shift the index: ^ - 1
+				if ( vertexIndex < 0 ) {
+
+					vertexIndex = vertexIndex ^ - 1; // equivalent to ( x * -1 ) - 1
+					endOfFace = true;
+
+				}
+
+				var weightIndices = [];
+				var weights = [];
+
+				facePositionIndexes.push( vertexIndex * 3, vertexIndex * 3 + 1, vertexIndex * 3 + 2 );
+
+				if ( geoInfo.color ) {
+
+					var data = getData( polygonVertexIndex, polygonIndex, vertexIndex, geoInfo.color );
+
+					faceColors.push( data[ 0 ], data[ 1 ], data[ 2 ] );
+
+				}
+
+				if ( geoInfo.skeleton ) {
+
+					if ( geoInfo.weightTable[ vertexIndex ] !== undefined ) {
+
+						geoInfo.weightTable[ vertexIndex ].forEach( function ( wt ) {
+
+							weights.push( wt.weight );
+							weightIndices.push( wt.id );
+
+						} );
+
+
+					}
+
+					if ( weights.length > 4 ) {
+
+						if ( ! displayedWeightsWarning ) {
+
+							console.warn( 'THREE.FBXLoader: Vertex has more than 4 skinning weights assigned to vertex. Deleting additional weights.' );
+							displayedWeightsWarning = true;
+
+						}
+
+						var wIndex = [ 0, 0, 0, 0 ];
+						var Weight = [ 0, 0, 0, 0 ];
+
+						weights.forEach( function ( weight, weightIndex ) {
+
+							var currentWeight = weight;
+							var currentIndex = weightIndices[ weightIndex ];
+
+							Weight.forEach( function ( comparedWeight, comparedWeightIndex, comparedWeightArray ) {
+
+								if ( currentWeight > comparedWeight ) {
+
+									comparedWeightArray[ comparedWeightIndex ] = currentWeight;
+									currentWeight = comparedWeight;
+
+									var tmp = wIndex[ comparedWeightIndex ];
+									wIndex[ comparedWeightIndex ] = currentIndex;
+									currentIndex = tmp;
+
+								}
+
+							} );
+
+						} );
+
+						weightIndices = wIndex;
+						weights = Weight;
+
+					}
+
+					// if the weight array is shorter than 4 pad with 0s
+					while ( weights.length < 4 ) {
+
+						weights.push( 0 );
+						weightIndices.push( 0 );
+
+					}
+
+					for ( var i = 0; i < 4; ++ i ) {
+
+						faceWeights.push( weights[ i ] );
+						faceWeightIndices.push( weightIndices[ i ] );
+
+					}
+
+				}
+
+				if ( geoInfo.normal ) {
+
+					var data = getData( polygonVertexIndex, polygonIndex, vertexIndex, geoInfo.normal );
+
+					faceNormals.push( data[ 0 ], data[ 1 ], data[ 2 ] );
+
+				}
+
+				if ( geoInfo.material && geoInfo.material.mappingType !== 'AllSame' ) {
+
+					var materialIndex = getData( polygonVertexIndex, polygonIndex, vertexIndex, geoInfo.material )[ 0 ];
+
+				}
+
+				if ( geoInfo.uv ) {
+
+					geoInfo.uv.forEach( function ( uv, i ) {
+
+						var data = getData( polygonVertexIndex, polygonIndex, vertexIndex, uv );
+
+						if ( faceUVs[ i ] === undefined ) {
+
+							faceUVs[ i ] = [];
+
+						}
+
+						faceUVs[ i ].push( data[ 0 ] );
+						faceUVs[ i ].push( data[ 1 ] );
+
+					} );
+
+				}
+
+				faceLength ++;
+
+				if ( endOfFace ) {
+
+					self.genFace( buffers, geoInfo, facePositionIndexes, materialIndex, faceNormals, faceColors, faceUVs, faceWeights, faceWeightIndices, faceLength );
+
+					polygonIndex ++;
+					faceLength = 0;
+
+					// reset arrays for the next face
+					facePositionIndexes = [];
+					faceNormals = [];
+					faceColors = [];
+					faceUVs = [];
+					faceWeights = [];
+					faceWeightIndices = [];
+
+				}
+
+			} );
+
+			return buffers;
+
+		},
+
+		// Generate data for a single face in a geometry. If the face is a quad then split it into 2 tris
+		genFace: function ( buffers, geoInfo, facePositionIndexes, materialIndex, faceNormals, faceColors, faceUVs, faceWeights, faceWeightIndices, faceLength ) {
+
+			for ( var i = 2; i < faceLength; i ++ ) {
+
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ 0 ] ] );
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ 1 ] ] );
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ 2 ] ] );
+
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ ( i - 1 ) * 3 ] ] );
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ ( i - 1 ) * 3 + 1 ] ] );
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ ( i - 1 ) * 3 + 2 ] ] );
+
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ i * 3 ] ] );
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ i * 3 + 1 ] ] );
+				buffers.vertex.push( geoInfo.vertexPositions[ facePositionIndexes[ i * 3 + 2 ] ] );
+
+				if ( geoInfo.skeleton ) {
+
+					buffers.vertexWeights.push( faceWeights[ 0 ] );
+					buffers.vertexWeights.push( faceWeights[ 1 ] );
+					buffers.vertexWeights.push( faceWeights[ 2 ] );
+					buffers.vertexWeights.push( faceWeights[ 3 ] );
+
+					buffers.vertexWeights.push( faceWeights[ ( i - 1 ) * 4 ] );
+					buffers.vertexWeights.push( faceWeights[ ( i - 1 ) * 4 + 1 ] );
+					buffers.vertexWeights.push( faceWeights[ ( i - 1 ) * 4 + 2 ] );
+					buffers.vertexWeights.push( faceWeights[ ( i - 1 ) * 4 + 3 ] );
+
+					buffers.vertexWeights.push( faceWeights[ i * 4 ] );
+					buffers.vertexWeights.push( faceWeights[ i * 4 + 1 ] );
+					buffers.vertexWeights.push( faceWeights[ i * 4 + 2 ] );
+					buffers.vertexWeights.push( faceWeights[ i * 4 + 3 ] );
+
+					buffers.weightsIndices.push( faceWeightIndices[ 0 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ 1 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ 2 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ 3 ] );
+
+					buffers.weightsIndices.push( faceWeightIndices[ ( i - 1 ) * 4 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ ( i - 1 ) * 4 + 1 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ ( i - 1 ) * 4 + 2 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ ( i - 1 ) * 4 + 3 ] );
+
+					buffers.weightsIndices.push( faceWeightIndices[ i * 4 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ i * 4 + 1 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ i * 4 + 2 ] );
+					buffers.weightsIndices.push( faceWeightIndices[ i * 4 + 3 ] );
+
+				}
+
+				if ( geoInfo.color ) {
+
+					buffers.colors.push( faceColors[ 0 ] );
+					buffers.colors.push( faceColors[ 1 ] );
+					buffers.colors.push( faceColors[ 2 ] );
+
+					buffers.colors.push( faceColors[ ( i - 1 ) * 3 ] );
+					buffers.colors.push( faceColors[ ( i - 1 ) * 3 + 1 ] );
+					buffers.colors.push( faceColors[ ( i - 1 ) * 3 + 2 ] );
+
+					buffers.colors.push( faceColors[ i * 3 ] );
+					buffers.colors.push( faceColors[ i * 3 + 1 ] );
+					buffers.colors.push( faceColors[ i * 3 + 2 ] );
+
+				}
+
+				if ( geoInfo.material && geoInfo.material.mappingType !== 'AllSame' ) {
+
+					buffers.materialIndex.push( materialIndex );
+					buffers.materialIndex.push( materialIndex );
+					buffers.materialIndex.push( materialIndex );
+
+				}
+
+				if ( geoInfo.normal ) {
+
+					buffers.normal.push( faceNormals[ 0 ] );
+					buffers.normal.push( faceNormals[ 1 ] );
+					buffers.normal.push( faceNormals[ 2 ] );
+
+					buffers.normal.push( faceNormals[ ( i - 1 ) * 3 ] );
+					buffers.normal.push( faceNormals[ ( i - 1 ) * 3 + 1 ] );
+					buffers.normal.push( faceNormals[ ( i - 1 ) * 3 + 2 ] );
+
+					buffers.normal.push( faceNormals[ i * 3 ] );
+					buffers.normal.push( faceNormals[ i * 3 + 1 ] );
+					buffers.normal.push( faceNormals[ i * 3 + 2 ] );
+
+				}
+
+				if ( geoInfo.uv ) {
+
+					geoInfo.uv.forEach( function ( uv, j ) {
+
+						if ( buffers.uvs[ j ] === undefined ) buffers.uvs[ j ] = [];
+
+						buffers.uvs[ j ].push( faceUVs[ j ][ 0 ] );
+						buffers.uvs[ j ].push( faceUVs[ j ][ 1 ] );
+
+						buffers.uvs[ j ].push( faceUVs[ j ][ ( i - 1 ) * 2 ] );
+						buffers.uvs[ j ].push( faceUVs[ j ][ ( i - 1 ) * 2 + 1 ] );
+
+						buffers.uvs[ j ].push( faceUVs[ j ][ i * 2 ] );
+						buffers.uvs[ j ].push( faceUVs[ j ][ i * 2 + 1 ] );
+
+					} );
+
+				}
+
+			}
+
+		},
+
+		addMorphTargets: function ( parentGeo, parentGeoNode, morphTargets, preTransform ) {
+
+			if ( morphTargets.length === 0 ) return;
+
+			parentGeo.morphTargetsRelative = true;
+
+			parentGeo.morphAttributes.position = [];
+			// parentGeo.morphAttributes.normal = []; // not implemented
+
+			var self = this;
+			morphTargets.forEach( function ( morphTarget ) {
+
+				morphTarget.rawTargets.forEach( function ( rawTarget ) {
+
+					var morphGeoNode = fbxTree.Objects.Geometry[ rawTarget.geoID ];
+
+					if ( morphGeoNode !== undefined ) {
+
+						self.genMorphGeometry( parentGeo, parentGeoNode, morphGeoNode, preTransform, rawTarget.name );
+
+					}
+
+				} );
+
+			} );
+
+		},
+
+		// a morph geometry node is similar to a standard  node, and the node is also contained
+		// in FBXTree.Objects.Geometry, however it can only have attributes for position, normal
+		// and a special attribute Index defining which vertices of the original geometry are affected
+		// Normal and position attributes only have data for the vertices that are affected by the morph
+		genMorphGeometry: function ( parentGeo, parentGeoNode, morphGeoNode, preTransform, name ) {
+
+			var vertexIndices = ( parentGeoNode.PolygonVertexIndex !== undefined ) ? parentGeoNode.PolygonVertexIndex.a : [];
+
+			var morphPositionsSparse = ( morphGeoNode.Vertices !== undefined ) ? morphGeoNode.Vertices.a : [];
+			var indices = ( morphGeoNode.Indexes !== undefined ) ? morphGeoNode.Indexes.a : [];
+
+			var length = parentGeo.attributes.position.count * 3;
+			var morphPositions = new Float32Array( length );
+
+			for ( var i = 0; i < indices.length; i ++ ) {
+
+				var morphIndex = indices[ i ] * 3;
+
+				morphPositions[ morphIndex ] = morphPositionsSparse[ i * 3 ];
+				morphPositions[ morphIndex + 1 ] = morphPositionsSparse[ i * 3 + 1 ];
+				morphPositions[ morphIndex + 2 ] = morphPositionsSparse[ i * 3 + 2 ];
+
+			}
+
+			// TODO: add morph normal support
+			var morphGeoInfo = {
+				vertexIndices: vertexIndices,
+				vertexPositions: morphPositions,
+
+			};
+
+			var morphBuffers = this.genBuffers( morphGeoInfo );
+
+			var positionAttribute = new Float32BufferAttribute( morphBuffers.vertex, 3 );
+			positionAttribute.name = name || morphGeoNode.attrName;
+
+			preTransform.applyToBufferAttribute( positionAttribute );
+
+			parentGeo.morphAttributes.position.push( positionAttribute );
+
+		},
+
+		// Parse normal from FBXTree.Objects.Geometry.LayerElementNormal if it exists
+		parseNormals: function ( NormalNode ) {
+
+			var mappingType = NormalNode.MappingInformationType;
+			var referenceType = NormalNode.ReferenceInformationType;
+			var buffer = NormalNode.Normals.a;
+			var indexBuffer = [];
+			if ( referenceType === 'IndexToDirect' ) {
+
+				if ( 'NormalIndex' in NormalNode ) {
+
+					indexBuffer = NormalNode.NormalIndex.a;
+
+				} else if ( 'NormalsIndex' in NormalNode ) {
+
+					indexBuffer = NormalNode.NormalsIndex.a;
+
+				}
+
+			}
+
+			return {
+				dataSize: 3,
+				buffer: buffer,
+				indices: indexBuffer,
+				mappingType: mappingType,
+				referenceType: referenceType
+			};
+
+		},
+
+		// Parse UVs from FBXTree.Objects.Geometry.LayerElementUV if it exists
+		parseUVs: function ( UVNode ) {
+
+			var mappingType = UVNode.MappingInformationType;
+			var referenceType = UVNode.ReferenceInformationType;
+			var buffer = UVNode.UV.a;
+			var indexBuffer = [];
+			if ( referenceType === 'IndexToDirect' ) {
+
+				indexBuffer = UVNode.UVIndex.a;
+
+			}
+
+			return {
+				dataSize: 2,
+				buffer: buffer,
+				indices: indexBuffer,
+				mappingType: mappingType,
+				referenceType: referenceType
+			};
+
+		},
+
+		// Parse Vertex Colors from FBXTree.Objects.Geometry.LayerElementColor if it exists
+		parseVertexColors: function ( ColorNode ) {
+
+			var mappingType = ColorNode.MappingInformationType;
+			var referenceType = ColorNode.ReferenceInformationType;
+			var buffer = ColorNode.Colors.a;
+			var indexBuffer = [];
+			if ( referenceType === 'IndexToDirect' ) {
+
+				indexBuffer = ColorNode.ColorIndex.a;
+
+			}
+
+			return {
+				dataSize: 4,
+				buffer: buffer,
+				indices: indexBuffer,
+				mappingType: mappingType,
+				referenceType: referenceType
+			};
+
+		},
+
+		// Parse mapping and material data in FBXTree.Objects.Geometry.LayerElementMaterial if it exists
+		parseMaterialIndices: function ( MaterialNode ) {
+
+			var mappingType = MaterialNode.MappingInformationType;
+			var referenceType = MaterialNode.ReferenceInformationType;
+
+			if ( mappingType === 'NoMappingInformation' ) {
+
+				return {
+					dataSize: 1,
+					buffer: [ 0 ],
+					indices: [ 0 ],
+					mappingType: 'AllSame',
+					referenceType: referenceType
+				};
+
+			}
+
+			var materialIndexBuffer = MaterialNode.Materials.a;
+
+			// Since materials are stored as indices, there's a bit of a mismatch between FBX and what
+			// we expect.So we create an intermediate buffer that points to the index in the buffer,
+			// for conforming with the other functions we've written for other data.
+			var materialIndices = [];
+
+			for ( var i = 0; i < materialIndexBuffer.length; ++ i ) {
+
+				materialIndices.push( i );
+
+			}
+
+			return {
+				dataSize: 1,
+				buffer: materialIndexBuffer,
+				indices: materialIndices,
+				mappingType: mappingType,
+				referenceType: referenceType
+			};
+
+		},
+
+		// Generate a NurbGeometry from a node in FBXTree.Objects.Geometry
+		parseNurbsGeometry: function ( geoNode ) {
+
+			if ( NURBSCurve === undefined ) {
+
+				console.error( 'THREE.FBXLoader: The loader relies on NURBSCurve for any nurbs present in the model. Nurbs will show up as empty geometry.' );
+				return new BufferGeometry();
+
+			}
+
+			var order = parseInt( geoNode.Order );
+
+			if ( isNaN( order ) ) {
+
+				console.error( 'THREE.FBXLoader: Invalid Order %s given for geometry ID: %s', geoNode.Order, geoNode.id );
+				return new BufferGeometry();
+
+			}
+
+			var degree = order - 1;
+
+			var knots = geoNode.KnotVector.a;
+			var controlPoints = [];
+			var pointsValues = geoNode.Points.a;
+
+			for ( var i = 0, l = pointsValues.length; i < l; i += 4 ) {
+
+				controlPoints.push( new Vector4().fromArray( pointsValues, i ) );
+
+			}
+
+			var startKnot, endKnot;
+
+			if ( geoNode.Form === 'Closed' ) {
+
+				controlPoints.push( controlPoints[ 0 ] );
+
+			} else if ( geoNode.Form === 'Periodic' ) {
+
+				startKnot = degree;
+				endKnot = knots.length - 1 - startKnot;
+
+				for ( var i = 0; i < degree; ++ i ) {
+
+					controlPoints.push( controlPoints[ i ] );
+
+				}
+
+			}
+
+			var curve = new NURBSCurve( degree, knots, controlPoints, startKnot, endKnot );
+			var vertices = curve.getPoints( controlPoints.length * 7 );
+
+			var positions = new Float32Array( vertices.length * 3 );
+
+			vertices.forEach( function ( vertex, i ) {
+
+				vertex.toArray( positions, i * 3 );
+
+			} );
+
+			var geometry = new BufferGeometry();
+			geometry.setAttribute( 'position', new BufferAttribute( positions, 3 ) );
+
+			return geometry;
+
+		},
+
+	};
+
+	// parse animation data from FBXTree
+	function AnimationParser() {}
+
+	AnimationParser.prototype = {
+
+		constructor: AnimationParser,
+
+		// take raw animation clips and turn them into three.js animation clips
+		parse: function () {
+
+			var animationClips = [];
+
+			var rawClips = this.parseClips();
+
+			if ( rawClips !== undefined ) {
+
+				for ( var key in rawClips ) {
+
+					var rawClip = rawClips[ key ];
+
+					var clip = this.addClip( rawClip );
+
+					animationClips.push( clip );
+
+				}
+
+			}
+
+			return animationClips;
+
+		},
+
+		parseClips: function () {
+
+			// since the actual transformation data is stored in FBXTree.Objects.AnimationCurve,
+			// if this is undefined we can safely assume there are no animations
+			if ( fbxTree.Objects.AnimationCurve === undefined ) return undefined;
+
+			var curveNodesMap = this.parseAnimationCurveNodes();
+
+			this.parseAnimationCurves( curveNodesMap );
+
+			var layersMap = this.parseAnimationLayers( curveNodesMap );
+			var rawClips = this.parseAnimStacks( layersMap );
+
+			return rawClips;
+
+		},
+
+		// parse nodes in FBXTree.Objects.AnimationCurveNode
+		// each AnimationCurveNode holds data for an animation transform for a model (e.g. left arm rotation )
+		// and is referenced by an AnimationLayer
+		parseAnimationCurveNodes: function () {
+
+			var rawCurveNodes = fbxTree.Objects.AnimationCurveNode;
+
+			var curveNodesMap = new Map();
+
+			for ( var nodeID in rawCurveNodes ) {
+
+				var rawCurveNode = rawCurveNodes[ nodeID ];
+
+				if ( rawCurveNode.attrName.match( /S|R|T|DeformPercent/ ) !== null ) {
+
+					var curveNode = {
+
+						id: rawCurveNode.id,
+						attr: rawCurveNode.attrName,
+						curves: {},
+
+					};
+
+					curveNodesMap.set( curveNode.id, curveNode );
+
+				}
+
+			}
+
+			return curveNodesMap;
+
+		},
+
+		// parse nodes in FBXTree.Objects.AnimationCurve and connect them up to
+		// previously parsed AnimationCurveNodes. Each AnimationCurve holds data for a single animated
+		// axis ( e.g. times and values of x rotation)
+		parseAnimationCurves: function ( curveNodesMap ) {
+
+			var rawCurves = fbxTree.Objects.AnimationCurve;
+
+			// TODO: Many values are identical up to roundoff error, but won't be optimised
+			// e.g. position times: [0, 0.4, 0. 8]
+			// position values: [7.23538335023477e-7, 93.67518615722656, -0.9982695579528809, 7.23538335023477e-7, 93.67518615722656, -0.9982695579528809, 7.235384487103147e-7, 93.67520904541016, -0.9982695579528809]
+			// clearly, this should be optimised to
+			// times: [0], positions [7.23538335023477e-7, 93.67518615722656, -0.9982695579528809]
+			// this shows up in nearly every FBX file, and generally time array is length > 100
+
+			for ( var nodeID in rawCurves ) {
+
+				var animationCurve = {
+
+					id: rawCurves[ nodeID ].id,
+					times: rawCurves[ nodeID ].KeyTime.a.map( convertFBXTimeToSeconds ),
+					values: rawCurves[ nodeID ].KeyValueFloat.a,
+
+				};
+
+				var relationships = connections.get( animationCurve.id );
+
+				if ( relationships !== undefined ) {
+
+					var animationCurveID = relationships.parents[ 0 ].ID;
+					var animationCurveRelationship = relationships.parents[ 0 ].relationship;
+
+					if ( animationCurveRelationship.match( /X/ ) ) {
+
+						curveNodesMap.get( animationCurveID ).curves[ 'x' ] = animationCurve;
+
+					} else if ( animationCurveRelationship.match( /Y/ ) ) {
+
+						curveNodesMap.get( animationCurveID ).curves[ 'y' ] = animationCurve;
+
+					} else if ( animationCurveRelationship.match( /Z/ ) ) {
+
+						curveNodesMap.get( animationCurveID ).curves[ 'z' ] = animationCurve;
+
+					} else if ( animationCurveRelationship.match( /d|DeformPercent/ ) && curveNodesMap.has( animationCurveID ) ) {
+
+						curveNodesMap.get( animationCurveID ).curves[ 'morph' ] = animationCurve;
+
+					}
+
+				}
+
+			}
+
+		},
+
+		// parse nodes in FBXTree.Objects.AnimationLayer. Each layers holds references
+		// to various AnimationCurveNodes and is referenced by an AnimationStack node
+		// note: theoretically a stack can have multiple layers, however in practice there always seems to be one per stack
+		parseAnimationLayers: function ( curveNodesMap ) {
+
+			var rawLayers = fbxTree.Objects.AnimationLayer;
+
+			var layersMap = new Map();
+
+			for ( var nodeID in rawLayers ) {
+
+				var layerCurveNodes = [];
+
+				var connection = connections.get( parseInt( nodeID ) );
+
+				if ( connection !== undefined ) {
+
+					// all the animationCurveNodes used in the layer
+					var children = connection.children;
+
+					children.forEach( function ( child, i ) {
+
+						if ( curveNodesMap.has( child.ID ) ) {
+
+							var curveNode = curveNodesMap.get( child.ID );
+
+							// check that the curves are defined for at least one axis, otherwise ignore the curveNode
+							if ( curveNode.curves.x !== undefined || curveNode.curves.y !== undefined || curveNode.curves.z !== undefined ) {
+
+								if ( layerCurveNodes[ i ] === undefined ) {
+
+									var modelID = connections.get( child.ID ).parents.filter( function ( parent ) {
+
+										return parent.relationship !== undefined;
+
+									} )[ 0 ].ID;
+
+									if ( modelID !== undefined ) {
+
+										var rawModel = fbxTree.Objects.Model[ modelID.toString() ];
+
+										var node = {
+
+											modelName: rawModel.attrName ? PropertyBinding.sanitizeNodeName( rawModel.attrName ) : '',
+											ID: rawModel.id,
+											initialPosition: [ 0, 0, 0 ],
+											initialRotation: [ 0, 0, 0 ],
+											initialScale: [ 1, 1, 1 ],
+
+										};
+
+										sceneGraph.traverse( function ( child ) {
+
+											if ( child.ID === rawModel.id ) {
+
+												node.transform = child.matrix;
+
+												if ( child.userData.transformData ) node.eulerOrder = child.userData.transformData.eulerOrder;
+
+											}
+
+										} );
+
+										if ( ! node.transform ) node.transform = new Matrix4();
+
+										// if the animated model is pre rotated, we'll have to apply the pre rotations to every
+										// animation value as well
+										if ( 'PreRotation' in rawModel ) node.preRotation = rawModel.PreRotation.value;
+										if ( 'PostRotation' in rawModel ) node.postRotation = rawModel.PostRotation.value;
+
+										layerCurveNodes[ i ] = node;
+
+									}
+
+								}
+
+								if ( layerCurveNodes[ i ] ) layerCurveNodes[ i ][ curveNode.attr ] = curveNode;
+
+							} else if ( curveNode.curves.morph !== undefined ) {
+
+								if ( layerCurveNodes[ i ] === undefined ) {
+
+									var deformerID = connections.get( child.ID ).parents.filter( function ( parent ) {
+
+										return parent.relationship !== undefined;
+
+									} )[ 0 ].ID;
+
+									var morpherID = connections.get( deformerID ).parents[ 0 ].ID;
+									var geoID = connections.get( morpherID ).parents[ 0 ].ID;
+
+									// assuming geometry is not used in more than one model
+									var modelID = connections.get( geoID ).parents[ 0 ].ID;
+
+									var rawModel = fbxTree.Objects.Model[ modelID ];
+
+									var node = {
+
+										modelName: rawModel.attrName ? PropertyBinding.sanitizeNodeName( rawModel.attrName ) : '',
+										morphName: fbxTree.Objects.Deformer[ deformerID ].attrName,
+
+									};
+
+									layerCurveNodes[ i ] = node;
+
+								}
+
+								layerCurveNodes[ i ][ curveNode.attr ] = curveNode;
+
+							}
+
+						}
+
+					} );
+
+					layersMap.set( parseInt( nodeID ), layerCurveNodes );
+
+				}
+
+			}
+
+			return layersMap;
+
+		},
+
+		// parse nodes in FBXTree.Objects.AnimationStack. These are the top level node in the animation
+		// hierarchy. Each Stack node will be used to create a AnimationClip
+		parseAnimStacks: function ( layersMap ) {
+
+			var rawStacks = fbxTree.Objects.AnimationStack;
+
+			// connect the stacks (clips) up to the layers
+			var rawClips = {};
+
+			for ( var nodeID in rawStacks ) {
+
+				var children = connections.get( parseInt( nodeID ) ).children;
+
+				if ( children.length > 1 ) {
+
+					// it seems like stacks will always be associated with a single layer. But just in case there are files
+					// where there are multiple layers per stack, we'll display a warning
+					console.warn( 'THREE.FBXLoader: Encountered an animation stack with multiple layers, this is currently not supported. Ignoring subsequent layers.' );
+
+				}
+
+				var layer = layersMap.get( children[ 0 ].ID );
+
+				rawClips[ nodeID ] = {
+
+					name: rawStacks[ nodeID ].attrName,
+					layer: layer,
+
+				};
+
+			}
+
+			return rawClips;
+
+		},
+
+		addClip: function ( rawClip ) {
+
+			var tracks = [];
+
+			var self = this;
+			rawClip.layer.forEach( function ( rawTracks ) {
+
+				tracks = tracks.concat( self.generateTracks( rawTracks ) );
+
+			} );
+
+			return new AnimationClip( rawClip.name, - 1, tracks );
+
+		},
+
+		generateTracks: function ( rawTracks ) {
+
+			var tracks = [];
+
+			var initialPosition = new Vector3();
+			var initialRotation = new Quaternion();
+			var initialScale = new Vector3();
+
+			if ( rawTracks.transform ) rawTracks.transform.decompose( initialPosition, initialRotation, initialScale );
+
+			initialPosition = initialPosition.toArray();
+			initialRotation = new Euler().setFromQuaternion( initialRotation, rawTracks.eulerOrder ).toArray();
+			initialScale = initialScale.toArray();
+
+			if ( rawTracks.T !== undefined && Object.keys( rawTracks.T.curves ).length > 0 ) {
+
+				var positionTrack = this.generateVectorTrack( rawTracks.modelName, rawTracks.T.curves, initialPosition, 'position' );
+				if ( positionTrack !== undefined ) tracks.push( positionTrack );
+
+			}
+
+			if ( rawTracks.R !== undefined && Object.keys( rawTracks.R.curves ).length > 0 ) {
+
+				var rotationTrack = this.generateRotationTrack( rawTracks.modelName, rawTracks.R.curves, initialRotation, rawTracks.preRotation, rawTracks.postRotation, rawTracks.eulerOrder );
+				if ( rotationTrack !== undefined ) tracks.push( rotationTrack );
+
+			}
+
+			if ( rawTracks.S !== undefined && Object.keys( rawTracks.S.curves ).length > 0 ) {
+
+				var scaleTrack = this.generateVectorTrack( rawTracks.modelName, rawTracks.S.curves, initialScale, 'scale' );
+				if ( scaleTrack !== undefined ) tracks.push( scaleTrack );
+
+			}
+
+			if ( rawTracks.DeformPercent !== undefined ) {
+
+				var morphTrack = this.generateMorphTrack( rawTracks );
+				if ( morphTrack !== undefined ) tracks.push( morphTrack );
+
+			}
+
+			return tracks;
+
+		},
+
+		generateVectorTrack: function ( modelName, curves, initialValue, type ) {
+
+			var times = this.getTimesForAllAxes( curves );
+			var values = this.getKeyframeTrackValues( times, curves, initialValue );
+
+			return new VectorKeyframeTrack( modelName + '.' + type, times, values );
+
+		},
+
+		generateRotationTrack: function ( modelName, curves, initialValue, preRotation, postRotation, eulerOrder ) {
+
+			if ( curves.x !== undefined ) {
+
+				this.interpolateRotations( curves.x );
+				curves.x.values = curves.x.values.map( _Math.degToRad );
+
+			}
+			if ( curves.y !== undefined ) {
+
+				this.interpolateRotations( curves.y );
+				curves.y.values = curves.y.values.map( _Math.degToRad );
+
+			}
+			if ( curves.z !== undefined ) {
+
+				this.interpolateRotations( curves.z );
+				curves.z.values = curves.z.values.map( _Math.degToRad );
+
+			}
+
+			var times = this.getTimesForAllAxes( curves );
+			var values = this.getKeyframeTrackValues( times, curves, initialValue );
+
+			if ( preRotation !== undefined ) {
+
+				preRotation = preRotation.map( _Math.degToRad );
+				preRotation.push( eulerOrder );
+
+				preRotation = new Euler().fromArray( preRotation );
+				preRotation = new Quaternion().setFromEuler( preRotation );
+
+			}
+
+			if ( postRotation !== undefined ) {
+
+				postRotation = postRotation.map( _Math.degToRad );
+				postRotation.push( eulerOrder );
+
+				postRotation = new Euler().fromArray( postRotation );
+				postRotation = new Quaternion().setFromEuler( postRotation ).inverse();
+
+			}
+
+			var quaternion = new Quaternion();
+			var euler = new Euler();
+
+			var quaternionValues = [];
+
+			for ( var i = 0; i < values.length; i += 3 ) {
+
+				euler.set( values[ i ], values[ i + 1 ], values[ i + 2 ], eulerOrder );
+
+				quaternion.setFromEuler( euler );
+
+				if ( preRotation !== undefined ) quaternion.premultiply( preRotation );
+				if ( postRotation !== undefined ) quaternion.multiply( postRotation );
+
+				quaternion.toArray( quaternionValues, ( i / 3 ) * 4 );
+
+			}
+
+			return new QuaternionKeyframeTrack( modelName + '.quaternion', times, quaternionValues );
+
+		},
+
+		generateMorphTrack: function ( rawTracks ) {
+
+			var curves = rawTracks.DeformPercent.curves.morph;
+			var values = curves.values.map( function ( val ) {
+
+				return val / 100;
+
+			} );
+
+			var morphNum = sceneGraph.getObjectByName( rawTracks.modelName ).morphTargetDictionary[ rawTracks.morphName ];
+
+			return new NumberKeyframeTrack( rawTracks.modelName + '.morphTargetInfluences[' + morphNum + ']', curves.times, values );
+
+		},
+
+		// For all animated objects, times are defined separately for each axis
+		// Here we'll combine the times into one sorted array without duplicates
+		getTimesForAllAxes: function ( curves ) {
+
+			var times = [];
+
+			// first join together the times for each axis, if defined
+			if ( curves.x !== undefined ) times = times.concat( curves.x.times );
+			if ( curves.y !== undefined ) times = times.concat( curves.y.times );
+			if ( curves.z !== undefined ) times = times.concat( curves.z.times );
+
+			// then sort them and remove duplicates
+			times = times.sort( function ( a, b ) {
+
+				return a - b;
+
+			} ).filter( function ( elem, index, array ) {
+
+				return array.indexOf( elem ) == index;
+
+			} );
+
+			return times;
+
+		},
+
+		getKeyframeTrackValues: function ( times, curves, initialValue ) {
+
+			var prevValue = initialValue;
+
+			var values = [];
+
+			var xIndex = - 1;
+			var yIndex = - 1;
+			var zIndex = - 1;
+
+			times.forEach( function ( time ) {
+
+				if ( curves.x ) xIndex = curves.x.times.indexOf( time );
+				if ( curves.y ) yIndex = curves.y.times.indexOf( time );
+				if ( curves.z ) zIndex = curves.z.times.indexOf( time );
+
+				// if there is an x value defined for this frame, use that
+				if ( xIndex !== - 1 ) {
+
+					var xValue = curves.x.values[ xIndex ];
+					values.push( xValue );
+					prevValue[ 0 ] = xValue;
+
+				} else {
+
+					// otherwise use the x value from the previous frame
+					values.push( prevValue[ 0 ] );
+
+				}
+
+				if ( yIndex !== - 1 ) {
+
+					var yValue = curves.y.values[ yIndex ];
+					values.push( yValue );
+					prevValue[ 1 ] = yValue;
+
+				} else {
+
+					values.push( prevValue[ 1 ] );
+
+				}
+
+				if ( zIndex !== - 1 ) {
+
+					var zValue = curves.z.values[ zIndex ];
+					values.push( zValue );
+					prevValue[ 2 ] = zValue;
+
+				} else {
+
+					values.push( prevValue[ 2 ] );
+
+				}
+
+			} );
+
+			return values;
+
+		},
+
+		// Rotations are defined as Euler angles which can have values  of any size
+		// These will be converted to quaternions which don't support values greater than
+		// PI, so we'll interpolate large rotations
+		interpolateRotations: function ( curve ) {
+
+			for ( var i = 1; i < curve.values.length; i ++ ) {
+
+				var initialValue = curve.values[ i - 1 ];
+				var valuesSpan = curve.values[ i ] - initialValue;
+
+				var absoluteSpan = Math.abs( valuesSpan );
+
+				if ( absoluteSpan >= 180 ) {
+
+					var numSubIntervals = absoluteSpan / 180;
+
+					var step = valuesSpan / numSubIntervals;
+					var nextValue = initialValue + step;
+
+					var initialTime = curve.times[ i - 1 ];
+					var timeSpan = curve.times[ i ] - initialTime;
+					var interval = timeSpan / numSubIntervals;
+					var nextTime = initialTime + interval;
+
+					var interpolatedTimes = [];
+					var interpolatedValues = [];
+
+					while ( nextTime < curve.times[ i ] ) {
+
+						interpolatedTimes.push( nextTime );
+						nextTime += interval;
+
+						interpolatedValues.push( nextValue );
+						nextValue += step;
+
+					}
+
+					curve.times = inject( curve.times, i, interpolatedTimes );
+					curve.values = inject( curve.values, i, interpolatedValues );
+
+				}
+
+			}
+
+		},
+
+	};
+
+	// parse an FBX file in ASCII format
+	function TextParser() {}
+
+	TextParser.prototype = {
+
+		constructor: TextParser,
+
+		getPrevNode: function () {
+
+			return this.nodeStack[ this.currentIndent - 2 ];
+
+		},
+
+		getCurrentNode: function () {
+
+			return this.nodeStack[ this.currentIndent - 1 ];
+
+		},
+
+		getCurrentProp: function () {
+
+			return this.currentProp;
+
+		},
+
+		pushStack: function ( node ) {
+
+			this.nodeStack.push( node );
+			this.currentIndent += 1;
+
+		},
+
+		popStack: function () {
+
+			this.nodeStack.pop();
+			this.currentIndent -= 1;
+
+		},
+
+		setCurrentProp: function ( val, name ) {
+
+			this.currentProp = val;
+			this.currentPropName = name;
+
+		},
+
+		parse: function ( text ) {
+
+			this.currentIndent = 0;
+
+			this.allNodes = new FBXTree();
+			this.nodeStack = [];
+			this.currentProp = [];
+			this.currentPropName = '';
+
+			var self = this;
+
+			var split = text.split( /[\r\n]+/ );
+
+			split.forEach( function ( line, i ) {
+
+				var matchComment = line.match( /^[\s\t]*;/ );
+				var matchEmpty = line.match( /^[\s\t]*$/ );
+
+				if ( matchComment || matchEmpty ) return;
+
+				var matchBeginning = line.match( '^\\t{' + self.currentIndent + '}(\\w+):(.*){', '' );
+				var matchProperty = line.match( '^\\t{' + ( self.currentIndent ) + '}(\\w+):[\\s\\t\\r\\n](.*)' );
+				var matchEnd = line.match( '^\\t{' + ( self.currentIndent - 1 ) + '}}' );
+
+				if ( matchBeginning ) {
+
+					self.parseNodeBegin( line, matchBeginning );
+
+				} else if ( matchProperty ) {
+
+					self.parseNodeProperty( line, matchProperty, split[ ++ i ] );
+
+				} else if ( matchEnd ) {
+
+					self.popStack();
+
+				} else if ( line.match( /^[^\s\t}]/ ) ) {
+
+					// large arrays are split over multiple lines terminated with a ',' character
+					// if this is encountered the line needs to be joined to the previous line
+					self.parseNodePropertyContinued( line );
+
+				}
+
+			} );
+
+			return this.allNodes;
+
+		},
+
+		parseNodeBegin: function ( line, property ) {
+
+			var nodeName = property[ 1 ].trim().replace( /^"/, '' ).replace( /"$/, '' );
+
+			var nodeAttrs = property[ 2 ].split( ',' ).map( function ( attr ) {
+
+				return attr.trim().replace( /^"/, '' ).replace( /"$/, '' );
+
+			} );
+
+			var node = { name: nodeName };
+			var attrs = this.parseNodeAttr( nodeAttrs );
+
+			var currentNode = this.getCurrentNode();
+
+			// a top node
+			if ( this.currentIndent === 0 ) {
+
+				this.allNodes.add( nodeName, node );
+
+			} else { // a subnode
+
+				// if the subnode already exists, append it
+				if ( nodeName in currentNode ) {
+
+					// special case Pose needs PoseNodes as an array
+					if ( nodeName === 'PoseNode' ) {
+
+						currentNode.PoseNode.push( node );
+
+					} else if ( currentNode[ nodeName ].id !== undefined ) {
+
+						currentNode[ nodeName ] = {};
+						currentNode[ nodeName ][ currentNode[ nodeName ].id ] = currentNode[ nodeName ];
+
+					}
+
+					if ( attrs.id !== '' ) currentNode[ nodeName ][ attrs.id ] = node;
+
+				} else if ( typeof attrs.id === 'number' ) {
+
+					currentNode[ nodeName ] = {};
+					currentNode[ nodeName ][ attrs.id ] = node;
+
+				} else if ( nodeName !== 'Properties70' ) {
+
+					if ( nodeName === 'PoseNode' )	currentNode[ nodeName ] = [ node ];
+					else currentNode[ nodeName ] = node;
+
+				}
+
+			}
+
+			if ( typeof attrs.id === 'number' ) node.id = attrs.id;
+			if ( attrs.name !== '' ) node.attrName = attrs.name;
+			if ( attrs.type !== '' ) node.attrType = attrs.type;
+
+			this.pushStack( node );
+
+		},
+
+		parseNodeAttr: function ( attrs ) {
+
+			var id = attrs[ 0 ];
+
+			if ( attrs[ 0 ] !== '' ) {
+
+				id = parseInt( attrs[ 0 ] );
+
+				if ( isNaN( id ) ) {
+
+					id = attrs[ 0 ];
+
+				}
+
+			}
+
+			var name = '', type = '';
+
+			if ( attrs.length > 1 ) {
+
+				name = attrs[ 1 ].replace( /^(\w+)::/, '' );
+				type = attrs[ 2 ];
+
+			}
+
+			return { id: id, name: name, type: type };
+
+		},
+
+		parseNodeProperty: function ( line, property, contentLine ) {
+
+			var propName = property[ 1 ].replace( /^"/, '' ).replace( /"$/, '' ).trim();
+			var propValue = property[ 2 ].replace( /^"/, '' ).replace( /"$/, '' ).trim();
+
+			// for special case: base64 image data follows "Content: ," line
+			//	Content: ,
+			//	 "/9j/4RDaRXhpZgAATU0A..."
+			if ( propName === 'Content' && propValue === ',' ) {
+
+				propValue = contentLine.replace( /"/g, '' ).replace( /,$/, '' ).trim();
+
+			}
+
+			var currentNode = this.getCurrentNode();
+			var parentName = currentNode.name;
+
+			if ( parentName === 'Properties70' ) {
+
+				this.parseNodeSpecialProperty( line, propName, propValue );
+				return;
+
+			}
+
+			// Connections
+			if ( propName === 'C' ) {
+
+				var connProps = propValue.split( ',' ).slice( 1 );
+				var from = parseInt( connProps[ 0 ] );
+				var to = parseInt( connProps[ 1 ] );
+
+				var rest = propValue.split( ',' ).slice( 3 );
+
+				rest = rest.map( function ( elem ) {
+
+					return elem.trim().replace( /^"/, '' );
+
+				} );
+
+				propName = 'connections';
+				propValue = [ from, to ];
+				append( propValue, rest );
+
+				if ( currentNode[ propName ] === undefined ) {
+
+					currentNode[ propName ] = [];
+
+				}
+
+			}
+
+			// Node
+			if ( propName === 'Node' ) currentNode.id = propValue;
+
+			// connections
+			if ( propName in currentNode && Array.isArray( currentNode[ propName ] ) ) {
+
+				currentNode[ propName ].push( propValue );
+
+			} else {
+
+				if ( propName !== 'a' ) currentNode[ propName ] = propValue;
+				else currentNode.a = propValue;
+
+			}
+
+			this.setCurrentProp( currentNode, propName );
+
+			// convert string to array, unless it ends in ',' in which case more will be added to it
+			if ( propName === 'a' && propValue.slice( - 1 ) !== ',' ) {
+
+				currentNode.a = parseNumberArray( propValue );
+
+			}
+
+		},
+
+		parseNodePropertyContinued: function ( line ) {
+
+			var currentNode = this.getCurrentNode();
+
+			currentNode.a += line;
+
+			// if the line doesn't end in ',' we have reached the end of the property value
+			// so convert the string to an array
+			if ( line.slice( - 1 ) !== ',' ) {
+
+				currentNode.a = parseNumberArray( currentNode.a );
+
+			}
+
+		},
+
+		// parse "Property70"
+		parseNodeSpecialProperty: function ( line, propName, propValue ) {
+
+			// split this
+			// P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+			// into array like below
+			// ["Lcl Scaling", "Lcl Scaling", "", "A", "1,1,1" ]
+			var props = propValue.split( '",' ).map( function ( prop ) {
+
+				return prop.trim().replace( /^\"/, '' ).replace( /\s/, '_' );
+
+			} );
+
+			var innerPropName = props[ 0 ];
+			var innerPropType1 = props[ 1 ];
+			var innerPropType2 = props[ 2 ];
+			var innerPropFlag = props[ 3 ];
+			var innerPropValue = props[ 4 ];
+
+			// cast values where needed, otherwise leave as strings
+			switch ( innerPropType1 ) {
+
+				case 'int':
+				case 'enum':
+				case 'bool':
+				case 'ULongLong':
+				case 'double':
+				case 'Number':
+				case 'FieldOfView':
+					innerPropValue = parseFloat( innerPropValue );
+					break;
+
+				case 'Color':
+				case 'ColorRGB':
+				case 'Vector3D':
+				case 'Lcl_Translation':
+				case 'Lcl_Rotation':
+				case 'Lcl_Scaling':
+					innerPropValue = parseNumberArray( innerPropValue );
+					break;
+
+			}
+
+			// CAUTION: these props must append to parent's parent
+			this.getPrevNode()[ innerPropName ] = {
+
+				'type': innerPropType1,
+				'type2': innerPropType2,
+				'flag': innerPropFlag,
+				'value': innerPropValue
+
+			};
+
+			this.setCurrentProp( this.getPrevNode(), innerPropName );
+
+		},
+
+	};
+
+	// Parse an FBX file in Binary format
+	function BinaryParser() {}
+
+	BinaryParser.prototype = {
+
+		constructor: BinaryParser,
+
+		parse: function ( buffer ) {
+
+			var reader = new BinaryReader( buffer );
+			reader.skip( 23 ); // skip magic 23 bytes
+
+			var version = reader.getUint32();
+
+			console.log( 'THREE.FBXLoader: FBX binary version: ' + version );
+
+			var allNodes = new FBXTree();
+
+			while ( ! this.endOfContent( reader ) ) {
+
+				var node = this.parseNode( reader, version );
+				if ( node !== null ) allNodes.add( node.name, node );
+
+			}
+
+			return allNodes;
+
+		},
+
+		// Check if reader has reached the end of content.
+		endOfContent: function ( reader ) {
+
+			// footer size: 160bytes + 16-byte alignment padding
+			// - 16bytes: magic
+			// - padding til 16-byte alignment (at least 1byte?)
+			//	(seems like some exporters embed fixed 15 or 16bytes?)
+			// - 4bytes: magic
+			// - 4bytes: version
+			// - 120bytes: zero
+			// - 16bytes: magic
+			if ( reader.size() % 16 === 0 ) {
+
+				return ( ( reader.getOffset() + 160 + 16 ) & ~ 0xf ) >= reader.size();
+
+			} else {
+
+				return reader.getOffset() + 160 + 16 >= reader.size();
+
+			}
+
+		},
+
+		// recursively parse nodes until the end of the file is reached
+		parseNode: function ( reader, version ) {
+
+			var node = {};
+
+			// The first three data sizes depends on version.
+			var endOffset = ( version >= 7500 ) ? reader.getUint64() : reader.getUint32();
+			var numProperties = ( version >= 7500 ) ? reader.getUint64() : reader.getUint32();
+
+			// note: do not remove this even if you get a linter warning as it moves the buffer forward
+			var propertyListLen = ( version >= 7500 ) ? reader.getUint64() : reader.getUint32();
+
+			var nameLen = reader.getUint8();
+			var name = reader.getString( nameLen );
+
+			// Regards this node as NULL-record if endOffset is zero
+			if ( endOffset === 0 ) return null;
+
+			var propertyList = [];
+
+			for ( var i = 0; i < numProperties; i ++ ) {
+
+				propertyList.push( this.parseProperty( reader ) );
+
+			}
+
+			// Regards the first three elements in propertyList as id, attrName, and attrType
+			var id = propertyList.length > 0 ? propertyList[ 0 ] : '';
+			var attrName = propertyList.length > 1 ? propertyList[ 1 ] : '';
+			var attrType = propertyList.length > 2 ? propertyList[ 2 ] : '';
+
+			// check if this node represents just a single property
+			// like (name, 0) set or (name2, [0, 1, 2]) set of {name: 0, name2: [0, 1, 2]}
+			node.singleProperty = ( numProperties === 1 && reader.getOffset() === endOffset ) ? true : false;
+
+			while ( endOffset > reader.getOffset() ) {
+
+				var subNode = this.parseNode( reader, version );
+
+				if ( subNode !== null ) this.parseSubNode( name, node, subNode );
+
+			}
+
+			node.propertyList = propertyList; // raw property list used by parent
+
+			if ( typeof id === 'number' ) node.id = id;
+			if ( attrName !== '' ) node.attrName = attrName;
+			if ( attrType !== '' ) node.attrType = attrType;
+			if ( name !== '' ) node.name = name;
+
+			return node;
+
+		},
+
+		parseSubNode: function ( name, node, subNode ) {
+
+			// special case: child node is single property
+			if ( subNode.singleProperty === true ) {
+
+				var value = subNode.propertyList[ 0 ];
+
+				if ( Array.isArray( value ) ) {
+
+					node[ subNode.name ] = subNode;
+
+					subNode.a = value;
+
+				} else {
+
+					node[ subNode.name ] = value;
+
+				}
+
+			} else if ( name === 'Connections' && subNode.name === 'C' ) {
+
+				var array = [];
+
+				subNode.propertyList.forEach( function ( property, i ) {
+
+					// first Connection is FBX type (OO, OP, etc.). We'll discard these
+					if ( i !== 0 ) array.push( property );
+
+				} );
+
+				if ( node.connections === undefined ) {
+
+					node.connections = [];
+
+				}
+
+				node.connections.push( array );
+
+			} else if ( subNode.name === 'Properties70' ) {
+
+				var keys = Object.keys( subNode );
+
+				keys.forEach( function ( key ) {
+
+					node[ key ] = subNode[ key ];
+
+				} );
+
+			} else if ( name === 'Properties70' && subNode.name === 'P' ) {
+
+				var innerPropName = subNode.propertyList[ 0 ];
+				var innerPropType1 = subNode.propertyList[ 1 ];
+				var innerPropType2 = subNode.propertyList[ 2 ];
+				var innerPropFlag = subNode.propertyList[ 3 ];
+				var innerPropValue;
+
+				if ( innerPropName.indexOf( 'Lcl ' ) === 0 ) innerPropName = innerPropName.replace( 'Lcl ', 'Lcl_' );
+				if ( innerPropType1.indexOf( 'Lcl ' ) === 0 ) innerPropType1 = innerPropType1.replace( 'Lcl ', 'Lcl_' );
+
+				if ( innerPropType1 === 'Color' || innerPropType1 === 'ColorRGB' || innerPropType1 === 'Vector' || innerPropType1 === 'Vector3D' || innerPropType1.indexOf( 'Lcl_' ) === 0 ) {
+
+					innerPropValue = [
+						subNode.propertyList[ 4 ],
+						subNode.propertyList[ 5 ],
+						subNode.propertyList[ 6 ]
+					];
+
+				} else {
+
+					innerPropValue = subNode.propertyList[ 4 ];
+
+				}
+
+				// this will be copied to parent, see above
+				node[ innerPropName ] = {
+
+					'type': innerPropType1,
+					'type2': innerPropType2,
+					'flag': innerPropFlag,
+					'value': innerPropValue
+
+				};
+
+			} else if ( node[ subNode.name ] === undefined ) {
+
+				if ( typeof subNode.id === 'number' ) {
+
+					node[ subNode.name ] = {};
+					node[ subNode.name ][ subNode.id ] = subNode;
+
+				} else {
+
+					node[ subNode.name ] = subNode;
+
+				}
+
+			} else {
+
+				if ( subNode.name === 'PoseNode' ) {
+
+					if ( ! Array.isArray( node[ subNode.name ] ) ) {
+
+						node[ subNode.name ] = [ node[ subNode.name ] ];
+
+					}
+
+					node[ subNode.name ].push( subNode );
+
+				} else if ( node[ subNode.name ][ subNode.id ] === undefined ) {
+
+					node[ subNode.name ][ subNode.id ] = subNode;
+
+				}
+
+			}
+
+		},
+
+		parseProperty: function ( reader ) {
+
+			var type = reader.getString( 1 );
+
+			switch ( type ) {
+
+				case 'C':
+					return reader.getBoolean();
+
+				case 'D':
+					return reader.getFloat64();
+
+				case 'F':
+					return reader.getFloat32();
+
+				case 'I':
+					return reader.getInt32();
+
+				case 'L':
+					return reader.getInt64();
+
+				case 'R':
+					var length = reader.getUint32();
+					return reader.getArrayBuffer( length );
+
+				case 'S':
+					var length = reader.getUint32();
+					return reader.getString( length );
+
+				case 'Y':
+					return reader.getInt16();
+
+				case 'b':
+				case 'c':
+				case 'd':
+				case 'f':
+				case 'i':
+				case 'l':
+
+					var arrayLength = reader.getUint32();
+					var encoding = reader.getUint32(); // 0: non-compressed, 1: compressed
+					var compressedLength = reader.getUint32();
+
+					if ( encoding === 0 ) {
+
+						switch ( type ) {
+
+							case 'b':
+							case 'c':
+								return reader.getBooleanArray( arrayLength );
+
+							case 'd':
+								return reader.getFloat64Array( arrayLength );
+
+							case 'f':
+								return reader.getFloat32Array( arrayLength );
+
+							case 'i':
+								return reader.getInt32Array( arrayLength );
+
+							case 'l':
+								return reader.getInt64Array( arrayLength );
+
+						}
+
+					}
+
+					if ( typeof Zlib === 'undefined' ) {
+
+						console.error( 'THREE.FBXLoader: External library Inflate.min.js required, obtain or import from https://github.com/imaya/zlib.js' );
+
+					}
+
+					var inflate = new Zlib.Inflate( new Uint8Array( reader.getArrayBuffer( compressedLength ) ) ); // eslint-disable-line no-undef
+					var reader2 = new BinaryReader( inflate.decompress().buffer );
+
+					switch ( type ) {
+
+						case 'b':
+						case 'c':
+							return reader2.getBooleanArray( arrayLength );
+
+						case 'd':
+							return reader2.getFloat64Array( arrayLength );
+
+						case 'f':
+							return reader2.getFloat32Array( arrayLength );
+
+						case 'i':
+							return reader2.getInt32Array( arrayLength );
+
+						case 'l':
+							return reader2.getInt64Array( arrayLength );
+
+					}
+
+				default:
+					throw new Error( 'THREE.FBXLoader: Unknown property type ' + type );
+
+			}
+
+		}
+
+	};
+
+	function BinaryReader( buffer, littleEndian ) {
+
+		this.dv = new DataView( buffer );
+		this.offset = 0;
+		this.littleEndian = ( littleEndian !== undefined ) ? littleEndian : true;
+
+	}
+
+	BinaryReader.prototype = {
+
+		constructor: BinaryReader,
+
+		getOffset: function () {
+
+			return this.offset;
+
+		},
+
+		size: function () {
+
+			return this.dv.buffer.byteLength;
+
+		},
+
+		skip: function ( length ) {
+
+			this.offset += length;
+
+		},
+
+		// seems like true/false representation depends on exporter.
+		// true: 1 or 'Y'(=0x59), false: 0 or 'T'(=0x54)
+		// then sees LSB.
+		getBoolean: function () {
+
+			return ( this.getUint8() & 1 ) === 1;
+
+		},
+
+		getBooleanArray: function ( size ) {
+
+			var a = [];
+
+			for ( var i = 0; i < size; i ++ ) {
+
+				a.push( this.getBoolean() );
+
+			}
+
+			return a;
+
+		},
+
+		getUint8: function () {
+
+			var value = this.dv.getUint8( this.offset );
+			this.offset += 1;
+			return value;
+
+		},
+
+		getInt16: function () {
+
+			var value = this.dv.getInt16( this.offset, this.littleEndian );
+			this.offset += 2;
+			return value;
+
+		},
+
+		getInt32: function () {
+
+			var value = this.dv.getInt32( this.offset, this.littleEndian );
+			this.offset += 4;
+			return value;
+
+		},
+
+		getInt32Array: function ( size ) {
+
+			var a = [];
+
+			for ( var i = 0; i < size; i ++ ) {
+
+				a.push( this.getInt32() );
+
+			}
+
+			return a;
+
+		},
+
+		getUint32: function () {
+
+			var value = this.dv.getUint32( this.offset, this.littleEndian );
+			this.offset += 4;
+			return value;
+
+		},
+
+		// JavaScript doesn't support 64-bit integer so calculate this here
+		// 1 << 32 will return 1 so using multiply operation instead here.
+		// There's a possibility that this method returns wrong value if the value
+		// is out of the range between Number.MAX_SAFE_INTEGER and Number.MIN_SAFE_INTEGER.
+		// TODO: safely handle 64-bit integer
+		getInt64: function () {
+
+			var low, high;
+
+			if ( this.littleEndian ) {
+
+				low = this.getUint32();
+				high = this.getUint32();
+
+			} else {
+
+				high = this.getUint32();
+				low = this.getUint32();
+
+			}
+
+			// calculate negative value
+			if ( high & 0x80000000 ) {
+
+				high = ~ high & 0xFFFFFFFF;
+				low = ~ low & 0xFFFFFFFF;
+
+				if ( low === 0xFFFFFFFF ) high = ( high + 1 ) & 0xFFFFFFFF;
+
+				low = ( low + 1 ) & 0xFFFFFFFF;
+
+				return - ( high * 0x100000000 + low );
+
+			}
+
+			return high * 0x100000000 + low;
+
+		},
+
+		getInt64Array: function ( size ) {
+
+			var a = [];
+
+			for ( var i = 0; i < size; i ++ ) {
+
+				a.push( this.getInt64() );
+
+			}
+
+			return a;
+
+		},
+
+		// Note: see getInt64() comment
+		getUint64: function () {
+
+			var low, high;
+
+			if ( this.littleEndian ) {
+
+				low = this.getUint32();
+				high = this.getUint32();
+
+			} else {
+
+				high = this.getUint32();
+				low = this.getUint32();
+
+			}
+
+			return high * 0x100000000 + low;
+
+		},
+
+		getFloat32: function () {
+
+			var value = this.dv.getFloat32( this.offset, this.littleEndian );
+			this.offset += 4;
+			return value;
+
+		},
+
+		getFloat32Array: function ( size ) {
+
+			var a = [];
+
+			for ( var i = 0; i < size; i ++ ) {
+
+				a.push( this.getFloat32() );
+
+			}
+
+			return a;
+
+		},
+
+		getFloat64: function () {
+
+			var value = this.dv.getFloat64( this.offset, this.littleEndian );
+			this.offset += 8;
+			return value;
+
+		},
+
+		getFloat64Array: function ( size ) {
+
+			var a = [];
+
+			for ( var i = 0; i < size; i ++ ) {
+
+				a.push( this.getFloat64() );
+
+			}
+
+			return a;
+
+		},
+
+		getArrayBuffer: function ( size ) {
+
+			var value = this.dv.buffer.slice( this.offset, this.offset + size );
+			this.offset += size;
+			return value;
+
+		},
+
+		getString: function ( size ) {
+
+			// note: safari 9 doesn't support Uint8Array.indexOf; create intermediate array instead
+			var a = [];
+
+			for ( var i = 0; i < size; i ++ ) {
+
+				a[ i ] = this.getUint8();
+
+			}
+
+			var nullByte = a.indexOf( 0 );
+			if ( nullByte >= 0 ) a = a.slice( 0, nullByte );
+
+			return LoaderUtils.decodeText( new Uint8Array( a ) );
+
+		}
+
+	};
+
+	// FBXTree holds a representation of the FBX data, returned by the TextParser ( FBX ASCII format)
+	// and BinaryParser( FBX Binary format)
+	function FBXTree() {}
+
+	FBXTree.prototype = {
+
+		constructor: FBXTree,
+
+		add: function ( key, val ) {
+
+			this[ key ] = val;
+
+		},
+
+	};
+
+	// ************** UTILITY FUNCTIONS **************
+
+	function isFbxFormatBinary( buffer ) {
+
+		var CORRECT = 'Kaydara FBX Binary  \0';
+
+		return buffer.byteLength >= CORRECT.length && CORRECT === convertArrayBufferToString( buffer, 0, CORRECT.length );
+
+	}
+
+	function isFbxFormatASCII( text ) {
+
+		var CORRECT = [ 'K', 'a', 'y', 'd', 'a', 'r', 'a', '\\', 'F', 'B', 'X', '\\', 'B', 'i', 'n', 'a', 'r', 'y', '\\', '\\' ];
+
+		var cursor = 0;
+
+		function read( offset ) {
+
+			var result = text[ offset - 1 ];
+			text = text.slice( cursor + offset );
+			cursor ++;
+			return result;
+
+		}
+
+		for ( var i = 0; i < CORRECT.length; ++ i ) {
+
+			var num = read( 1 );
+			if ( num === CORRECT[ i ] ) {
+
+				return false;
+
+			}
+
+		}
+
+		return true;
+
+	}
+
+	function getFbxVersion( text ) {
+
+		var versionRegExp = /FBXVersion: (\d+)/;
+		var match = text.match( versionRegExp );
+		if ( match ) {
+
+			var version = parseInt( match[ 1 ] );
+			return version;
+
+		}
+		throw new Error( 'THREE.FBXLoader: Cannot find the version number for the file given.' );
+
+	}
+
+	// Converts FBX ticks into real time seconds.
+	function convertFBXTimeToSeconds( time ) {
+
+		return time / 46186158000;
+
+	}
+
+	var dataArray = [];
+
+	// extracts the data from the correct position in the FBX array based on indexing type
+	function getData( polygonVertexIndex, polygonIndex, vertexIndex, infoObject ) {
+
+		var index;
+
+		switch ( infoObject.mappingType ) {
+
+			case 'ByPolygonVertex' :
+				index = polygonVertexIndex;
+				break;
+			case 'ByPolygon' :
+				index = polygonIndex;
+				break;
+			case 'ByVertice' :
+				index = vertexIndex;
+				break;
+			case 'AllSame' :
+				index = infoObject.indices[ 0 ];
+				break;
+			default :
+				console.warn( 'THREE.FBXLoader: unknown attribute mapping type ' + infoObject.mappingType );
+
+		}
+
+		if ( infoObject.referenceType === 'IndexToDirect' ) index = infoObject.indices[ index ];
+
+		var from = index * infoObject.dataSize;
+		var to = from + infoObject.dataSize;
+
+		return slice( dataArray, infoObject.buffer, from, to );
+
+	}
+
+	var tempEuler = new Euler();
+	var tempVec = new Vector3();
+
+	// generate transformation from FBX transform data
+	// ref: https://help.autodesk.com/view/FBX/2017/ENU/?guid=__files_GUID_10CDD63C_79C1_4F2D_BB28_AD2BE65A02ED_htm
+	// ref: http://docs.autodesk.com/FBX/2014/ENU/FBX-SDK-Documentation/index.html?url=cpp_ref/_transformations_2main_8cxx-example.html,topicNumber=cpp_ref__transformations_2main_8cxx_example_htmlfc10a1e1-b18d-4e72-9dc0-70d0f1959f5e
+	function generateTransform( transformData ) {
+
+		var lTranslationM = new Matrix4();
+		var lPreRotationM = new Matrix4();
+		var lRotationM = new Matrix4();
+		var lPostRotationM = new Matrix4();
+
+		var lScalingM = new Matrix4();
+		var lScalingPivotM = new Matrix4();
+		var lScalingOffsetM = new Matrix4();
+		var lRotationOffsetM = new Matrix4();
+		var lRotationPivotM = new Matrix4();
+
+		var lParentGX = new Matrix4();
+		var lGlobalT = new Matrix4();
+
+		var inheritType = ( transformData.inheritType ) ? transformData.inheritType : 0;
+
+		if ( transformData.translation ) lTranslationM.setPosition( tempVec.fromArray( transformData.translation ) );
+
+		if ( transformData.preRotation ) {
+
+			var array = transformData.preRotation.map( _Math.degToRad );
+			array.push( transformData.eulerOrder );
+			lPreRotationM.makeRotationFromEuler( tempEuler.fromArray( array ) );
+
+		}
+
+		if ( transformData.rotation ) {
+
+			var array = transformData.rotation.map( _Math.degToRad );
+			array.push( transformData.eulerOrder );
+			lRotationM.makeRotationFromEuler( tempEuler.fromArray( array ) );
+
+		}
+
+		if ( transformData.postRotation ) {
+
+			var array = transformData.postRotation.map( _Math.degToRad );
+			array.push( transformData.eulerOrder );
+			lPostRotationM.makeRotationFromEuler( tempEuler.fromArray( array ) );
+
+		}
+
+		if ( transformData.scale ) lScalingM.scale( tempVec.fromArray( transformData.scale ) );
+
+		// Pivots and offsets
+		if ( transformData.scalingOffset ) lScalingOffsetM.setPosition( tempVec.fromArray( transformData.scalingOffset ) );
+		if ( transformData.scalingPivot ) lScalingPivotM.setPosition( tempVec.fromArray( transformData.scalingPivot ) );
+		if ( transformData.rotationOffset ) lRotationOffsetM.setPosition( tempVec.fromArray( transformData.rotationOffset ) );
+		if ( transformData.rotationPivot ) lRotationPivotM.setPosition( tempVec.fromArray( transformData.rotationPivot ) );
+
+		// parent transform
+		if ( transformData.parentMatrixWorld ) lParentGX = transformData.parentMatrixWorld;
+
+		// Global Rotation
+		var lLRM = lPreRotationM.multiply( lRotationM ).multiply( lPostRotationM );
+		var lParentGRM = new Matrix4();
+		lParentGX.extractRotation( lParentGRM );
+
+		// Global Shear*Scaling
+		var lParentTM = new Matrix4();
+		var lLSM;
+		var lParentGSM;
+		var lParentGRSM;
+
+		lParentTM.copyPosition( lParentGX );
+		lParentGRSM = lParentTM.getInverse( lParentTM ).multiply( lParentGX );
+		lParentGSM = lParentGRM.getInverse( lParentGRM ).multiply( lParentGRSM );
+		lLSM = lScalingM;
+
+		var lGlobalRS;
+		if ( inheritType === 0 ) {
+
+			lGlobalRS = lParentGRM.multiply( lLRM ).multiply( lParentGSM ).multiply( lLSM );
+
+		} else if ( inheritType === 1 ) {
+
+			lGlobalRS = lParentGRM.multiply( lParentGSM ).multiply( lLRM ).multiply( lLSM );
+
+		} else {
+
+			var lParentLSM = new Matrix4().copy( lScalingM );
+
+			var lParentGSM_noLocal = lParentGSM.multiply( lParentLSM.getInverse( lParentLSM ) );
+
+			lGlobalRS = lParentGRM.multiply( lLRM ).multiply( lParentGSM_noLocal ).multiply( lLSM );
+
+		}
+
+		// Calculate the local transform matrix
+		var lTransform = lTranslationM.multiply( lRotationOffsetM ).multiply( lRotationPivotM ).multiply( lPreRotationM ).multiply( lRotationM ).multiply( lPostRotationM ).multiply( lRotationPivotM.getInverse( lRotationPivotM ) ).multiply( lScalingOffsetM ).multiply( lScalingPivotM ).multiply( lScalingM ).multiply( lScalingPivotM.getInverse( lScalingPivotM ) );
+
+		var lLocalTWithAllPivotAndOffsetInfo = new Matrix4().copyPosition( lTransform );
+
+		var lGlobalTranslation = lParentGX.multiply( lLocalTWithAllPivotAndOffsetInfo );
+		lGlobalT.copyPosition( lGlobalTranslation );
+
+		lTransform = lGlobalT.multiply( lGlobalRS );
+
+		return lTransform;
+
+	}
+
+	// Returns the three.js intrinsic Euler order corresponding to FBX extrinsic Euler order
+	// ref: http://help.autodesk.com/view/FBX/2017/ENU/?guid=__cpp_ref_class_fbx_euler_html
+	function getEulerOrder( order ) {
+
+		order = order || 0;
+
+		var enums = [
+			'ZYX', // -> XYZ extrinsic
+			'YZX', // -> XZY extrinsic
+			'XZY', // -> YZX extrinsic
+			'ZXY', // -> YXZ extrinsic
+			'YXZ', // -> ZXY extrinsic
+			'XYZ', // -> ZYX extrinsic
+			//'SphericXYZ', // not possible to support
+		];
+
+		if ( order === 6 ) {
+
+			console.warn( 'THREE.FBXLoader: unsupported Euler Order: Spherical XYZ. Animations and rotations may be incorrect.' );
+			return enums[ 0 ];
+
+		}
+
+		return enums[ order ];
+
+	}
+
+	// Parses comma separated list of numbers and returns them an array.
+	// Used internally by the TextParser
+	function parseNumberArray( value ) {
+
+		var array = value.split( ',' ).map( function ( val ) {
+
+			return parseFloat( val );
+
+		} );
+
+		return array;
+
+	}
+
+	function convertArrayBufferToString( buffer, from, to ) {
+
+		if ( from === undefined ) from = 0;
+		if ( to === undefined ) to = buffer.byteLength;
+
+		return LoaderUtils.decodeText( new Uint8Array( buffer, from, to ) );
+
+	}
+
+	function append( a, b ) {
+
+		for ( var i = 0, j = a.length, l = b.length; i < l; i ++, j ++ ) {
+
+			a[ j ] = b[ i ];
+
+		}
+
+	}
+
+	function slice( a, b, from, to ) {
+
+		for ( var i = from, j = 0; i < to; i ++, j ++ ) {
+
+			a[ j ] = b[ i ];
+
+		}
+
+		return a;
+
+	}
+
+	// inject array a2 into array a1 at index
+	function inject( a1, index, a2 ) {
+
+		return a1.slice( 0, index ).concat( a2 ).concat( a1.slice( index ) );
+
+	}
+
+	return FBXLoader;
+
+} )();
+
+export { FBXLoader };
