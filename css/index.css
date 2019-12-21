@@ -185,14 +185,17 @@ figure.hero__bg {
     transform: translateY(0px);
   }
 }
+
 .introduction {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: black;
+  background: linear-gradient(to bottom, #cf4e7c 50%, rgba(0, 0, 0, 0)),
+    linear-gradient(to left, #7995f7, #de7072);
   padding: 230px 120px;
 }
+
 @media screen and (max-width: 700px) {
   .introduction {
     padding: 40px;
@@ -205,7 +208,10 @@ figure.hero__bg {
 
 .playlist {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 10vh;
+}
+.playlist h2 {
+  margin-bottom: 20px;
 }
 .playlist .videos {
   display: flex;
@@ -326,11 +332,12 @@ a.share-button:hover {
   box-shadow: 0 0 24px #00000050;
   background: linear-gradient(to left, #962c6a, #3b26b1);
 }
+
 .about-us {
-  margin: 0 auto;
+  margin-bottom: 10vh;
   max-width: 700px;
-  border-top: solid 1px;
-  border-bottom: solid 1px;
+  border-top: dotted 5px;
+  border-bottom: dotted 5px;
 }
 
 .about-us .do-omega {
