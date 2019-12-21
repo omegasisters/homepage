@@ -5,6 +5,8 @@ import {
   useState
 } from "/homepage/web_modules/preact/hooks.js";
 
+import Rotate from "./three/rotate.js";
+import ThreeScene from "./three/scene.js";
 import ThreeViewer from "./three/viewer.js";
 
 const App: FunctionalComponent = () => {
@@ -13,18 +15,23 @@ const App: FunctionalComponent = () => {
   const [modelType, setModelType] = useState<"otohime" | "curing">("otohime");
 
   const divRef = useRef<HTMLDivElement>();
-  const viewerRef = useRef(new ThreeViewer());
-  const viewer = viewerRef.current;
+  const rotate = useRef(new Rotate()).current;
+  const scene = useRef(
+    new ThreeScene(() => {
+      rotate.update(viewer.model);
+    })
+  ).current;
+  const viewer = useRef(new ThreeViewer(scene.scene)).current;
 
   useEffect(() => {
-    viewer.start(divRef.current!);
+    scene.start(divRef.current!);
     onOtohime();
   }, []);
 
   useEffect(() => {
-    window.addEventListener("resize", viewer.resize);
+    window.addEventListener("resize", scene.resize);
     return () => {
-      window.removeEventListener("resize", viewer.resize);
+      window.removeEventListener("resize", scene.resize);
     };
   }, []);
 
@@ -86,8 +93,7 @@ const App: FunctionalComponent = () => {
           </a>
         </div>
       )}
-
-      <div ref={divRef} />
+      <div ref={divRef} onClick={rotate.stop} />
     </div>
   );
 };

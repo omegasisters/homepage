@@ -1,6 +1,10 @@
 {
   "imports": {
     "preact": "./preact.js",
-    "preact/hooks": "./preact/hooks.js"
+    "preact/hooks": "./preact/hooks.js",
+    "three": "./three.js",
+    "three/examples/jsm/controls/OrbitControls": "./three/examples/jsm/controls/OrbitControls.js",
+    "three/examples/jsm/loaders/FBXLoader": "./three/examples/jsm/loaders/FBXLoader.js",
+    "three/examples/jsm/loaders/GLTFLoader": "./three/examples/jsm/loaders/GLTFLoader.js"
   }
 }
