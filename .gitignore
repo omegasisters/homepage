@@ -61,7 +61,7 @@ build-iPhoneSimulator/
 
 #Node.js
 node_modules
-# homepage
+homepage
 
 #dot net
 bin/

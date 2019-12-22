@@ -13,7 +13,7 @@ const App: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [modelType, setModelType] = useState<"otohime" | "curing">("otohime");
-  const [button, setButton] = useState("回転停止");
+  const [isRotate, setIsRotate] = useState(true);
 
   const divRef = useRef<HTMLDivElement>();
   const rotate = useRef(new Rotate()).current;
@@ -52,6 +52,11 @@ const App: FunctionalComponent = () => {
     setLoading(false);
   };
 
+  const toggleRotate = () => {
+    rotate.switch();
+    setIsRotate(prev => !prev);
+  };
+
   return (
     <div className="viewer">
       <div className="controller">
@@ -68,6 +73,7 @@ const App: FunctionalComponent = () => {
           うんちかーりんぐ
         </button>
       </div>
+
       {loading && <p>Now Loading {progress}%</p>}
       {modelType === "otohime" && (
         <div className="description">
@@ -94,15 +100,15 @@ const App: FunctionalComponent = () => {
           </a>
         </div>
       )}
-      <div ref={divRef} />
+
       <button
-        onClick={() => {
-          rotate.switch();
-          setButton(rotate.isRotate ? "回転停止" : "回転開始");
-        }}
+        onClick={toggleRotate}
+        className={`rotate_button ${isRotate ? "active" : ""}`}
       >
-        {button}
+        <i className={`fas fa-fw fa-${isRotate ? "times" : "sync-alt"}`} />
+        {isRotate ? "回転停止" : "回転開始"}
       </button>
+      <div ref={divRef} />
     </div>
   );
 };
