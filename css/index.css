@@ -193,7 +193,7 @@ figure.hero__bg {
   text-align: center;
   background: linear-gradient(to bottom, #cf4e7c 50%, rgba(0, 0, 0, 0)),
     linear-gradient(to left, #7995f7, #de7072);
-  padding: 230px 120px;
+  padding: 100px 120px 230px;
 }
 
 @media screen and (max-width: 700px) {
@@ -208,7 +208,7 @@ figure.hero__bg {
 
 .playlist {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 .playlist h2 {
   margin-bottom: 20px;
@@ -222,7 +222,7 @@ figure.hero__bg {
   margin: 0 10px;
 }
 .videos .video-link img {
-  width: 400px;
+  width: 320px;
 }
 .videos::-webkit-scrollbar {
   width: 10px;
@@ -334,7 +334,7 @@ a.share-button:hover {
 }
 
 .about-us {
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   max-width: 700px;
   border-top: dotted 5px;
   border-bottom: dotted 5px;
@@ -403,7 +403,7 @@ a.share-button:hover {
 }
 
 .c-alpha {
-  margin-top: 200px;
+  margin-top: 800px;
   font-size: 0.1rem;
   animation: omega-noise 4s linear infinite 2s;
 }
