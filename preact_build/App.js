@@ -43,7 +43,7 @@ var App = function () {
     var _a = useState(false), loading = _a[0], setLoading = _a[1];
     var _b = useState(0), progress = _b[0], setProgress = _b[1];
     var _c = useState("otohime"), modelType = _c[0], setModelType = _c[1];
-    var _d = useState("回転停止"), button = _d[0], setButton = _d[1];
+    var _d = useState(true), isRotate = _d[0], setIsRotate = _d[1];
     var divRef = useRef();
     var rotate = useRef(new Rotate()).current;
     var scene = useRef(new ThreeScene(function () {
@@ -92,6 +92,10 @@ var App = function () {
             }
         });
     }); };
+    var toggleRotate = function () {
+        rotate.switch();
+        setIsRotate(function (prev) { return !prev; });
+    };
     return (h("div", { className: "viewer" },
         h("div", { className: "controller" },
             h("button", { onClick: onOtohime, className: modelType === "otohime" ? "active" : "" }, "\u304A\u3068\u3072\u3081"),
@@ -106,10 +110,9 @@ var App = function () {
         modelType === "curing" && (h("div", { className: "description" },
             h("p", null, "\u3046\u3093\u3061\u30AB\u30FC\u30EA\u30F3\u30B0"),
             h("a", { href: "https://omesis-shop.booth.pm/items/1269953", target: "_blank", rel: "noopener noreferrer" }, "omesis-shop.booth.pm/items/1269953"))),
-        h("div", { ref: divRef }),
-        h("button", { onClick: function () {
-                rotate.switch();
-                setButton(rotate.isRotate ? "回転停止" : "回転開始");
-            } }, button)));
+        h("button", { onClick: toggleRotate, className: "rotate_button " + (isRotate ? "active" : "") },
+            h("i", { className: "fas fa-fw fa-" + (isRotate ? "times" : "sync-alt") }),
+            isRotate ? "回転停止" : "回転開始"),
+        h("div", { ref: divRef })));
 };
 export default App;

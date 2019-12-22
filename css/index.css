@@ -377,7 +377,8 @@ a.share-button:hover {
   justify-content: center;
   margin: 10px 0;
 }
-.viewer .controller button {
+.viewer .controller button,
+.rotate_button {
   cursor: pointer;
   margin: 5px;
   padding: 10px;
@@ -386,11 +387,18 @@ a.share-button:hover {
   color: white;
   border-radius: 2px;
 }
+.rotate_button {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
 .viewer .controller button:hover,
-.viewer .controller button.active {
+.viewer .controller button.active,
+.rotate_button:hover,
+.rotate_button.active {
   box-shadow: 0 0 24px #00000050;
 }
-.viewer .controller button.active {
+.viewer .controller button.active,
+.rotate_button.active {
   background: #06ffd2;
   color: black;
   border: none;
