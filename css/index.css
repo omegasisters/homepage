@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background: black;
-}
-
 html,
 body {
   width: 100%;
@@ -44,16 +40,13 @@ i.fas {
 
 .hero {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 a {
   color: white;
 }
 
-figure.hero__bg {
+.hero__bg {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -67,14 +60,21 @@ figure.hero__bg {
   object-fit: cover;
 }
 
-.hero .hero__logo,
-.guide_for_scroll {
+.hero__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__guide_for_scroll {
   opacity: 0;
   animation: logo 1s ease 1s forwards;
 }
 
 .hero__logo {
-  margin-top: -30vh;
+  margin-top: -40vh;
 }
 
 .hero .logo,
@@ -87,7 +87,7 @@ figure.hero__bg {
 }
 .hero .logo-sub {
   text-align: center;
-  margin-top: 2.5rem;
+  margin-top: 2.5em;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 6px;
@@ -195,12 +195,12 @@ figure.hero__bg {
     linear-gradient(to left, #7995f7, #de7072);
   padding: 100px 120px 230px;
 }
-
 @media screen and (max-width: 700px) {
   .introduction {
     padding: 40px;
   }
 }
+
 .introduction .video {
   width: 560px;
   height: 315px;
@@ -255,7 +255,7 @@ figure.hero__bg {
 @media screen and (max-width: 700px) {
   .links {
     padding: 40px;
-    background: linear-gradient(to left, #de7072, #7995f7);
+    background: linear-gradient(to left, #7995f7, #de7072);
   }
 }
 
@@ -310,6 +310,7 @@ figure.hero__bg {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background: none;
   }
 
   .profiles .profile .image {
@@ -411,7 +412,7 @@ a.share-button:hover {
 }
 
 .c-alpha {
-  margin-top: 800px;
+  margin-top: 200px;
   font-size: 0.1rem;
   animation: omega-noise 4s linear infinite 2s;
 }
