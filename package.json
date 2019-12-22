@@ -38,7 +38,8 @@
       "three",
       "three/examples/jsm/controls/OrbitControls.js",
       "three/examples/jsm/loaders/FBXLoader.js",
-      "three/examples/jsm/loaders/GLTFLoader.js"
+      "three/examples/jsm/loaders/GLTFLoader.js",
+      "three/examples/jsm/webxr/VRButton.js"
     ]
   },
   "main": "server.js",

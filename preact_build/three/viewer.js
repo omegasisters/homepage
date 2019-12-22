@@ -17,7 +17,8 @@ var ThreeViewer = /** @class */ (function () {
                 }
                 new GLTFLoader().load(address, function (gltf) {
                     var mesh = (_this.models[address] = _this.model = gltf.scene);
-                    mesh.scale.set(1.5, 1.5, 1.5);
+                    mesh.scale.set(1, 1, 1);
+                    mesh.position.z -= 2;
                     _this.scene.add(_this.model);
                     r();
                 }, function (xhr) {
@@ -48,6 +49,8 @@ var ThreeViewer = /** @class */ (function () {
                             child.receiveShadow = true;
                         }
                     });
+                    object.position.y += 0.5;
+                    object.position.z -= 2;
                     _this.scene.add(_this.model);
                     r();
                 }, function (xhr) {

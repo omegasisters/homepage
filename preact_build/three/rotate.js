@@ -2,8 +2,8 @@ var Rotate = /** @class */ (function () {
     function Rotate() {
         var _this = this;
         this.isRotate = true;
-        this.stop = function () {
-            _this.isRotate = false;
+        this.switch = function () {
+            _this.isRotate = !_this.isRotate;
         };
         this.update = function (model) {
             if (model && _this.isRotate) {

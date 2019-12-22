@@ -33,7 +33,8 @@ export default class ThreeViewer {
         address,
         gltf => {
           const mesh = (this.models[address] = this.model = gltf.scene);
-          mesh.scale.set(1.5, 1.5, 1.5);
+          mesh.scale.set(1, 1, 1);
+          mesh.position.z -= 2;
           this.scene.add(this.model);
           r();
         },
@@ -72,7 +73,8 @@ export default class ThreeViewer {
               child.receiveShadow = true;
             }
           });
-
+          object.position.y += 0.5;
+          object.position.z -= 2;
           this.scene.add(this.model);
           r();
         },
