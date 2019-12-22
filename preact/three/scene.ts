@@ -22,7 +22,10 @@ export default class ThreeScene {
 
     try {
       renderer.vr.enabled = true;
-      div.appendChild(VRButton.createButton(this.renderer));
+      const vrButton = VRButton.createButton(this.renderer);
+      div.appendChild(vrButton);
+      vrButton.style.top = "";
+      vrButton.style.bottom = "";
     } catch (error) {}
 
     const controls = new OrbitControls(camera, renderer.domElement);

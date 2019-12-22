@@ -15,7 +15,10 @@ var ThreeScene = /** @class */ (function () {
             div.appendChild(renderer.domElement);
             try {
                 renderer.vr.enabled = true;
-                div.appendChild(VRButton.createButton(_this.renderer));
+                var vrButton = VRButton.createButton(_this.renderer);
+                div.appendChild(vrButton);
+                vrButton.style.top = "";
+                vrButton.style.bottom = "";
             }
             catch (error) { }
             var controls = new OrbitControls(camera, renderer.domElement);
