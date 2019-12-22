@@ -3,8 +3,8 @@ import * as THREE from "/homepage/web_modules/three.js";
 export default class Rotate {
   isRotate = true;
 
-  stop = () => {
-    this.isRotate = false;
+  switch = () => {
+    this.isRotate = !this.isRotate;
   };
 
   update = (model: THREE.Object3D | undefined) => {

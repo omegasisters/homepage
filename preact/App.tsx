@@ -13,6 +13,7 @@ const App: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [modelType, setModelType] = useState<"otohime" | "curing">("otohime");
+  const [button, setButton] = useState("回転停止");
 
   const divRef = useRef<HTMLDivElement>();
   const rotate = useRef(new Rotate()).current;
@@ -93,7 +94,15 @@ const App: FunctionalComponent = () => {
           </a>
         </div>
       )}
-      <div ref={divRef} onClick={rotate.stop} />
+      <div ref={divRef} />
+      <button
+        onClick={() => {
+          rotate.switch();
+          setButton(rotate.isRotate ? "回転停止" : "回転開始");
+        }}
+      >
+        {button}
+      </button>
     </div>
   );
 };

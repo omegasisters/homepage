@@ -1,5 +1,6 @@
 import * as THREE from "/homepage/web_modules/three.js";
 import { OrbitControls } from "/homepage/web_modules/three/examples/jsm/controls/OrbitControls.js";
+import { VRButton } from "/homepage/web_modules/three/examples/jsm/webxr/VRButton.js";
 var ThreeScene = /** @class */ (function () {
     function ThreeScene(onUpdate) {
         var _this = this;
@@ -9,9 +10,14 @@ var ThreeScene = /** @class */ (function () {
         this.start = function (div) {
             var _a = _this, scene = _a.scene, renderer = _a.renderer;
             var camera = new THREE.PerspectiveCamera(75, 1.7, 0.1, 1000);
-            camera.position.set(0, 1, -3);
+            camera.position.set(0, 1, 0);
             _this.resize();
             div.appendChild(renderer.domElement);
+            try {
+                renderer.vr.enabled = true;
+                div.appendChild(VRButton.createButton(_this.renderer));
+            }
+            catch (error) { }
             var controls = new OrbitControls(camera, renderer.domElement);
             controls.target.set(0, 1, 0);
             controls.update();
@@ -19,13 +25,11 @@ var ThreeScene = /** @class */ (function () {
             renderer.gammaOutput = true;
             var ambient = new THREE.AmbientLight("#85b2cd");
             scene.add(ambient);
-            var render = function () {
-                requestAnimationFrame(render);
-                controls.update();
+            renderer.setAnimationLoop(function () {
                 _this.onUpdate(_this);
+                controls.update();
                 renderer.render(scene, camera);
-            };
-            render();
+            });
         };
         this.resize = function () {
             var renderer = _this.renderer;
