@@ -1,6 +1,7 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-        // .register('./assets/js/sw.js')
-        .register('./sw.js')
-        .then(function () {console.log('Service Worker Registered');});
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (let registration of registrations) {
+      registration.unregister();
+    }
+  });
 }
