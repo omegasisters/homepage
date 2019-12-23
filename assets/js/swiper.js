@@ -1,6 +1,7 @@
 const videoSwiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
   spaceBetween: 30,
+  centeredSlides: true,
   mousewheel: true,
   grabCursor: true,
   autoplay: {

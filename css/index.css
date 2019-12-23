@@ -227,7 +227,7 @@ a:hover {
 
 .videos .video-link {
   display: block;
-  margin: 0 10px;
+  margin: 0;
   position: relative;
   width: 320px;
   height: 240px;
