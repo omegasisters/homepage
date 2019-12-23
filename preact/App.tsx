@@ -1,13 +1,9 @@
-import {FunctionalComponent, h} from '/homepage/web_modules/preact.js';
-import {
-  useEffect,
-  useRef,
-  useState,
-} from '/homepage/web_modules/preact/hooks.js';
+import {FunctionalComponent, h} from 'preact';
+import {useEffect, useRef, useState} from 'preact/hooks';
 
-import Rotate from './three/rotate.js';
-import ThreeScene from './three/scene.js';
-import ThreeViewer from './three/viewer.js';
+import Rotate from './three/rotate';
+import ThreeScene from './three/scene';
+import ThreeViewer from './three/viewer';
 
 const App: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);

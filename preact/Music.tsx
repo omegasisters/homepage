@@ -1,13 +1,9 @@
-import {FunctionalComponent, h} from '/homepage/web_modules/preact.js';
-import {
-  useEffect,
-  useRef,
-  useState,
-} from '/homepage/web_modules/preact/hooks.js';
+import {FunctionalComponent, h} from 'preact';
+import {useEffect, useRef, useState} from 'preact/hooks';
 
 // @ts-ignore
-import scoped from '/homepage/web_modules/scoped-style.js';
-import youTubePlayer from '/homepage/web_modules/youtube-player.js';
+import scoped from 'scoped-style';
+import youTubePlayer from 'youtube-player';
 
 const styled = scoped(h);
 
@@ -50,8 +46,10 @@ const MusicPlayer: FunctionalComponent = () => {
   const setMusic = (url: string) => {
     const id = url.replace('https://i.ytimg.com/vi/', '').split('/')[0];
     console.log(id);
-    youtubeRef.current?.loadVideoById(id);
-    youtubeRef.current?.stopVideo();
+    const youtube = youtubeRef.current;
+    if (!youtube) return;
+    youtube.loadVideoById(id);
+    youtube.stopVideo();
   };
 
   const right = () => {

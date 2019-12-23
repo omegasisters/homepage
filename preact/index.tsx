@@ -1,7 +1,7 @@
-import {h, render} from '/homepage/web_modules/preact.js';
+import {h, render} from 'preact';
 
-import App from './App.js';
-import MusicPlayer from './Music.js';
+import App from './App';
+import MusicPlayer from './Music';
 
 const appMount = document.querySelector('#preact');
 if (appMount) render(<App />, appMount);

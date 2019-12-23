@@ -1,4 +1,4 @@
-import * as THREE from "/homepage/web_modules/three.js";
+import * as THREE from 'three';
 
 export default class Rotate {
   isRotate = true;

@@ -1,7 +1,7 @@
-import * as THREE from '/homepage/web_modules/three.js';
+import * as THREE from 'three';
 
-import {OrbitControls} from '/homepage/web_modules/three/examples/jsm/controls/OrbitControls.js';
-import {VRButton} from '/homepage/web_modules/three/examples/jsm/webxr/VRButton.js';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import {VRButton} from 'three/examples/jsm/webxr/VRButton';
 
 export default class ThreeScene {
   renderer: THREE.WebGLRenderer = undefined as any;
