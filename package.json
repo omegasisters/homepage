@@ -3,16 +3,16 @@
   "description": "https://omegasisters.github.io/homepage",
   "version": "0.0.1",
   "scripts": {
+    "build": "npm run pika && npm run pika:dev && npm run ts",
     "dev": "browser-sync start --server --files '*.js' .",
     "format": "prettier --write \"**/*.{css,html,json,md}\"",
-    "build": "npm run pika && npm run pika:dev && npm run ts",
     "pika": "rm -rf web_modules && pika-web --dest web_modules",
     "pika:dev": "rm -rf homepage && mkdir homepage && cp -r web_modules homepage/web_modules",
-    "ts": "rm -rf preact_build && tsc",
-    "ts:watch": "tsc -w",
     "start": "npm run build && concurrently 'npm run ts:watch' 'npm run dev'",
     "start:docker": "npm run build && concurrently 'npm run ts:watch' 'serve -s ./'",
-    "test": "jest"
+    "test": "jest",
+    "ts": "rm -rf preact_build && tsc",
+    "ts:watch": "tsc -w"
   },
   "dependencies": {
     "preact": "^10.1.1",
@@ -25,11 +25,19 @@
     "concurrently": "^5.0.0",
     "copyfiles": "^2.1.1",
     "express": "^4.17.1",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "serve": "^11.2.0",
     "ts-jest": "^24.2.0",
     "typescript": "^3.6.3"
+  },
+  "main": "server.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "@pika/web": {
     "webDependencies": [
@@ -42,7 +50,6 @@
       "three/examples/jsm/webxr/VRButton.js"
     ]
   },
-  "main": "server.js",
   "bugs": {
     "url": "https://github.com/omegasisters/homepage/issues"
   },
