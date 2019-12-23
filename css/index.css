@@ -261,8 +261,12 @@ a:hover {
     height: auto;
   }
 
+  .videos .video-link {
+    height: 150px;
+  }
   .videos .video-link img {
     width: 200px;
+    height: 150px;
   }
 }
 
