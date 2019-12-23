@@ -1,5 +1,5 @@
-import { FBXLoader } from "/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js";
-import { GLTFLoader } from "/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import { FBXLoader } from '/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js';
+import { GLTFLoader } from '/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js';
 var ThreeViewer = /** @class */ (function () {
     function ThreeViewer(scene) {
         var _this = this;
@@ -8,7 +8,7 @@ var ThreeViewer = /** @class */ (function () {
         this.loadVrm = function (progress) {
             return new Promise(function (r) {
                 _this.beforeLoad();
-                var address = "assets/blob/otohime.vrm";
+                var address = 'assets/blob/otohime.vrm';
                 _this.model = _this.models[address];
                 if (_this.model) {
                     _this.scene.add(_this.model);
@@ -18,13 +18,12 @@ var ThreeViewer = /** @class */ (function () {
                 new GLTFLoader().load(address, function (gltf) {
                     var mesh = (_this.models[address] = _this.model = gltf.scene);
                     mesh.scale.set(1, 1, 1);
-                    mesh.position.z -= 2;
                     _this.scene.add(_this.model);
                     r();
                 }, function (xhr) {
                     var now = (xhr.loaded / xhr.total) * 100;
                     progress(now);
-                    console.log(now + "% loaded");
+                    console.log(now + '% loaded');
                 }, function (error) {
                     console.warn(error);
                 });
@@ -33,7 +32,7 @@ var ThreeViewer = /** @class */ (function () {
         this.loadFbx = function (progress) {
             return new Promise(function (r) {
                 _this.beforeLoad();
-                var address = "assets/blob/unchi_curling.fbx";
+                var address = 'assets/blob/unchi_curling.fbx';
                 _this.model = _this.models[address];
                 if (_this.model) {
                     _this.scene.add(_this.model);
@@ -49,14 +48,12 @@ var ThreeViewer = /** @class */ (function () {
                             child.receiveShadow = true;
                         }
                     });
-                    object.position.y += 0.5;
-                    object.position.z -= 2;
                     _this.scene.add(_this.model);
                     r();
                 }, function (xhr) {
                     var now = (xhr.loaded / xhr.total) * 100;
                     progress(now);
-                    console.log(now + "% loaded");
+                    console.log(now + '% loaded');
                 }, function (error) {
                     console.warn(error);
                 });

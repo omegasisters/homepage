@@ -1,11 +1,11 @@
-import * as THREE from "/homepage/web_modules/three.js";
+import * as THREE from '/homepage/web_modules/three.js';
 
-import { FBXLoader } from "/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js";
-import { GLTFLoader } from "/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js";
+import {FBXLoader} from '/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js';
+import {GLTFLoader} from '/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js';
 
 export default class ThreeViewer {
   model: any;
-  models: { [key: string]: any } = {};
+  models: {[key: string]: any} = {};
 
   constructor(private scene: THREE.Scene) {}
 
@@ -17,10 +17,10 @@ export default class ThreeViewer {
   }
 
   loadVrm = (progress: (progress: number) => void) =>
-    new Promise(r => {
+    new Promise((r) => {
       this.beforeLoad();
 
-      const address = "assets/blob/otohime.vrm";
+      const address = 'assets/blob/otohime.vrm';
 
       this.model = this.models[address];
       if (this.model) {
@@ -31,29 +31,28 @@ export default class ThreeViewer {
 
       new GLTFLoader().load(
         address,
-        gltf => {
+        (gltf) => {
           const mesh = (this.models[address] = this.model = gltf.scene);
           mesh.scale.set(1, 1, 1);
-          mesh.position.z -= 2;
           this.scene.add(this.model);
           r();
         },
-        xhr => {
+        (xhr) => {
           const now = (xhr.loaded / xhr.total) * 100;
           progress(now);
-          console.log(now + "% loaded");
+          console.log(now + '% loaded');
         },
-        error => {
+        (error) => {
           console.warn(error);
-        }
+        },
       );
     });
 
   loadFbx = (progress: (progress: number) => void) =>
-    new Promise(r => {
+    new Promise((r) => {
       this.beforeLoad();
 
-      const address = "assets/blob/unchi_curling.fbx";
+      const address = 'assets/blob/unchi_curling.fbx';
 
       this.model = this.models[address];
       if (this.model) {
@@ -64,7 +63,7 @@ export default class ThreeViewer {
 
       new FBXLoader().load(
         address,
-        object => {
+        (object) => {
           this.model = this.models[address] = object;
           object.scale.set(0.1, 0.1, 0.1);
           object.traverse((child: any) => {
@@ -73,19 +72,17 @@ export default class ThreeViewer {
               child.receiveShadow = true;
             }
           });
-          object.position.y += 0.5;
-          object.position.z -= 2;
           this.scene.add(this.model);
           r();
         },
-        xhr => {
+        (xhr) => {
           const now = (xhr.loaded / xhr.total) * 100;
           progress(now);
-          console.log(now + "% loaded");
+          console.log(now + '% loaded');
         },
-        error => {
+        (error) => {
           console.warn(error);
-        }
+        },
       );
     });
 }
