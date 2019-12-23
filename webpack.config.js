@@ -1,5 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const dist = __dirname + '/';
 
 module.exports = {
@@ -33,11 +31,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'index.html',
-    }),
-  ],
+  plugins: [],
   devServer: {
     disableHostCheck: true,
     historyApiFallback: true,
