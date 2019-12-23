@@ -17,7 +17,13 @@ const loadPlayList = (id, dom) => {
       image.dataset.src = item.snippet.thumbnails.high.url;
       image.className = 'lazy';
 
+      const span = document.createElement('span');
+      span.textContent = item.snippet.title
+      span.className = 'video-title'
+
       link.appendChild(image);
+      link.appendChild(span);
+
       dom.appendChild(link);
     });
 
