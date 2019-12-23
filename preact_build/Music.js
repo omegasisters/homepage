@@ -59,8 +59,7 @@ var MusicPlayer = function() {
     setPlaylist = _a[1];
   useEffect(function() {
     youtubeRef.current = youTubePlayer(divRef.current, {
-      width: 500,
-      height: 500,
+      width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
     });
     setMusic(thumbs[0]);
   }, []);
@@ -99,11 +98,7 @@ var MusicPlayer = function() {
           justifyContent: 'space-between',
         },
       },
-      h('div', {
-        className: 'fas fa-arrow-left',
-        onClick: left,
-        style: {margin: 'auto', padding: 10, cursor: 'pointer'},
-      }),
+      h(Button, {className: 'fas fa-arrow-left', onClick: left}),
       h(
         List,
         null,
@@ -111,14 +106,14 @@ var MusicPlayer = function() {
           return h('img', {
             src: url,
             key: i,
-            style: {cursor: 'pointer', margin: '0px 5px'},
+            style: {cursor: 'pointer', margin: '10px 5px', height: 100},
             onClick: function() {
               return setMusic(url);
             },
           });
         }),
       ),
-      h('div', {
+      h(Button, {
         className: 'fas fa-arrow-right',
         onClick: right,
         style: {margin: 'auto', padding: 10, cursor: 'pointer'},
@@ -132,8 +127,23 @@ export default MusicPlayer;
 var List = styled('div')(
   templateObject_1 ||
     (templateObject_1 = __makeTemplateObject(
-      ['\n  display: flex;\n  overflow: hidden;\n'],
-      ['\n  display: flex;\n  overflow: hidden;\n'],
+      [
+        '\n  display: flex;\n  overflow-x: scroll;\n  ::-webkit-scrollbar {\n    width: 10px;\n    height: 10px;\n  }\n  ::-webkit-scrollbar-thumb {\n    background: rgba(255, 255, 255, 0.5);\n    border: none;\n  }\n',
+      ],
+      [
+        '\n  display: flex;\n  overflow-x: scroll;\n  ::-webkit-scrollbar {\n    width: 10px;\n    height: 10px;\n  }\n  ::-webkit-scrollbar-thumb {\n    background: rgba(255, 255, 255, 0.5);\n    border: none;\n  }\n',
+      ],
     )),
 );
-var templateObject_1;
+var Button = styled('div')(
+  templateObject_2 ||
+    (templateObject_2 = __makeTemplateObject(
+      [
+        '\n  margin: auto;\n  padding: 10;\n  cursor: pointer;\n\n  @media (max-width: 769px) {\n    display: none;\n  }\n',
+      ],
+      [
+        '\n  margin: auto;\n  padding: 10;\n  cursor: pointer;\n\n  @media (max-width: 769px) {\n    display: none;\n  }\n',
+      ],
+    )),
+);
+var templateObject_1, templateObject_2;

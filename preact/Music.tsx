@@ -42,8 +42,7 @@ const MusicPlayer: FunctionalComponent = () => {
 
   useEffect(() => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
-      width: 500,
-      height: 500,
+      width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
     });
     setMusic(thumbs[0]);
   }, []);
@@ -77,22 +76,18 @@ const MusicPlayer: FunctionalComponent = () => {
           width: '100%',
           justifyContent: 'space-between',
         }}>
-        <div
-          className="fas fa-arrow-left"
-          onClick={left}
-          style={{margin: 'auto', padding: 10, cursor: 'pointer'}}
-        />
+        <Button className="fas fa-arrow-left" onClick={left} />
         <List>
           {playlist.map((url, i) => (
             <img
               src={url}
               key={i}
-              style={{cursor: 'pointer', margin: '0px 5px'}}
+              style={{cursor: 'pointer', margin: '10px 5px', height: 100}}
               onClick={() => setMusic(url)}
             />
           ))}
         </List>
-        <div
+        <Button
           className="fas fa-arrow-right"
           onClick={right}
           style={{margin: 'auto', padding: 10, cursor: 'pointer'}}
@@ -108,5 +103,23 @@ export default MusicPlayer;
 
 const List = styled('div')`
   display: flex;
-  overflow: hidden;
+  overflow-x: scroll;
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+  }
+`;
+
+const Button = styled('div')`
+  margin: auto;
+  padding: 10;
+  cursor: pointer;
+
+  @media (max-width: 769px) {
+    display: none;
+  }
 `;
