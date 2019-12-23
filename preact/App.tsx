@@ -1,18 +1,19 @@
-import { FunctionalComponent, h } from "/homepage/web_modules/preact.js";
+import {FunctionalComponent, h} from '/homepage/web_modules/preact.js';
 import {
   useEffect,
   useRef,
-  useState
-} from "/homepage/web_modules/preact/hooks.js";
+  useState,
+} from '/homepage/web_modules/preact/hooks.js';
 
-import Rotate from "./three/rotate.js";
-import ThreeScene from "./three/scene.js";
-import ThreeViewer from "./three/viewer.js";
+import Rotate from './three/rotate.js';
+import ThreeScene from './three/scene.js';
+import ThreeViewer from './three/viewer.js';
+import Youtube from './Youtube.js';
 
 const App: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [modelType, setModelType] = useState<"otohime" | "curing">("otohime");
+  const [modelType, setModelType] = useState<'otohime' | 'curing'>('otohime');
   const [isRotate, setIsRotate] = useState(true);
 
   const divRef = useRef<HTMLDivElement>();
@@ -20,25 +21,25 @@ const App: FunctionalComponent = () => {
   const scene = useRef(
     new ThreeScene(() => {
       rotate.update(viewer.model);
-    })
+    }),
   ).current;
   const viewer = useRef(new ThreeViewer(scene.scene)).current;
 
   useEffect(() => {
-    scene.start(divRef.current!);
-    onOtohime();
+    // scene.start(divRef.current!);
+    // onOtohime();
   }, []);
 
   useEffect(() => {
-    window.addEventListener("resize", scene.resize);
+    window.addEventListener('resize', scene.resize);
     return () => {
-      window.removeEventListener("resize", scene.resize);
+      window.removeEventListener('resize', scene.resize);
     };
   }, []);
 
   const onOtohime = async () => {
     if (loading) return;
-    setModelType("otohime");
+    setModelType('otohime');
     setLoading(true);
     await viewer.loadVrm(setProgress);
     setLoading(false);
@@ -46,7 +47,7 @@ const App: FunctionalComponent = () => {
 
   const onCuring = async () => {
     if (loading) return;
-    setModelType("curing");
+    setModelType('curing');
     setLoading(true);
     await viewer.loadFbx(setProgress);
     setLoading(false);
@@ -54,48 +55,45 @@ const App: FunctionalComponent = () => {
 
   const toggleRotate = () => {
     rotate.switch();
-    setIsRotate(prev => !prev);
+    setIsRotate((prev) => !prev);
   };
 
   return (
     <div className="viewer">
+      <Youtube />
       <div className="controller">
         <button
           onClick={onOtohime}
-          className={modelType === "otohime" ? "active" : ""}
-        >
+          className={modelType === 'otohime' ? 'active' : ''}>
           おとひめ
         </button>
         <button
           onClick={onCuring}
-          className={modelType === "curing" ? "active" : ""}
-        >
+          className={modelType === 'curing' ? 'active' : ''}>
           うんちかーりんぐ
         </button>
       </div>
 
       {loading && <p>Now Loading {progress}%</p>}
-      {modelType === "otohime" && (
+      {modelType === 'otohime' && (
         <div className="description">
           <p>おとひめ.vrm</p>
           <a
             href="https://3d.nicovideo.jp/works/td41391"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             3d.nicovideo.jp/works/td41391
           </a>
         </div>
       )}
 
-      {modelType === "curing" && (
+      {modelType === 'curing' && (
         <div className="description">
           <p>うんちカーリング</p>
           <a
             href="https://omesis-shop.booth.pm/items/1269953"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             omesis-shop.booth.pm/items/1269953
           </a>
         </div>
@@ -103,10 +101,9 @@ const App: FunctionalComponent = () => {
 
       <button
         onClick={toggleRotate}
-        className={`rotate_button ${isRotate ? "active" : ""}`}
-      >
-        <i className={`fas fa-fw fa-${isRotate ? "times" : "sync-alt"}`} />
-        {isRotate ? "回転停止" : "回転開始"}
+        className={`rotate_button ${isRotate ? 'active' : ''}`}>
+        <i className={`fas fa-fw fa-${isRotate ? 'times' : 'sync-alt'}`} />
+        {isRotate ? '回転停止' : '回転開始'}
       </button>
       <div ref={divRef} />
     </div>

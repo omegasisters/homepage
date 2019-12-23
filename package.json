@@ -8,6 +8,7 @@
     "format": "prettier --write \"**/*.{css,html,json,md}\"",
     "pika": "rm -rf web_modules && pika-web --dest web_modules",
     "pika:dev": "rm -rf homepage && mkdir homepage && cp -r web_modules homepage/web_modules",
+    "pika:update": "npm run pika && npm run pika:dev",
     "start": "npm run build && concurrently 'npm run ts:watch' 'npm run dev'",
     "start:docker": "npm run build && concurrently 'npm run ts:watch' 'serve -s ./'",
     "test": "jest",
@@ -16,11 +17,14 @@
   },
   "dependencies": {
     "preact": "^10.1.1",
-    "three": "^0.111.0"
+    "scoped-style": "^1.4.0",
+    "three": "^0.111.0",
+    "youtube-player": "^5.5.2"
   },
   "devDependencies": {
     "@pika/web": "^0.6.1",
     "@types/jest": "^24.0.24",
+    "@types/youtube-player": "^5.5.1",
     "browser-sync": "^2.26.7",
     "concurrently": "^5.0.0",
     "copyfiles": "^2.1.1",
@@ -47,7 +51,9 @@
       "three/examples/jsm/controls/OrbitControls.js",
       "three/examples/jsm/loaders/FBXLoader.js",
       "three/examples/jsm/loaders/GLTFLoader.js",
-      "three/examples/jsm/webxr/VRButton.js"
+      "three/examples/jsm/webxr/VRButton.js",
+      "youtube-player",
+      "scoped-style"
     ]
   },
   "bugs": {
