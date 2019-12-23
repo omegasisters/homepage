@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const dist = __dirname + './';
+const dist = __dirname + '/';
 
 module.exports = {
   devtool: 'source-map',

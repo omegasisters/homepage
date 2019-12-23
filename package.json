@@ -3,7 +3,7 @@
   "description": "https://omegasisters.github.io/homepage",
   "version": "0.0.1",
   "scripts": {
-    "build": "npm run pika && npm run pika:dev && npm run ts",
+    "build": "webpack --mode production",
     "dev": "browser-sync start --server --files '*.js' .",
     "format": "prettier --write \"**/*.{css,html,json,md}\"",
     "pika": "rm -rf web_modules && pika-web --dest web_modules",
