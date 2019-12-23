@@ -1,7 +1,7 @@
-import * as THREE from '/homepage/web_modules/three.js';
+import * as THREE from 'three';
 
-import {FBXLoader} from '/homepage/web_modules/three/examples/jsm/loaders/FBXLoader.js';
-import {GLTFLoader} from '/homepage/web_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 export default class ThreeViewer {
   model: any;
