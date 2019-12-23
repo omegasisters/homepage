@@ -2,6 +2,7 @@
   "name": "omegasisters-homepage",
   "description": "https://omegasisters.github.io/homepage",
   "version": "0.0.1",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "npm run pika && npm run pika:dev && npm run ts",
     "dev": "browser-sync start --server --files '*.js' .",
