@@ -140,7 +140,6 @@ import {
 import Rotate from './three/rotate.js';
 import ThreeScene from './three/scene.js';
 import ThreeViewer from './three/viewer.js';
-import Youtube from './Youtube.js';
 var App = function() {
   var _a = useState(false),
     loading = _a[0],
@@ -215,7 +214,6 @@ var App = function() {
   return h(
     'div',
     {className: 'viewer'},
-    h(Youtube, null),
     h(
       'div',
       {className: 'controller'},

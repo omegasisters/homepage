@@ -8,7 +8,6 @@ import {
 import Rotate from './three/rotate.js';
 import ThreeScene from './three/scene.js';
 import ThreeViewer from './three/viewer.js';
-import Youtube from './Youtube.js';
 
 const App: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
@@ -60,7 +59,6 @@ const App: FunctionalComponent = () => {
 
   return (
     <div className="viewer">
-      <Youtube />
       <div className="controller">
         <button
           onClick={onOtohime}

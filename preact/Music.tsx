@@ -20,7 +20,7 @@ const thumbs = [
   'https://i.ytimg.com/vi/3JAeD-9FE8I/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLA8x6yUUIJtL9ZlHSxvOFwIBjUsDw',
 ];
 
-const Youtube: FunctionalComponent = () => {
+const MusicPlayer: FunctionalComponent = () => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
   const [playlist, setPlaylist] = useState(thumbs);
@@ -54,6 +54,8 @@ const Youtube: FunctionalComponent = () => {
 
   return (
     <div>
+      <h2>ディスコグラフィー</h2>
+      <br />
       <div
         style={{
           display: 'flex',
@@ -70,6 +72,7 @@ const Youtube: FunctionalComponent = () => {
             <img
               src={url}
               key={i}
+              style={{cursor: 'pointer', margin: '0px 5px'}}
               onClick={() => {
                 setMusic(url);
                 youtubeRef.current?.playVideo();
@@ -83,12 +86,13 @@ const Youtube: FunctionalComponent = () => {
           style={{margin: 'auto', padding: 10, cursor: 'pointer'}}
         />
       </div>
+      <br />
       <div ref={divRef} />
     </div>
   );
 };
 
-export default Youtube;
+export default MusicPlayer;
 
 const ArrowButton = styled('button')`
   width: 0;
