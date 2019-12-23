@@ -1,5 +1,7 @@
 const path = require('path');
 
+const TerserPlugin = require('terser-webpack-plugin');
+
 module.exports = {
   devtool: 'source-map',
   entry: ['@babel/polyfill', './preact/index'],
@@ -38,5 +40,13 @@ module.exports = {
   },
   performance: {
     hints: false,
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true,
+      }),
+    ],
   },
 };
