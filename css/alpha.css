@@ -39,3 +39,10 @@
     linear-gradient(to left, #7995f7, #de7072);
   min-height: 1000px;
 }
+@media screen and (max-width: 700px) {
+  .links--alpha {
+    padding: 40px;
+    background: linear-gradient(to left, #7995f7, #de7072);
+    min-height: auto;
+  }
+}
