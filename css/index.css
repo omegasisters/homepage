@@ -273,22 +273,26 @@ a:hover {
 
 .profiles {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
   text-align: center;
 }
-.profiles a.profile {
-  display: block;
+.profiles .profile {
+  margin: 5px;
+}
+.profiles .profile a {
+  display: flex;
   text-decoration: none;
   margin: 5px;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .profiles .profile .image {
   text-align: center;
-  margin-bottom: 10px;
+  margin-right: 5px;
 }
 .profiles .profile h3 {
   margin-bottom: 7px;
@@ -299,24 +303,11 @@ a:hover {
   width: 120px;
   max-width: 100%;
 }
-@media screen and (max-width: 700px) {
-  .profiles {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .profiles a.profile {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background: none;
-  }
-
-  .profiles .profile .image {
-    margin-bottom: 0;
-    margin-right: 5px;
-  }
+.omesis_ray .twitter-timeline {
+  background: #de7072;
+}
+.omesis_rio .twitter-timeline {
+  background: #7995f7;
 }
 
 .share-button {
