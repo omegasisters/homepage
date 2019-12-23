@@ -303,12 +303,14 @@ a:hover {
   width: 120px;
   max-width: 100%;
 }
+/*
 .omesis_ray .twitter-timeline {
   background: #de7072;
 }
 .omesis_rio .twitter-timeline {
   background: #7995f7;
 }
+ */
 
 .share-button {
   background: linear-gradient(to left, #3b26b1, #962c6a);
