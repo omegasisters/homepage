@@ -3,6 +3,7 @@
 #Node.js
 node_modules
 homepage
+yarn-error.log
 
 #dot net
 bin/
