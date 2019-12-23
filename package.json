@@ -2,6 +2,8 @@
   "name": "omegasisters-homepage",
   "description": "https://omegasisters.github.io/homepage",
   "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
   "scripts": {
     "build": "webpack --mode production",
     "dev": "browser-sync start --server --files '*.js' .",

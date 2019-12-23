@@ -6,6 +6,21 @@ https://omegasisters.github.io/homepage
 
 プルリク待ってます！！！！
 
+## ここが何かよく分からない人向け
+
+### 今のおめシスホームページはどんな感じ？
+
+[ここ](https://omegasisters.github.io/homepage) をクリックすると、今のおめシスホームページの状態を見に行けます
+
+### ここをこうしたい、ああしたい。けどプログラムはよく分からない
+
+[上部メニューの**Issues**](https://github.com/omegasisters/homepage/issues) では、これからやりたい事、変えてほしい事、（何か変なので）なおしてほしい事が書けます。
+
+一般的なスレッド式掲示板のような場所です。
+何か書いておくと、実装されるかもしれません。されないかもしれません。
+
+新しく作成するには、[GitHub アカウントを作成](https://github.com/join?source_repo=omegasisters%2Fhomepage) して、[Issue を作成](https://github.com/omegasisters/homepage/issues/new) してください。
+
 # Tips
 
 ## ローカルプレビュー
@@ -89,7 +104,7 @@ php -S 0.0.0.0:8000 -t ../
 ```
 
 サーバーが起動したら、次にブラウザーで http://0.0.0.0:8000/homepage を開いてください。
-同じローカルネットワークであればホストの IP アドレス:8000（例: http://192.168.1.2:8000）でスマホからも確認できます。
+同じローカルネットワークであればホストの IP アドレス:8000(例: http://192.168.1.2:8000 )でスマホからも確認できます。
 サーバーは ctrl+c で停止できます。
 
 ### Elixir 編
