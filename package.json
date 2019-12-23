@@ -50,12 +50,6 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
-  "main": "server.js",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "@pika/web": {
     "webDependencies": [
       "preact",
