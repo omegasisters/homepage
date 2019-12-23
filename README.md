@@ -14,10 +14,12 @@ https://omegasisters.github.io/homepage
 
 ### ここをこうしたい、ああしたい。けどプログラムはよく分からない
 
-上部メニューのissuesでは、これからやりたい事、変えてほしい事、（何か変なので）なおしてほしい事が書けます。
+[上部メニューの**Issues**](https://github.com/omegasisters/homepage/issues) では、これからやりたい事、変えてほしい事、（何か変なので）なおしてほしい事が書けます。
 
 一般的なスレッド式掲示板のような場所です。
 何か書いておくと、実装されるかもしれません。されないかもしれません。
+
+新しく作成するには、[GitHub アカウントを作成](https://github.com/join?source_repo=omegasisters%2Fhomepage) して、[Issue を作成](https://github.com/omegasisters/homepage/issues/new) してください。
 
 # Tips
 
