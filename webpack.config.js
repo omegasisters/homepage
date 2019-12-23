@@ -1,12 +1,12 @@
-const dist = __dirname + '/';
+const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
   entry: ['@babel/polyfill', './preact/index'],
   output: {
-    path: dist,
+    path: path.resolve(__dirname, 'assets', 'preact_build'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/homepage/',
     globalObject: 'self',
   },
   resolve: {

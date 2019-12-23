@@ -52,5 +52,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omegasisters/homepage.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
