@@ -178,14 +178,20 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
 
         <div class="box playlist">
           <h2>⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
-          <div class="videos" id="beginner-playlist"></div>
-          <a
-            href="https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            残りの動画を見る
-          </a>
+          <div class="videos">
+            <div class="swiper-container">
+              <div class="swiper-wrapper" id="beginner-playlist"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <a
+              href="https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              残りの動画を見る
+            </a>
+          </div>
         </div>
 
         <div class="box">
@@ -370,6 +376,16 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     <script
       type="text/javascript"
       src="./assets/js/ytplaylist.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/swiper/js/swiper.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/swiper.js"
       defer
     ></script>
     <script
