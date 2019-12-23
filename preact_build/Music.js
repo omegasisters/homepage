@@ -35,6 +35,21 @@ var thumbs = [
   'https://i.ytimg.com/vi/owl2ZtgDRHI/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLD0tcHy7wZ-zKyzx-Y7tKwT08BCYA',
   'https://i.ytimg.com/vi/-YLyVDOJnFc/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLApDrPcstG4CqzdMG7hTyQNfzNLpg',
   'https://i.ytimg.com/vi/3JAeD-9FE8I/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLA8x6yUUIJtL9ZlHSxvOFwIBjUsDw',
+  'https://i.ytimg.com/vi/KQPr8Qde22w/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBjH8nBGhQlFL2ydqyJuEe0NBJ_7A',
+  'https://i.ytimg.com/vi/IfYODh82hTo/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDLrSuU4eehrghGgAVZDk-cXuYbqg',
+  'https://i.ytimg.com/vi/abDwOIMcBEw/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLC0KlSAnzL_nktfx7qf7KiVCHgERg',
+  'https://i.ytimg.com/vi/gXhqIT7XnsI/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBxUvSYmAYG8ei-qCtF5aqf1S2jLg',
+  'https://i.ytimg.com/vi/VBpXOOPK6-E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAcElqEouylVK7a274rD5bRPnlhpA',
+  'https://i.ytimg.com/vi/_AcOHoF68vo/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDeJGN6g9KEQsiyh0eLw29aKjq65Q',
+  'https://i.ytimg.com/vi/s9IvNnu0kqc/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAfjZkueF2Vl9L7GJqWfBYXLpaUMA',
+  'https://i.ytimg.com/vi/FVfim9jNQVg/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCHSMjzh5CXh8yoZ97PjjYK_710yg',
+  'https://i.ytimg.com/vi/sYNL6WlW-e8/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDqlwkXtOtcqWR5aSY6AvEM2qpqZA',
+  'https://i.ytimg.com/vi/pSBk3QVY3cA/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAFgQVWgVeexxg56nvSdUh3F1pAxQ',
+  'https://i.ytimg.com/vi/b0nF7oUbsfg/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBwwRzQaO2eRKNpPuxZAE3FrLGDrQ',
+  'https://i.ytimg.com/vi/9Ppv1wvwHXI/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLC3s7BDFQoyRVLG70rB5H9IglQW4A',
+  'https://i.ytimg.com/vi/58al_aq_E2M/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAqQGYzz8issfnlAXWpd4xPSImxZg',
+  'https://i.ytimg.com/vi/XAt2lODxz_E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDgKjhUDjVllfbHbVi9ScF496cuYw',
+  'https://i.ytimg.com/vi/58TGnNnXT6E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLD36841bBz6htYcX_bJr_Ii_xmpRg',
 ];
 var MusicPlayer = function() {
   var divRef = useRef();
@@ -60,12 +75,12 @@ var MusicPlayer = function() {
       ? void 0
       : _b.stopVideo();
   };
-  var left = function() {
+  var right = function() {
     var arr = __spreadArrays(playlist);
     var shift = arr.shift();
     setPlaylist(__spreadArrays(arr, [shift]));
   };
-  var right = function() {
+  var left = function() {
     var arr = __spreadArrays(playlist);
     var pop = arr.pop();
     setPlaylist(__spreadArrays([pop], arr));
@@ -98,11 +113,7 @@ var MusicPlayer = function() {
             key: i,
             style: {cursor: 'pointer', margin: '0px 5px'},
             onClick: function() {
-              var _a;
-              setMusic(url);
-              (_a = youtubeRef.current) === null || _a === void 0
-                ? void 0
-                : _a.playVideo();
+              return setMusic(url);
             },
           });
         }),
@@ -118,36 +129,11 @@ var MusicPlayer = function() {
   );
 };
 export default MusicPlayer;
-var ArrowButton = styled('button')(
+var List = styled('div')(
   templateObject_1 ||
     (templateObject_1 = __makeTemplateObject(
-      [
-        '\n  width: 0;\n  height: 0;\n  border-top: solid 15px transparent;\n  border-right: solid 15px transparent;\n  border-bottom: solid 15px transparent;\n  border-left: solid 15px #697b91;\n  margin: auto;\n',
-      ],
-      [
-        '\n  width: 0;\n  height: 0;\n  border-top: solid 15px transparent;\n  border-right: solid 15px transparent;\n  border-bottom: solid 15px transparent;\n  border-left: solid 15px #697b91;\n  margin: auto;\n',
-      ],
-    )),
-);
-var RightButton = styled('button')(
-  templateObject_2 || (templateObject_2 = __makeTemplateObject([''], [''])),
-);
-var List = styled('div')(
-  templateObject_3 ||
-    (templateObject_3 = __makeTemplateObject(
       ['\n  display: flex;\n  overflow: hidden;\n'],
       ['\n  display: flex;\n  overflow: hidden;\n'],
     )),
 );
-var Button = styled('button')(
-  templateObject_4 ||
-    (templateObject_4 = __makeTemplateObject(
-      [
-        '\n  background: gray;\n  border: none;\n  border-radius: 2px;\n  :hover,\n  :focus,\n  :active {\n    padding: 10px;\n  }\n  @media screen and (max-width: 640px) {\n    background: blue;\n    :hover,\n    :focus,\n    :active {\n      padding: 5px;\n    }\n  }\n',
-      ],
-      [
-        '\n  background: gray;\n  border: none;\n  border-radius: 2px;\n  :hover,\n  :focus,\n  :active {\n    padding: 10px;\n  }\n  @media screen and (max-width: 640px) {\n    background: blue;\n    :hover,\n    :focus,\n    :active {\n      padding: 5px;\n    }\n  }\n',
-      ],
-    )),
-);
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
+var templateObject_1;

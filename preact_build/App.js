@@ -162,8 +162,8 @@ var App = function() {
   ).current;
   var viewer = useRef(new ThreeViewer(scene.scene)).current;
   useEffect(function() {
-    // scene.start(divRef.current!);
-    // onOtohime();
+    scene.start(divRef.current);
+    onOtohime();
   }, []);
   useEffect(function() {
     window.addEventListener('resize', scene.resize);

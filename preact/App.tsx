@@ -25,8 +25,8 @@ const App: FunctionalComponent = () => {
   const viewer = useRef(new ThreeViewer(scene.scene)).current;
 
   useEffect(() => {
-    // scene.start(divRef.current!);
-    // onOtohime();
+    scene.start(divRef.current!);
+    onOtohime();
   }, []);
 
   useEffect(() => {
