@@ -60,14 +60,16 @@ header.scrolled {
   header .menu-icon {
     color: rgba(255, 255, 255, 0.7);
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: inline-block;
     transition-duration: 0.5s;
   }
 
   header .drawer-hamburger {
-    padding: 0 1rem;
+    padding: 0;
     height: 3.75rem;
+    position: relative;
+    margin-left: auto;
   }
 
   header .menu-icon.opened {

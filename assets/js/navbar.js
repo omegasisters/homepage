@@ -16,6 +16,7 @@ $(document).ready(function() {
   });
 
   $('.drawer-menu-item').click(function() {
-    $('.drawer').drawer('toggle');
+    $('header .menu-icon').removeClass('opened');
+    $('.drawer').drawer('close');
   });
 });
