@@ -25,36 +25,66 @@ body {
   scroll-behavior: smooth;
 }
 
+body.drawer--navbarTopGutter {
+  padding-top: 0;
+}
+
 /*上部ヘッダー*/
-#header {
-  position: fixed;
-  width: 100%;
-  font-size: 80%;
-  z-index: 2;
-  text-align: right;
-  padding: 25px 20px;
-  transition: 200ms ease;
+header.drawer-navbar .drawer-navbar-header {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: none;
 }
-#header.scrolled {
-  box-shadow: 0 0 8px #00000050;
+
+header.drawer-navbar {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+header nav.drawer-nav {
+  background-color: transparent;
+}
+
+header.scrolled {
   background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
 }
-#header #header_contents {
-  display: flex;
-  justify-content: flex-end;
+
+header.scrolled {
+  background: rgba(0, 0, 0, 0.5);
 }
-#header #header_contents p {
-  margin: 0 0.5em;
-}
-#header a {
-  text-decoration: none;
-}
-@media screen and (max-width: 700px) {
-  /* 幅が小さかったら消す */
-  #header {
-    display: none;
+
+@media screen and (max-width: 64em) {
+  header.scrolled {
+    background-color: transparent;
   }
+
+  header .menu-icon {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    font-size: 2.5rem;
+    display: inline-block;
+    transition-duration: 0.5s;
+  }
+
+  header .drawer-hamburger {
+    padding: 0;
+    height: 3.75rem;
+    position: relative;
+    margin-left: auto;
+  }
+
+  header .menu-icon.opened {
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+  }
+}
+
+header a.drawer-menu-item {
+  color: white;
+}
+
+header a.drawer-menu-item:hover {
+  color: #06ffd2;
+  text-decoration: none;
 }
 /*上部ヘッダーここまで*/
 h2.section_title {
