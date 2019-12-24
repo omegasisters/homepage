@@ -46,7 +46,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     const shift = arr.shift();
     setPlaylist([...arr, shift!]);
 
-    setMove(200);
+    setMove(180);
     setTimeout(() => setMove(0), 0);
   };
 
@@ -55,7 +55,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     const pop = arr.pop();
     setPlaylist([pop!, ...arr]);
 
-    setMove(-200);
+    setMove(-180);
     setTimeout(() => setMove(0), 0);
   };
 
@@ -79,17 +79,9 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
         }}>
         <Button className="fas fa-arrow-left" onClick={left} />
         <List>
-          {playlist.map(
-            (url, i) =>
-              i < playlist.length && (
-                <Card
-                  src={url}
-                  key={i}
-                  onClick={() => setMusic(url)}
-                  move={move}
-                />
-              ),
-          )}
+          {playlist.map((url, i) => (
+            <Card src={url} key={i} onClick={() => setMusic(url)} move={move} />
+          ))}
         </List>
         <Button
           className="fas fa-arrow-right"
@@ -134,7 +126,7 @@ const Card = styled('img')`
   margin: 10px 5px;
   width: 200px;
 
-  transition: ${(props: any) => (props.move === 0 ? `all .3s` : 'none')};
+  transition: ${(props: any) => (props.move === 0 ? `all 0.3s` : 'none')};
   transform: ${(props: any) => `translateX(${props.move - 180}px)`};
   @media (max-width: 769px) {
     transform: translateX(0px);
