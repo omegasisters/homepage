@@ -10,14 +10,7 @@ const styled = scoped(h);
 const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
-  const [playlist, setPlaylist] = useState(
-    (() => {
-      if (window.innerWidth < 769) {
-        return thumbs;
-      }
-      return [thumbs[thumbs.length - 1], ...thumbs.slice(0, thumbs.length - 2)];
-    })(),
-  );
+  const [playlist, setPlaylist] = useState(thumbs);
 
   const [move, setMove] = useState(0);
 
@@ -25,10 +18,9 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
       width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
     });
-    if (window.innerWidth < 769) {
-      setMusic(playlist[0]);
-    } else {
-      setMusic(playlist[1]);
+    setMusic(playlist[0]);
+    if (window.innerWidth > 769) {
+      left();
     }
   }, []);
 
@@ -43,19 +35,19 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   const right = () => {
     const arr = [...playlist];
-    const shift = arr.shift();
-    setPlaylist([...arr, shift!]);
+    if (arr.length > thumbs.length) arr.shift();
+    setPlaylist([...arr, arr[0]]);
 
-    setMove(200);
+    setMove(180);
     setTimeout(() => setMove(0), 0);
   };
 
   const left = () => {
     const arr = [...playlist];
-    const pop = arr.pop();
-    setPlaylist([pop!, ...arr]);
+    if (arr.length > thumbs.length) arr.pop();
+    setPlaylist([arr[arr.length - 1], ...arr]);
 
-    setMove(-200);
+    setMove(-180);
     setTimeout(() => setMove(0), 0);
   };
 
@@ -79,17 +71,9 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
         }}>
         <Button className="fas fa-arrow-left" onClick={left} />
         <List>
-          {playlist.map(
-            (url, i) =>
-              i < playlist.length && (
-                <Card
-                  src={url}
-                  key={i}
-                  onClick={() => setMusic(url)}
-                  move={move}
-                />
-              ),
-          )}
+          {playlist.map((url, i) => (
+            <Card src={url} key={i} onClick={() => setMusic(url)} move={move} />
+          ))}
         </List>
         <Button
           className="fas fa-arrow-right"
@@ -134,7 +118,7 @@ const Card = styled('img')`
   margin: 10px 5px;
   width: 200px;
 
-  transition: ${(props: any) => (props.move === 0 ? `all .3s` : 'none')};
+  transition: ${(props: any) => (props.move === 0 ? `all 0.3s` : 'none')};
   transform: ${(props: any) => `translateX(${props.move - 180}px)`};
   @media (max-width: 769px) {
     transform: translateX(0px);

@@ -6,9 +6,8 @@ const loadPlayList = (id, dom) => {
 
       MoviesData.items.forEach((MovieData) => {
         const link = document.createElement('a');
-        
-        if('resourceId' in MovieData.snippet)
-        {
+
+        if ('resourceId' in MovieData.snippet) {
           link.href = `https://youtu.be/${MovieData.snippet.resourceId.videoId}`;
         } else {
           link.href = `https://youtu.be/${MovieData.id.videoId}`;
@@ -45,15 +44,11 @@ const loadPlayList = (id, dom) => {
 };
 
 // https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
-if(!document.URL.match('alpha'))
-{
+if (!document.URL.match('alpha')) {
   loadPlayList(
     'PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja',
     document.getElementById('beginner-playlist'),
   );
 } else {
-  loadPlayList(
-    'alphaList',
-    document.getElementById('beginner-playlist'),
-  );
+  loadPlayList('alphaList', document.getElementById('beginner-playlist'));
 }
