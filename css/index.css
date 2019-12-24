@@ -44,7 +44,11 @@ header #header_contents {
   display: flex;
   justify-content: flex-end;
 }
-header #header_contents p {
+header ul {
+  list-style: none;
+}
+
+header #header_contents li {
   margin: 0 0.5em;
 }
 header a {
