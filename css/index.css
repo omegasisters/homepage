@@ -22,18 +22,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
-  scroll-behavior: smooth;
 }
 
 /*上部ヘッダー*/
 #header {
   position: fixed;
   width: 100%;
-  height: 36px;
-  background-color: #000000;
   font-size: 80%;
   z-index: 2;
   text-align: right;
+  padding: 25px 20px;
+  transition: 200ms ease;
+}
+#header.scrolled {
+  box-shadow: 0 0 8px #00000050;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
 #header #header_contents {
   display: flex;
@@ -41,6 +45,9 @@ body {
 }
 #header #header_contents p {
   margin: 0 0.5em;
+}
+#header a {
+  text-decoration: none;
 }
 @media screen and (max-width: 700px) {
   /* 幅が小さかったら消す */
@@ -252,10 +259,15 @@ a:hover {
 .playlist h2 {
   margin-bottom: 20px;
 }
+/*
 .playlist .videos {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
+}
+*/
+.playlist .videos img {
+  margin: auto;
 }
 .videos .video-link {
   display: block;
