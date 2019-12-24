@@ -130,17 +130,17 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     </title>
   </head>
   <body style="background-color: #1e2a55">
-  <div id="header">
-    <div id="header_contents">
-<!--      各項目へのジャンプ用ヘッダです。-->
-<!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
-      <p><a href="#section_description">おめシスって？</a></p>
-      <p><a href="#section_movie">おすすめ動画</a></p>
-      <p><a href="#section_discography">ディスコグラフィー</a></p>
-      <p><a href="#section_link">リンク</a></p>
-      <p><a href="#section_3d">3Dモデル</a></p>
+    <div id="header">
+      <div id="header_contents">
+        <!--      各項目へのジャンプ用ヘッダです。-->
+        <!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
+        <p><a href="#section_description">おめシスって？</a></p>
+        <p><a href="#section_movie">おすすめ動画</a></p>
+        <p><a href="#section_discography">ディスコグラフィー</a></p>
+        <p><a href="#section_link">リンク</a></p>
+        <p><a href="#section_3d">3Dモデル</a></p>
+      </div>
     </div>
-  </div>
     <div class="main">
       <div class="section hero">
         <figure class="hero__bg">
@@ -194,7 +194,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
         ></iframe>
 
         <div class="box playlist">
-          <h2 class="section_title" id="section_movie">⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
+          <h2 class="section_title" id="section_movie">
+            ⭐【初心者向け】<br class="br-sp" />すごい面白い動画
+          </h2>
           <div class="videos" id="beginner-playlist"></div>
           <a
             href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A/videos"
@@ -219,7 +221,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
           </div>
           <div id="preact-music"></div>
         </div>
-        
       </div>
 
       <div class="section links">
@@ -415,6 +416,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
       src="./assets/js/ytplaylist.js"
       defer
     ></script>
+    <script type="text/javascript" src="./assets/js/navbar.js" defer></script>
     <script
       type="text/javascript"
       src="./assets/preact_build/bundle.js"
