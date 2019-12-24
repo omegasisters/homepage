@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="images/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@omesis_ray" />
+
+    <meta property="og:title" content="おめシスのホームページ" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta
+      name="description"
+      content="バーチャル双子Youtuber「おめがシスターズ」のおめがレイ、おめがリオのホームページです！"
+    />
+    <meta
+      property="og:description"
+      content="バーチャル双子Youtuber「おめがシスターズ」のおめがレイ、おめがリオのホームページです！"
+    />
+    <meta property="og:site_name" content="おめシスのホームページ" />
+    <meta
+      property="og:image"
+      content="https://omegasisters.github.io/homepage/images/ogp.png"
+    />
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+
+    <script type="application/ld+json">
+      {
+        "description": "バーチャル双子Youtuber「おめがシスターズ」のおめがレイ、おめがリオのホームページです！",
+        "@type": "WebSite",
+        "url": "/",
+        "name": "おめシスのホームページ",
+        "image": "/homepage/images/ogp.png",
+        "headline": "おめシスのホームページ",
+        "@context": "https://schema.org"
+      }
+    </script>
+
+    <title>
+      SYNCHRONITY
+    </title>
+    <style type="text/css">
+      .cover {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        width: 100vw;
+        min-height: 100vh;
+      }
+      .jacket {
+        min-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <v-app dark>
+        <v-content>
+          <v-container class="cover" fluid>
+            <v-sheet class="overflow-hidden" style="position: relative;">
+              <v-app-bar
+                absolute
+                src="https://i.gyazo.com/e44d8c1493ac0afa19946fd5b447fc6a.jpg"
+                height="100"
+              >
+                <template v-slot:img="{ props }">
+                  <v-img
+                    v-bind="props"
+                    gradient="to top right, rgba(90,84,90,.8), rgba(198,208,199,.9)"
+                  ></v-img>
+                </template>
+                <v-app-bar-nav-icon
+                  @click.stop="drawer = !drawer"
+                ></v-app-bar-nav-icon>
+              </v-app-bar>
+
+              <v-navigation-drawer v-model="drawer" absolute temporary>
+                <v-list dense>
+                  <v-list-item
+                    v-for="item in items"
+                    :key="item.title"
+                    link
+                    :href="item.url"
+                  >
+                    <v-list-content>
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-content>
+                  </v-list-item>
+                </v-list>
+              </v-navigation-drawer>
+
+              <section style="min-height: 150vh;">
+                <article id="parallax" class="elevation-3">
+                  <v-parallax
+                    dark
+                    src="https://i.gyazo.com/e44d8c1493ac0afa19946fd5b447fc6a.jpg"
+                    style="height: 100vh;"
+                  >
+                    <v-row align="center" justify="center">
+                      <v-col class="text-center" cols="12">
+                        <h1 class="display-1 font-weight-bold mb-4">
+                          SYNCHRONITY
+                        </h1>
+                        <h4 class="subheading font-weight-thin">
+                          <span class="pink--text">Omega</span>
+                          <span class="indigo--text">Sisters</span>
+                        </h4>
+                      </v-col>
+                    </v-row>
+                  </v-parallax>
+                </article>
+
+                <article class="pt-10 pb-10">
+                  <v-col cols="12">
+                    <v-row align="center" justify="center">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/jis7E_mbwPw"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
+                    </v-row>
+
+                    <v-row align="center" justify="center">
+                      <v-col cols="12" align="center" justify="center">
+                        <v-card color="pink" dark style="max-width: 700px">
+                          <v-row
+                            align="center"
+                            justify="center"
+                            style="margin-top: 5vh;"
+                          >
+                            <div
+                              class="d-flex flex-no-wrap justify-space-between mt-5"
+                            >
+                              <div>
+                                <v-hover v-slot:default="{ hover }">
+                                  <v-card
+                                    class="ma-3"
+                                    :elevation="hover ? 12: 2"
+                                    ripple
+                                    href="https://linkco.re/GTzcQV2Z"
+                                  >
+                                    <v-avatar tile size="300">
+                                      <v-img
+                                        src="https://i.gyazo.com/76ce4b6e0d4c1080b2319d28b9559246.jpg"
+                                      ></v-img>
+                                    </v-avatar>
+                                  </v-card>
+                                </v-hover>
+                              </div>
+                            </div>
+
+                            <div>
+                              <v-card-title class="headline font-weight-bold"
+                                >シンクロニティ</v-card-title
+                              >
+                              <v-card-subtitle
+                                >おめがシスターズ</v-card-subtitle
+                              >
+
+                              <v-card-text class="mt-5">
+                                <div class="body-1 font-weight-bold">
+                                  <p>作詞: TEEDA(BACK-ON)</p>
+                                  <p>作曲: KENJI03(BACK-ON)</p>
+                                  <p>レーベル: upd8 music</p>
+                                </div>
+                              </v-card-text>
+                            </div>
+                          </v-row>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </article>
+              </section>
+            </v-sheet>
+          </v-container>
+        </v-content>
+      </v-app>
+
+      <div id="top-to-unchan" class="c-unchan c-unchan--fixedBottom">
+        <div class="fukidashi" ontouchstart="">トップに戻る</div>
+        <div class="c-unchan__inner">
+          <div class="c-unchan__tsuno">
+            <div class="c-unchan__tsuno__inner"></div>
+          </div>
+          <div class="c-unchan__toguro c-unchan__toguro--top"></div>
+          <div class="c-unchan__toguro c-unchan__toguro--middle">
+            <div class="c-unchan__eye c-unchan__eye--left">
+              <div></div>
+            </div>
+            <div class="c-unchan__eye c-unchan__eye--right">
+              <div></div>
+            </div>
+          </div>
+          <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
+          <div class="c-unchan__mouth">
+            <div class="c-unchan__mouth__inner">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify({
+          theme: {
+            themes: {
+              dark: {
+                background: '#dddddd',
+              },
+            },
+            dark: true,
+          },
+        }),
+        data() {
+          return {
+            drawer: null,
+            items: [{title: 'Home', url: '/'}],
+          };
+        },
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="./assets/js/scroll-to-top.js"
+      defer
+    ></script>
+  </body>
+</html>
+
+<!-- もちょもちょ -->
