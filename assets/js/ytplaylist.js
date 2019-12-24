@@ -29,7 +29,7 @@ const loadPlayList = (id, dom) => {
 
     $('.' + dom.className).slick({
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       dots: true,
       slidesToShow: 3
     });
