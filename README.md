@@ -27,6 +27,7 @@ https://omegasisters.github.io/homepage
 
 VRM モデルも含めて完全な状態でプレビューしたい場合は以下の方法を試してください。
 GitHub Pages で公開された時と同じ状態で開発することが出来ます。
+同じローカルネットワークに接続されていればホストの[IP アドレス]:[ポート番号](例: http://192.168.1.2:8000 )で他の端末からも確認できます。
 
 **記述を移動しました**
 [documents/environment](documents/environment)をご覧ください。

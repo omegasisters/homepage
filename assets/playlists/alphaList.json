@@ -75,39 +75,6 @@
     },
     {
       "kind": "youtube#searchResult",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/56hJgb7b7R7Kgk69CQXgg_4KD5w\"",
-      "id": {
-        "kind": "youtube#playlist",
-        "playlistId": "PLa5MA-5dqze2ERY3EbfLS9OTGsYrbceIF"
-      },
-      "snippet": {
-        "publishedAt": "2019-09-01T10:26:38.000Z",
-        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
-        "title": "カルタ用",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/68xnCUR5vn0/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "あるふぁブラザーズ",
-        "liveBroadcastContent": "none"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
       "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_uM5U-LxXkKk9nTkf0h7aNDfSHQ\"",
       "id": {
         "kind": "youtube#video",
@@ -337,5 +304,5 @@
         "liveBroadcastContent": "none"
       }
     }
-  ] 
+  ]
 }

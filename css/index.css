@@ -88,7 +88,8 @@ header a.drawer-menu-item:hover {
 h2.section_title {
   /* ヘッダからのジャンプ用タイトル */
   margin-bottom: 20px;
-  padding-top: 6vh;
+  margin-top: -50px;
+  padding-top: calc(50px + 6vh);
 }
 
 .box {
@@ -255,6 +256,60 @@ a:hover {
   10% {
     transform: translateY(0px);
   }
+}
+
+.firstview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #cf4e7c;
+  padding: 100px 20px 20px;
+}
+@media screen and (max-width: 700px) {
+  .firstview {
+    padding: 10px;
+  }
+}
+.firstview .do-omega {
+  font-weight: bold;
+  margin-top: 1em;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+  font-size: 3em;
+}
+@media screen and (max-width: 700px) {
+  .firstview .do-omega {
+    font-size: 1.4em;
+  }
+}
+.firstview .video_box {
+  padding: 4vw;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 60%;
+  border-radius: 1vw;
+}
+@media screen and (max-width: 1440px) {
+  .firstview .video_box {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .firstview .video_box {
+    width: 100%;
+  }
+}
+.firstview .video_wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.firstview .video_wrapper iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .introduction {

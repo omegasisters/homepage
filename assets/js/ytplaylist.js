@@ -50,5 +50,6 @@ if (!document.URL.match('alpha')) {
     document.getElementById('beginner-playlist'),
   );
 } else {
+  // https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ/videos
   loadPlayList('alphaList', document.getElementById('beginner-playlist'));
 }
