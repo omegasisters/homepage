@@ -1,5 +1,4 @@
 const path = require('path');
-
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
@@ -35,6 +34,7 @@ module.exports = {
   },
   plugins: [],
   devServer: {
+    publicPath: '/assets/preact_build/',
     disableHostCheck: true,
     historyApiFallback: true,
   },

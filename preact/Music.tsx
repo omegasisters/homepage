@@ -66,7 +66,15 @@ const MusicPlayer: FunctionalComponent = () => {
 
   return (
     <div>
-      <h2>ディスコグラフィー</h2>
+      <h3>
+        <a
+          href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
+          style={{textDecoration: 'none'}}
+          target="_blank"
+          rel="noopener noreferrer">
+          🎵おめシスの歌ってみたシリーズ
+        </a>
+      </h3>
       <br />
       <div
         style={{
