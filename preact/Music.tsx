@@ -66,7 +66,7 @@ const MusicPlayer: FunctionalComponent = () => {
 
   return (
     <div>
-      <h2>ディスコグラフィー</h2>
+      <h2 class='section_title' id='section_discography'>ディスコグラフィー</h2>
       <br />
       <div
         style={{

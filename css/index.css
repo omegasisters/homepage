@@ -26,6 +26,36 @@ body {
   scroll-behavior: smooth;
 }
 
+/*上部ヘッダー*/
+#header{
+  position: fixed;
+  width: 100%;
+  height: 36px;
+  background-color: #000000;
+  font-size: 80%;
+  z-index: 2;
+  text-align: right;
+}
+#header #header_contents{
+  display: flex;
+  justify-content: flex-end;
+}
+#header #header_contents p{
+  margin: 0 0.5em;
+}
+@media screen and (max-width: 700px) {
+  /* 幅が小さかったら消す */
+  #header {
+    display: none;
+  }
+}
+/*上部ヘッダーここまで*/
+h2.section_title{
+  /* ヘッダからのジャンプ用タイトル */
+  margin-bottom: 20px;
+  padding-top: 6vh;
+}
+
 .box {
   padding: 30px 0;
 }
@@ -204,7 +234,7 @@ a:hover {
   text-align: center;
   background: linear-gradient(to bottom, #cf4e7c 50%, rgba(0, 0, 0, 0)),
     linear-gradient(to left, #7995f7, #de7072);
-  padding: 100px 120px 230px;
+  padding: 100px 120px 120px;
 }
 @media screen and (max-width: 700px) {
   .introduction {
@@ -217,6 +247,10 @@ a:hover {
   height: 315px;
 }
 
+.discography {
+  width: 100%;
+  padding-top: 5vh
+}
 .playlist {
   width: 100%;
   margin-top: 5vh;
