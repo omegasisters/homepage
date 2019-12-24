@@ -26,7 +26,7 @@ body {
 }
 
 /*上部ヘッダー*/
-#header {
+header {
   position: fixed;
   width: 100%;
   font-size: 80%;
@@ -35,24 +35,24 @@ body {
   padding: 25px 20px;
   transition: 200ms ease;
 }
-#header.scrolled {
+header.scrolled {
   box-shadow: 0 0 8px #00000050;
   background: rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
-#header #header_contents {
+header #header_contents {
   display: flex;
   justify-content: flex-end;
 }
-#header #header_contents p {
+header #header_contents p {
   margin: 0 0.5em;
 }
-#header a {
+header a {
   text-decoration: none;
 }
 @media screen and (max-width: 700px) {
   /* 幅が小さかったら消す */
-  #header {
+  header {
     display: none;
   }
 }
