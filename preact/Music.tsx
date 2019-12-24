@@ -72,8 +72,6 @@ const MusicPlayer: FunctionalComponent = () => {
     setPlaylist([pop!, ...arr]);
   };
 
-  console.log(playlist.length * 200, move);
-
   return (
     <div>
       <h3>
