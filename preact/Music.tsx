@@ -36,6 +36,8 @@ const MusicPlayer: FunctionalComponent = () => {
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
   const [playlist, setPlaylist] = useState(thumbs);
 
+  const [move, setMove] = useState(0);
+
   useEffect(() => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
       width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
@@ -53,16 +55,22 @@ const MusicPlayer: FunctionalComponent = () => {
   };
 
   const right = () => {
-    const arr = [...playlist];
-    const shift = arr.shift();
-    setPlaylist([...arr, shift!]);
+    setMove((prev) => (prev === 0 ? 0 : prev + 200));
+    // const arr = [...playlist];
+    // const shift = arr.shift();
+    // setPlaylist([...arr, shift!]);
   };
 
   const left = () => {
-    const arr = [...playlist];
-    const pop = arr.pop();
-    setPlaylist([pop!, ...arr]);
+    setMove((prev) =>
+      prev < -(playlist.length - 5) * 200 ? prev : prev - 200,
+    );
+    // const arr = [...playlist];
+    // const pop = arr.pop();
+    // setPlaylist([pop!, ...arr]);
   };
+
+  console.log(playlist.length * 200, move);
 
   return (
     <div>
@@ -85,12 +93,7 @@ const MusicPlayer: FunctionalComponent = () => {
         <Button className="fas fa-arrow-left" onClick={left} />
         <List>
           {playlist.map((url, i) => (
-            <img
-              src={url}
-              key={i}
-              style={{cursor: 'pointer', margin: '10px 5px', height: 100}}
-              onClick={() => setMusic(url)}
-            />
+            <Card src={url} key={i} onClick={() => setMusic(url)} move={move} />
           ))}
         </List>
         <Button
@@ -128,4 +131,13 @@ const Button = styled('div')`
   @media (max-width: 769px) {
     display: none;
   }
+`;
+
+const Card = styled('img')`
+  cursor: pointer;
+  margin: 10px 5px;
+  width: 200px;
+
+  transition: all 1s ease-out;
+  transform: ${(props: any) => `translateX(${props.move}px)`};
 `;
