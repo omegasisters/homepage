@@ -57,7 +57,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   return (
     <div>
-      <h3>
+      <h3 class="section_title" id="section_discography">
         <a
           href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
           style={{textDecoration: 'none'}}
