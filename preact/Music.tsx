@@ -51,13 +51,9 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     setTimeout(() => setMove(0), 0);
   };
 
-  const leftEnd = [...playlist].pop()!;
-
-  console.log(move);
-
   return (
     <div>
-      <h3 class="section_title">
+      <h3>
         <a
           href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
           style={{textDecoration: 'none'}}
