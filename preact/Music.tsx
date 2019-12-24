@@ -55,19 +55,21 @@ const MusicPlayer: FunctionalComponent = () => {
   };
 
   const right = () => {
-    setMove((prev) => (prev === 0 ? 0 : prev + 200));
-    // const arr = [...playlist];
-    // const shift = arr.shift();
-    // setPlaylist([...arr, shift!]);
+    setMove(200);
+    setTimeout(() => setMove(0), 0);
+
+    const arr = [...playlist];
+    const shift = arr.shift();
+    setPlaylist([...arr, shift!]);
   };
 
   const left = () => {
-    setMove((prev) =>
-      prev < -(playlist.length - 5) * 200 ? prev : prev - 200,
-    );
-    // const arr = [...playlist];
-    // const pop = arr.pop();
-    // setPlaylist([pop!, ...arr]);
+    setMove(-200);
+    setTimeout(() => setMove(0), 0);
+
+    const arr = [...playlist];
+    const pop = arr.pop();
+    setPlaylist([pop!, ...arr]);
   };
 
   console.log(playlist.length * 200, move);
@@ -138,6 +140,7 @@ const Card = styled('img')`
   margin: 10px 5px;
   width: 200px;
 
-  transition: all 1s ease-out;
+  transition: ${(props: any) =>
+    props.move === 0 ? `all 0.3s ease-out` : 'none'};
   transform: ${(props: any) => `translateX(${props.move}px)`};
 `;
