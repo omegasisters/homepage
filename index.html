@@ -120,12 +120,15 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     <script src="./index.js" defer></script>
     <link rel="manifest" href="./manifest.webmanifest" />
 
+    <!-- slick -->
+    <link rel='stylesheet' href='./assets/slick/slick.css'>
+    <link rel='stylesheet' href='./assets/slick/slick-theme.css'>
+
     <title>
       おめシスのホームページ |
       第１回おめシスのホームページをプルリクだけで更新していったらどうなるの？企画
     </title>
   </head>
-
   <body style="background-color: #1e2a55">
   <div id="header">
     <div id="header_contents">
@@ -139,7 +142,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     </div>
   </div>
     <div class="main">
-      <div class="section hero" id="top">
+      <div class="section hero">
         <figure class="hero__bg">
           <video class="hero__inner__bg" autoplay playsinline loop muted>
             <source src="./images/walk_omesis.webm" type="video/webm" />
@@ -192,11 +195,11 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
           <h2 class="section_title" id="section_movie">⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
           <div class="videos" id="beginner-playlist"></div>
           <a
-            href="https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja"
+            href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A/videos"
             target="_blank"
             rel="noopener noreferrer"
           >
-            残りの動画を見る
+            他の動画も見る
           </a>
         </div>
 
@@ -347,30 +350,55 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
         <div id="preact"></div>
       </div>
 
-      <a href="#top">
-        <div class="c-unchan c-unchan--fixedBottom">
-          <div class="fukidashi" ontouchstart="">トップに戻る</div>
-          <div class="c-unchan__inner">
-            <div class="c-unchan__tsuno">
-              <div class="c-unchan__tsuno__inner"></div>
+      <div id="top-to-unchan" class="c-unchan c-unchan--fixedBottom">
+        <div class="fukidashi" ontouchstart="">トップに戻る</div>
+        <div class="c-unchan__inner">
+          <div class="c-unchan__tsuno">
+            <div class="c-unchan__tsuno__inner"></div>
+          </div>
+          <div class="c-unchan__toguro c-unchan__toguro--top"></div>
+          <div class="c-unchan__toguro c-unchan__toguro--middle">
+            <div class="c-unchan__eye c-unchan__eye--left">
+              <div></div>
             </div>
-            <div class="c-unchan__toguro c-unchan__toguro--top"></div>
-            <div class="c-unchan__toguro c-unchan__toguro--middle">
-              <div class="c-unchan__eye c-unchan__eye--left">
-                <div></div>
-              </div>
-              <div class="c-unchan__eye c-unchan__eye--right">
-                <div></div>
-              </div>
+            <div class="c-unchan__eye c-unchan__eye--right">
+              <div></div>
             </div>
-            <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
-            <div class="c-unchan__mouth">
-              <div class="c-unchan__mouth__inner">
-                <div></div>
-              </div>
+          </div>
+          <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
+          <div class="c-unchan__mouth">
+            <div class="c-unchan__mouth__inner">
+              <div></div>
             </div>
           </div>
         </div>
+      </div>
+
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
+      <script type="module" src="./preact_build/index.js"></script>
+      <script
+        type="text/javascript"
+        src="./assets/js/lazyload.js"
+        defer
+      ></script>
+      <script
+        src='./assets/js/jquery-3.4.1.min.js'
+        defer
+      ></script>
+      <script
+        src='./assets/slick/slick.min.js'
+        defer
+      ></script>
+      <script
+        type="text/javascript"
+        src="./assets/js/ytplaylist.js"
+        defer
+      ></script>
+    </div>
       </a>
     </div>
 

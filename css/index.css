@@ -22,7 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
-  scroll-behavior: smooth;
 }
 
 /*上部ヘッダー*/
@@ -252,10 +251,15 @@ a:hover {
 .playlist h2 {
   margin-bottom: 20px;
 }
+/*
 .playlist .videos {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
+}
+*/
+.playlist .videos img{
+  margin: auto;
 }
 .videos .video-link {
   display: block;
