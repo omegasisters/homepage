@@ -10,14 +10,7 @@ const styled = scoped(h);
 const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
-  const [playlist, setPlaylist] = useState(
-    (() => {
-      if (window.innerWidth < 769) {
-        return thumbs;
-      }
-      return thumbs;
-    })(),
-  );
+  const [playlist, setPlaylist] = useState(thumbs);
 
   const [move, setMove] = useState(0);
 
@@ -25,10 +18,8 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
       width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
     });
-    if (window.innerWidth < 769) {
-      setMusic(playlist[0]);
-    } else {
-      setMusic(playlist[0]);
+    setMusic(playlist[0]);
+    if (window.innerWidth > 769) {
       left();
     }
   }, []);
