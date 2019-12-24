@@ -25,7 +25,11 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
       width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
     });
-    setMusic(playlist[1]);
+    if (window.innerWidth < 769) {
+      setMusic(playlist[0]);
+    } else {
+      setMusic(playlist[1]);
+    }
   }, []);
 
   const setMusic = (url: string) => {
@@ -116,7 +120,8 @@ const List = styled('div')`
 
 const Button = styled('div')`
   margin: auto;
-  padding: 10;
+  width: 50px;
+  padding: 10px;
   cursor: pointer;
 
   @media (max-width: 769px) {
@@ -129,7 +134,7 @@ const Card = styled('img')`
   margin: 10px 5px;
   width: 200px;
 
-  transition: ${(props: any) => (props.move === 0 ? `all .4s` : 'none')};
+  transition: ${(props: any) => (props.move === 0 ? `all .3s` : 'none')};
   transform: ${(props: any) => `translateX(${props.move - 180}px)`};
   @media (max-width: 769px) {
     transform: translateX(0px);
