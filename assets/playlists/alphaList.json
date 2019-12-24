@@ -336,33 +336,6 @@
         "channelTitle": "あるふぁブラザーズ",
         "liveBroadcastContent": "none"
       }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/z6nzRjow55dskzss0AGtUjVFD3w\"",
-      "id": {
-        "kind": "youtube#channel",
-        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ"
-      },
-      "snippet": {
-        "publishedAt": "2019-08-12T09:55:50.000Z",
-        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
-        "title": "あるふぁブラザーズ",
-        "description": "",
-        "thumbnails": {
-          "default": {
-            "url": "https://yt3.ggpht.com/-NjJ-f-mZUYs/AAAAAAAAAAI/AAAAAAAAAAA/6G1BCLbJDxU/s88-c-k-no-mo-rj-c0xffffff/photo.jpg"
-          },
-          "medium": {
-            "url": "https://yt3.ggpht.com/-NjJ-f-mZUYs/AAAAAAAAAAI/AAAAAAAAAAA/6G1BCLbJDxU/s240-c-k-no-mo-rj-c0xffffff/photo.jpg"
-          },
-          "high": {
-            "url": "https://yt3.ggpht.com/-NjJ-f-mZUYs/AAAAAAAAAAI/AAAAAAAAAAA/6G1BCLbJDxU/s800-c-k-no-mo-rj-c0xffffff/photo.jpg"
-          }
-        },
-        "channelTitle": "あるふぁブラザーズ",
-        "liveBroadcastContent": "none"
-      }
     }
-  ]
+  ] 
 }
