@@ -15,7 +15,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
       if (window.innerWidth < 769) {
         return thumbs;
       }
-      return [thumbs[thumbs.length - 1], ...thumbs.slice(0, thumbs.length - 2)];
+      return thumbs;
     })(),
   );
 
@@ -28,7 +28,8 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     if (window.innerWidth < 769) {
       setMusic(playlist[0]);
     } else {
-      setMusic(playlist[1]);
+      setMusic(playlist[0]);
+      left();
     }
   }, []);
 
@@ -43,8 +44,8 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   const right = () => {
     const arr = [...playlist];
-    const shift = arr.shift();
-    setPlaylist([...arr, shift!]);
+    if (arr.length > thumbs.length) arr.shift();
+    setPlaylist([...arr, arr[0]]);
 
     setMove(180);
     setTimeout(() => setMove(0), 0);
@@ -52,8 +53,8 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   const left = () => {
     const arr = [...playlist];
-    const pop = arr.pop();
-    setPlaylist([pop!, ...arr]);
+    if (arr.length > thumbs.length) arr.pop();
+    setPlaylist([arr[arr.length - 1], ...arr]);
 
     setMove(-180);
     setTimeout(() => setMove(0), 0);
