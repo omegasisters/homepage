@@ -374,9 +374,6 @@ a:hover {
 
 .links {
   padding: 50px 80px 30px 80px;
-  background: url(../images/omesis_with_silhouette.png) top center no-repeat,
-    linear-gradient(to left, #7995f7, #de7072);
-  background-size: cover;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
@@ -385,6 +382,18 @@ a:hover {
     padding: 40px;
     background: linear-gradient(to left, #7995f7, #de7072);
   }
+}
+
+.links.normal {
+  background: url(../images/omesis_with_silhouette.png) top center no-repeat,
+    linear-gradient(to left, #7995f7, #de7072);
+  background-size: cover;
+}
+
+.links.lucky {
+  background: url(../images/unchan.png) top center no-repeat,
+    linear-gradient(to left, #7995f7, #de7072);
+  background-size: cover;
 }
 
 .links a.omesis_ray:hover {
