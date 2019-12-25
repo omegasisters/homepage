@@ -115,18 +115,12 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.0/css/solid.css"
     />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
 
     <script src="./index.js" defer></script>
     <link rel="manifest" href="./manifest.webmanifest" />
-
-    <!-- slick -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
 
     <!-- Drawer -->
     <link
@@ -249,7 +243,17 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
             <h2 class="section_title" id="section_movie">
               ⭐【初心者向け】<br class="br-sp" />すごい面白い動画
             </h2>
-            <div class="videos" id="beginner-playlist"></div>
+
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="videos swiper-wrapper" id="beginner-playlist"></div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+
             <a
               href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A/videos"
               target="_blank"
@@ -451,12 +455,8 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
       defer
     ></script>
     <script type="text/javascript" src="./assets/js/navbar.js" defer></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-      defer
-    ></script>
     <script type="text/javascript" src="./assets/js/lazyload.js" defer></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" defer></script>
     <script
       type="text/javascript"
       src="./assets/js/ytplaylist.js"

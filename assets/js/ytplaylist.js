@@ -5,6 +5,8 @@ const loadPlayList = (id, dom) => {
       MoviesData.items.reverse();
 
       MoviesData.items.forEach((MovieData) => {
+        const container = document.createElement('div');
+        container.className = 'swiper-slide';
         const link = document.createElement('a');
 
         if ('resourceId' in MovieData.snippet) {
@@ -29,16 +31,45 @@ const loadPlayList = (id, dom) => {
         link.appendChild(image);
         link.appendChild(span);
 
-        dom.appendChild(link);
-      });
+        container.appendChild(link);
 
-      $('.' + dom.className).slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: true,
-        slidesToShow: 3,
+        dom.appendChild(container);
       });
+      // 必要があれば画角変更時のイベントハンドラで制御
+      const isNarrow = window.matchMedia('(max-width:700px)').matches;
 
+      let swiperParams = {
+        spaceBetween: 5,
+        slidesPerView: isNarrow ? 1 : 3,
+        loop: true,
+        grabCursor: true,
+        centeredSlides: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          bulletElement: 'span',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      };
+      if (!isNarrow) {
+        swiperParams.effect = 'coverflow';
+        swiperParams.coverflowEffect = {
+          coverflowEffect: {
+            depth: 10,
+            modifier: 1,
+            slideShadows: false,
+          },
+        };
+      }
+
+      new Swiper('.swiper-container', swiperParams);
       lazyLoad();
     });
 };
