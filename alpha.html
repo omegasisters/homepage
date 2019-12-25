@@ -62,16 +62,10 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.0/css/solid.css"
     />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/alpha.css" />
-
-    <!-- slick -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
 
     <title>
       あるブラのホームページ |
@@ -110,7 +104,15 @@
         <div class="box playlist">
           <!-- [ToDo]あるブラ向けの文章を変える -->
           <h2>⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
-          <div class="videos" id="beginner-playlist"></div>
+          <!-- Swiper -->
+          <div class="swiper-container">
+            <div class="videos swiper-wrapper" id="beginner-playlist"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
           <a
             href="https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ/videos"
             target="_blank"
@@ -149,15 +151,11 @@
     </div>
 
     <script type="text/javascript" src="./assets/js/lazyload.js" defer></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" defer></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
       crossorigin="anonymous"
-      defer
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
       defer
     ></script>
     <script
