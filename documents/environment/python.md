@@ -1,13 +1,14 @@
 ### Python 編
 
-Python3 のバージョンを確認します。
+まず、Python3 のバージョンを確認します。
 
-> ~$ python3 -V
-> Python 3.7.6
-> ~$
+```
+~$ python3 -V
+Python 3.7.6
+~$
+```
 
-
-#### Python 3.7 系
+#### Python 3.7 系以降
 
 ```
 git clone https://github.com/omegasisters/homepage.git
@@ -20,7 +21,8 @@ python3 -m http.server -d ..
 
 #### Python 3.6 系以前
 
-例えば、Win10 + WSL の場合の標準は  v3.5.2 なので、こちらです。
+例えば、Win10 + WSL の場合の標準は  v3.5.2 (アップデート推奨) なので、こちらです
+。
 
 
 ```
