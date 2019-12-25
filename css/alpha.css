@@ -56,3 +56,16 @@
 .c-omega .c-omega__link {
   text-decoration: none;
 }
+
+@media screen and (max-width: 64em) {
+  header .menu-icon {
+    color: rgba(0, 0, 0, 0.7);
+    border: solid 3px rgba(0, 0, 0, 0.2);
+  }
+}
+header a.drawer-menu-item {
+  color: #000;
+}
+header.scrolled a.drawer-menu-item {
+  color: #fff;
+}
