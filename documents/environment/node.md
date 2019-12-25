@@ -12,7 +12,7 @@ yarn && yarn start # yarn の場合
 npm install && npm run start # npm の場合
 ```
 
-サーバーが起動したら、次にブラウザーで http://localhost:3000/ を開いてください。
+サーバーが起動したら、次にブラウザーで http://localhost:8080/ を開いてください。
 
 次のコマンドで Browser Sync サーバーを立ち上げることも出来ます。
 
@@ -20,3 +20,5 @@ npm install && npm run start # npm の場合
 yarn dev # yarn の場合
 npm run dev # npm の場合
 ```
+
+サーバーが起動したら、次にブラウザーで http://localhost:3000/ を開いてください。
