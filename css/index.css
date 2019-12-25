@@ -33,6 +33,7 @@ body.drawer--navbarTopGutter {
 header.drawer-navbar .drawer-navbar-header {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: none;
+  padding: 0 1.5rem;
 }
 
 header.drawer-navbar {
@@ -63,6 +64,9 @@ header.scrolled {
     font-size: 2.5rem;
     display: inline-block;
     transition-duration: 0.5s;
+    padding: 0 10px;
+    border-radius: 0.2em;
+    border: solid 3px rgba(255, 255, 255, 0.2);
   }
 
   header .drawer-hamburger {
