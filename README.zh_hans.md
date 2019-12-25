@@ -14,7 +14,7 @@ https://omegasisters.github.io/homepage
 
 ###我想这样做，哦。但是我不懂程序
 
-在上方菜单的[**问题**]（https://github.com/omegasisters/homepage/issues）中，您可以编写要执行的操作，要更改的内容以及要修复的内容（因为有些奇怪）。
+在上方菜单的[问题]（https://github.com/omegasisters/homepage/issues）中，您可以编写要执行的操作，要更改的内容以及要修复的内容（因为有些奇怪）。
 
 这就像一个典型的线程公告板。
 如果您写一些东西，它可能会实现。可能不是。
@@ -30,13 +30,13 @@ https://omegasisters.github.io/homepage
 如果连接到相同的本地网络，则可以使用主机的[IP 地址]：[端口号]（例如：http：//192.168.1.2：8000）从其他终端进行检查。
 
 **移动说明**
-请参阅[文档/环境]（文档/环境）。
+请参阅[文档/环境](documents/environment)。
 
 ##代码格式（需要 Node.js 环境）
 
 ```
-纱线规格＃纱线
-npm运行格式＃对于npm
+For yarn format # yarn
+npm run format # For npm
 ```
 
 ##如何开发常规部分（Node.js）
@@ -44,17 +44,17 @@ npm运行格式＃对于npm
 预览时，输入以下命令之一：
 
 ```
-纱头＃
-npm运行开始＃npm
+yarn start # for yarn
+npm run start # npm
 ```
 
-托管在 http：//本地主机：8080
+托管在 http://localhost:8080
 
 编辑源代码时，请在 git push 之前进行构建：
 
 ```
-用于纱线制造＃纱线
-npm run build＃对于npm
+For yarn build # yarn
+npm run build # For npm
 ```
 
 ##测试（Node.js）
@@ -62,8 +62,8 @@ npm run build＃对于npm
 您可以使用以下命令进行测试。
 
 ```
-用于纱线测试＃纱线
-npm运行测试＃对于npm
+For yarn test # yarn
+npm run test # For npm
 ```
 
 `__tests__`和`preact`具有示例测试用例。
