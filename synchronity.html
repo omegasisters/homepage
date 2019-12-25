@@ -68,7 +68,6 @@
     </style>
   </head>
   <body>
-
     <!-- contents -->
     <!-- for developpers 
       This page powered by Vue and Vuetify.
@@ -83,7 +82,6 @@
         <v-content>
           <v-container class="cover" fluid>
             <v-sheet class="overflow-hidden" style="position: relative;">
-
               <!-- menubar -->
               <v-app-bar
                 absolute
@@ -119,7 +117,6 @@
 
               <!-- main contents -->
               <section style="min-height: 150vh;">
-
                 <!-- first view -->
                 <article id="parallax" class="elevation-3">
                   <v-parallax
@@ -129,7 +126,9 @@
                   >
                     <v-row align="center" justify="center">
                       <v-col class="text-center" cols="12">
-                        <h1 class="display-1 font-weight-bold mb-4">{{ album.title_en }}</h1>
+                        <h1 class="display-1 font-weight-bold mb-4">
+                          {{ album.title_en }}
+                        </h1>
                         <h4 class="subheading font-weight-thin">
                           <span class="pink--text">Omega</span>
                           <span class="indigo--text">Sisters</span>
@@ -142,11 +141,9 @@
                 <!-- description -->
                 <article class="pt-10 pb-10">
                   <v-col cols="12">
-
                     <v-row align="center" justify="center">
                       <v-col cols="12" align="center" justify="center">
                         <v-card color="pink" dark style="max-width: 700px">
-
                           <!-- album description -->
                           <v-row
                             align="center"
@@ -175,11 +172,18 @@
                             </div>
 
                             <div>
-                              <v-card-title class="headline font-weight-bold">{{ album.title }}</v-card-title>
-                              <v-card-subtitle>{{ album.artist }}</v-card-subtitle>
+                              <v-card-title class="headline font-weight-bold"
+                                >{{ album.title }}</v-card-title
+                              >
+                              <v-card-subtitle
+                                >{{ album.artist }}</v-card-subtitle
+                              >
 
                               <v-card-text class="mt-5">
-                                <div v-for="line of album.description" class="body-1 font-weight-bold">
+                                <div
+                                  v-for="line of album.description"
+                                  class="body-1 font-weight-bold"
+                                >
                                   <p>{{ line }}</p>
                                 </div>
                               </v-card-text>
@@ -187,7 +191,12 @@
                           </v-row>
 
                           <!-- youtube links -->
-                          <v-row class="pt-10 pb-10" cols="12" align="center" justify="center">
+                          <v-row
+                            class="pt-10 pb-10"
+                            cols="12"
+                            align="center"
+                            justify="center"
+                          >
                             <iframe
                               width="560"
                               height="315"
@@ -197,26 +206,31 @@
                               allowfullscreen
                             ></iframe>
                           </v-row>
-
                         </v-card>
                       </v-col>
-
                     </v-row>
 
                     <!-- album lyrics -->
                     <v-row align="center" justify="center">
                       <v-col cols="12" align="center" justify="center">
                         <v-expansion-panels style="z-index: 0;">
-                          <v-expansion-panel style="max-width: 700px; background-color: #3f51b5;">
-                            <v-expansion-panel-header class="headline font-weight-bold">Lyrics</v-expansion-panel-header>
-                            <v-expansion-panel-content v-for="line of album.lyrics" class="caption font-weight-bold">
+                          <v-expansion-panel
+                            style="max-width: 700px; background-color: #3f51b5;"
+                          >
+                            <v-expansion-panel-header
+                              class="headline font-weight-bold"
+                              >Lyrics</v-expansion-panel-header
+                            >
+                            <v-expansion-panel-content
+                              v-for="line of album.lyrics"
+                              class="caption font-weight-bold"
+                            >
                               <p style="padding: 0 0 0 0;">{{ line }}</p>
                             </v-expansion-panel-content>
                           </v-expansion-panel>
                         </v-expansion-panels>
                       </v-col>
                     </v-row>
-
                   </v-col>
                 </article>
               </section>
@@ -251,7 +265,6 @@
           </div>
         </div>
       </a>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
