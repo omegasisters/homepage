@@ -32,12 +32,28 @@ const loadPlayList = (id, dom) => {
         dom.appendChild(link);
       });
 
-      $('.' + dom.className).slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
-        dots: true,
-        slidesToShow: 3,
-      });
+      var IsDevice = DeviceName => (navigator.userAgent.indexOf(DeviceName) > 0);
+
+      var isSmartphone = (IsDevice('iPhone') || IsDevice('iPod') || IsDevice('Android') && IsDevice('Movile'));
+
+      var isTablet = (!isSmartphone && IsDevice('Android') || IsDevice('iPad'));
+
+      if(isSmartphone || isTablet)
+      {
+        $('.' + dom.className).slick({
+          autoplay: true,
+          autoplaySpeed: 4000,
+          dots: false,
+          slidesToShow: 1,
+        });
+      } else {
+        $('.' + dom.className).slick({
+          autoplay: true,
+          autoplaySpeed: 4000,
+          dots: true,
+          slidesToShow: 3,
+        });
+      }
 
       lazyLoad();
     });
