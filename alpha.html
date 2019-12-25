@@ -65,6 +65,10 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/alpha.css" />
 
+    <!-- slick -->
+    <link rel="stylesheet" href="./assets/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
+
     <title>
       あるブラのホームページ |
     </title>
@@ -99,13 +103,25 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+        <div class="box playlist">
+          <!-- [ToDo]あるブラ向けの文章を変える -->
+          <h2>⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
+          <div class="videos" id="beginner-playlist"></div>
+          <a
+            href="https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ/videos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            他の動画も見る
+          </a>
+        </div>
       </div>
 
       <div class="section links links--alpha">
         <div class="box">
           <h2><i class="fab fa-youtube"></i>YouTube</h2>
           <a
-            href="https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ"
+            href="https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
             >あるふぁブラザーズ</a
@@ -119,9 +135,22 @@
             #あるブラはいいぞ
           </a>
         </div>
+
+        <div class="c-omega">
+          <a class="c-omega__link" href="./index.html">
+            Ω
+          </a>
+        </div>
       </div>
     </div>
 
     <script type="text/javascript" src="./assets/js/lazyload.js" defer></script>
+    <script src="./assets/js/jquery-3.4.1.min.js" defer></script>
+    <script src="./assets/slick/slick.min.js" defer></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/ytplaylist.js"
+      defer
+    ></script>
   </body>
 </html>

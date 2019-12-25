@@ -1,12 +1,13 @@
-const dist = __dirname + '/';
+const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: ['@babel/polyfill', './preact/index'],
   output: {
-    path: dist,
+    path: path.resolve(__dirname, 'assets', 'preact_build'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/homepage/',
     globalObject: 'self',
   },
   resolve: {
@@ -33,10 +34,19 @@ module.exports = {
   },
   plugins: [],
   devServer: {
+    publicPath: '/assets/preact_build/',
     disableHostCheck: true,
     historyApiFallback: true,
   },
   performance: {
     hints: false,
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true,
+      }),
+    ],
   },
 };

@@ -120,97 +120,167 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     <script src="./index.js" defer></script>
     <link rel="manifest" href="./manifest.webmanifest" />
 
+    <!-- slick -->
+    <link rel="stylesheet" href="./assets/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
+
+    <!-- Drawer -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css"
+    />
+
     <title>
       おめシスのホームページ |
       第１回おめシスのホームページをプルリクだけで更新していったらどうなるの？企画
     </title>
   </head>
 
-  <body style="background-color: #1e2a55">
-    <div class="main">
-      <div class="section hero" id="top">
-        <figure class="hero__bg">
-          <video class="hero__inner__bg" autoplay playsinline loop muted>
-            <source src="./images/walk_omesis.webm" type="video/webm" />
-            <source
-              src="./images/walk_omesis_small.mp4"
-              type="video/mp4"
-              media="all and (max-width: 1000px)"
-            />
-            <source src="./images/walk_omesis.mp4" type="video/mp4" />
-            <img
-              src="./images/walk_omesis_placeholder.jpg"
-              title="Your browser does not support the <video> tag"
-            />
-          </video>
-        </figure>
-        <div class="hero__container">
-          <div class="hero__logo">
-            <h1 class="logo">Ω Sisters</h1>
-            <div class="logo-sub">おめがシスターズ</div>
-          </div>
-          <div class="guide_for_scroll">
-            <i class="fas fa-angle-double-down"></i>
-          </div>
+  <body
+    style="background-color: #1e2a55"
+    class="drawer drawer--top drawer--navbarTopGutter"
+  >
+    <header class="drawer-navbar drawer-navbar--fixed" role="banner">
+      <div class="drawer-container">
+        <div class="drawer-navbar-header">
+          <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">メニュー</span>
+            <span class="menu-icon">Ω</span>
+          </button>
         </div>
+        <nav class="drawer-nav" role="navigation">
+          <ul id="header_contents" class="drawer-menu drawer-menu--right">
+            <!--      各項目へのジャンプ用ヘッダです。-->
+            <!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
+            <li>
+              <a class="drawer-menu-item" href="#section_description"
+                >おめシスって？</a
+              >
+            </li>
+            <li>
+              <a class="drawer-menu-item" href="#section_movie">おすすめ動画</a>
+            </li>
+            <li>
+              <a class="drawer-menu-item" href="#section_discography"
+                >ディスコグラフィー</a
+              >
+            </li>
+            <li><a class="drawer-menu-item" href="#section_link">リンク</a></li>
+            <li><a class="drawer-menu-item" href="#section_3d">3Dモデル</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <div class="section introduction">
-        <div class="box about-us">
-          <p>
-            姉が赤いリボンのおめがレイ、<br
-              class="br-sp"
-            />妹が青いリボンのおめがリオ。
-          </p>
-          <p>
-            バーチャルを武器にした個性的な企画から、歌動画にゲーム実況と幅広いジャンルの動画をYouTubeに投稿し活動している。
-          </p>
-          <p class="do-omega">おめがってるー？！</p>
-        </div>
-        <iframe
-          class="video lazy"
-          title="【バーチャル双子Youtuber】はじめまして！おめがシスターズです！【自己紹介】"
-          data-src="https://www.youtube.com/embed/GgHx7ljXs08"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-
-        <div class="box playlist">
-          <h2>⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
-          <div class="videos" id="beginner-playlist"></div>
-          <a
-            href="https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            残りの動画を見る
-          </a>
+    </header>
+    <main role="main">
+      <div class="main" id="top-anchor">
+        <div class="section hero">
+          <figure class="hero__bg">
+            <video class="hero__inner__bg" autoplay playsinline loop muted>
+              <source src="./images/walk_omesis.webm" type="video/webm" />
+              <source
+                src="./images/walk_omesis_small.mp4"
+                type="video/mp4"
+                media="all and (max-width: 1000px)"
+              />
+              <source src="./images/walk_omesis.mp4" type="video/mp4" />
+              <img
+                src="./images/walk_omesis_placeholder.jpg"
+                title="Your browser does not support the <video> tag"
+              />
+            </video>
+          </figure>
+          <div class="hero__container">
+            <div class="hero__logo">
+              <h1 class="logo">Ω Sisters</h1>
+              <div class="logo-sub">おめがシスターズ</div>
+            </div>
+            <div class="guide_for_scroll">
+              <a href="#section_description">
+                <i class="fas fa-angle-double-down"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="box">
-          <h2 style="margin-top: 3em; margin-bottom: 1em;">
-            シンクロニティ by おめシス × BACK-ON
-          </h2>
-          <a href="./synchronity.html">
-            <img
-              src="https://i.gyazo.com/76ce4b6e0d4c1080b2319d28b9559246.jpg"
-              width="300"
-            />
-          </a>
+        <div class="section firstview">
+          <h1 class="section_title do-omega" id="section_firstview">
+            おめがってるー？！
+          </h1>
+          <div class="box">
+            <i class="fab fa-youtube"></i>
+            <a
+              href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A?sub_confirmation=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              >おめがシスターズ [Ω Sisters]</a
+            >
+          </div>
+          <div class="video_box">
+            <div class="video_wrapper">
+              <iframe
+                class="video lazy"
+                title="【バーチャル双子Youtuber】はじめまして！おめがシスターズです！【自己紹介】"
+                data-src="https://www.youtube.com/embed/GgHx7ljXs08"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
+        <div class="section introduction">
+          <h2 class="section_title" id="section_description">おめシスって？</h2>
+          <div class="box about-us">
+            <p>
+              姉が赤いリボンのおめがレイ、<br
+                class="br-sp"
+              />妹が青いリボンのおめがリオ。
+            </p>
+            <p>
+              バーチャルを武器にした個性的な企画から、歌動画にゲーム実況と幅広いジャンルの動画をYouTubeに投稿し活動している。
+            </p>
+          </div>
 
-        <div style="width:100%;margin-top:5vh">
-          <div id="preact-music"></div>
+          <div class="box playlist">
+            <h2 class="section_title" id="section_movie">
+              ⭐【初心者向け】<br class="br-sp" />すごい面白い動画
+            </h2>
+            <div class="videos" id="beginner-playlist"></div>
+            <a
+              href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              他の動画も見る
+            </a>
+          </div>
+
+          <div class="section discography">
+            <h2 class="section_title" id="section_discography">
+              ディスコグラフィー
+            </h2>
+            <div class="box">
+              <h3 style="margin-bottom: 1em;">
+                シンクロニティ by おめシス × BACK-ON
+              </h3>
+              <a href="./synchronity.html">
+                <img
+                  src="https://i.gyazo.com/76ce4b6e0d4c1080b2319d28b9559246.jpg"
+                  width="300"
+                />
+              </a>
+            </div>
+            <div id="preact-music"></div>
+          </div>
         </div>
-        
       </div>
 
       <div class="section links">
+        <h2 class="section_title" id="section_link">リンク</h2>
         <div class="box">
           <h2><i class="fab fa-youtube"></i>YouTube</h2>
           <a
-            href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A"
+            href="https://www.youtube.com/channel/UCNjTjd2-PMC8Oo_-dCEss7A?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
             >おめがシスターズ [Ω Sisters]</a
@@ -331,56 +401,77 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
       </div>
 
       <div class="section exotic">
+        <h2 class="section_title" id="section_3d">3Dモデル</h2>
         <div id="preact"></div>
       </div>
+    </main>
 
-      <a href="#top">
-        <div class="c-unchan c-unchan--fixedBottom">
-          <div class="fukidashi" ontouchstart="">トップに戻る</div>
-          <div class="c-unchan__inner">
-            <div class="c-unchan__tsuno">
-              <div class="c-unchan__tsuno__inner"></div>
+    <a href="#top-anchor">
+      <div class="c-unchan c-unchan--fixedBottom">
+        <div class="fukidashi" ontouchstart="">トップに戻る</div>
+        <div class="c-unchan__inner">
+          <div class="c-unchan__tsuno">
+            <div class="c-unchan__tsuno__inner"></div>
+          </div>
+          <div class="c-unchan__toguro c-unchan__toguro--top"></div>
+          <div class="c-unchan__toguro c-unchan__toguro--middle">
+            <div class="c-unchan__eye c-unchan__eye--left">
+              <div></div>
             </div>
-            <div class="c-unchan__toguro c-unchan__toguro--top"></div>
-            <div class="c-unchan__toguro c-unchan__toguro--middle">
-              <div class="c-unchan__eye c-unchan__eye--left">
-                <div></div>
-              </div>
-              <div class="c-unchan__eye c-unchan__eye--right">
-                <div></div>
-              </div>
+            <div class="c-unchan__eye c-unchan__eye--right">
+              <div></div>
             </div>
-            <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
-            <div class="c-unchan__mouth">
-              <div class="c-unchan__mouth__inner">
-                <div></div>
-              </div>
+          </div>
+          <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
+          <div class="c-unchan__mouth">
+            <div class="c-unchan__mouth__inner">
+              <div></div>
             </div>
           </div>
         </div>
-      </a>
+      </div>
+    </a>
 
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script>
-      <script
-        type="text/javascript"
-        src="./assets/js/lazyload.js"
-        defer
-      ></script>
-      <script
-        type="text/javascript"
-        src="./assets/js/ytplaylist.js"
-        defer
-      ></script>
-      <script
-        type="text/javascript"
-        src="./assets/js/scroll-to-top.js"
-        defer
-      ></script>
-    </div>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script src="./assets/js/jquery-3.4.1.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"
+      defer
+    ></script>
+    <script type="text/javascript" src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/slick/slick.min.js" defer></script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script type="text/javascript" src="./assets/js/lazyload.js" defer></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/ytplaylist.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/lucky_rayrio.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/preact_build/bundle.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/console_unchan.js"
+      defer
+    ></script>
   </body>
 </html>

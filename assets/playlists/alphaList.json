@@ -1,0 +1,308 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/qhkg8xNfdftA1sB3ucOcs44aq_U\"",
+  "regionCode": "JP",
+  "pageInfo": {
+    "totalResults": 11,
+    "resultsPerPage": 20
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/nQO1W3PUxnrt82Qm77gR0F43UX8\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "wUhWD-iBgek"
+      },
+      "snippet": {
+        "publishedAt": "2019-09-19T08:00:12.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "【NGシーン】笑顔を早々に取り戻してしまうおめがレイ",
+        "description": "本編はこちら https://www.youtube.com/watch?v=m8-DWSPFzak ▽Twitter おめがレイ @omesis_ray おめがリオ @omesis_rio https://twitter.com/omesis_ray ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wUhWD-iBgek/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wUhWD-iBgek/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wUhWD-iBgek/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/CIYDXVq33ZFOnC05ILdDLX86lnc\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Mhtv43x_vgY"
+      },
+      "snippet": {
+        "publishedAt": "2019-08-12T11:30:00.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "【バーチャル双子Youtuber】はじめまして！あるふぁブラザーズです！【自己紹介】",
+        "description": "はじめましてだぜ！ バーチャル双子Youtuberのあるふぁブラザーズだぜ！ よろしくだぜ！ ▽本家「おめがシスターズ」 https://www.youtube.com/channel/UCNjT...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Mhtv43x_vgY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Mhtv43x_vgY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Mhtv43x_vgY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_uM5U-LxXkKk9nTkf0h7aNDfSHQ\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "5tBRUWJQyIo"
+      },
+      "snippet": {
+        "publishedAt": "2019-08-14T08:00:42.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "【大流行】シリトリンゴリラッパに挑戦してみた結果・・・！？",
+        "description": "今日はVチューバーで大人気のシリトリンゴリラッパに挑戦していくぞ！！！ チャンネル登録よろしくな！！ ▽本家「おめがシスターズ」 https://w...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5tBRUWJQyIo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5tBRUWJQyIo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5tBRUWJQyIo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/j7dRADj9AtbHioU9oHzPzFDEAMU\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "n7ii9MybpO8"
+      },
+      "snippet": {
+        "publishedAt": "2019-09-02T10:00:13.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "とある双子Vチューバーの本当にあった怖い話",
+        "description": "百物語で使ってもらった動画+α版です！！！！！ ▽百個怖い話言うまで帰れない放送2019【前半】 https://youtu.be/d53jcJWb4TE ▽Twitter おめがレイ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/n7ii9MybpO8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/n7ii9MybpO8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/n7ii9MybpO8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/naLqygmBoxjzRwBbENd81FGDAs8\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4IS-t66C3Os"
+      },
+      "snippet": {
+        "publishedAt": "2019-08-19T10:00:00.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "あるふぁブラザーズの真実を話します。",
+        "description": "まさかの・・・！？ たくさんのチャンネル登録ありがとうございます！！ まったり更新していくよ～ ▽本家「おめがシスターズ」 https://www.youtub...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4IS-t66C3Os/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4IS-t66C3Os/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4IS-t66C3Os/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/d-Gz7Rx7ts3ykzjeU7ZBAD_xFd0\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "qb7Pn9xOmq0"
+      },
+      "snippet": {
+        "publishedAt": "2019-08-26T10:00:11.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "「あるふぁってる」って何なの？",
+        "description": "あるふぁライ、ロイの2人は「あるふぁってる」の意味を見つけようとするが・・・(編集済) ▽本家「おめがシスターズ」 https://www.youtube.com/channel/...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qb7Pn9xOmq0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qb7Pn9xOmq0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qb7Pn9xOmq0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/93cCwVaVsMiHMWwyONO0_r-F20k\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LBQk0nX1RE4"
+      },
+      "snippet": {
+        "publishedAt": "2019-10-07T09:00:04.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "おめシスと１分しゃべります",
+        "description": "もう少しでイベントだ！！！！シミュレーションしてみたからみんなも参考にしてね！！！ ▽11日からのバーチャルスクランブルはこちらをチェ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LBQk0nX1RE4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LBQk0nX1RE4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LBQk0nX1RE4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/e96hjWkXuZ7zjXoLuXgKUkeRU7E\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Rsdqa3DrRGI"
+      },
+      "snippet": {
+        "publishedAt": "2019-09-08T10:00:08.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "【作業用BGM】マリカ逆走対決動画のレース部分ノーカット",
+        "description": "元動画はこちら！ https://youtu.be/x7wA0DHvXos レース部分のノーカット動画です！のんびり見てください。 ▽Twitter おめがレイ @omesis_ray おめがリオ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rsdqa3DrRGI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rsdqa3DrRGI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rsdqa3DrRGI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/1buaXJkPnspXCmhb_vRk81SLWS8\"",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "VEE03it_-EE"
+      },
+      "snippet": {
+        "publishedAt": "2019-12-03T10:13:02.000Z",
+        "channelId": "UCDiCNS939uq5E4-5CJ-EAZQ",
+        "title": "【VR180】おめシスが3Dに見える！？顔だけサッカー！！！",
+        "description": "YouTubeVRアプリとかで見ると、あの「顔だけサッカー」が立体的に見えるって！！！ ▽Twitter おめがレイ @omesis_ray おめがリオ @omesis_rio https://twit...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VEE03it_-EE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VEE03it_-EE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VEE03it_-EE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "あるふぁブラザーズ",
+        "liveBroadcastContent": "none"
+      }
+    }
+  ]
+}

@@ -46,3 +46,13 @@
     min-height: auto;
   }
 }
+
+.c-omega {
+  margin-top: 200px;
+  font-size: 0.1rem;
+  animation: omega-noise 4s linear infinite 2s;
+}
+
+.c-omega .c-omega__link {
+  text-decoration: none;
+}

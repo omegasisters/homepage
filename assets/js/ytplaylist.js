@@ -1,35 +1,55 @@
 const loadPlayList = (id, dom) => {
   fetch(`./assets/playlists/${id}.json`)
-  .then(response => response.json())
-  .then(json => {
-    json.items.reverse();
+    .then((response) => response.json())
+    .then((MoviesData) => {
+      MoviesData.items.reverse();
 
-    json.items.forEach(item => {
-      const link = document.createElement('a');
-      link.href = `https://youtu.be/${item.snippet.resourceId.videoId}`;
-      link.className = 'video-link';
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.title = item.snippet.title;
+      MoviesData.items.forEach((MovieData) => {
+        const link = document.createElement('a');
 
-      const image = document.createElement('img');
-      image.src = item.snippet.thumbnails.default.url;
-      image.dataset.src = item.snippet.thumbnails.high.url;
-      image.className = 'lazy';
+        if ('resourceId' in MovieData.snippet) {
+          link.href = `https://youtu.be/${MovieData.snippet.resourceId.videoId}`;
+        } else {
+          link.href = `https://youtu.be/${MovieData.id.videoId}`;
+        }
+        link.className = 'video-link';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.title = MovieData.snippet.title;
 
-      const span = document.createElement('span');
-      span.textContent = item.snippet.title
-      span.className = 'video-title'
+        const image = document.createElement('img');
+        image.src = MovieData.snippet.thumbnails.default.url;
+        image.dataset.src = MovieData.snippet.thumbnails.high.url;
+        image.className = 'lazy';
 
-      link.appendChild(image);
-      link.appendChild(span);
+        const span = document.createElement('span');
+        span.textContent = MovieData.snippet.title;
+        span.className = 'video-title';
 
-      dom.appendChild(link);
+        link.appendChild(image);
+        link.appendChild(span);
+
+        dom.appendChild(link);
+      });
+
+      $('.' + dom.className).slick({
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: true,
+        slidesToShow: 3,
+      });
+
+      lazyLoad();
     });
-
-    lazyLoad();
-  });
 };
 
 // https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
-loadPlayList('PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja', document.getElementById('beginner-playlist'));
+if (!document.URL.match('alpha')) {
+  loadPlayList(
+    'PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja',
+    document.getElementById('beginner-playlist'),
+  );
+} else {
+  // https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ/videos
+  loadPlayList('alphaList', document.getElementById('beginner-playlist'));
+}
