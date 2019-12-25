@@ -143,22 +143,11 @@
                 <article class="pt-10 pb-10">
                   <v-col cols="12">
 
-                    <!-- youtube links -->
-                    <v-row align="center" justify="center">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/jis7E_mbwPw"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                      ></iframe>
-                    </v-row>
-
-                    <!-- album description -->
                     <v-row align="center" justify="center">
                       <v-col cols="12" align="center" justify="center">
                         <v-card color="pink" dark style="max-width: 700px">
+
+                          <!-- album description -->
                           <v-row
                             align="center"
                             justify="center"
@@ -196,9 +185,38 @@
                               </v-card-text>
                             </div>
                           </v-row>
+
+                          <!-- youtube links -->
+                          <v-row class="pt-10 pb-10" cols="12" align="center" justify="center">
+                            <iframe
+                              width="560"
+                              height="315"
+                              src="https://www.youtube.com/embed/jis7E_mbwPw"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
+                          </v-row>
+
                         </v-card>
                       </v-col>
+
                     </v-row>
+
+                    <!-- album lyrics -->
+                    <v-row align="center" justify="center">
+                      <v-col cols="12" align="center" justify="center">
+                        <v-expansion-panels style="z-index: 0;">
+                          <v-expansion-panel style="max-width: 700px; background-color: #3f51b5;">
+                            <v-expansion-panel-header class="headline font-weight-bold">Lyrics</v-expansion-panel-header>
+                            <v-expansion-panel-content v-for="line of album.lyrics" class="caption font-weight-bold">
+                              <p style="padding: 0 0 0 0;">{{ line }}</p>
+                            </v-expansion-panel-content>
+                          </v-expansion-panel>
+                        </v-expansion-panels>
+                      </v-col>
+                    </v-row>
+
                   </v-col>
                 </article>
               </section>
@@ -264,7 +282,38 @@
                 '作詞: TEEDA(BACK-ON)',
                 '作曲: KENJI03(BACK-ON)',
                 'レーベル: upd8 music',
-              ]
+              ],
+              lyrics: [
+                '願いが今、重なり合う',
+                '二つの夢が　一つにシンクロする',
+                '',
+                'きっと青い空でも、赤く染まる夕陽も昨日と同じ、明日も同じ歌ってるんだろう',
+                'カードの表と裏背中合わせ　二つの　emotions　',
+                '繋いでもっと　刺激が欲しいから',
+                '',
+                'If you lost on the way　そうずっと隣で',
+                'No worries my baby uh　不安なんて言わないで',
+                '',
+                'キミがいるから、僕がいるから、叶えたい夢へとまた進めた',
+                '一つを二つに分け合えたから、弱い僕でも強くいられるんだ',
+                '',
+                '眩しくて鮮やかな、憧れ続けた場所',
+                'あれから僕ら、どれくらい近づけたんだろう？',
+                '二つの鼓動合わせて、夢を奏で、リアルなmotion',
+                '世界にもっと　笑って欲しいから',
+                '',
+                'A to Z　越え　Omega　 見出すこの願い',
+                '人差し指でPlayback  邪魔すんなら Stay back!',
+                '',
+                '伝えたくて、歌いたくて、奏でたい未来へ歩き出せた',
+                '新しい僕やキミに出逢いたいから',
+                '弱い僕でも強くいられるんだ',
+                '',
+                '『諦めたら、楽なのに。。。』と、弱い僕が隣で邪魔するけど',
+                '',
+                'キミがいるから、僕がいるから、叶えたい夢へとまた進めた',
+                '一つを二つに分け合えたから、弱い僕でも強くいられるんだ',
+              ],
             },
           };
         },
