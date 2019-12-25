@@ -1,3 +1,5 @@
+[English](README.en.md) | [日本語](README.md) | [简体中文](README.zh_hans.md) |
+
 ＃创建“ Omesys 主页”！
 
 https://omegasisters.github.io/homepage
