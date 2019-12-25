@@ -68,11 +68,23 @@
     </style>
   </head>
   <body>
+
+    <!-- contents -->
+    <!-- for developpers 
+      This page powered by Vue and Vuetify.
+
+      ---
+      Documents:
+        [Vue](https://vuejs.org)
+        [Vuetify](https://vuetifyjs.com)
+    -->
     <div id="app">
       <v-app dark>
         <v-content>
           <v-container class="cover" fluid>
             <v-sheet class="overflow-hidden" style="position: relative;">
+
+              <!-- menubar -->
               <v-app-bar
                 absolute
                 src="https://i.gyazo.com/e44d8c1493ac0afa19946fd5b447fc6a.jpg"
@@ -89,6 +101,7 @@
                 ></v-app-bar-nav-icon>
               </v-app-bar>
 
+              <!-- sidebar (defualt: hidden) -->
               <v-navigation-drawer v-model="drawer" absolute temporary>
                 <v-list dense>
                   <v-list-item
@@ -104,7 +117,10 @@
                 </v-list>
               </v-navigation-drawer>
 
+              <!-- main contents -->
               <section style="min-height: 150vh;">
+
+                <!-- first view -->
                 <article id="parallax" class="elevation-3">
                   <v-parallax
                     dark
@@ -123,8 +139,11 @@
                   </v-parallax>
                 </article>
 
+                <!-- description -->
                 <article class="pt-10 pb-10">
                   <v-col cols="12">
+
+                    <!-- youtube links -->
                     <v-row align="center" justify="center">
                       <iframe
                         width="560"
@@ -136,6 +155,7 @@
                       ></iframe>
                     </v-row>
 
+                    <!-- album description -->
                     <v-row align="center" justify="center">
                       <v-col cols="12" align="center" justify="center">
                         <v-card color="pink" dark style="max-width: 700px">
@@ -187,6 +207,7 @@
         </v-content>
       </v-app>
 
+      <!-- un-chan scroll -->>
       <a href="#top">
         <div class="c-unchan c-unchan--fixedBottom">
           <div class="fukidashi" ontouchstart="">トップに戻る</div>
@@ -216,7 +237,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script >
+
+    <!-- data structure -->
+    <script>
       new Vue({
         el: '#app',
         vuetify: new Vuetify({
