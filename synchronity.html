@@ -54,9 +54,7 @@
       }
     </script>
 
-    <title>
-      SYNCHRONITY
-    </title>
+    <title>SYNCHRONITY</title>
     <style type="text/css">
       .cover {
         margin: 0 0 0 0;
@@ -94,13 +92,13 @@
               <v-navigation-drawer v-model="drawer" absolute temporary>
                 <v-list dense>
                   <v-list-item
-                    v-for="item in items"
+                    v-for="item in list_items"
                     :key="item.title"
                     link
                     :href="item.url"
                   >
                     <v-list-content>
-                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                      <v-list-item-title> {{ item.title }} </v-list-item-title>
                     </v-list-content>
                   </v-list-item>
                 </v-list>
@@ -115,9 +113,7 @@
                   >
                     <v-row align="center" justify="center">
                       <v-col class="text-center" cols="12">
-                        <h1 class="display-1 font-weight-bold mb-4">
-                          SYNCHRONITY
-                        </h1>
+                        <h1 class="display-1 font-weight-bold mb-4">{{ album.title_en }}</h1>
                         <h4 class="subheading font-weight-thin">
                           <span class="pink--text">Omega</span>
                           <span class="indigo--text">Sisters</span>
@@ -170,14 +166,12 @@
                             </div>
 
                             <div>
-                              <v-card-title class="headline font-weight-bold">シンクロニティ</v-card-title>
-                              <v-card-subtitle>おめがシスターズ</v-card-subtitle>
+                              <v-card-title class="headline font-weight-bold">{{ album.title }}</v-card-title>
+                              <v-card-subtitle>{{ album.artist }}</v-card-subtitle>
 
                               <v-card-text class="mt-5">
-                                <div class="body-1 font-weight-bold">
-                                  <p>作詞: TEEDA(BACK-ON)</p>
-                                  <p>作曲: KENJI03(BACK-ON)</p>
-                                  <p>レーベル: upd8 music</p>
+                                <div v-for="line of album.description" class="body-1 font-weight-bold">
+                                  <p>{{ line }}</p>
                                 </div>
                               </v-card-text>
                             </div>
@@ -219,7 +213,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script>
+    <script >
       new Vue({
         el: '#app',
         vuetify: new Vuetify({
@@ -235,7 +229,17 @@
         data() {
           return {
             drawer: null,
-            items: [{title: 'Home', url: '/'}],
+            list_items: [{title: 'Home', url: '/'}],
+            album: {
+              title: 'シンクロニティ',
+              title_en: 'SYNCHRONITY',
+              artist: 'おめがシスターズ',
+              description: [
+                '作詞: TEEDA(BACK-ON)',
+                '作曲: KENJI03(BACK-ON)',
+                'レーベル: upd8 music',
+              ]
+            },
           };
         },
       });
