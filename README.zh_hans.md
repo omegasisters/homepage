@@ -20,7 +20,7 @@ https://omegasisters.github.io/homepage
 
 这就像一个普通的论坛留言板。您在里面的留言有可能会实现。
 
-要创建新Issue，请先 [创建 GitHub 帐户]（https://github.com/join?source_repo=omegasisters%2Fhomepage）再 [创建Issue]（https://github.com/omegasisters/homepage/issues/new）。
+要创建新Issue，请先[创建 GitHub 帐户]（https://github.com/join?source_repo=omegasisters%2Fhomepage） 再[创建Issue]（https://github.com/omegasisters/homepage/issues/new）。
 
 # 提示
 
