@@ -39,6 +39,7 @@ header.drawer-navbar .drawer-navbar-header {
 header.drawer-navbar {
   background-color: transparent;
   border-bottom: none;
+  transition: 200ms ease;
 }
 
 header nav.drawer-nav {
@@ -47,15 +48,13 @@ header nav.drawer-nav {
 
 header.scrolled {
   background: rgba(0, 0, 0, 0.5);
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px #00000050;
 }
 
 @media screen and (max-width: 64em) {
   header.scrolled {
     background-color: transparent;
+    box-shadow: none;
   }
 
   header .menu-icon {
