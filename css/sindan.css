@@ -31,7 +31,7 @@
 
 .hero__container_for_sindan {
   width: 100%;
-  height: 70%;
+  height: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@
 }
 
 .hero__logo_for_sindan {
-  margin-top: -40vh;
+  margin-top: 0vh;
 }
 
 .hero__logo_for_sindan_result {
@@ -57,14 +57,26 @@
 .question-logo {
   margin: 0;
   padding: 0;
+  text-align:left;
   font-size: 80px;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
 }
 
+.question-text {
+  max-width: 800px;
+  text-align: left;
+  margin-top: 2.5em;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 6px;
+  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+}
+
 .controle-box {
   width: 100%;
-  height: 30%;
+  height: 35%;
+  padding-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
