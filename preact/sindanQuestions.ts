@@ -37,6 +37,4 @@ const data = {
   ]
 }
 
-//const data :string= "1";
-
 export default data;
