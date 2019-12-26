@@ -2,9 +2,13 @@ import {h, render} from 'preact';
 
 import App from './App';
 import MusicPlayer from './Music';
+import SindanApp from "./SindanApp";
 
 const appMount = document.querySelector('#preact');
 if (appMount) render(<App />, appMount);
+
+const sindanMount = document.querySelector("#sindan");
+if (sindanMount) render(<SindanApp />, sindanMount);
 
 const musicMount = document.querySelector('#preact-music');
 if (musicMount)
