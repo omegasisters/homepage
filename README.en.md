@@ -1,43 +1,46 @@
 [English](README.en.md) | [日本語](README.md) | [简体中文](README.zh_hans.md) |
 
-# Let's make "Omesis Homepage"!
+# Let's make "OmegaSisters(Omesis) Homepage"!
 
 https://omegasisters.github.io/homepage
 
-What happens if I update the homepage of the 1st Omeshisu with only Pulllik? Planning
+What happens if I update the homepage of OmegaSisters(Omesis) for the first time with only pull request? In planning
 
-I'm waiting for Pullik! ! ! !
+I'm waiting for your pull requests! ! ! !
 
-## For those who do not know what this is
+## For those who do not know what this project is
 
 ### What is your current homepage like?
 
-Click [here](https://omegasisters.github.io/homepage) to see the status of the Omesys website
+Click [here](https://omegasisters.github.io/homepage) to see the current status of the OmegaSisters(Omesis) website
 
-### I want to do this here, oh. But I don't understand the program
+### I have ideas and want to do this here, but I don't know to program
 
-[In the **Issues** menu on the top menu](https://github.com/omegasisters/homepage/issues), you can write what you want to do, what you want to change, and what you want to do again (because something is strange).
+[In the **Issues** button on the top menu](https://github.com/omegasisters/homepage/issues), you can write what you want to do, what you want to change, and what you want to do again (because something is strange).
 
-It's like a typical threaded bulletin board.
-If you write something, it may be implemented. May not be.
+It's like a typical threaded message board.
+Noted if you write something, it may be implemented or may not be.
 
-To create a new one, [create a GitHub account](https://github.com/join?source_repo=omegasisters%2Fhomepage) and [create an Issue](https://github.com/omegasisters/homepage/issues/new).
+To create a new issue, [create a GitHub account](https://github.com/join?source_repo=omegasisters%2Fhomepage) and [create an Issue](https://github.com/omegasisters/homepage/issues/new).
 
 # Tips
 
 ## Local preview
 
-If you want to preview in full, including the VRM model, try the following.
-You can develop it as it was published on GitHub Pages.
+If you want to preview in full pages including the VRM model, try the following.
+
+You can develop it based on the original version published on GitHub Pages.
+
 If you are connected to the same local network, you can check it from other terminals with the host's [IP address]: [port number] (example: http://192.168.1.2:8000).
 
-**Moved description**
+**More description**
+
 Please see [documents/environment](documents/environment).
 
 ## Code formatting (Node.js environment required)
 
 ```
-For yarn format # yarn
+yarn format # For yarn
 npm run format # For npm
 ```
 
@@ -46,16 +49,16 @@ npm run format # For npm
 When previewing, enter one of the following commands:
 
 ```
-yarn start # for yarn
-npm run start # npm
+yarn start # For yarn
+npm run start # For npm
 ```
 
 Hosted at http://localhost: 8080
 
-When editing the source code, build before git push:
+When editing the source code, build before doing a 'git push':
 
 ```
-For yarn build # yarn
+yarn build # For yarn
 npm run build # For npm
 ```
 
@@ -64,7 +67,7 @@ npm run build # For npm
 You can test with the following command.
 
 ```
-For yarn test # yarn
+yarn test # For yarn
 npm run test # For npm
 ```
 
