@@ -48,7 +48,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { Component, h } from "/homepage/web_modules/preact.js";
-import sindanQuestions from "./sindanQuestions.js";
+//@ts-ignore
+import sindanQuestions from "../config/sindanQuestions.js";
 var SindanApp = /** @class */ (function (_super) {
     __extends(SindanApp, _super);
     function SindanApp() {

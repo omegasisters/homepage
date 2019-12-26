@@ -1,5 +1,6 @@
 import { Component, h } from "/homepage/web_modules/preact.js";
-import sindanQuestions from "./sindanQuestions.js";
+//@ts-ignore
+import sindanQuestions from "../config/sindanQuestions.js";
 
 interface State {
 	started:boolean;

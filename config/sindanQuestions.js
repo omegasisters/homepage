@@ -1,4 +1,4 @@
-const data = {
+var data = {
   questions:[
     {
       text:"何色が好きですか？",
@@ -87,5 +87,25 @@ const data = {
     }
   ]
 }
+
+/* 追加質問例
+  {
+    text:"ここに質問文を書く",
+    answers:[
+      //ここから下が回答の選択肢
+      {
+        text:"選択肢1に入る文章",
+        target:"誰のポイントに影響するか(rayまたはrioまたはunchan)",
+        value:この回答でtargetに何ポイント入るか
+      },
+      {
+        text:"うんち",
+        target:"rio",
+        value:1
+      },
+      ・・・
+    ]
+  }
+*/
 
 export default data;
