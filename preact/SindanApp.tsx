@@ -69,12 +69,13 @@ export default class SindanApp extends Component {
 				}
 			}
 			console.log("Result is "+maxPointTarget)
-			if (maxPointTarget==="ray"){
-				window.location.href = "./pages/sindan_ray.html";
-			} else if (maxPointTarget==="rio"){
-				window.location.href = "./pages/sindan_rio.html";
-			} else if (maxPointTarget==="unchan"){
-				window.location.href = "./pages/sindan_unchan.html";
+			try{
+				const resultPage = sindanQuestions["resultPages"][maxPointTarget]
+				if (resultPage){
+					window.location.href = "./pages/"+resultPage
+				}
+			} catch(e){
+				console.error(`can not find result page ${e}`)
 			}
 		}
 	}

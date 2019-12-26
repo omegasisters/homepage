@@ -85,7 +85,12 @@ var data = {
         }
       ]
     }
-  ]
+  ],
+  resultPages:{
+    ray:"sindan_ray.html",
+    rio:"sindan_rio.html",
+    unchan:"sindan_unchan.html"
+  }
 }
 
 /* 追加質問例

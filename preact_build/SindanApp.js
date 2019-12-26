@@ -94,7 +94,7 @@ var SindanApp = /** @class */ (function (_super) {
             });
         }); };
         _this.readNext = function () { return __awaiter(_this, void 0, void 0, function () {
-            var question, e_2, maxPointTarget, maxPoint, target, point;
+            var question, e_2, maxPointTarget, maxPoint, target, point, resultPage;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -132,14 +132,14 @@ var SindanApp = /** @class */ (function (_super) {
                             }
                         }
                         console.log("Result is " + maxPointTarget);
-                        if (maxPointTarget === "ray") {
-                            window.location.href = "./pages/sindan_ray.html";
+                        try {
+                            resultPage = sindanQuestions["resultPages"][maxPointTarget];
+                            if (resultPage) {
+                                window.location.href = "./pages/" + resultPage;
+                            }
                         }
-                        else if (maxPointTarget === "rio") {
-                            window.location.href = "./pages/sindan_rio.html";
-                        }
-                        else if (maxPointTarget === "unchan") {
-                            window.location.href = "./pages/sindan_unchan.html";
+                        catch (e) {
+                            console.error("can not find result page " + e);
                         }
                         _a.label = 6;
                     case 6: return [2 /*return*/];
