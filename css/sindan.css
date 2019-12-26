@@ -9,9 +9,14 @@
 	display: inline-block;
 }
 
+.preact__container_for_sindan {
+	width: 100%;
+	height: 100%;
+}
+
 .hero__container_for_sindan {
 	width: 100%;
-	height: 80%;
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,4 +25,9 @@
 .controle-box {
 	display: flex;
 	justify-content: center;
+}
+
+#sindan {
+	width: 100%;
+	height: 80%;
 }
