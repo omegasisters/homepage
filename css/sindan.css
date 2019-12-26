@@ -3,9 +3,10 @@
 	border-radius: 24px;
 	box-shadow: 0 0 8px #00000050;
 	padding: 10px 50px;
-	width: 200px;
+	width: 300px;
 	margin-top: 10px;
 	text-decoration: none;
+	text-align: center;
 	transition: box-shadow 0.25s;
 	display: inline-block;
 }
