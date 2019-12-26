@@ -42,8 +42,6 @@ export default class SindanApp extends Component {
 	}
 
 	readNext = async ()=>{
-		console.log(this.state.questions)
-				console.log(this.state.questionsCount)
 		if (this.state.questionID+1 < this.state.questionsCount) {
 			try {
 				await this.setState({questionID:this.state.questionID+1})
@@ -55,17 +53,41 @@ export default class SindanApp extends Component {
 				this.setState({questionID:-1})
 				alert(`設定ファイルに問題があります。 ${e}`)
 			}
+		} else {
+			let maxPointTarget = ""
+			let maxPoint = 0
+			for (let target in this.state.pointsMap){
+				try{
+					const point = this.state.pointsMap[target]
+					if (point>=maxPoint){
+						maxPoint = point
+						maxPointTarget = target
+					}
+				} catch(e){
+					console.error(`pointsMap is broken ${e}`)
+				}
+			}
+			console.log("Result is "+maxPointTarget)
+			if (maxPointTarget==="ray"){
+				window.location.href = "./pages/sindan_ray.html";
+			} else if (maxPointTarget==="rio"){
+				window.location.href = "./pages/sindan_rio.html";
+			} else if (maxPointTarget==="unchan"){
+				window.location.href = "./pages/sindan_unchan.html";
+			}
 		}
 	}
 
-	answer = (answer: any)=>{
+	answer = async (answer: any)=>{
 		try {
 			const target = answer["target"]
+			let newPointsMap = this.state.pointsMap
 			let point = this.state.pointsMap[target]
 			if (point == undefined){
 				point = 0
 			}
-			this.setState({pointsMap: (point + answer["value"])})
+			newPointsMap[target] = point + answer["value"]
+			await this.setState({pointsMap: newPointsMap})
 			this.readNext()
 		} catch(e) {
 				this.setState({started:false})

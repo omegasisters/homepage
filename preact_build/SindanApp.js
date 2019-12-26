@@ -93,13 +93,11 @@ var SindanApp = /** @class */ (function (_super) {
             });
         }); };
         _this.readNext = function () { return __awaiter(_this, void 0, void 0, function () {
-            var question, e_2;
+            var question, e_2, maxPointTarget, maxPoint, target, point;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        console.log(this.state.questions);
-                        console.log(this.state.questionsCount);
-                        if (!(this.state.questionID + 1 < this.state.questionsCount)) return [3 /*break*/, 4];
+                        if (!(this.state.questionID + 1 < this.state.questionsCount)) return [3 /*break*/, 5];
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
@@ -116,26 +114,66 @@ var SindanApp = /** @class */ (function (_super) {
                         this.setState({ questionID: -1 });
                         alert("\u8A2D\u5B9A\u30D5\u30A1\u30A4\u30EB\u306B\u554F\u984C\u304C\u3042\u308A\u307E\u3059\u3002 " + e_2);
                         return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
+                    case 4: return [3 /*break*/, 6];
+                    case 5:
+                        maxPointTarget = "";
+                        maxPoint = 0;
+                        for (target in this.state.pointsMap) {
+                            try {
+                                point = this.state.pointsMap[target];
+                                if (point >= maxPoint) {
+                                    maxPoint = point;
+                                    maxPointTarget = target;
+                                }
+                            }
+                            catch (e) {
+                                console.error("pointsMap is broken " + e);
+                            }
+                        }
+                        console.log(this.state.pointsMap);
+                        console.log("Result is " + maxPointTarget);
+                        if (maxPointTarget === "ray") {
+                            window.location.href = "./pages/sindan_ray.html";
+                        }
+                        else if (maxPointTarget === "rio") {
+                            window.location.href = "./pages/sindan_rio.html";
+                        }
+                        else if (maxPointTarget === "unchan") {
+                            window.location.href = "./pages/sindan_unchan.html";
+                        }
+                        _a.label = 6;
+                    case 6: return [2 /*return*/];
                 }
             });
         }); };
-        _this.answer = function (answer) {
-            try {
-                var target = answer["target"];
-                var point = _this.state.pointsMap[target];
-                if (point == undefined) {
-                    point = 0;
+        _this.answer = function (answer) { return __awaiter(_this, void 0, void 0, function () {
+            var target, newPointsMap, point, e_3;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        target = answer["target"];
+                        newPointsMap = this.state.pointsMap;
+                        point = this.state.pointsMap[target];
+                        if (point == undefined) {
+                            point = 0;
+                        }
+                        newPointsMap[target] = point + answer["value"];
+                        return [4 /*yield*/, this.setState({ pointsMap: newPointsMap })];
+                    case 1:
+                        _a.sent();
+                        this.readNext();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        e_3 = _a.sent();
+                        this.setState({ started: false });
+                        this.setState({ questionId: -1 });
+                        alert("\u8A2D\u5B9A\u30D5\u30A1\u30A4\u30EB\u306B\u554F\u984C\u304C\u3042\u308A\u307E\u3059\u3002 " + e_3);
+                        return [3 /*break*/, 3];
+                    case 3: return [2 /*return*/];
                 }
-                _this.setState({ pointsMap: (point + answer["value"]) });
-                _this.readNext();
-            }
-            catch (e) {
-                _this.setState({ started: false });
-                _this.setState({ questionId: -1 });
-                alert("\u8A2D\u5B9A\u30D5\u30A1\u30A4\u30EB\u306B\u554F\u984C\u304C\u3042\u308A\u307E\u3059\u3002 " + e);
-            }
-        };
+            });
+        }); };
         return _this;
     }
     SindanApp.prototype.render = function () {
