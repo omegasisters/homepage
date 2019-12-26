@@ -27,7 +27,7 @@ To create a new issue, [create a GitHub account](https://github.com/join?source_
 
 ## Local preview
 
-If you want to preview in full, including the VRM model, try the following.
+If you want to preview in full pages including the VRM model, try the following.
 You can develop it based on the original version published on GitHub Pages.
 If you are connected to the same local network, you can check it from other terminals with the host's [IP address]: [port number] (example: http://192.168.1.2:8000).
 
