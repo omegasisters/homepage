@@ -1,5 +1,17 @@
+'use strict';
+exports.__esModule = true;
 var rxjs_1 = require('rxjs');
 var operators_1 = require('rxjs/operators');
+/* unchan_loop
+
+Usage:
+  `$ node unchan_loop.js`
+
+Option:
+  `arg1(number): Number of times to stop unun-loops.`
+  ex. `node unchan_loop.js 3`
+
+*/
 var unchanStream = [
   [
     '                                                  ',
@@ -870,7 +882,7 @@ var unchanStream = [
     '                                                  ',
   ],
 ];
-var UNUN_COUNT = parseInt(process.argv[1]);
+var UNUN_COUNT = process.argv[2] === undefined ? 2 : parseInt(process.argv[2]);
 var UNCHAN_MOVE_WIDTH = 20;
 rxjs_1
   .from(unchanStream)

@@ -1,5 +1,6 @@
 import {from, timer} from 'rxjs';
 import {concatMap, map, repeat, scan} from 'rxjs/operators';
+import {existsTypeAnnotation} from '@babel/types';
 
 /* unchan_loop
 
@@ -883,7 +884,8 @@ const unchanStream: string[][] = [
   ],
 ];
 
-const UNUN_COUNT: number = parseInt(process.argv[1]);
+const UNUN_COUNT: number =
+  process.argv[2] === undefined ? 2 : parseInt(process.argv[2]);
 const UNCHAN_MOVE_WIDTH: number = 20;
 
 from(unchanStream)
