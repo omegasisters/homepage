@@ -124,17 +124,42 @@
                     src="https://i.gyazo.com/e44d8c1493ac0afa19946fd5b447fc6a.jpg"
                     style="height: 100vh;"
                   >
-                    <v-row align="center" justify="center">
-                      <v-col class="text-center" cols="12">
-                        <h1 class="display-1 font-weight-bold mb-4">
-                          {{ album.title_en }}
-                        </h1>
-                        <h4 class="subheading font-weight-thin">
-                          <span class="pink--text">Omega</span>
-                          <span class="indigo--text">Sisters</span>
-                        </h4>
+                    <v-container fluid fill-height>
+                      <v-col cols="12">
+                        <v-row
+                          align="center"
+                          align-content="center"
+                          justify="center"
+                        >
+                          <v-card
+                            color="rgba(0, 0, 0, 0.1)"
+                            style="width: 300px; height: 300px;"
+                          >
+                            <v-container fluid fill-height>
+                              <v-col cols="12">
+                                <v-row
+                                  align="center"
+                                  align-content="center"
+                                  justify="center"
+                                >
+                                  <h1
+                                    class="display-1 font-weight-bold mb-4 text-center"
+                                  >
+                                    {{ album.title_en }}
+                                  </h1>
+                                  <h4
+                                    class="subheading font-weight-light text-center"
+                                  >
+                                    <span class="pink--text">Omega</span>
+                                    <span class="indigo--text">Sisters</span>
+                                  </h4>
+                                </v-row>
+                              </v-col>
+                            </v-container>
+                          </v-card>
+                        </v-row>
                       </v-col>
-                    </v-row>
+                    </v-container>
                   </v-parallax>
                 </article>
 
