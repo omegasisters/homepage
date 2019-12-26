@@ -141,10 +141,10 @@
                 <!-- description -->
                 <article class="pt-10 pb-10">
                   <v-col cols="12">
+                    <!-- album description -->
                     <v-row align="center" justify="center">
                       <v-col cols="12" align="center" justify="center">
                         <v-card color="pink" dark style="max-width: 700px">
-                          <!-- album description -->
                           <v-row
                             align="center"
                             justify="center"
@@ -189,8 +189,14 @@
                               </v-card-text>
                             </div>
                           </v-row>
+                        </v-card>
+                      </v-col>
+                    </v-row>
 
-                          <!-- youtube links -->
+                    <!-- youtube -->
+                    <v-row align="center" justify="center">
+                      <v-col cols="12" align="center" justify="center">
+                        <v-card color="indigo" dark style="max-width: 700px">
                           <v-row
                             class="pt-10 pb-10"
                             cols="12"
@@ -206,29 +212,31 @@
                               allowfullscreen
                             ></iframe>
                           </v-row>
-                        </v-card>
-                      </v-col>
-                    </v-row>
 
-                    <!-- album lyrics -->
-                    <v-row align="center" justify="center">
-                      <v-col cols="12" align="center" justify="center">
-                        <v-expansion-panels style="z-index: 0;">
-                          <v-expansion-panel
-                            style="max-width: 700px; background-color: #3f51b5;"
-                          >
-                            <v-expansion-panel-header
-                              class="headline font-weight-bold"
-                              >Lyrics</v-expansion-panel-header
+                          <v-card-actions>
+                            <v-btn icon @click="showLyrics = !showLyrics">
+                              <v-icon
+                                >{{ showLyrics ? 'mdi-chevron-up' :
+                                'mdi-chevron-down'}}</v-icon
+                              >
+                            </v-btn>
+                            <span class="body-1"
+                              >{{ showLyrics ? '' : 'SHOW LYRICS' }}</span
                             >
-                            <v-expansion-panel-content
-                              v-for="line of album.lyrics"
-                              class="caption font-weight-bold"
-                            >
-                              <p style="padding: 0 0 0 0;">{{ line }}</p>
-                            </v-expansion-panel-content>
-                          </v-expansion-panel>
-                        </v-expansion-panels>
+                          </v-card-actions>
+
+                          <v-expand-transition>
+                            <div v-show="showLyrics">
+                              <v-divider></v-divider>
+                              <v-card-text
+                                v-for="line of album.lyrics"
+                                class="caption font-weight-bold"
+                              >
+                                {{ line }}
+                              </v-card-text>
+                            </div>
+                          </v-expand-transition>
+                        </v-card>
                       </v-col>
                     </v-row>
                   </v-col>
@@ -237,35 +245,36 @@
             </v-sheet>
           </v-container>
         </v-content>
-      </v-app>
 
-      <!-- un-chan scroll -->>
-      <a href="#top">
-        <div class="c-unchan c-unchan--fixedBottom">
-          <div class="fukidashi" ontouchstart="">トップに戻る</div>
-          <div class="c-unchan__inner">
-            <div class="c-unchan__tsuno">
-              <div class="c-unchan__tsuno__inner"></div>
-            </div>
-            <div class="c-unchan__toguro c-unchan__toguro--top"></div>
-            <div class="c-unchan__toguro c-unchan__toguro--middle">
-              <div class="c-unchan__eye c-unchan__eye--left">
-                <div></div>
+        <!-- un-chan scroll -->
+        <a href="#top">
+          <div class="c-unchan c-unchan--fixedBottom">
+            <div class="fukidashi" ontouchstart="">トップに戻る</div>
+            <div class="c-unchan__inner">
+              <div class="c-unchan__tsuno">
+                <div class="c-unchan__tsuno__inner"></div>
               </div>
-              <div class="c-unchan__eye c-unchan__eye--right">
-                <div></div>
+              <div class="c-unchan__toguro c-unchan__toguro--top"></div>
+              <div class="c-unchan__toguro c-unchan__toguro--middle">
+                <div class="c-unchan__eye c-unchan__eye--left">
+                  <div></div>
+                </div>
+                <div class="c-unchan__eye c-unchan__eye--right">
+                  <div></div>
+                </div>
               </div>
-            </div>
-            <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
-            <div class="c-unchan__mouth">
-              <div class="c-unchan__mouth__inner">
-                <div></div>
+              <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
+              <div class="c-unchan__mouth">
+                <div class="c-unchan__mouth__inner">
+                  <div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </v-app>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 
@@ -286,6 +295,7 @@
         data() {
           return {
             drawer: null,
+            showLyrics: false,
             list_items: [{title: 'Home', url: '/homepage'}],
             album: {
               title: 'シンクロニティ',
@@ -326,6 +336,7 @@
                 '',
                 'キミがいるから、僕がいるから、叶えたい夢へとまた進めた',
                 '一つを二つに分け合えたから、弱い僕でも強くいられるんだ',
+                '',
               ],
             },
           };
