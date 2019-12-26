@@ -52,7 +52,7 @@ npm run start # For npm
 
 Hosted at http://localhost: 8080
 
-When editing the source code, build before doning a 'git push':
+When editing the source code, build before doing a 'git push':
 
 ```
 yarn build # For yarn
