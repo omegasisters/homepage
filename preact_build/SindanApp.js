@@ -130,7 +130,6 @@ var SindanApp = /** @class */ (function (_super) {
                                 console.error("pointsMap is broken " + e);
                             }
                         }
-                        console.log(this.state.pointsMap);
                         console.log("Result is " + maxPointTarget);
                         if (maxPointTarget === "ray") {
                             window.location.href = "./pages/sindan_ray.html";
@@ -184,7 +183,7 @@ var SindanApp = /** @class */ (function (_super) {
             h("div", { className: "hero__container_for_sindan" },
                 h("div", { className: "hero__logo_for_sindan" },
                     h("h1", { className: "logo", style: this.state.started ? "display:none" : "" }, "\u304A\u3081\u304C\u8A3A\u65AD"),
-                    h("h1", { className: "logo-sub", style: this.state.started ? "display:none" : "" }, "\u3042\u306A\u305F\u306B\u3074\u3063\u305F\u308A\u306E\u304A\u3081\u304C\u3092\u898B\u3064\u3051\u3088\u3046"),
+                    h("h1", { className: "logo-sub", style: this.state.started ? "display:none" : "" }, "\u3042\u306A\u305F\u306F\u3069\u306E\u304A\u3081\u304C\uFF1F"),
                     h("h1", { className: "question-logo", style: this.state.started ? "" : "display:none" },
                         "Q",
                         this.state.questionID + 1),
