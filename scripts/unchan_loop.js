@@ -1,4 +1,6 @@
-const unchan = [
+var rxjs_1 = require('rxjs');
+var operators_1 = require('rxjs/operators');
+var unchanStream = [
   [
     '                                                  ',
     '                                                  ',
@@ -868,23 +870,35 @@ const unchan = [
     '                                                  ',
   ],
 ];
-
-const {execSync} = require('child_process');
-
-while (true) {
-  unchan.forEach((un, index) => {
-    execSync('clear');
-    var isReverse = un.length / 2 < index % un.length;
-    console.log(
-      un
-        .map(
-          (u) =>
-            ' '.repeat(
-              isReverse ? un.length - (index % un.length) : index % un.length,
-            ) + u,
-        )
-        .join('\n'),
-    );
-    execSync('sleep 0.02');
+var UNUN_COUNT = parseInt(process.argv[1]);
+var UNCHAN_MOVE_WIDTH = 20;
+rxjs_1
+  .from(unchanStream)
+  .pipe(
+    operators_1.concatMap(function(unf) {
+      return rxjs_1.timer(100).pipe(
+        operators_1.map(function(_) {
+          return unf;
+        }),
+      );
+    }),
+    operators_1.repeat(UNUN_COUNT),
+    operators_1.scan(function(_, unf, i) {
+      return unf.map(function(unf) {
+        return (
+          ' '.repeat(
+            i % UNCHAN_MOVE_WIDTH < UNCHAN_MOVE_WIDTH / 2
+              ? i % UNCHAN_MOVE_WIDTH
+              : UNCHAN_MOVE_WIDTH - (i % UNCHAN_MOVE_WIDTH),
+          ) + unf
+        );
+      });
+    }),
+    operators_1.map(function(un) {
+      return un.join('\n');
+    }),
+  )
+  .subscribe(function(unchanFrame) {
+    console.clear();
+    console.log(unchanFrame);
   });
-}
