@@ -1,4 +1,4 @@
-var data = {
+var sindanQuestions = {
   questions:[
     {
       text:"何色が好きですか？",
@@ -113,4 +113,4 @@ var data = {
   }
 */
 
-export default data;
+export default sindanQuestions;
