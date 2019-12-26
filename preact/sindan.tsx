@@ -1,6 +1,6 @@
-import { h, render } from "/homepage/web_modules/preact.js";
+import { h, render } from "preact";
 
-import SindanApp from "./SindanApp.js";
+import SindanApp from "./SindanApp";
 
 const appMount = document.querySelector("#sindan");
 if (appMount) render(<SindanApp />, appMount);

@@ -1,4 +1,4 @@
-import { Component, h } from "/homepage/web_modules/preact.js";
+import { Component, h } from "preact";
 //@ts-ignore
 import sindanQuestions from "../config/sindanQuestions.js";
 
@@ -70,7 +70,8 @@ export default class SindanApp extends Component {
 			}
 			console.log("Result is "+maxPointTarget)
 			try{
-				const resultPage = sindanQuestions["resultPages"][maxPointTarget]
+				const resultPages: {[key:string]:string} = sindanQuestions.resultPages
+				const resultPage = resultPages[maxPointTarget]
 				if (resultPage){
 					window.location.href = "./pages/"+resultPage
 				}
