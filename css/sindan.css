@@ -3,6 +3,7 @@
 	border-radius: 24px;
 	box-shadow: 0 0 8px #00000050;
 	padding: 10px 50px;
+	width: 200px;
 	margin-top: 10px;
 	text-decoration: none;
 	transition: box-shadow 0.25s;
@@ -16,18 +17,34 @@
 
 .hero__container_for_sindan {
 	width: 100%;
-	height: 100%;
+	height: 70%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+.hero__logo_for_sindan {
+	margin-top: -40vh;
+}
+
+.question-logo {
+	margin: 0;
+  padding: 0;
+  font-size: 80px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+}
+
 .controle-box {
+	width: 100%;
+	height: 30%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 #sindan {
 	width: 100%;
-	height: 80%;
+	height: 100%;
 }
