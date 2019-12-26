@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Kosugi Maru', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #06ffd2;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #7995f7, #de7072);
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 2em;
+  }
+}

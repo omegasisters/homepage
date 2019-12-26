@@ -62,22 +62,46 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.0/css/solid.css"
     />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/alpha.css" />
-
-    <!-- slick -->
+    <!-- Drawer -->
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css"
     />
-    <link rel="stylesheet" href="./assets/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/alpha.css" />
 
     <title>
       あるブラのホームページ |
     </title>
   </head>
-  <body>
+  <body class="drawer drawer--top drawer--navbarTopGutter">
+    <header class="drawer-navbar drawer-navbar--fixed" role="banner">
+      <div class="drawer-container">
+        <div class="drawer-navbar-header">
+          <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">メニュー</span>
+            <span class="menu-icon">α</span>
+          </button>
+        </div>
+        <nav class="drawer-nav" role="navigation">
+          <ul id="header_contents" class="drawer-menu drawer-menu--right">
+            <!--      各項目へのジャンプ用ヘッダです。-->
+            <!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
+            <li>
+              <a class="drawer-menu-item" href="#section_description"
+                >あるブラって？</a
+              >
+            </li>
+            <li>
+              <a class="drawer-menu-item" href="#section_movie">おすすめ動画</a>
+            </li>
+            <li><a class="drawer-menu-item" href="#section_link">リンク</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="main">
       <div class="section hero">
         <figure class="hero__bg">
@@ -90,6 +114,7 @@
       </div>
 
       <div class="section introduction">
+        <h2 class="section_title" id="section_description">あるブラって？</h2>
         <div class="box about-us">
           <p>
             兄が青いメッシュのあるふぁロイ、<br />弟が赤いメッシュのあるふぁライ。
@@ -109,7 +134,18 @@
         ></iframe>
         <div class="box playlist">
           <!-- [ToDo]あるブラ向けの文章を変える -->
-          <h2>⭐【初心者向け】<br class="br-sp" />すごい面白い動画</h2>
+          <h2 class="section_title" id="section_movie">
+            ⭐【初心者向け】<br class="br-sp" />すごい面白い動画
+          </h2>
+          <!-- Swiper -->
+          <div class="swiper-container">
+            <div class="videos swiper-wrapper" id="beginner-playlist"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
           <div class="videos" id="beginner-playlist"></div>
           <a
             href="https://www.youtube.com/channel/UCDiCNS939uq5E4-5CJ-EAZQ/videos"
@@ -122,6 +158,7 @@
       </div>
 
       <div class="section links links--alpha">
+        <h2 class="section_title" id="section_link">リンク</h2>
         <div class="box">
           <h2><i class="fab fa-youtube"></i>YouTube</h2>
           <a
@@ -149,6 +186,7 @@
     </div>
 
     <script type="text/javascript" src="./assets/js/lazyload.js" defer></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js" defer></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
@@ -156,14 +194,27 @@
       defer
     ></script>
     <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
       defer
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"
+      defer
+    ></script>
+    <script type="text/javascript" src="./assets/js/navbar.js" defer></script>
     <script
       type="text/javascript"
       src="./assets/js/ytplaylist.js"
       defer
     ></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+    </script>
   </body>
 </html>

@@ -33,11 +33,13 @@ body.drawer--navbarTopGutter {
 header.drawer-navbar .drawer-navbar-header {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: none;
+  padding: 0 1.5rem;
 }
 
 header.drawer-navbar {
   background-color: transparent;
   border-bottom: none;
+  transition: 200ms ease;
 }
 
 header nav.drawer-nav {
@@ -46,15 +48,13 @@ header nav.drawer-nav {
 
 header.scrolled {
   background: rgba(0, 0, 0, 0.5);
-}
-
-header.scrolled {
-  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px #00000050;
 }
 
 @media screen and (max-width: 64em) {
   header.scrolled {
     background-color: transparent;
+    box-shadow: none;
   }
 
   header .menu-icon {
@@ -63,6 +63,9 @@ header.scrolled {
     font-size: 2.5rem;
     display: inline-block;
     transition-duration: 0.5s;
+    padding: 0 10px;
+    border-radius: 0.2em;
+    border: solid 3px rgba(255, 255, 255, 0.2);
   }
 
   header .drawer-hamburger {
@@ -401,6 +404,80 @@ a:hover {
     width: 200px;
     height: 150px;
   }
+  .videos .video-link .video-title {
+    font-size: 0.5rem;
+  }
+}
+.swiper-parent {
+  position: relative;
+}
+
+.swiper-container {
+  width: 100%;
+  padding-bottom: 100px;
+  height: 300px;
+  box-sizing: content-box;
+}
+
+@media screen and (max-width: 700px) {
+  .swiper-container {
+    width: 100%;
+    padding-bottom: 0;
+    height: 300px;
+    box-sizing: content-box;
+  }
+}
+
+.swiper-wrapper .swiper-slide {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 100px;
+}
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #f083ba;
+  opacity: 0.2;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #007aff;
+}
+/*.swiper-button-prev {*/
+/*  color: #f083ba;*/
+/*  background: rgba(255, 255, 255, 50);*/
+
+/*}*/
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none;
+  width: 28px;
+  height: 86px;
+}
+.swiper-button-prev:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f100';
+  font-size: 48px;
+  color: #f083ba;
+  text-shadow: 4px 4px 6px #ffaeae;
+}
+/* 次ページボタンのスタイル */
+.swiper-button-next:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f101';
+  font-size: 48px;
+  color: #007aff;
+  text-shadow: -4px 4px 6px #8f8fff;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
 }
 
 .links {
@@ -569,7 +646,6 @@ a.share-button:hover {
 }
 
 .c-alpha {
-  margin-top: 200px;
   font-size: 0.1rem;
   animation: omega-noise 4s linear infinite 2s;
 }
