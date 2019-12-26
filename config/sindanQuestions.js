@@ -36,7 +36,7 @@ var sindanQuestions = {
       ]
     },
     {
-      text:"好きな食べ物は何ですか？",
+      text:"好きなものはどれですか？",
       answers:[
         {
           text:"VRゴーグル",
