@@ -11,7 +11,8 @@
     "format": "prettier --write \"**/*.{css,html,json,md}\"",
     "start": "webpack-dev-server --mode development --open --hot --host 0.0.0.0",
     "start:docker": "npm run build && concurrently 'npm run ts:watch' 'serve -s ./'",
-    "test": "jest"
+    "test": "jest",
+    "unun": "node scripts/unchan_loop.js"
   },
   "dependencies": {
     "preact": "^10.1.1",
@@ -38,6 +39,7 @@
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
+    "rxjs": "^6.5.3",
     "serve": "^11.2.0",
     "terser-webpack-plugin": "^2.3.1",
     "ts-jest": "^24.2.0",

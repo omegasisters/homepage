@@ -4,9 +4,9 @@
 
 https://omegasisters.github.io/homepage
 
-第一回“只用Pull Request来更新欧米茄姐妹(Omesys)的主页会怎样？”企划
+第一回“只用 Pull Request 来更新欧米茄姐妹(Omesys)的主页会怎样？”企划
 
-期待您的Pull Request！ ！ ！ ！
+期待您的 Pull Request！ ！ ！ ！
 
 ## 不知道这是什么的人请看这里
 
@@ -20,14 +20,14 @@ https://omegasisters.github.io/homepage
 
 这就像一个普通的论坛留言板。您在里面的留言有可能会实现。
 
-要创建新Issue，请先[创建 GitHub 帐户]（https://github.com/join?source_repo=omegasisters%2Fhomepage） 再[创建Issue]（https://github.com/omegasisters/homepage/issues/new）。
+要创建新 Issue，请先[创建 GitHub 帐户]（https://github.com/join?source_repo=omegasisters%2Fhomepage） 再[创建 Issue]（https://github.com/omegasisters/homepage/issues/new）。
 
 # 提示
 
 ## 本地预览
 
-如果要预览包括VRM模型在内的完整页面，请尝试以下操作：
-您可以基于GitHub Pages上发布的原始页面进行开发。
+如果要预览包括 VRM 模型在内的完整页面，请尝试以下操作：
+您可以基于 GitHub Pages 上发布的原始页面进行开发。
 在同一本地网络，你可以从其他终端访问主机的[IP 地址]：[端口号]（例如：http：//192.168.1.2：8000）进行浏览。
 
 **文档路径变更**
