@@ -110,7 +110,7 @@ export default class SindanApp extends Component {
 					<h1 className="logo" style={this.state.started?"display:none":""}>おめが診断</h1>
 					<h1 className="logo-sub" style={this.state.started?"display:none":""}>あなたはどのおめが？</h1>
 					<h1 className="question-logo" style={this.state.started?"":"display:none"}>Q{this.state.questionID+1}</h1>
-					<h1 className="logo-sub" style={this.state.started?"":"display:none"}>{this.state.questionText}</h1>
+					<h1 className="question-text" style={this.state.started?"":"display:none"}>{this.state.questionText}</h1>
 				</div>
 			</div>
 			<div className="controle-box">
