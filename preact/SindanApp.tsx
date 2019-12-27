@@ -1,65 +1,62 @@
-import { Component, h } from "preact";
+import { h, FunctionalComponent } from "preact";
 //@ts-ignore
 import sindanQuestions from "../config/sindanQuestions.js";
+import { useState } from "preact/hooks";
 
-interface State {
-	started:boolean;
-	questionID:number;
-	questionText:string;
-	answers: never[];
-	questions: never[];
-	questionsCount:number;
-	pointsMap:{[key:string]:number};
+interface Question {
+	text: string;
+	answers: Answer[];
 }
 
-export default class SindanApp extends Component {
+interface Answer {
+	text: string;
+	target: string;
+	value: number;
+}
 
-	state:State = {
-		started:false,
-		questionID:-1,
-		questionText:"",
-		answers:[],
-		questions:[],
-		questionsCount:0,
-		pointsMap:{}
-	}
+const SindanApp: FunctionalComponent = () => {
 
-	readSindan = ()=>{
-		console.log(sindanQuestions)
-	}
+	const [started,setStarted] = useState(false);
+	const [questionID,setQuestionID] = useState(-1);
+	const [questionsCount,setQuestionsCount] = useState(0);
+	const [questionText,setQuestionText] = useState("");
+	const [answers,setAnswers]:[Answer[],any] = useState([]);
+	const [questions,setQuestions]:[Question[],any] = useState([]);
+	const [pointsMap,setPointsMap]:[{[key:string]:number},any] = useState({ray:0,rio:0,unchan:0});
 
-	setStart = async (start: boolean)=>{
-		this.setState({started:start})
+	const startSindan = async (start: boolean)=>{
+		setStarted(start)
 		if (start === true){
 			try {
-				await this.setState({questions:sindanQuestions["questions"]})
-				await this.setState({questionsCount:this.state.questions.length})
-				this.readNext()
+				const q:Question[] = sindanQuestions["questions"];
+				setQuestions(q);
+				setQuestionsCount(q.length);
+				readNext(q,q.length,pointsMap)
 			} catch (e) {
-				this.setState({started:false})
+				setStarted(false)
 				alert(`設定ファイルに問題があります。 ${e}`)
 			}
 		}
 	}
 
-	readNext = async ()=>{
-		if (this.state.questionID+1 < this.state.questionsCount) {
+	const readNext = (questions:Question[],qCount:number,points:{[key:string]:number})=>{
+		if (questionID+1 < qCount) {
 			try {
-				await this.setState({questionID:this.state.questionID+1})
-				const question = this.state.questions[this.state.questionID]
-				this.setState({questionText:question["text"]})
-				this.setState({answers:question["answers"]})
+				setQuestionID(questionID+1)
+				const question = questions[questionID+1]
+				setQuestionText(question["text"])
+				setAnswers(question["answers"])
 			} catch(e) {
-				this.setState({started:false})
-				this.setState({questionID:-1})
+				setStarted(false)
+				setQuestionID(-1)
 				alert(`設定ファイルに問題があります。 ${e}`)
 			}
 		} else {
 			let maxPointTarget = ""
 			let maxPoint = 0
-			for (let target in this.state.pointsMap){
+			for (let target in points){
 				try{
-					const point = this.state.pointsMap[target]
+					const point = points[target]
 					if (point>=maxPoint){
 						maxPoint = point
 						maxPointTarget = target
@@ -81,57 +78,64 @@ export default class SindanApp extends Component {
 		}
 	}
 
-	answer = async (answer: any)=>{
+	const answer = (answer: Answer)=>{
 		try {
 			const target = answer["target"]
-			let newPointsMap = this.state.pointsMap
-			let point = this.state.pointsMap[target]
-			if (point == undefined){
+			let newPointsMap = pointsMap;
+			let point = newPointsMap[target]
+			if (!point){
 				point = 0
 			}
 			newPointsMap[target] = point + answer["value"]
-			await this.setState({pointsMap: newPointsMap})
-			this.readNext()
+			setPointsMap(newPointsMap)
+			readNext(questions,questionsCount,newPointsMap)
 		} catch(e) {
-				this.setState({started:false})
-				this.setState({questionId:-1})
-				alert(`設定ファイルに問題があります。 ${e}`)
+			setStarted(false)
+			setQuestionID(-1)
+			alert(`設定ファイルに問題があります。 ${e}`)
 		}
 	}
 
-	render() {
-		// props === this.props
-		//state ==== this.state
-
-		return(
+	return(
 		<div className="preact__container_for_sindan">
 			<div className="hero__container_for_sindan">
 				<div className="hero__logo_for_sindan">
-					<h1 className="logo" style={this.state.started?"display:none":""}>おめが診断</h1>
-					<h1 className="logo-sub" style={this.state.started?"display:none":""}>あなたはどのおめが？</h1>
-					<h1 className="question-logo" style={this.state.started?"":"display:none"}>Q{this.state.questionID+1}</h1>
-					<h1 className="question-text" style={this.state.started?"":"display:none"}>{this.state.questionText}</h1>
+					{ started==false &&
+						<div>
+							<h1 className="logo">おめが診断</h1>
+							<h1 className="logo-sub">あなたはどのおめが？</h1>
+						</div>
+					}
+					{ started &&
+						<div>
+							<h1 className="question-logo">Q{questionID+1}</h1>
+							<h1 className="question-text">{questionText}</h1>
+						</div>
+					}
 				</div>
 			</div>
 			<div className="controle-box">
-				<div
-				className="start-button"
-				onClick={()=>this.setStart(true)}
-				style={this.state.started?"display:none":""}
-				>
-					はじめる
-				</div>
+				{ started==false &&
+					<div
+					className="start-button"
+					onClick={()=>startSindan(true)}
+					>
+						はじめる
+					</div>
+				}
 				{
-					this.state.answers.map((ans)=>{
+					answers.map((ans)=>{
 						return <div
 						className="start-button"
-						onClick={()=>this.answer(ans)}
+						onClick={()=>answer(ans)}
 						>
 							{ans["text"]}
 						</div>
 					})
 				}
 			</div>
-		</div>);
-	}
+		</div>
+	);
 }
+
+export default SindanApp;
