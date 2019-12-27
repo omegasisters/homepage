@@ -689,6 +689,24 @@ a.share-button:hover {
   z-index: 0;
 }
 
+.hover-effect a {
+  display: inline-block;
+  background-color: black;
+}
+
+.hover-effect a img {
+  vertical-align: middle;
+  transition: opacity 0.3s;
+}
+
+.hover-effect a:hover img {
+  opacity: 0.7;
+}
+
+.hover-effect a:hover {
+  opacity: 1;
+}
+
 /*
 うんちゃん
 */
