@@ -337,12 +337,24 @@
                                   align-content="center"
                                   justify="center"
                                 >
-                                <p class="body-1">
-                                    <span style="opacity: 0.4">―</span>
-                                    一つを二つに分け合えたから、弱い僕でも強くいられるんだ
-                                    <span style="opacity: 0.4">―</span>
-                                </p>
-                                </v-row>
+                                  <p
+                                    :class="[!$vuetify.breakpoint.xs ? 'body-1' : 'body-2']"
+                                  >
+                                    <span
+                                      v-if="!$vuetify.breakpoint.xs"
+                                      style="opacity: 0.4;"
+                                      >―</span
+                                    >
+                                    <span>一つを二つに分け合えたから、</span>
+                                    <br v-if="$vuetify.breakpoint.xs" />
+                                    <span>弱い僕でも強くいられるんだ</span>
+                                    <span
+                                      v-if="!$vuetify.breakpoint.xs"
+                                      style="opacity: 0.4;"
+                                      >―</span
+                                    >
+                                  </p></v-row
+                                >
                               </v-col>
                             </v-container>
                           </v-card>
@@ -352,7 +364,6 @@
                   </v-parallax>
                 </article>
               </section>
-
             </v-sheet>
           </v-container>
         </v-content>
