@@ -37,6 +37,10 @@
       href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
@@ -289,6 +293,18 @@
                               </v-card-text>
                             </div>
                           </v-expand-transition>
+
+                          <v-card-actions>
+                            <v-container>
+                              <v-col cols="12">
+                                <v-row align="center" justify="center">
+                                  <v-btn fab @click="tweet">
+                                    <v-icon>mdi-twitter</v-icon>
+                                  </v-btn>
+                                </v-row>
+                              </v-col>
+                            </v-container>
+                          </v-card-actions>
                         </v-card>
                       </v-col>
                     </v-row>
@@ -389,6 +405,29 @@
         }),
         data() {
           return {
+            tweet() {
+              const EUC = encodeURIComponent;
+              const LINK = 'https://youtu.be/jis7E_mbwPw';
+              const message = 'シンクロニティ by おめシス × BACK-ON';
+              const hashtag = 'おめシス';
+              const URL = `https://twitter.com/intent/tweet?text=${EUC(
+                message,
+              )}&hashtags=${EUC(hashtag)}&url=${LINK}`;
+              if (
+                navigator.userAgent.indexOf('iPhone') > 0 ||
+                navigator.userAgent.indexOf('iPad') > 0 ||
+                navigator.userAgent.indexOf('iPod') > 0 ||
+                navigator.userAgent.indexOf('Android') > 0
+              ) {
+                location.href = URL;
+              } else {
+                window.open(
+                  URL,
+                  '_blank',
+                  'top=50,left=50,width=500,height=500,scrollbars=1,location=0,menubar=0,toolbar=0,status=1,directories=0,resizable=1',
+                );
+              }
+            },
             drawer: null,
             showLyrics: false,
             list_items: [{title: 'Home', url: '/homepage'}],
