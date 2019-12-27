@@ -37,6 +37,10 @@
       href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
@@ -64,6 +68,25 @@
       }
       .jacket {
         min-width: 300px;
+      }
+
+      /*extends vuetify*/
+      .v-parallax__image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        display: none;
+        transform: translate(-50%);
+        will-change: transform;
+        transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+        z-index: 1;
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
       }
     </style>
   </head>
@@ -124,27 +147,52 @@
                     src="https://i.gyazo.com/e44d8c1493ac0afa19946fd5b447fc6a.jpg"
                     style="height: 100vh;"
                   >
-                    <v-row align="center" justify="center">
-                      <v-col class="text-center" cols="12">
-                        <h1 class="display-1 font-weight-bold mb-4">
-                          {{ album.title_en }}
-                        </h1>
-                        <h4 class="subheading font-weight-thin">
-                          <span class="pink--text">Omega</span>
-                          <span class="indigo--text">Sisters</span>
-                        </h4>
+                    <v-container fluid fill-height>
+                      <v-col cols="12">
+                        <v-row
+                          align="center"
+                          align-content="center"
+                          justify="center"
+                        >
+                          <v-card
+                            color="rgba(0, 0, 0, 0.1)"
+                            style="width: 300px; height: 300px;"
+                          >
+                            <v-container fluid fill-height>
+                              <v-col cols="12">
+                                <v-row
+                                  align="center"
+                                  align-content="center"
+                                  justify="center"
+                                >
+                                  <h1
+                                    class="display-1 font-weight-bold mb-4 text-center"
+                                  >
+                                    {{ album.title_en }}
+                                  </h1>
+                                  <h4
+                                    class="subheading font-weight-light text-center"
+                                  >
+                                    <span class="pink--text">Omega</span>
+                                    <span class="indigo--text">Sisters</span>
+                                  </h4>
+                                </v-row>
+                              </v-col>
+                            </v-container>
+                          </v-card>
+                        </v-row>
                       </v-col>
-                    </v-row>
+                    </v-container>
                   </v-parallax>
                 </article>
 
                 <!-- description -->
                 <article class="pt-10 pb-10">
                   <v-col cols="12">
+                    <!-- album description -->
                     <v-row align="center" justify="center">
                       <v-col cols="12" align="center" justify="center">
                         <v-card color="pink" dark style="max-width: 700px">
-                          <!-- album description -->
                           <v-row
                             align="center"
                             justify="center"
@@ -166,14 +214,23 @@
                                         src="https://i.gyazo.com/76ce4b6e0d4c1080b2319d28b9559246.jpg"
                                       ></v-img>
                                     </v-avatar>
+                                    <v-fade-transition>
+                                      <v-overlay
+                                        v-if="hover"
+                                        absolute
+                                        color="black"
+                                      >
+                                        SEE MORE INFO
+                                      </v-overlay>
+                                    </v-fade-transition>
                                   </v-card>
                                 </v-hover>
                               </div>
                             </div>
 
                             <div>
-                              <v-card-title class="headline font-weight-bold"
-                                >{{ album.title }}</v-card-title
+                              <v-card-text class="headline font-weight-bold"
+                                >{{ album.title }}</v-card-text
                               >
                               <v-card-subtitle
                                 >{{ album.artist }}</v-card-subtitle
@@ -189,8 +246,14 @@
                               </v-card-text>
                             </div>
                           </v-row>
+                        </v-card>
+                      </v-col>
+                    </v-row>
 
-                          <!-- youtube links -->
+                    <!-- youtube -->
+                    <v-row align="center" justify="center">
+                      <v-col cols="12" align="center" justify="center">
+                        <v-card color="indigo" dark style="max-width: 700px">
                           <v-row
                             class="pt-10 pb-10"
                             cols="12"
@@ -206,66 +269,144 @@
                               allowfullscreen
                             ></iframe>
                           </v-row>
-                        </v-card>
-                      </v-col>
-                    </v-row>
 
-                    <!-- album lyrics -->
-                    <v-row align="center" justify="center">
-                      <v-col cols="12" align="center" justify="center">
-                        <v-expansion-panels style="z-index: 0;">
-                          <v-expansion-panel
-                            style="max-width: 700px; background-color: #3f51b5;"
-                          >
-                            <v-expansion-panel-header
-                              class="headline font-weight-bold"
-                              >Lyrics</v-expansion-panel-header
+                          <v-card-actions>
+                            <v-btn icon @click="showLyrics = !showLyrics">
+                              <v-icon
+                                >{{ showLyrics ? 'mdi-chevron-up' :
+                                'mdi-chevron-down'}}</v-icon
+                              >
+                            </v-btn>
+                            <span class="body-1"
+                              >{{ showLyrics ? '' : 'SHOW LYRICS' }}</span
                             >
-                            <v-expansion-panel-content
-                              v-for="line of album.lyrics"
-                              class="caption font-weight-bold"
-                            >
-                              <p style="padding: 0 0 0 0;">{{ line }}</p>
-                            </v-expansion-panel-content>
-                          </v-expansion-panel>
-                        </v-expansion-panels>
+                          </v-card-actions>
+
+                          <v-expand-transition>
+                            <div v-show="showLyrics">
+                              <v-divider></v-divider>
+                              <v-card-text
+                                v-for="line of album.lyrics"
+                                class="caption font-weight-bold"
+                              >
+                                {{ line }}
+                              </v-card-text>
+                            </div>
+                          </v-expand-transition>
+
+                          <v-card-actions>
+                            <v-container>
+                              <v-col cols="12">
+                                <v-row align="center" justify="center">
+                                  <v-btn fab @click="tweet">
+                                    <v-icon>mdi-twitter</v-icon>
+                                  </v-btn>
+                                </v-row>
+                              </v-col>
+                            </v-container>
+                          </v-card-actions>
+                        </v-card>
                       </v-col>
                     </v-row>
                   </v-col>
                 </article>
               </section>
+
+              <section>
+                <article>
+                  <v-parallax
+                    dark
+                    src="images/synchronity_omesis.jpg"
+                    style="height: 30vh; min-height: 400px"
+                  >
+                    <v-container fluid fill-height>
+                      <v-col cols="12">
+                        <v-row
+                          align="center"
+                          align-content="center"
+                          justify="center"
+                        >
+                          <v-card
+                            color="rgba(0, 0, 0, 0.3)"
+                            style="width: 80vh; max-width: 700px; height: 300px;"
+                          >
+                            <v-container fluid fill-height>
+                              <v-col cols="12">
+                                <v-row
+                                  align="center"
+                                  align-content="center"
+                                  justify="center"
+                                >
+                                  <p
+                                    :class="[!$vuetify.breakpoint.xs ? 'body-1' : 'body-2']"
+                                  >
+                                    <span
+                                      v-if="!$vuetify.breakpoint.xs"
+                                      style="opacity: 0.4;"
+                                      >―</span
+                                    >
+                                    <span>一つを二つに分け合えたから、</span>
+                                    <br v-if="$vuetify.breakpoint.xs" />
+                                    <span>弱い僕でも強くいられるんだ</span>
+                                    <span
+                                      v-if="!$vuetify.breakpoint.xs"
+                                      style="opacity: 0.4;"
+                                      >―</span
+                                    >
+                                  </p></v-row
+                                >
+                              </v-col>
+                            </v-container>
+                          </v-card>
+                        </v-row>
+                      </v-col>
+                    </v-container>
+                  </v-parallax>
+                </article>
+              </section>
             </v-sheet>
           </v-container>
         </v-content>
-      </v-app>
 
-      <!-- un-chan scroll -->>
-      <a href="#top">
-        <div class="c-unchan c-unchan--fixedBottom">
-          <div class="fukidashi" ontouchstart="">トップに戻る</div>
-          <div class="c-unchan__inner">
-            <div class="c-unchan__tsuno">
-              <div class="c-unchan__tsuno__inner"></div>
-            </div>
-            <div class="c-unchan__toguro c-unchan__toguro--top"></div>
-            <div class="c-unchan__toguro c-unchan__toguro--middle">
-              <div class="c-unchan__eye c-unchan__eye--left">
-                <div></div>
+        <v-footer>
+          <v-container fluid fill-height>
+            <v-col>
+              <v-row align="center" justify="center">
+                <p class="ma-0 caption">Ω{{ year }} おめがシスターズ</p>
+              </v-row>
+            </v-col>
+          </v-container>
+        </v-footer>
+
+        <!-- un-chan scroll -->
+        <a href="#top">
+          <div class="c-unchan c-unchan--fixedBottom">
+            <div class="fukidashi" ontouchstart="">トップに戻る</div>
+            <div class="c-unchan__inner">
+              <div class="c-unchan__tsuno">
+                <div class="c-unchan__tsuno__inner"></div>
               </div>
-              <div class="c-unchan__eye c-unchan__eye--right">
-                <div></div>
+              <div class="c-unchan__toguro c-unchan__toguro--top"></div>
+              <div class="c-unchan__toguro c-unchan__toguro--middle">
+                <div class="c-unchan__eye c-unchan__eye--left">
+                  <div></div>
+                </div>
+                <div class="c-unchan__eye c-unchan__eye--right">
+                  <div></div>
+                </div>
               </div>
-            </div>
-            <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
-            <div class="c-unchan__mouth">
-              <div class="c-unchan__mouth__inner">
-                <div></div>
+              <div class="c-unchan__toguro c-unchan__toguro--bottom"></div>
+              <div class="c-unchan__mouth">
+                <div class="c-unchan__mouth__inner">
+                  <div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </v-app>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
 
@@ -285,7 +426,32 @@
         }),
         data() {
           return {
+            tweet() {
+              const EUC = encodeURIComponent;
+              const LINK = 'https://youtu.be/jis7E_mbwPw';
+              const message = 'シンクロニティ by おめシス × BACK-ON';
+              const hashtag = 'おめシス';
+              const URL = `https://twitter.com/intent/tweet?text=${EUC(
+                message,
+              )}&hashtags=${EUC(hashtag)}&url=${LINK}`;
+              if (
+                navigator.userAgent.indexOf('iPhone') > 0 ||
+                navigator.userAgent.indexOf('iPad') > 0 ||
+                navigator.userAgent.indexOf('iPod') > 0 ||
+                navigator.userAgent.indexOf('Android') > 0
+              ) {
+                location.href = URL;
+              } else {
+                window.open(
+                  URL,
+                  '_blank',
+                  'top=50,left=50,width=500,height=500,scrollbars=1,location=0,menubar=0,toolbar=0,status=1,directories=0,resizable=1',
+                );
+              }
+            },
+            year: new Date().getFullYear(),
             drawer: null,
+            showLyrics: false,
             list_items: [{title: 'Home', url: '/homepage'}],
             album: {
               title: 'シンクロニティ',
@@ -326,6 +492,7 @@
                 '',
                 'キミがいるから、僕がいるから、叶えたい夢へとまた進めた',
                 '一つを二つに分け合えたから、弱い僕でも強くいられるんだ',
+                '',
               ],
             },
           };
