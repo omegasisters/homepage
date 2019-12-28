@@ -3,8 +3,8 @@ enchant();
 window.onload = () => {
   // global settings
   let FPS = 60;
-  let WIDTH = 256;
-  let HEIGHT = 256;
+  let WIDTH = 128;
+  let HEIGHT = 128;
   let VERSION = '0.0.0';
 
   // initialize game instance
@@ -13,22 +13,29 @@ window.onload = () => {
   //game.keybind(32, 'a');
 
   // preloading assets
-  let assets = ['../../images/walk_rays.png', '../../images/walk_rios.png'];
+  const assets = ['../../images/walk_rays.png', '../../images/walk_rios.png'];
   assets.forEach((item) => {
     game.preload(item);
   });
 
   // centering game window element
+  const wrapper_width = $('#enchant-wrapper').width();
+  const wrapper_height = $('#enchant-wrapper').height();
+
+  console.log(wrapper_height);
+  console.log(wrapper_width);
+
   game.scale = Math.min(
-    window.innerWidth / game.width,
-    window.innerHeight / game.height,
+    wrapper_width / game.width,
+    wrapper_height / game.height,
   );
-  let left = (window.innerWidth - game.width * game.scale) / 2;
-  let top = (window.innerHeight - game.height * game.scale) / 2;
+  const left = (wrapper_width - game.width * game.scale) / 2;
+  const top = (wrapper_height - game.height * game.scale) / 2;
   $('#enchant-stage').css({
     position: 'absolute',
     left: left + 'px',
     top: top + 'px',
+    imageRendering: 'pixelated',
   });
 
   // when start game
