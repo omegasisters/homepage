@@ -8,7 +8,7 @@ document.onscroll = () => {
     element.classList.remove('scrolled');
   }
 };
-$(document).ready(function() {
+const navbar = () => {
   $('.drawer').drawer();
 
   $('.drawer-toggle').click(function() {
@@ -19,4 +19,6 @@ $(document).ready(function() {
     $('header .menu-icon').removeClass('opened');
     $('.drawer').drawer('close');
   });
-});
+};
+
+navbar();
