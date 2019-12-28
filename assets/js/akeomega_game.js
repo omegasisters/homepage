@@ -21,10 +21,6 @@ window.onload = () => {
   // centering game window element
   const wrapper_width = $('#enchant-wrapper').width();
   const wrapper_height = $('#enchant-wrapper').height();
-
-  console.log(wrapper_height);
-  console.log(wrapper_width);
-
   game.scale = Math.min(
     wrapper_width / game.width,
     wrapper_height / game.height,
