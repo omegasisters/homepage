@@ -1,19 +1,11 @@
 const luckyRayRio = () => {
-  // 1からnまでのランダムな整数を生成する
-  const n = 100;
-  var x = Math.floor(Math.random() * n + 1);
-  var elements = document.getElementsByClassName('links');
-  switch (x) {
-    case 1:
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.add('lucky');
-      }
-      break;
-    default:
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.add('normal');
-      }
-      break;
+  const probability = 1.0;
+
+  const isLucky = Math.random() * 100 < probability;
+  const toAddClass = isLucky ? 'lucky' : 'normal';
+
+  for (const element of document.getElementsByClassName('links')) {
+    element.classList.add(toAddClass);
   }
 };
 
