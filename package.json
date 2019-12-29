@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "type": "tsc --noEmit",
-    "build": "npm run type && webpack --mode production",
+    "build": "npm run type --scripts-prepend-node-path && webpack --mode production",
     "dev": "browser-sync start --server --files '*.js' .",
     "format": "prettier --write \"**/*.{css,html,json,md}\"",
     "start": "webpack-dev-server --mode development --open --hot --host 0.0.0.0",
