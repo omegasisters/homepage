@@ -1,12 +1,20 @@
 const luckyRayRio = () => {
-  const probability = 1.0;
+  var isSiteVisit = document.cookie.replace(
+    /(?:(?:^|.*;\s*)is-site-visit\s*\=\s*([^;]*).*$)|^.*$/,
+    '$1',
+  );
 
-  const isLucky = Math.random() * 100 < probability;
-  const toAddClass = isLucky ? 'lucky' : 'normal';
+  if (isSiteVisit === 'true') {
+    const probability = 1.0;
 
-  for (const element of document.getElementsByClassName('links')) {
-    element.classList.add(toAddClass);
+    const isLucky = Math.random() * 100 < probability;
+    const toAddClass = isLucky ? 'lucky' : 'normal';
+
+    for (const element of document.getElementsByClassName('links')) {
+      element.classList.add(toAddClass);
+    }
   }
+  document.cookie = 'is-site-visit=true';
 };
 
 luckyRayRio();
