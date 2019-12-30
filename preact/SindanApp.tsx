@@ -72,7 +72,6 @@ const SindanApp: FunctionalComponent = () => {
           console.error(`pointsMap is broken ${e}`);
         }
       }
-      console.log('Result is ' + maxPointTarget);
       try {
         const resultPages: {[key: string]: string} =
           sindanQuestions.resultPages;
