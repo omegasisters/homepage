@@ -1,3 +1,14 @@
+/* 効果音素材
+OtoLogic
+> https://otologic.jp (CC BY 4.0)
+*/
+
+/* 背景画像素材(加工元)
+いらすとや
+> https://www.irasutoya.com/2016/01/blog-post_351.html
+> https://www.irasutoya.com/2017/11/blog-post_794.html
+*/
+
 enchant();
 
 window.onload = () => {
