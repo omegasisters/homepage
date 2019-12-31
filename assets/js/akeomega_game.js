@@ -31,6 +31,7 @@ window.onload = () => {
     '../images/walk_rays.png',
     '../images/walk_rios.png',
     '../images/walk_unchan.png',
+    '../images/walk_unchan_mochi.png',
     '../images/bg_outside_buildings_resized.png',
     '../images/bg_outside_buildings_yuyake_resized.png',
     '../images/share_on_twitter.png',
@@ -113,9 +114,11 @@ window.onload = () => {
     var ray = new Ray((game.width / 3) * 2, HORIZON);
     var rio = new Rio((game.width / 3) * 2 + 20, HORIZON);
     var un = new Unchan(-512, HORIZON + 10);
+    var un_mochi = new UnchanMochi(-1024, HORIZON + 10);
     scene.addChild(ray);
     scene.addChild(rio);
     scene.addChild(un);
+    scene.addChild(un_mochi);
 
     const score = new Label();
     score.x = score.y = 5;
@@ -143,7 +146,10 @@ window.onload = () => {
     bgm.src.loop = true;
 
     scene.onenterframe = function() {
-      if (current_score < 5000 && ray.within(un, 14)) {
+      if (
+        (current_score < 5000 && ray.within(un, 14)) ||
+        ray.within(un_mochi, 14)
+      ) {
         const gameover = createGameOverScreen();
         game.pushScene(gameover);
       }
@@ -297,6 +303,27 @@ window.onload = () => {
         // respawn
         if (current_score < 4900 && game.width < this.x) {
           this.x = -Math.floor(Math.random() * 30) * 20;
+        }
+      }
+    },
+  });
+
+  var UnchanMochi = Class.create(Sprite, {
+    initialize: function(x, y) {
+      Sprite.call(this, 18, 18);
+      this.image = game.assets['../images/walk_unchan_mochi.png'];
+      this.x = x;
+      this.y = y;
+      this.frame = 1;
+    },
+    onenterframe: function() {
+      this.x += 3;
+      if (game.frame % 20 == 0) {
+        this.frame = this.frame == 1 ? 0 : 1;
+
+        // respawn
+        if (current_score < 4900 && game.width < this.x) {
+          this.x = -Math.floor(Math.random() * 30) * 100;
         }
       }
     },
