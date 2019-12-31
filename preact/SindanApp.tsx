@@ -77,7 +77,7 @@ const SindanApp: FunctionalComponent = () => {
           sindanQuestions.resultPages;
         const resultPage = resultPages[maxPointTarget];
         if (resultPage) {
-          window.location.href = './pages/' + resultPage;
+          window.location.href = './' + resultPage;
         }
       } catch (e) {
         console.error(`can not find result page ${e}`);

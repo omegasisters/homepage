@@ -494,14 +494,13 @@ a:hover {
 }
 
 .links.normal {
-  background: url(../assets/images/omesis_with_silhouette.png) top center
-      no-repeat,
+  background: url(./images/omesis_with_silhouette.png) top center no-repeat,
     linear-gradient(to left, #7995f7, #de7072);
   background-size: cover;
 }
 
 .links.lucky {
-  background: url(../assets/images/rayrio.png) top center no-repeat,
+  background: url(./images/rayrio.png) top center no-repeat,
     linear-gradient(to left, #7995f7, #de7072);
   background-size: cover;
 }
