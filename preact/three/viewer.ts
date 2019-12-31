@@ -40,7 +40,6 @@ export default class ThreeViewer {
         (xhr) => {
           const now = (xhr.loaded / xhr.total) * 100;
           progress(now);
-          console.log(now + '% loaded');
         },
         (error) => {
           console.warn(error);
@@ -78,7 +77,6 @@ export default class ThreeViewer {
         (xhr) => {
           const now = (xhr.loaded / xhr.total) * 100;
           progress(now);
-          console.log(now + '% loaded');
         },
         (error) => {
           console.warn(error);
