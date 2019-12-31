@@ -104,8 +104,8 @@ window.onload = () => {
     const now_hour = new Date().getHours();
     const background_image =
       6 < now_hour && now_hour < 18
-        ? './images/bg_outside_buildings_resized.png'
-        : './images/bg_outside_buildings_yuyake_resized.png';
+        ? '../../assets/images/bg_outside_buildings_resized.png'
+        : '../../assets/images/bg_outside_buildings_yuyake_resized.png';
     const bg1 = createMovableSprite(background_image, 0, 0, 2, 0);
     const bg2 = createMovableSprite(background_image, -512, 0, 2, 0);
     scene.addChild(bg1);
@@ -140,8 +140,8 @@ window.onload = () => {
     };
     scene.addChild(score);
 
-    const jumpSe = game.assets['../assets/sounds/Onmtp-Click03-1.mp3'];
-    const bgm = game.assets['../assets/sounds/synchronity_rmx_fami.mp3'];
+    const jumpSe = game.assets['../../assets/sounds/Onmtp-Click03-1.mp3'];
+    const bgm = game.assets['../../assets/sounds/synchronity_rmx_fami.mp3'];
     bgm.play();
     bgm.src.loop = true;
 
@@ -236,7 +236,7 @@ window.onload = () => {
     scene.addChild(score);
 
     const tweet = new Sprite(128, 32);
-    tweet.image = game.assets['./images/share_on_twitter.png'];
+    tweet.image = game.assets['../../assets/images/share_on_twitter.png'];
     tweet.x = 0;
     tweet.y = game.height / 2;
     tweet.ontouchstart = function() {
@@ -252,7 +252,7 @@ window.onload = () => {
   var Ray = Class.create(Sprite, {
     initialize: function(x, y) {
       Sprite.call(this, 16, 26);
-      this.image = game.assets['./images/walk_rays.png'];
+      this.image = game.assets['../../assets/images/walk_rays.png'];
       this.x = x;
       this.y = y;
       this.frame = 1;
@@ -271,7 +271,7 @@ window.onload = () => {
   var Rio = Class.create(Sprite, {
     initialize: function(x, y) {
       Sprite.call(this, 15, 26);
-      this.image = game.assets['./images/walk_rios.png'];
+      this.image = game.assets['../../assets/images/walk_rios.png'];
       this.x = x;
       this.y = y;
       this.frame = 1;
@@ -290,7 +290,7 @@ window.onload = () => {
   var Unchan = Class.create(Sprite, {
     initialize: function(x, y) {
       Sprite.call(this, 18, 18);
-      this.image = game.assets['./images/walk_unchan.png'];
+      this.image = game.assets['../../assets/images/walk_unchan.png'];
       this.x = x;
       this.y = y;
       this.frame = 1;
