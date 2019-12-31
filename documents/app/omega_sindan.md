@@ -1,6 +1,6 @@
 # おめが診断
 
-https://omegasisters.github.io/homepage/sindan.html
+https://omegasisters.github.io/homepage/pages/sindan.html
 
 回答者がおめシスの誰に似ているかを診断するページを作りました。
 
