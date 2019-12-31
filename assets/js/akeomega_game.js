@@ -19,6 +19,8 @@ window.onload = () => {
   const HORIZON = 85;
   const VERSION = '1.0.0';
 
+  var current_score = 0;
+
   // initialize game instance
   let game = new Game(WIDTH, HEIGHT);
   game.fps = FPS;
@@ -31,6 +33,7 @@ window.onload = () => {
     '../../images/walk_unchan.png',
     '../../images/bg_outside_buildings_resized.png',
     '../../images/bg_outside_buildings_yuyake_resized.png',
+    '../../images/share_on_twitter.png',
     '../../assets/sounds/synchronity_rmx_fami.mp3',
     '../../assets/sounds/Onmtp-Click03-1.mp3',
   ];
@@ -57,8 +60,8 @@ window.onload = () => {
   // when start game
   game.onload = () => {
     // start game
-    const gameScene = createGameScene();
-    game.pushScene(gameScene);
+    const titleScene = createTitleScene();
+    game.pushScene(titleScene);
 
     game.rootScene.backgroundColor = 'rgba(0, 0, 0, 0.8)';
   };
@@ -66,7 +69,7 @@ window.onload = () => {
   // Function
 
   var createMovableSprite = function(image_path, x, y, x_speed, y_speed) {
-    var sprite = new Sprite(1024, 256);
+    var sprite = new Sprite(512, 128);
     sprite.image = game.assets[image_path];
     sprite.x = x;
     sprite.y = y;
@@ -74,8 +77,8 @@ window.onload = () => {
       if (game.fps % 20 == 0) {
         sprite.x += x_speed;
         sprite.y += y_speed;
-        if (game.width < this.x) {
-          this.x = -this.width;
+        if (game.width == this.x) {
+          this.x = -(this.width - game.width + this.width);
         }
       }
     };
@@ -86,7 +89,7 @@ window.onload = () => {
     var scene = new Scene();
     var background = new Sprite(game.width, game.height);
     if (image_path) {
-      background.image = image_path;
+      background.image = game.assets[image_path];
     }
     background.x = 0;
     background.y = 0;
@@ -103,30 +106,36 @@ window.onload = () => {
         ? '../../images/bg_outside_buildings_resized.png'
         : '../../images/bg_outside_buildings_yuyake_resized.png';
     const bg1 = createMovableSprite(background_image, 0, 0, 2, 0);
-    const bg2 = createMovableSprite(background_image, -1024, 0, 2, 0);
-
+    const bg2 = createMovableSprite(background_image, -512, 0, 2, 0);
     scene.addChild(bg1);
     scene.addChild(bg2);
+
+    var ray = new Ray((game.width / 3) * 2, HORIZON);
+    var rio = new Rio((game.width / 3) * 2 + 20, HORIZON);
+    var un = new Unchan(-512, HORIZON + 10);
+    scene.addChild(ray);
+    scene.addChild(rio);
+    scene.addChild(un);
 
     const score = new Label();
     score.x = score.y = 5;
     score.font = '10px arial';
     score.color = '#FFF';
     score.onenterframe = function() {
-      if (game.frame <= 5000) {
-        this.text = `SCORE: ${game.frame}`;
+      current_score++;
+      if (current_score <= 5000) {
+        this.text = `SCORE: ${current_score}`;
       } else {
+        current_score = 5000;
         this.opacity = new Date().getMilliseconds() > 500 ? 1 : 0;
+
+        if (ray.x < -512) {
+          const gameover = createGameOverScreen();
+          game.pushScene(gameover);
+        }
       }
     };
     scene.addChild(score);
-
-    var ray = new Ray(game.width / 3, HORIZON);
-    var rio = new Rio(game.width / 3 + 50, HORIZON);
-    var un = new Unchan(-512, HORIZON + 10);
-    scene.addChild(ray);
-    scene.addChild(rio);
-    scene.addChild(un);
 
     const jumpSe = game.assets['../../assets/sounds/Onmtp-Click03-1.mp3'];
     const bgm = game.assets['../../assets/sounds/synchronity_rmx_fami.mp3'];
@@ -134,14 +143,21 @@ window.onload = () => {
     bgm.src.loop = true;
 
     scene.onenterframe = function() {
-      if (ray.within(un, 14)) {
-        console.log('dead');
+      if (current_score < 5000 && ray.within(un, 14)) {
+        const gameover = createGameOverScreen();
+        game.pushScene(gameover);
       }
     };
     scene.ontouchstart = () => {
       if (ray.y == HORIZON) {
         ray.frame = 0;
         ray.tl
+          .moveBy(0, -32, 12, enchant.Easing.CUBIC_EASEOUT)
+          .moveBy(0, 32, 12, enchant.Easing.CUBIC_EASEIN);
+
+        rio.frame = 0;
+        rio.tl
+          .delay(10)
           .moveBy(0, -32, 12, enchant.Easing.CUBIC_EASEOUT)
           .moveBy(0, 32, 12, enchant.Easing.CUBIC_EASEIN);
         jumpSe.play();
@@ -152,9 +168,76 @@ window.onload = () => {
   };
 
   var createTitleScene = function() {
-    var scene = createScene(
-      game.assets['../../images/bg_outside_buildings_resized.png'],
-    );
+    var scene = createScene('../../images/bg_outside_buildings_resized.png');
+    var ray = new Ray(game.width / 3, HORIZON);
+    var rio = new Rio(game.width / 3 + 30, HORIZON);
+    scene.addChild(ray);
+    scene.addChild(rio);
+
+    const title = new Label();
+    title.text = 'あけおめが';
+    title.font = 'bold 20px arial';
+    title.x = game.width / 2 - 50;
+    title.y = game.height / 2 - 30;
+    title.color = '#FFF';
+    scene.addChild(title);
+
+    const touchToStart = new Label();
+    touchToStart.text = 'TOUCH TO START';
+    touchToStart.x = game.width / 2 - 35;
+    touchToStart.y = game.height / 2;
+    touchToStart.font = '8px arial';
+    touchToStart.color = '#FFF';
+    touchToStart.onenterframe = function() {
+      this.opacity = new Date().getMilliseconds() > 500 ? 1 : 0;
+    };
+    scene.addChild(touchToStart);
+
+    const version = new Label();
+    version.text = `version: ${VERSION}`;
+    version.x = game.width / 2 + 15;
+    version.y = game.height - 8;
+    version.font = '8px arial';
+    version.color = '#FFF';
+    scene.addChild(version);
+
+    scene.ontouchstart = function() {
+      const gameScene = createGameScene();
+      game.pushScene(gameScene);
+    };
+
+    return scene;
+  };
+
+  var createGameOverScreen = function() {
+    var scene = createScene();
+    scene.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+
+    const title = new Label();
+    title.text = '　 今年もよろしく！<br>あけましておめがとう！';
+    title.font = 'bold 10px arial';
+    title.x = game.width / 2 - 50;
+    title.y = 10;
+    title.color = '#FFF';
+    scene.addChild(title);
+
+    const score = new Label();
+    score.text = `Your Score: ${current_score}`;
+    score.font = 'bold 8px arial';
+    score.x = game.width / 2 - 28;
+    score.y = game.height / 2 - 20;
+    score.color = '#FFF';
+    scene.addChild(score);
+
+    const tweet = new Sprite(128, 32);
+    tweet.image = game.assets['../../images/share_on_twitter.png'];
+    tweet.x = 0;
+    tweet.y = game.height / 2;
+    tweet.ontouchstart = function() {
+      shareOnTwitter(current_score);
+    };
+    scene.addChild(tweet);
+
     return scene;
   };
 
@@ -172,8 +255,9 @@ window.onload = () => {
       if (game.frame % 24 == 0) {
         this.frame = this.frame == 1 ? 0 : 1;
       }
-      if (5000 < game.frame) {
-        this.x += 2;
+      if (5000 <= current_score) {
+        this.y = HORIZON + 1;
+        this.x -= 2;
       }
     },
   });
@@ -190,8 +274,9 @@ window.onload = () => {
       if (game.frame % 24 == 0) {
         this.frame = this.frame == 1 ? 0 : 1;
       }
-      if (5000 < game.frame) {
-        this.x += 2;
+      if (5000 <= current_score) {
+        this.y = HORIZON + 1;
+        this.x -= 2;
       }
     },
   });
@@ -210,12 +295,57 @@ window.onload = () => {
         this.frame = this.frame == 1 ? 0 : 1;
 
         // respawn
-        if (game.frame < 4900 && game.width < this.x) {
+        if (current_score < 4900 && game.width < this.x) {
           this.x = -Math.floor(Math.random() * 30) * 20;
         }
       }
     },
   });
+
+  var shareOnTwitter = function(score) {
+    const luckyitem = ['うんちゃん'];
+
+    const item = luckyitem[Math.floor(Math.random() * luckyitem.length)];
+
+    const rank =
+      score < 500
+        ? 'うん吉'
+        : score < 1000
+        ? '小吉'
+        : score < 2000
+        ? '中吉'
+        : score < 3000
+        ? '吉'
+        : score < 4000
+        ? '大吉'
+        : score < 5000
+        ? 'おめ吉'
+        : 'おめ吉';
+
+    const EUC = encodeURIComponent;
+    const LINK =
+      'https://omegasisters.github.io/homepage/special/akeomega.html';
+    const message = `🎍おめくじ🎍 - 今年もよろしく！あけおめが！\nあなたの運勢は${rank}です！ラッキーアイテムは\"${item}\"！`;
+    const hashtag = 'おめくじ,おめシス';
+    const URL = `https://twitter.com/intent/tweet?text=${EUC(
+      message,
+    )}&hashtags=${EUC(hashtag)}&url=${LINK}`;
+
+    if (
+      navigator.userAgent.indexOf('iPhone') > 0 ||
+      navigator.userAgent.indexOf('iPad') > 0 ||
+      navigator.userAgent.indexOf('iPod') > 0 ||
+      navigator.userAgent.indexOf('Android') > 0
+    ) {
+      location.href = URL;
+    } else {
+      window.open(
+        URL,
+        '_blank',
+        'top=50,left=50,width=500,height=500,scrollbars=1,location=0,menubar=0,toolbar=0,status=1,directories=0,resizable=1',
+      );
+    }
+  };
 
   game.start();
 };
