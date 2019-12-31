@@ -303,7 +303,34 @@ window.onload = () => {
   });
 
   var shareOnTwitter = function(score) {
-    const luckyitem = ['うんちゃん'];
+    // 足してけば普通に動くと思います
+    const luckyitem = [
+      'うんちゃん',
+      'ぴょこぴょこ',
+      'VALVE INDEX',
+      'Oculus Quest',
+      'カルピス100本セット',
+      'iPhone 11 Pro',
+      'おとしだマネー',
+      'toio',
+      'AirPods Pro',
+      'TAGIRON',
+      '馬油',
+      'チチカカのマフラー',
+      '増殖するG',
+      '辛辛魚',
+      '椿のシャンプー',
+      'ドンキで100円のスウェット',
+      '蒸気でホッとアイマスク',
+      '銀の盾',
+      'ココスキ',
+      '納豆',
+      'マッギョのグッズ',
+      'マーイーカのグッズ',
+      'ベニスコネクション',
+      'Yogibo',
+      'めんつゆバター',
+    ];
 
     const item = luckyitem[Math.floor(Math.random() * luckyitem.length)];
 
