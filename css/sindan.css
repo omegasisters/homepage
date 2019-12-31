@@ -9,6 +9,7 @@
   text-align: center;
   transition: box-shadow 0.25s;
   display: inline-block;
+  cursor: pointer;
 }
 
 .tweet-button {
@@ -90,7 +91,6 @@
 }
 
 .logo-desc {
-  text-align: center;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 6px;
