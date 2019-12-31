@@ -79,7 +79,7 @@ window.onload = () => {
         sprite.x += x_speed;
         sprite.y += y_speed;
         if (game.width == this.x) {
-          this.x = -(this.width - game.width + this.width);
+          this.x = -(this.width + (this.width - game.width));
         }
       }
     };
