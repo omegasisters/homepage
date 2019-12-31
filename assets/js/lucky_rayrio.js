@@ -1,16 +1,21 @@
 const luckyRayRio = () => {
-  const isSiteVisit = localStorage.getItem('isSiteVisit');
-  if (isSiteVisit === 'true') {
-    const probability = 1.0;
-    const isLucky = Math.random() * 100 < probability;
-    const toAddClass = isLucky ? 'lucky' : 'normal';
+  const toAddClass = isLucky() ? 'lucky' : 'normal';
 
-    for (const element of document.getElementsByClassName('links')) {
-      element.classList.add(toAddClass);
-    }
-  } else {
-    localStorage.setItem('isSiteVisit', 'true');
+  for (const element of document.getElementsByClassName('links')) {
+    element.classList.add(toAddClass);
   }
 };
+
+function isLucky() {
+  const isSiteVisit = localStorage.getItem('isSiteVisit');
+  const probability = 1.0;
+
+  if (isSiteVisit === 'true') {
+    return Math.random() * 100 < probability;
+  } else {
+    localStorage.setItem('isSiteVisit', 'true');
+    return 0;
+  }
+}
 
 luckyRayRio();
