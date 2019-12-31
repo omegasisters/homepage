@@ -26,7 +26,6 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   const setMusic = (url: string) => {
     const id = url.replace('https://i.ytimg.com/vi/', '').split('/')[0];
-    console.log(id);
     const youtube = youtubeRef.current;
     if (!youtube) return;
     youtube.loadVideoById(id);

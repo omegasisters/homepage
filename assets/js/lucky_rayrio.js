@@ -1,20 +1,21 @@
 const luckyRayRio = () => {
-  var isSiteVisit = document.cookie.replace(
-    /(?:(?:^|.*;\s*)is-site-visit\s*\=\s*([^;]*).*$)|^.*$/,
-    '$1',
-  );
+  const toAddClass = isLucky() ? 'lucky' : 'normal';
+
+  for (const element of document.getElementsByClassName('links')) {
+    element.classList.add(toAddClass);
+  }
+};
+
+function isLucky() {
+  const isSiteVisit = localStorage.getItem('isSiteVisit');
+  const probability = 1.0;
 
   if (isSiteVisit === 'true') {
-    const probability = 1.0;
-
-    const isLucky = Math.random() * 100 < probability;
-    const toAddClass = isLucky ? 'lucky' : 'normal';
-
-    for (const element of document.getElementsByClassName('links')) {
-      element.classList.add(toAddClass);
-    }
+    return Math.random() * 100 < probability;
+  } else {
+    localStorage.setItem('isSiteVisit', 'true');
+    return 0;
   }
-  document.cookie = 'is-site-visit=true';
-};
+}
 
 luckyRayRio();
