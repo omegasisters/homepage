@@ -1,6 +1,7 @@
-import {h, FunctionalComponent} from 'preact';
+import {FunctionalComponent, h} from 'preact';
+
 //@ts-ignore
-import sindanQuestions from '../config/sindanQuestions.js';
+import sindanQuestions from '../../config/sindanQuestions.js';
 import {useState} from 'preact/hooks';
 
 interface Question {
