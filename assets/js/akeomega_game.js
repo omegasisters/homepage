@@ -174,7 +174,9 @@ window.onload = () => {
   };
 
   var createTitleScene = function() {
-    var scene = createScene('../../assets/images/bg_outside_buildings_resized.png');
+    var scene = createScene(
+      '../../assets/images/bg_outside_buildings_resized.png',
+    );
     var ray = new Ray(game.width / 3, HORIZON);
     var rio = new Rio(game.width / 3 + 30, HORIZON);
     scene.addChild(ray);
@@ -311,7 +313,7 @@ window.onload = () => {
   var UnchanMochi = Class.create(Sprite, {
     initialize: function(x, y) {
       Sprite.call(this, 18, 18);
-      this.image = game.assets['../images/walk_unchan_mochi.png'];
+      this.image = game.assets['../../assets/images/walk_unchan_mochi.png'];
       this.x = x;
       this.y = y;
       this.frame = 1;
