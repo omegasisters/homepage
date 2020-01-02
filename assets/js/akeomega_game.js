@@ -380,7 +380,7 @@ window.onload = () => {
 
     const EUC = encodeURIComponent;
     const LINK =
-      'https://omegasisters.github.io/homepage/special/akeomega.html';
+      'https://omegasisters.github.io/homepage/pages/special/akeomega.html';
     const message = `🎍おめくじ🎍 - 今年もよろしく！あけおめが！\nあなたの運勢は${rank}です！ラッキーアイテムは\"${item}\"！`;
     const hashtag = 'おめくじ,おめシス';
     const URL = `https://twitter.com/intent/tweet?text=${EUC(
