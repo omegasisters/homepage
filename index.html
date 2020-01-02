@@ -436,7 +436,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
 
       <div class="section exotic">
         <h2 class="section_title" id="section_3d">3Dモデル</h2>
-        <div id="preact"></div>
+        <div id="preact-viewer"></div>
       </div>
     </main>
 
@@ -495,12 +495,13 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     ></script>
     <script
       type="text/javascript"
-      src="./assets/preact_build/bundle.js"
-    ></script>
-    <script
-      type="text/javascript"
       src="./assets/js/console_unchan.js"
       defer
     ></script>
+    <script
+      type="text/javascript"
+      src="./assets/preact_build/polyfill.js"
+    ></script>
+    <script type="text/javascript" src="./assets/preact_build/main.js"></script>
   </body>
 </html>

@@ -1,14 +1,10 @@
 import {h, render} from 'preact';
 
-import App from './App';
 import MusicPlayer from './Music';
-import SindanApp from "./SindanApp";
+import Viewer from './Viewer';
 
-const appMount = document.querySelector('#preact');
-if (appMount) render(<App />, appMount);
-
-const sindanMount = document.querySelector("#sindan");
-if (sindanMount) render(<SindanApp />, sindanMount);
+const appMount = document.querySelector('#preact-viewer');
+if (appMount) render(<Viewer />, appMount);
 
 const musicMount = document.querySelector('#preact-music');
 if (musicMount)
@@ -41,4 +37,4 @@ if (musicMount)
     musicMount,
   );
 
-export default App;
+export default Viewer;

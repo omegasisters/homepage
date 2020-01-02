@@ -5,7 +5,7 @@ import Rotate from './three/rotate';
 import ThreeScene from './three/scene';
 import ThreeViewer from './three/viewer';
 
-const App: FunctionalComponent = () => {
+const Viewer: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [modelType, setModelType] = useState<'otohime' | 'curing'>('otohime');
@@ -104,4 +104,4 @@ const App: FunctionalComponent = () => {
   );
 };
 
-export default App;
+export default Viewer;

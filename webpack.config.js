@@ -3,10 +3,13 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
-  entry: ['@babel/polyfill', './preact/index'],
+  entry: {
+    polyfill: '@babel/polyfill',
+    main: './preact/main',
+    sindan: './preact/sindan',
+  },
   output: {
     path: path.resolve(__dirname, 'assets', 'preact_build'),
-    filename: 'bundle.js',
     publicPath: '/homepage/',
     globalObject: 'self',
   },
