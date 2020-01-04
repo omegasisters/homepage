@@ -3,9 +3,7 @@ import {createContext, h} from 'preact';
 export default class I18n {
   language = 'ja';
   json: any;
-  constructor() {
-    this.load();
-  }
+  constructor(private onChange?: (lang: string) => void) {}
 
   async load() {
     const res = await fetch('./assets/i18n/resource.json');
@@ -18,6 +16,7 @@ export default class I18n {
     if (!json) return;
 
     this.language = language;
+    if (this.onChange) this.onChange(language);
 
     Object.keys(json).forEach((id) => {
       const elm = document.getElementById(id);
