@@ -1,14 +1,14 @@
 import {FunctionalComponent, h} from 'preact';
+import {useCallback, useRef} from 'preact/hooks';
 
+import I18n from './i18n';
 // @ts-ignore
 import scoped from 'scoped-style';
-import {useCallback} from 'preact/hooks';
-import {useI18n} from '../hooks/i18n';
 
 const styled = scoped(h);
 
 const Switcher: FunctionalComponent = () => {
-  const i18n = useI18n();
+  const i18n = useRef(new I18n()).current;
   const setLanguage = useCallback(
     (s: string) => (_: any) => i18n.setLanguage(s),
     [i18n],

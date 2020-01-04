@@ -25,6 +25,3 @@ export default class I18n {
     });
   }
 }
-
-export const I18nContext = createContext(new I18n());
-export const ProvideI18n = I18nContext.Provider;
