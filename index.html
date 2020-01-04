@@ -138,6 +138,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     style="background-color: #1e2a55"
     class="drawer drawer--top drawer--navbarTopGutter"
   >
+    <div style="position: absolute;z-index: 9999;" id="preact-i18n"></div>
     <header class="drawer-navbar drawer-navbar--fixed" role="banner">
       <div class="drawer-container">
         <div class="drawer-navbar-header">
@@ -185,7 +186,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     </header>
     <main role="main">
       <div class="main" id="top-anchor">
-        <div class="section hero">
+        <section class="section hero">
           <figure class="hero__bg">
             <video class="hero__inner__bg" autoplay playsinline loop muted>
               <source
@@ -207,7 +208,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
           <div class="hero__container">
             <div class="hero__logo">
               <h1 class="logo">Ω Sisters</h1>
-              <div class="logo-sub">おめがシスターズ</div>
+              <div class="logo-sub" id="おめがシスターズ">おめがシスターズ</div>
             </div>
             <div class="guide_for_scroll">
               <a href="#section_description">
@@ -215,9 +216,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
               </a>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="section firstview">
+        <section class="section firstview">
           <h1 class="section_title do-omega" id="section_firstview">
             おめがってるー？！
           </h1>
@@ -242,8 +243,8 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
               ></iframe>
             </div>
           </div>
-        </div>
-        <div class="section introduction">
+        </section>
+        <section class="section introduction">
           <h2 class="section_title" id="section_description">おめシスって？</h2>
           <div class="box about-us">
             <p>
@@ -297,10 +298,10 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
             </div>
             <div id="preact-music"></div>
           </div>
-        </div>
+        </section>
       </div>
 
-      <div class="section links">
+      <section class="section links">
         <h2 class="section_title" id="section_link">リンク</h2>
         <div class="box">
           <h2><i class="fab fa-youtube"></i>YouTube</h2>
@@ -432,12 +433,12 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
             α
           </a>
         </div>
-      </div>
+      </section>
 
-      <div class="section exotic">
+      <section class="section exotic">
         <h2 class="section_title" id="section_3d">3Dモデル</h2>
         <div id="preact-viewer"></div>
-      </div>
+      </section>
     </main>
 
     <a href="#top-anchor">
@@ -496,6 +497,11 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     <script
       type="text/javascript"
       src="./assets/js/console_unchan.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="./assets/preact_build/i18n.js"
       defer
     ></script>
     <script

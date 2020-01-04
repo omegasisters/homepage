@@ -57,9 +57,8 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
           href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
           style={{textDecoration: 'none'}}
           target="_blank"
-          rel="noopener noreferrer">
-          🎵おめシスの歌ってみたシリーズ
-        </a>
+          rel="noopener noreferrer"
+          id="おめシスの歌ってみたシリーズ"></a>
       </h3>
       <br />
       <div
