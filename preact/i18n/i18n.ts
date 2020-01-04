@@ -1,5 +1,3 @@
-import {createContext, h} from 'preact';
-
 export default class I18n {
   language = 'ja';
   json: any;
