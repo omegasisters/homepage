@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     polyfill: '@babel/polyfill',
-    i18n: './preact/i18n',
+    internationalization: './preact/i18n',
     main: './preact/main',
     sindan: './preact/sindan',
   },
