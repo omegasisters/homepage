@@ -1,14 +1,14 @@
 import {h, render} from 'preact';
 
-import Button from './Button';
 import {I18nProvider} from '../hooks/i18n';
+import Switcher from './Switcher';
 
 const mount = document.querySelector('#preact-i18n');
 
 if (mount)
   render(
     <I18nProvider>
-      <Button />
+      <Switcher />
     </I18nProvider>,
     mount,
   );

@@ -7,7 +7,7 @@ import {useI18n} from '../hooks/i18n';
 
 const styled = scoped(h);
 
-const Button: FunctionalComponent = () => {
+const Switcher: FunctionalComponent = () => {
   const i18n = useI18n();
   const setLanguage = useCallback(
     (s: string) => (_: any) => i18n.setLanguage(s),
@@ -28,4 +28,4 @@ const ClickSpan = styled('span')`
   margin: 3px;
 `;
 
-export default Button;
+export default Switcher;
