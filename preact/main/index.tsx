@@ -3,8 +3,8 @@ import {h, render} from 'preact';
 import MusicPlayer from './Music';
 import Viewer from './Viewer';
 
-// const appMount = document.querySelector('#preact-viewer');
-// if (appMount) render(<Viewer />, appMount);
+const appMount = document.querySelector('#preact-viewer');
+if (appMount) render(<Viewer />, appMount);
 
 const musicMount = document.querySelector('#preact-music');
 if (musicMount)
