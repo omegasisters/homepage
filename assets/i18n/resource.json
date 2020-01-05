@@ -1,12 +1,17 @@
 {
-  "おめがシスターズ": {
+  "logo-sub--text": {
     "ja": "おめがシスターズ",
     "en": "omega sisters",
     "cn": "欧米茄姐妹"
   },
-  "おめシスの歌ってみたシリーズ": {
+  "preact-music__title": {
     "ja": "🎵おめシスの歌ってみたシリーズ",
     "en": "omega sisters cover songs",
     "cn": "欧米茄姐妹 cover songs"
+  },
+  "section_description": {
+    "ja": "おめシスって？",
+    "en": "What is Ome-sis?",
+    "cn": "Ome-sis 是什么?"
   }
 }

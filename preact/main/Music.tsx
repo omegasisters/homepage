@@ -58,7 +58,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
           style={{textDecoration: 'none'}}
           target="_blank"
           rel="noopener noreferrer"
-          id="おめシスの歌ってみたシリーズ"></a>
+          id="preact-music__title"></a>
       </h3>
       <br />
       <div
