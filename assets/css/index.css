@@ -459,6 +459,7 @@ a:hover {
   background-image: none;
   width: 28px;
   height: 86px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .swiper-button-prev:after {
   font-family: 'Font Awesome 5 Free';
@@ -474,6 +475,11 @@ a:hover {
   font-size: 48px;
   color: #007aff;
   text-shadow: -4px 4px 6px #8f8fff;
+}
+
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  outline: none;
 }
 
 .swiper-container-3d .swiper-slide-shadow-left,
