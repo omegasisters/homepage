@@ -175,6 +175,9 @@ a:hover {
   position: absolute;
   top: 85vh;
 }
+.guide_for_scroll a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .guide_for_scroll i {
   font-size: 5rem;
   font-weight: bold;
