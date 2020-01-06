@@ -2,70 +2,109 @@
 
 # みんなでつくろう「おめシスホームページ」！
 
-https://omegasisters.github.io/homepage
+みんなで作るおめがシスターズのホームページです
 
-第１回おめシスのホームページをプルリクだけで更新していったらどうなるの？企画
+![](assets/images/ogp.png)
 
-プルリク待ってます！！！！
+## このサイトは何のためにありますか？
 
-## ここが何かよく分からない人向け
+本サイトは、「第１回おめシスのホームページをプルリクだけで更新していったらどうなるの？」という、おめがシスターズの企画用サイトです
 
-### 今のおめシスホームページはどんな感じ？
+ユーザー参加型の企画なので、誰でも参加することができます 👏
 
-[ここ](https://omegasisters.github.io/homepage) をクリックすると、今のおめシスホームページの状態を見に行けます
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おめシスのホームページをGithubのプルリクで更新していったらどうなるのか、こっそり検証中です。そのうち動画にします！<a href="https://t.co/rErhv32NNR">https://t.co/rErhv32NNR</a></p>&mdash; おめがレイ@バーチャル双子YouTuber (@omesis_ray) <a href="https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw">December 23, 2019</a></blockquote>
 
-### ここをこうしたい、ああしたい。けどプログラムはよく分からない
+## この企画に参加するにはどうすればいいですか？
 
-[上部メニューの**Issues**](https://github.com/omegasisters/homepage/issues) では、これからやりたい事、変えてほしい事、（何か変なので）なおしてほしい事が書けます。
+大きくわけて 3 つの方法があります
 
-一般的なスレッド式掲示板のような場所です。
-何か書いておくと、実装されるかもしれません。されないかもしれません。
+- [issue(要望・不具合)](https://github.com/omegasisters/homepage/issues) を立てる・コメントする
+- [PR](https://github.com/omegasisters/homepage/pulls) を投げる・レビューする
+- Twitter で共有 🎉
+- その他、みんなで盛り上げていきましょう 👍
 
-新しく作成するには、[GitHub アカウントを作成](https://github.com/join?source_repo=omegasisters%2Fhomepage) して、[Issue を作成](https://github.com/omegasisters/homepage/issues/new) してください。
+## 開発のやり方
 
-# Tips
+### GitHub アカウント
 
-## ローカルプレビュー
+GitHub のアカウントは持っていますか？
 
-VRM モデルも含めて完全な状態でプレビューしたい場合は以下の方法を試してください。
-GitHub Pages で公開された時と同じ状態で開発することが出来ます。
-同じローカルネットワークに接続されていればホストの[IP アドレス]:[ポート番号](例: http://192.168.1.2:8000 )で他の端末からも確認できます。
+なければ[ここ](https://github.com/)で作成することができます。
 
-**記述を移動しました**
-[documents/environment](documents/environment)をご覧ください。
+yarn, npm の場合それぞれ書いています
 
-## コード整形(Node.js 環境必須)
+### yarn の導入方法
 
-```
-yarn format # yarn の場合
-npm run format # npm の場合
-```
+※OS 別、公式ドキュメントへのリンク
 
-## preact 部分の開発方法 (Node.js)
+- [mac OS](https://yarnpkg.com/lang/ja/docs/install/#mac-stable)
+- [Windows](https://yarnpkg.com/lang/ja/docs/install/#windows-stable)
+- [Linux(Ubuntu/Debian)](https://yarnpkg.com/lang/ja/docs/install/#debian-stable)
 
-プレビューする際には以下のコマンドのどちらかを入力してください:
+### ローカルプレビュー (Node.js)
 
-```
-yarn start # yarn の場合
-npm run start # npm の場合
-```
+コマンドを実行すると、 http://localhost:8080 にホストされます
 
-http://localhost:8080 にホストされます。
-
-ソースコードを編集する際には、git push する前にビルドを行ってください:
+#### yarn
 
 ```
-yarn build # yarn の場合
-npm run build # npm の場合
+yarn start
 ```
 
-## テストする (Node.js)
-
-以下のコマンドでテストができます。
+#### npm
 
 ```
-yarn test # yarn の場合
-npm run test # npm の場合
+npm run start
 ```
 
-`__tests__`, `preact` にサンプルテストケースがあります。
+### コード整形(Node.js 環境必須)
+
+#### yarn
+
+```
+yarn format
+```
+
+#### npm
+
+```
+npm run format
+```
+
+### Push する前にすること
+
+ソースコードを編集した後、Push する前にビルドを行ってください
+
+#### yarn
+
+```
+yarn build
+```
+
+#### npm
+
+```
+npm run build
+```
+
+### テストコードを実行する (Node.js)
+
+#### yarn
+
+```
+yarn test
+```
+
+#### npm
+
+```
+npm run test
+```
+
+#### Sample Test Case
+
+`__tests__`, `preact` にサンプルテストケースがあります
+
+### 使用されている技術にはどんなものがありますか？
+
+[こちら](./documents/environment/README.md)を確認してください
