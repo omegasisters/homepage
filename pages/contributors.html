@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@omesis_ray" />
+
+    <meta property="og:title" content="おめシスのホームページ" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta
+      name="description"
+      content="バーチャル双子YouTuber「おめがシスターズ」のおめがレイ、おめがリオのホームページです！"
+    />
+    <meta
+      property="og:description"
+      content="バーチャル双子YouTuber「おめがシスターズ」のおめがレイ、おめがリオのホームページです！"
+    />
+    <meta property="og:site_name" content="おめシスのホームページ" />
+    <meta
+      property="og:image"
+      content="https://omegasisters.github.io/homepage/assets/images/ogp.png"
+    />
+
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Serif:700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
+
+    <script type="application/ld+json">
+      {
+        "description": "バーチャル双子YouTuber「おめがシスターズ」のおめがレイ、おめがリオのホームページです！",
+        "@type": "WebSite",
+        "url": "/",
+        "name": "おめシスのホームページ",
+        "image": "/homepage/assets/images/ogp.png",
+        "headline": "おめシスのホームページ",
+        "@context": "https://schema.org"
+      }
+    </script>
+
+    <title>Contributors</title>
+    <style type="text/css">
+      .cover {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        width: 100vw;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- contents -->
+    <!-- for developpers 
+      This page powered by Vue and Vuetify.
+
+      ---
+      Documents:
+        [Vue](https://vuejs.org)
+        [Vuetify](https://vuetifyjs.com)
+    -->
+    <div id="app">
+      <v-app dark>
+        <v-content>
+          <v-container class="cover" fluid>
+            <v-sheet class="overflow-hidden" style="position: relative;">
+              <!-- menubar -->
+              <v-app-bar absolute height="100">
+                <template v-slot:img="{ props }">
+                  <v-img
+                    v-bind="props"
+                    gradient="to top right, rgba(90,84,90,.8), rgba(198,208,199,.9)"
+                  ></v-img>
+                </template>
+                <v-app-bar-nav-icon
+                  @click.stop="drawer = !drawer"
+                ></v-app-bar-nav-icon>
+              </v-app-bar>
+
+              <!-- sidebar (defualt: hidden) -->
+              <v-navigation-drawer v-model="drawer" absolute temporary>
+                <v-list dense>
+                  <v-list-item
+                    v-for="item in list_items"
+                    :key="item.title"
+                    link
+                    :href="item.url"
+                  >
+                    <v-list-content>
+                      <v-list-item-title> {{ item.title }} </v-list-item-title>
+                    </v-list-content>
+                  </v-list-item>
+                </v-list>
+              </v-navigation-drawer>
+
+              <!-- main contents -->
+              <section style="min-height: 100vh; margin-top: 100px;">
+                <!-- first view -->
+                <article>
+                  <v-container>
+                    <v-row align="center" justify="center" no-gutters>
+                      <v-col
+                        align="center"
+                        justify="center"
+                        cols="6"
+                        xs="6"
+                        sm="3"
+                        lg="2"
+                        xl="1"
+                        v-for="contributor of contributors"
+                      >
+                        <v-card class="ma-1" color="white">
+                          <v-card-text class="black--text">
+                            <v-avatar>
+                              <img :src="contributor.image" />
+                            </v-avatar>
+                            <p class="subheading">{{ contributor.name }}</p>
+                            <a :href="contributor.url">
+                              <p class="overline">
+                                {{ contributor.commits }} commits
+                              </p>
+                            </a>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                </article>
+              </section>
+            </v-sheet>
+          </v-container>
+        </v-content>
+
+        <v-footer>
+          <v-container fluid fill-height>
+            <v-col>
+              <v-row align="center" justify="center">
+                <p class="ma-0 caption">Ω{{ year }} おめがシスターズ</p>
+              </v-row>
+            </v-col>
+          </v-container>
+        </v-footer>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+    <!-- data structure -->
+    <script>
+      new Vue({
+        el: '#app',
+        vuetify: new Vuetify({
+          theme: {
+            themes: {
+              dark: {
+                background: '#dddddd',
+              },
+            },
+            dark: true,
+          },
+        }),
+        data() {
+          return {
+            year: new Date().getFullYear(),
+            drawer: null,
+            list_items: [{title: 'Home', url: '/homepage'}],
+            contributors: [],
+          };
+        },
+        mounted() {
+          const users = fetch(
+            'https://api.github.com/repos/omegasisters/homepage/stats/contributors',
+          )
+            .then((response) => {
+              return response.json();
+            })
+            .then((result) => {
+              this.contributors = result.reverse().map((contributor) => {
+                return {
+                  name: contributor.author.login,
+                  url: contributor.author.html_url,
+                  image: contributor.author.avatar_url,
+                  commits: contributor.total,
+                };
+              });
+            });
+        },
+      });
+    </script>
+  </body>
+</html>
+
+<!-- ちょんな〜〜〜〜〜〜！！ -->
