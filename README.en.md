@@ -2,73 +2,101 @@
 
 # Let's make "OmegaSisters(Omesis) Homepage"!
 
-https://omegasisters.github.io/homepage
+A participatory OmegaSisters(Omesis) Homepage creation project.
 
-What happens if I update the homepage of OmegaSisters(Omesis) for the first time with only pull request? In planning
+![](assets/images/ogp.png)
 
-I'm waiting for your pull requests! ! ! !
+## What is OmegaSisters/Homepage?
 
-## For those who do not know what this project is
+This site is a site designed by Omega Sisters called "What happens if I update the Ome-sis home page with only PR?".
 
-### What is your current homepage like?
+Anyone can participate. 👏
 
-Click [here](https://omegasisters.github.io/homepage) to see the current status of the OmegaSisters(Omesis) website
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おめシスのホームページをGithubのプルリクで更新していったらどうなるのか、こっそり検証中です。そのうち動画にします！<a href="https://t.co/rErhv32NNR">https://t.co/rErhv32NNR</a></p>&mdash; おめがレイ@バーチャル双子YouTuber (@omesis_ray) <a href="https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw">December 23, 2019</a></blockquote>
 
-### I have ideas and want to do this here, but I don't know to program
+## How to contribute?
 
-[In the **Issues** button on the top menu](https://github.com/omegasisters/homepage/issues), you can write what you want to do, what you want to change, and what you want to do again (because something is strange).
+There are three ways.
 
-It's like a typical threaded message board.
-Noted if you write something, it may be implemented or may not be.
+- [issue](https://github.com/omegasisters/homepage/issues) / Comment
+- Throw and review [PR](https://github.com/omegasisters/homepage/pulls)
+- Share on Twitter 🎉
+- In addition, let's have fun together👍
 
-To create a new issue, [create a GitHub account](https://github.com/join?source_repo=omegasisters%2Fhomepage) and [create an Issue](https://github.com/omegasisters/homepage/issues/new).
+## Getting Started
 
-# Tips
+### Installing yarn
 
-## Local preview
+※Link to documentation
 
-If you want to preview in full pages including the VRM model, try the following.
+- [mac OS](https://yarnpkg.com/lang/ja/docs/install/#mac-stable)
+- [Windows](https://yarnpkg.com/lang/ja/docs/install/#windows-stable)
+- [Linux(Ubuntu/Debian)](https://yarnpkg.com/lang/ja/docs/install/#debian-stable)
 
-You can develop it based on the original version published on GitHub Pages.
+### Local preview (Node.js)
 
-If you are connected to the same local network, you can check it from other terminals with the host's [IP address]: [port number] (example: http://192.168.1.2:8000).
+When you run the command, you can see http://localhost:8080
 
-**More description**
-
-Please see [documents/environment](documents/environment).
-
-## Code formatting (Node.js environment required)
-
-```
-yarn format # For yarn
-npm run format # For npm
-```
-
-## Preact part development method (Node.js)
-
-When previewing, enter one of the following commands:
+#### yarn
 
 ```
-yarn start # For yarn
-npm run start # For npm
+yarn start
 ```
 
-Hosted at http://localhost: 8080
-
-When editing the source code, build before doing a 'git push':
+#### npm
 
 ```
-yarn build # For yarn
-npm run build # For npm
+npm run start
 ```
 
-## Test (Node.js)
+### Formatting (Node.js)
 
-You can test with the following command.
+#### yarn
 
 ```
-yarn test # For yarn
-npm run test # For npm
+yarn format
 ```
 
-`__tests__`, `preact` has sample test cases.
+#### npm
+
+```
+npm run format
+```
+
+### Things to do before pushing
+
+After editing the source code, please build before pushing.
+
+#### yarn
+
+```
+yarn build
+```
+
+#### npm
+
+```
+npm run build
+```
+
+### Testing (Node.js)
+
+#### yarn
+
+```
+yarn test
+```
+
+#### npm
+
+```
+npm run test
+```
+
+#### Test case
+
+At `__tests__`, `preact`
+
+### Development environment
+
+Check [here](./documents/environment/README.md)
