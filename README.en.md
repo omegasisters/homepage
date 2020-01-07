@@ -4,7 +4,7 @@
 
 A participatory OmegaSisters(Omesis) Homepage creation project.
 
-![](assets/images/ogp.png)
+[![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
 ## What is OmegaSisters/Homepage?
 
