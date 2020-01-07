@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru|M+PLUS+1p:900&display=swap');
 
 * {
   margin: 0;
@@ -281,15 +281,32 @@ a:hover {
   }
 }
 .firstview .do-omega {
-  font-weight: bold;
-  margin-top: 1em;
-  letter-spacing: 6px;
-  text-shadow: 4px 4px 6px #ffaeae, -4px 4px 6px #8f8fff;
-  font-size: 3em;
+  margin: 1rem 0;
+  font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 900;
+  padding-right: 0.3rem;
+  letter-spacing: -0.9rem;
+  font-size: 7rem;
+  line-height: initial;
+  background: linear-gradient(
+    to bottom,
+    rgb(254, 127, 126),
+    rgb(254, 127, 126) 50%,
+    rgb(47, 168, 249) 53%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.4rem whitesmoke;
 }
 @media screen and (max-width: 700px) {
   .firstview .do-omega {
-    font-size: 1.4em;
+    padding-right: 0.1rem;
+    letter-spacing: -0.3rem;
+    font-size: 2.1rem;
+    -webkit-text-stroke-width: 0.15rem;
   }
 }
 .firstview .video_box {
