@@ -4,7 +4,7 @@
 
 みんなで作るおめがシスターズのホームページです
 
-![](assets/images/ogp.png)
+[![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
 ## このサイトは何のためにありますか？
 
