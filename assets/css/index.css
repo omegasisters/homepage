@@ -157,6 +157,7 @@ a:hover {
 
 .hero .logo,
 .guide_for_scroll {
+  text-align: center;
   margin: 0;
   padding: 0;
   font-size: 140px;
