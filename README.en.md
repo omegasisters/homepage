@@ -4,6 +4,8 @@
 
 A participatory OmegaSisters(Omesis) Homepage creation project.
 
+https://omegasisters.github.io/homepage
+
 [![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
 ## What is OmegaSisters/Homepage?
@@ -25,6 +27,14 @@ There are three ways.
 
 ## Getting Started
 
+[※Look here at npm](documents/environment/npm.md)
+
+### GitHub Account
+
+Do you have a github account?
+
+You can create it [here](https://github.com/)
+
 ### Installing yarn
 
 ※Link to documentation
@@ -33,64 +43,36 @@ There are three ways.
 - [Windows](https://yarnpkg.com/lang/ja/docs/install/#windows-stable)
 - [Linux(Ubuntu/Debian)](https://yarnpkg.com/lang/ja/docs/install/#debian-stable)
 
+### Installing node.js
+
+Click [here](https://nodejs.org/ja/download/)
+
 ### Local preview (Node.js)
 
 When you run the command, you can see http://localhost:8080
-
-#### yarn
 
 ```
 yarn start
 ```
 
-#### npm
-
-```
-npm run start
-```
-
 ### Formatting (Node.js)
-
-#### yarn
 
 ```
 yarn format
-```
-
-#### npm
-
-```
-npm run format
 ```
 
 ### Things to do before pushing
 
 After editing the source code, please build before pushing.
 
-#### yarn
-
 ```
 yarn build
 ```
 
-#### npm
-
-```
-npm run build
-```
-
 ### Testing (Node.js)
-
-#### yarn
 
 ```
 yarn test
-```
-
-#### npm
-
-```
-npm run test
 ```
 
 #### Test case

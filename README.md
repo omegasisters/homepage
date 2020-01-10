@@ -4,6 +4,8 @@
 
 みんなで作るおめがシスターズのホームページです
 
+https://omegasisters.github.io/homepage
+
 [![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
 ## このサイトは何のためにありますか？
@@ -31,9 +33,9 @@ GitHub のアカウントは持っていますか？
 
 なければ[ここ](https://github.com/)で作成することができます。
 
-yarn, npm の場合それぞれ書いています
-
 ### yarn の導入方法
+
+[※npm で実行したい場合](documents/environment/npm.md)
 
 ※OS 別、公式ドキュメントへのリンク
 
@@ -41,64 +43,36 @@ yarn, npm の場合それぞれ書いています
 - [Windows](https://yarnpkg.com/lang/ja/docs/install/#windows-stable)
 - [Linux(Ubuntu/Debian)](https://yarnpkg.com/lang/ja/docs/install/#debian-stable)
 
+### Node.js の導入方法
+
+[こちら](https://nodejs.org/ja/download/)をご確認ください
+
 ### ローカルプレビュー (Node.js)
 
 コマンドを実行すると、 http://localhost:8080 にホストされます
-
-#### yarn
 
 ```
 yarn start
 ```
 
-#### npm
-
-```
-npm run start
-```
-
 ### コード整形(Node.js 環境必須)
-
-#### yarn
 
 ```
 yarn format
-```
-
-#### npm
-
-```
-npm run format
 ```
 
 ### Push する前にすること
 
 ソースコードを編集した後、Push する前にビルドを行ってください
 
-#### yarn
-
 ```
 yarn build
 ```
 
-#### npm
-
-```
-npm run build
-```
-
 ### テストコードを実行する (Node.js)
-
-#### yarn
 
 ```
 yarn test
-```
-
-#### npm
-
-```
-npm run test
 ```
 
 #### Sample Test Case
