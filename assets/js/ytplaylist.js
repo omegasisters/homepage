@@ -1,5 +1,5 @@
 const loadPlayList = (id, dom) => {
-  fetch(`/assets/playlists/${id}.json`)
+  fetch(`/homepage/assets/playlists/${id}.json`)
     .then((response) => response.json())
     .then((MoviesData) => {
       MoviesData.items.reverse();
