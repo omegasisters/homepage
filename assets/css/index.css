@@ -705,9 +705,9 @@ a.share-button:hover {
 */
 .fukidashi {
   display: inline-block;
-  visibility: hidden;
+  pointer-events: none;
   opacity: 0;
-  transition: visibility 0.1s linear, opacity 0.1s linear;
+  transition: opacity 0.1s linear;
   position: absolute;
   bottom: 140px;
   left: 0;
@@ -734,11 +734,11 @@ a.share-button:hover {
   margin-left: -15px;
   border: 15px solid transparent;
   border-top: 15px solid #70a6ff;
-  z-index: 0;
 }
 
-.c-unchan:hover > .fukidashi {
-  visibility: visible;
+.c-unchan:hover > .fukidashi,
+.c-unchan:focus > .fukidashi {
+  pointer-events: unset;
   opacity: 1;
 }
 
