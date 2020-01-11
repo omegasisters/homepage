@@ -682,6 +682,27 @@ a.share-button:hover {
   text-decoration: none;
 }
 
+.hover-effect a {
+  display: inline-block;
+  background-color: black;
+}
+
+.hover-effect a img {
+  vertical-align: middle;
+  transition: opacity 0.3s;
+}
+
+.hover-effect a:hover img {
+  opacity: 0.7;
+}
+
+.hover-effect a:hover {
+  opacity: 1;
+}
+
+/*
+うんちゃん
+*/
 .fukidashi {
   display: inline-block;
   visibility: hidden;
@@ -716,27 +737,6 @@ a.share-button:hover {
   z-index: 0;
 }
 
-.hover-effect a {
-  display: inline-block;
-  background-color: black;
-}
-
-.hover-effect a img {
-  vertical-align: middle;
-  transition: opacity 0.3s;
-}
-
-.hover-effect a:hover img {
-  opacity: 0.7;
-}
-
-.hover-effect a:hover {
-  opacity: 1;
-}
-
-/*
-うんちゃん
-*/
 .c-unchan:hover > .fukidashi {
   visibility: visible;
   opacity: 1;
