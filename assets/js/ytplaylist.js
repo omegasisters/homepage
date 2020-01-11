@@ -20,6 +20,7 @@ const loadPlayList = (id, dom) => {
         link.title = MovieData.snippet.title;
 
         const image = document.createElement('img');
+        image.alt = '';
         image.src = MovieData.snippet.thumbnails.default.url;
         image.dataset.src = MovieData.snippet.thumbnails.high.url;
         image.className = 'lazy';
