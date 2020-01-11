@@ -74,8 +74,8 @@ const loadPlayList = (id, dom) => {
     });
 };
 
-// https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
 if (!document.URL.match('alpha')) {
+  // https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
   loadPlayList(
     'PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja',
     document.getElementById('beginner-playlist'),
