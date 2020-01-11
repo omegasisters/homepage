@@ -74,7 +74,8 @@ const loadPlayList = (id, dom) => {
     });
 };
 
-if (!document.URL.match('alpha')) {
+const searchParams = new URLSearchParams(window.location.search);
+if (!searchParams.has('alpha')) {
   // https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
   loadPlayList(
     'PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja',
