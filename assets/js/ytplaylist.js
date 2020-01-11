@@ -39,7 +39,7 @@ const loadPlayList = (id, dom) => {
       // 必要があれば画角変更時のイベントハンドラで制御
       const isNarrow = window.matchMedia('(max-width:700px)').matches;
 
-      let swiperParams = {
+      const swiperParams = {
         spaceBetween: 5,
         slidesPerView: isNarrow ? 1 : 3,
         loop: true,
