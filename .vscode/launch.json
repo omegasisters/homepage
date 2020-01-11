@@ -1,7 +1,13 @@
 {
-  // IntelliSense を使用して利用可能な属性を学べます。
+  // # 本ファイルについて
+  // 本ファイルでは、デバッグモードの実行環境を設定しています
+  // 参考: [Debugging - Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
+  //
+  // ## 設定可能な属性について
+  // 下記URLを参考にすることで、 IntelliSense を使用して利用可能な属性を学べます。
   // 既存の属性の説明をホバーして表示します。
   // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+
   "version": "0.2.0",
   "configurations": [
     {
