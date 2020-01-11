@@ -20,6 +20,7 @@ const loadPlayList = (id, dom) => {
         link.title = MovieData.snippet.title;
 
         const image = document.createElement('img');
+        image.alt = '';
         image.src = MovieData.snippet.thumbnails.default.url;
         image.dataset.src = MovieData.snippet.thumbnails.high.url;
         image.className = 'lazy';
@@ -38,7 +39,7 @@ const loadPlayList = (id, dom) => {
       // 必要があれば画角変更時のイベントハンドラで制御
       const isNarrow = window.matchMedia('(max-width:700px)').matches;
 
-      let swiperParams = {
+      const swiperParams = {
         spaceBetween: 5,
         slidesPerView: isNarrow ? 1 : 3,
         loop: true,
@@ -74,8 +75,8 @@ const loadPlayList = (id, dom) => {
     });
 };
 
-// https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
-if (!document.URL.match('alpha')) {
+if (!window.location.pathname.endsWith('/alpha.html')) {
+  // https://www.youtube.com/playlist?list=PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja
   loadPlayList(
     'PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja',
     document.getElementById('beginner-playlist'),
