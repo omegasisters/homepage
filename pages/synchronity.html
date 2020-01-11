@@ -115,7 +115,7 @@
   </head>
   <body>
     <!-- contents -->
-    <!-- for developpers 
+    <!-- for developpers
       This page powered by Vue and Vuetify.
 
       ---
@@ -162,7 +162,7 @@
               </v-navigation-drawer>
 
               <!-- main contents -->
-              <section style="min-height: 150vh;">
+              <section style="min-height: 150vh;" id="top-anchor">
                 <!-- first view -->
                 <article id="parallax" class="elevation-3">
                   <v-parallax
@@ -426,7 +426,7 @@
         </v-footer>
 
         <!-- un-chan scroll -->
-        <a href="#top" class="c-unchan c-unchan--fixedBottom">
+        <a href="#top-anchor" class="c-unchan c-unchan--fixedBottom">
           <div class="fukidashi">トップに戻る</div>
           <div class="c-unchan__inner">
             <div class="c-unchan__tsuno">
@@ -545,8 +545,7 @@
       });
     </script>
     <script
-      type="text/javascript"
-      src="../assets/js/scroll-to-top.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
       defer
     ></script>
   </body>
