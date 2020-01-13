@@ -755,7 +755,8 @@ a.share-button:hover {
   animation: purupuru 7s 5s linear infinite;
 }
 
-.c-unchan__toguro {
+.c-unchan__toguro,
+.c-unchan__toguro.normal {
   position: absolute;
   left: 0;
   right: 0;
@@ -765,6 +766,18 @@ a.share-button:hover {
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to bottom, #f083ba, #c26795);
+}
+
+.c-unchan__toguro.lucky {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 30%;
+  border-radius: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to bottom, #ffd700, #daa520);
 }
 
 .c-unchan__toguro,
@@ -780,21 +793,27 @@ a.share-button:hover {
   animation: unchan-show-other 1.75s 2.2s ease-out backwards;
 }
 
-.c-unchan__toguro--top {
+.c-unchan__toguro--top,
+.c-unchan__toguro--top.normal,
+.c-unchan__toguro--top.lucky {
   bottom: 50%;
   width: 60%;
   z-index: 3;
   animation-delay: 1.1s;
 }
 
-.c-unchan__toguro--middle {
+.c-unchan__toguro--middle,
+.c-unchan__toguro--middle.normal,
+.c-unchan__toguro--middle.lucky {
   bottom: 25%;
   width: 85%;
   z-index: 2;
   animation-delay: 1.05s;
 }
 
-.c-unchan__toguro--bottom {
+.c-unchan__toguro--bottom,
+.c-unchan__toguro--bottom.normal,
+.c-unchan__toguro--bottom.lucky {
   bottom: 0;
   z-index: 1;
   animation-delay: 1s;
@@ -900,7 +919,8 @@ a.share-button:hover {
   border-radius: 100%;
 }
 
-.c-unchan__tsuno__inner::before {
+.c-unchan__tsuno__inner::before,
+.c-unchan__tsuno__inner.normal::before {
   content: '';
   position: absolute;
   bottom: 70%;
@@ -908,6 +928,15 @@ a.share-button:hover {
   height: 100%;
   border-radius: 100%;
   box-shadow: 0 300px 0 300px #f083ba;
+}
+.c-unchan__tsuno__inner.lucky::before {
+  content: '';
+  position: absolute;
+  bottom: 70%;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 300px 0 300px #ffd700;
 }
 
 @keyframes unchan-show-toguro {
