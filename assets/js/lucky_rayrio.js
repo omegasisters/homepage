@@ -4,6 +4,12 @@ const luckyRayRio = () => {
   for (const element of document.getElementsByClassName('links')) {
     element.classList.add(toAddClass);
   }
+  for (const element of document.getElementsByClassName('c-unchan__toguro')) {
+    element.classList.add(toAddClass);
+  }
+  for (const element of document.getElementsByClassName('c-unchan__tsuno__inner')) {
+    element.classList.add(toAddClass);
+  }
 };
 
 function isLucky() {
