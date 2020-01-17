@@ -3,6 +3,7 @@
 # Let's make "OmegaSisters(Omesis) Homepage"!
 
 [![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
 A participatory OmegaSisters(Omesis) Homepage creation project.
 

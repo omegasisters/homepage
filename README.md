@@ -3,6 +3,7 @@
 # みんなでつくろう「おめシスホームページ」！
 
 [![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
 みんなで作るおめがシスターズのホームページです
 
