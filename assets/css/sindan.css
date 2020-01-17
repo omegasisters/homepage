@@ -45,6 +45,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 80px;
 }
 
 .hero__logo_for_sindan {
@@ -53,7 +54,7 @@
 }
 
 .hero__logo_for_sindan_result {
-  margin-top: 8vh;
+  margin-top: 10vh;
 }
 
 .question-logo {
@@ -100,7 +101,7 @@
 }
 
 .desc-box {
-  margin-top: 200px;
+  margin-top: 150px;
   max-width: 800px;
   width: 90%;
   display: flex;
