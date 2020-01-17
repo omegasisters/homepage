@@ -2,6 +2,8 @@
 
 # 一起来建 “Omesys 主页”！
 
+[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+
 第一回“只用 Pull Request 来更新欧米茄姐妹(Omesys)的主页会怎样？”企划
 
 期待您的 Pull Request！ ！ ！ ！

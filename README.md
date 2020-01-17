@@ -2,6 +2,8 @@
 
 # みんなでつくろう「おめシスホームページ」！
 
+[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+
 みんなで作るおめがシスターズのホームページです
 
 https://omegasisters.github.io/homepage

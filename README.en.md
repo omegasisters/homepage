@@ -2,6 +2,8 @@
 
 # Let's make "OmegaSisters(Omesis) Homepage"!
 
+[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+
 A participatory OmegaSisters(Omesis) Homepage creation project.
 
 https://omegasisters.github.io/homepage
