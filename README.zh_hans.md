@@ -3,6 +3,7 @@
 # 一起来建 “Omesys 主页”！
 
 [![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
 https://omegasisters.github.io/homepage
 
