@@ -76,7 +76,7 @@ header.scrolled {
     margin-left: auto;
   }
 
-  header .menu-icon.opened {
+  .drawer-open header .menu-icon {
     transform: rotate(180deg);
     transition-duration: 0.5s;
   }
