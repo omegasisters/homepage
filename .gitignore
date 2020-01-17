@@ -5,6 +5,7 @@ node_modules
 homepage
 yarn-error.log
 package-lock.json
+coverage
 
 #dot net
 bin/
