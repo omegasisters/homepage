@@ -11,18 +11,22 @@ interface Question {
 
 interface Answer {
   text: string;
-  target: string;
+  target: SindanType;
   value: number;
 }
+
+type SindanType = 'ray' | 'rio' | 'unchan';
+
+type SindanPoints = {[key in SindanType]: number};
 
 const SindanApp: FunctionalComponent = () => {
   const [started, setStarted] = useState(false);
   const [questionID, setQuestionID] = useState(-1);
   const [questionsCount, setQuestionsCount] = useState(0);
   const [questionText, setQuestionText] = useState('');
-  const [answers, setAnswers]: [Answer[], any] = useState([]);
-  const [questions, setQuestions]: [Question[], any] = useState([]);
-  const [pointsMap, setPointsMap]: [{[key: string]: number}, any] = useState({
+  const [answers, setAnswers] = useState<Answer[]>([]);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [pointsMap, setPointsMap] = useState<SindanPoints>({
     ray: 0,
     rio: 0,
     unchan: 0,
@@ -32,7 +36,7 @@ const SindanApp: FunctionalComponent = () => {
     setStarted(start);
     if (start === true) {
       try {
-        const q: Question[] = sindanQuestions['questions'];
+        const q = sindanQuestions['questions'] as Question[];
         setQuestions(q);
         setQuestionsCount(q.length);
         readNext(q, q.length, pointsMap);
@@ -46,7 +50,7 @@ const SindanApp: FunctionalComponent = () => {
   const readNext = (
     questions: Question[],
     qCount: number,
-    points: {[key: string]: number},
+    points: SindanPoints,
   ) => {
     if (questionID + 1 < qCount) {
       try {
@@ -60,19 +64,9 @@ const SindanApp: FunctionalComponent = () => {
         alert(`設定ファイルに問題があります。 ${e}`);
       }
     } else {
-      let maxPointTarget = '';
-      let maxPoint = 0;
-      for (let target in points) {
-        try {
-          const point = points[target];
-          if (point >= maxPoint) {
-            maxPoint = point;
-            maxPointTarget = target;
-          }
-        } catch (e) {
-          console.error(`pointsMap is broken ${e}`);
-        }
-      }
+      const maxPointTarget = Object.keys(points).reduce((a, b) =>
+        points[a as SindanType] > points[b as SindanType] ? a : b,
+      );
       try {
         const resultPages: {[key: string]: string} =
           sindanQuestions.resultPages;
@@ -89,7 +83,7 @@ const SindanApp: FunctionalComponent = () => {
   const answer = (answer: Answer) => {
     try {
       const target = answer['target'];
-      let newPointsMap = pointsMap;
+      const newPointsMap = pointsMap;
       let point = newPointsMap[target];
       if (!point) {
         point = 0;
