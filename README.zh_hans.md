@@ -2,13 +2,13 @@
 
 # 一起来建 “Omesys 主页”！
 
-https://omegasisters.github.io/homepage
-
-[![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
-
 第一回“只用 Pull Request 来更新欧米茄姐妹(Omesys)的主页会怎样？”企划
 
 期待您的 Pull Request！ ！ ！ ！
+
+https://omegasisters.github.io/homepage
+
+[![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
 ## 不知道这是什么的人请看这里
 
