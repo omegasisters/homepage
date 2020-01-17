@@ -2,6 +2,8 @@
 
 # 一起来建 “Omesys 主页”！
 
+[![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
+
 https://omegasisters.github.io/homepage
 
 [![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
