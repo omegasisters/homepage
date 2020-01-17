@@ -5,13 +5,13 @@
 [![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
-https://omegasisters.github.io/homepage
-
-[![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
-
 第一回“只用 Pull Request 来更新欧米茄姐妹(Omesys)的主页会怎样？”企划
 
 期待您的 Pull Request！ ！ ！ ！
+
+https://omegasisters.github.io/homepage
+
+[![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
 ## 不知道这是什么的人请看这里
 
