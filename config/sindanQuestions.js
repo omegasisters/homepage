@@ -70,7 +70,7 @@ var sindanQuestions = {
           value: 1,
         },
         {
-          text: 'リビングデットの呼び声を発動',
+          text: 'リビングデッドの呼び声を発動',
           target: 'unchan',
           value: 1,
         },
