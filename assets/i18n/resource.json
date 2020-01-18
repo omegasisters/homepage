@@ -39,10 +39,30 @@
     "en": "⭐【Beginners】Recommended Videos",
     "cn": "⭐【对于初学者】推荐影片"
   },
+  "section_movide_more_videos": {
+    "ja": "他の動画も見る",
+    "en": "Watch More Videos",
+    "cn": "观看更多视频"
+  },
   "section_link": {
     "ja": "リンク",
     "en": "Link",
     "cn": "连结"
+  },
+  "section_link_line_stamp": {
+    "ja": "LINEスタンプ",
+    "en": "LINE Stamps",
+    "cn": "LINE 邮票"
+  },
+  "section_link_contact": {
+    "ja": "お問い合わせはこちらから",
+    "en": "Contact us from here",
+    "cn": "从这里联系我们"
+  },
+  "section_link_github": {
+    "ja": "プルリク待ってます！！！！",
+    "en": "We are waiting your pull requests !!!!",
+    "cn": "我们正在等Pull requests！！！！"
   },
   "section_3d": {
     "ja": "3Dモデル",
@@ -83,5 +103,10 @@
     "ja": "お問い合わせ",
     "en": "Contact Us",
     "cn": "联络我们"
+  },
+  "unchan_fukidashi": {
+    "ja": "トップに戻る",
+    "en": "Back to TOP",
+    "cn": "回页首"
   }
 }
