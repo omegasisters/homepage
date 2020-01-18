@@ -9,6 +9,26 @@
     "en": "omega sisters cover songs",
     "cn": "欧米茄姐妹 原创曲&翻唱系列"
   },
+  "preact_viewer_otohime": {
+    "ja": "おとひめ",
+    "en": "otohime",
+    "cn": "音姫"
+  },
+  "preact_viewer_curling": {
+    "ja": "うんちかーりんぐ",
+    "en": "poop curling",
+    "cn": "便便冰壶"
+  },
+  "preact_viewer_stop_rotation": {
+    "ja": "回転停止",
+    "en": "stop rotation",
+    "cn": "停止旋转"
+  },
+  "preact_viewer_start_rotation": {
+    "ja": "回転開始",
+    "en": "start rotation",
+    "cn": "開始旋转"
+  },
   "section_description": {
     "ja": "おめシスって？",
     "en": "What is Ome-sis?",

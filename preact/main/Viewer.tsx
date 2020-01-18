@@ -4,6 +4,7 @@ import {useEffect, useRef, useState} from 'preact/hooks';
 import Rotate from './three/rotate';
 import ThreeScene from './three/scene';
 import ThreeViewer from './three/viewer';
+import {useI18n} from '../hooks/useI18n';
 
 const Viewer: FunctionalComponent = () => {
   const [loading, setLoading] = useState(false);
@@ -53,19 +54,24 @@ const Viewer: FunctionalComponent = () => {
     setIsRotate((prev) => !prev);
   };
 
+  const stopRotateButtonRef = useRef<HTMLDivElement>();
+  const startRotateButtonRef = useRef<HTMLDivElement>();
+  useI18n([
+    [stopRotateButtonRef, 'preact_viewer_stop_rotation'],
+    [startRotateButtonRef, 'preact_viewer_start_rotation'],
+  ]);
+
   return (
     <div className="viewer">
       <div className="controller">
         <button
           onClick={onOtohime}
-          className={modelType === 'otohime' ? 'active' : ''}>
-          おとひめ
-        </button>
+          className={modelType === 'otohime' ? 'active' : ''}
+          id="preact_viewer_otohime"></button>
         <button
           onClick={onCuring}
-          className={modelType === 'curing' ? 'active' : ''}>
-          うんちかーりんぐ
-        </button>
+          className={modelType === 'curing' ? 'active' : ''}
+          id="preact_viewer_curling"></button>
       </div>
 
       {loading && <p>Now Loading {progress}%</p>}
@@ -97,7 +103,14 @@ const Viewer: FunctionalComponent = () => {
         onClick={toggleRotate}
         className={`rotate_button ${isRotate ? 'active' : ''}`}>
         <i className={`fas fa-fw fa-${isRotate ? 'times' : 'sync-alt'}`} />
-        {isRotate ? '回転停止' : '回転開始'}
+        <span
+          id="preact_viewer_stop_rotation"
+          ref={stopRotateButtonRef}
+          style={{display: isRotate ? '' : 'none'}}></span>
+        <span
+          id="preact_viewer_start_rotation"
+          ref={startRotateButtonRef}
+          style={{display: isRotate ? 'none' : ''}}></span>
       </button>
       <div ref={divRef} />
     </div>
