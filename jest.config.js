@@ -1,4 +1,13 @@
 module.exports = {
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{ts,tsx}",
+    "!**/node_modules/**",
+    "!**/tests/**"
+  ],
+  "coverageReporters": [
+    "html"
+  ],
   "roots": [
     "./__tests__"
   ],
