@@ -1,24 +1,25 @@
 export default class I18n {
   language = 'ja';
-  languageDatas: any;
+  languageData: any;
   constructor(private onChange?: (lang: string) => void) {}
 
   async load() {
-    const i18nFileDatas = await fetch('./assets/i18n/resource.json');
-    this.languageDatas = await i18nFileDatas.json();
+    const i18nFileData = await fetch('./assets/i18n/resource.json');
+    this.languageData = await i18nFileData.json();
     this.setLanguage('ja');
   }
 
   setLanguage(language: string) {
-    const {languageDatas} = this;
-    if (!languageDatas) return;
+    const {languageData} = this;
+    if (!languageData) return;
 
     this.language = language;
     if (this.onChange) this.onChange(language);
 
-    Object.keys(languageDatas).forEach((id) => {
+    Object.keys(languageData).forEach((id) => {
       const elm = document.getElementById(id);
-      if (elm) elm.textContent = languageDatas[id][language];
+      if (elm) elm.textContent = languageData[id][language];
     });
+    (window as any).omesis_language = language;
   }
 }
