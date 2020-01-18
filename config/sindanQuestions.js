@@ -70,7 +70,7 @@ var sindanQuestions = {
           value: 1,
         },
         {
-          text: 'リビングデットの呼び声を発動',
+          text: 'リビングデッドの呼び声を発動',
           target: 'unchan',
           value: 1,
         },
@@ -83,6 +83,26 @@ var sindanQuestions = {
           text: '何もせずターンエンド',
           target: 'ray',
           value: 2,
+        },
+      ],
+    },
+    {
+      text: '「プルリク」ってなんの略？',
+      answers: [
+        {
+          text: 'プルデンシャル・リクルーティング',
+          target: 'unchan',
+          value: 1,
+        },
+        {
+          text: 'プルリクエスト',
+          target: 'ray',
+          value: 1,
+        },
+        {
+          text: 'プルリクって言わないで！！',
+          target: 'rio',
+          value: 1,
         },
       ],
     },

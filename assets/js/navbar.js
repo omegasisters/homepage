@@ -11,12 +11,7 @@ document.onscroll = () => {
 const navbar = () => {
   $('.drawer').drawer();
 
-  $('.drawer-toggle').click(function() {
-    $('header .menu-icon').toggleClass('opened');
-  });
-
   $('.drawer-menu-item').click(function() {
-    $('header .menu-icon').removeClass('opened');
     $('.drawer').drawer('close');
   });
 };
