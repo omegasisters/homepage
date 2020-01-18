@@ -1,11 +1,13 @@
 FROM node:alpine
+
 WORKDIR /omegasisters-webpage
 
 # Cache node packages
-ADD package.json /omegasisters-webpage
-ADD yarn.lock /omegasisters-webpage
+# ADD doesn't make cache so you should use COPY
+COPY package.json yarn.lock ./
+
 RUN yarn
 
-ADD . /omegasisters-webpage
+COPY . .
 
 ENTRYPOINT ["yarn", "start:docker"]
