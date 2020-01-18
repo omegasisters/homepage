@@ -28,5 +28,60 @@
     "ja": "バーチャルを武器にした個性的な企画から、歌動画にゲーム実況と幅広いジャンルの動画をYouTubeに投稿し活動している。",
     "en": "They create YouTube videos about their unique VR projects, singing musics, in-game commentaries, etc.",
     "cn": "他们制作有关自己的独特VR项目，唱歌音乐，游戏内评论等的YouTube视频。"
+  },
+  "section_discography": {
+    "ja": "ディスコグラフィー",
+    "en": "Discography",
+    "cn": "唱片目录"
+  },
+  "section_movie": {
+    "ja": "⭐【初心者向け】すごい面白い動画",
+    "en": "⭐【Beginners】Recommended Videos",
+    "cn": "⭐【对于初学者】推荐影片"
+  },
+  "section_link": {
+    "ja": "リンク",
+    "en": "Link",
+    "cn": "连结"
+  },
+  "section_3d": {
+    "ja": "3Dモデル",
+    "en": "3D model",
+    "cn": "3D模型"
+  },
+  "header_section_description": {
+    "ja": "おめシスって？",
+    "en": "What is Ome-sis?",
+    "cn": "Ome-sis 是什么?"
+  },
+  "header_section_movie": {
+    "ja": "おすすめ動画",
+    "en": "Recommended Videos",
+    "cn": "推荐影片"
+  },
+  "header_section_discography": {
+    "ja": "ディスコグラフィー",
+    "en": "Discography",
+    "cn": "唱片目录"
+  },
+  "header_section_link": {
+    "ja": "リンク",
+    "en": "Link",
+    "cn": "连结"
+  },
+  "header_section_3d": {
+    "ja": "3Dモデル",
+    "en": "3D model",
+    "cn": "3D模型"
+  },
+  "header_diagnosis": {
+    "ja": "おめが診断",
+    "en": "Omega Diagnosis",
+    "cn": "欧米茄诊断"
+  },
+  "header_contact": {
+    "ja": "お問い合わせ",
+    "en": "Contact Us",
+    "cn": "联络我们"
   }
 }
