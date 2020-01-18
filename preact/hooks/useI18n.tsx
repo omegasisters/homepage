@@ -19,10 +19,13 @@ export function useI18n(sets: [PropRef<HTMLDivElement>, string][]) {
     return languageData[id][language];
   };
 
-  sets.forEach(([ref, id]) => {
-    if (ref.current) {
-      const elm = ref.current;
-      elm.textContent = getText(id);
-    }
+  useEffect(() => {
+    sets.forEach(([ref, id]) => {
+      if (ref.current) {
+        const elm = ref.current;
+        const text = getText(id);
+        elm.textContent = text;
+      }
+    });
   });
 }

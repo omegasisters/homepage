@@ -103,14 +103,17 @@ const Viewer: FunctionalComponent = () => {
         onClick={toggleRotate}
         className={`rotate_button ${isRotate ? 'active' : ''}`}>
         <i className={`fas fa-fw fa-${isRotate ? 'times' : 'sync-alt'}`} />
-        <span
-          id="preact_viewer_stop_rotation"
-          ref={stopRotateButtonRef}
-          style={{display: isRotate ? '' : 'none'}}></span>
-        <span
-          id="preact_viewer_start_rotation"
-          ref={startRotateButtonRef}
-          style={{display: isRotate ? 'none' : ''}}></span>
+        {isRotate ? (
+          <span
+            id="preact_viewer_stop_rotation"
+            ref={stopRotateButtonRef}
+            key="stop"></span>
+        ) : (
+          <span
+            id="preact_viewer_start_rotation"
+            ref={startRotateButtonRef}
+            key="start"></span>
+        )}
       </button>
       <div ref={divRef} />
     </div>
