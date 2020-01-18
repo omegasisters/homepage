@@ -130,6 +130,34 @@ const SindanApp: FunctionalComponent = () => {
           );
         })}
       </div>
+
+      {started == false && (
+        <a href="/homepage" className="c-unchan c-unchan--fixedBottom">
+          <div className="fukidashi" id="unchan_fukidashi">
+            ホームページに戻る
+          </div>
+          <div className="c-unchan__inner">
+            <div className="c-unchan__tsuno">
+              <div className="c-unchan__tsuno__inner"></div>
+            </div>
+            <div className="c-unchan__toguro c-unchan__toguro--top"></div>
+            <div className="c-unchan__toguro c-unchan__toguro--middle">
+              <div className="c-unchan__eye c-unchan__eye--left">
+                <div></div>
+              </div>
+              <div className="c-unchan__eye c-unchan__eye--right">
+                <div></div>
+              </div>
+            </div>
+            <div className="c-unchan__toguro c-unchan__toguro--bottom"></div>
+            <div className="c-unchan__mouth">
+              <div className="c-unchan__mouth__inner">
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      )}
     </div>
   );
 };
