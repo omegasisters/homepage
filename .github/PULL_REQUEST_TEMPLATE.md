@@ -11,6 +11,14 @@
 
 - [ ] PR を作成する前に、 https://github.com/omegasisters/homepage の最新の master を取り込み済みである。
   - Conflict や他の方の変更で自分の変更が動かなくなる可能性を防ぎます。
+  - 最新の master を取り込む方法
+    - upstream に fork 元リポジトリを追加
+      - `git remote add upstream git@github.com:omegasisters/homepage.git`
+    - 現在のブランチに `upstream` の `master` を取り込む
+      - `$ git pull --rebase upstream master`
+  - おまけ
+    - rebase 後に再度 `push` する場合、 `--force-with-lease` オプションをつける
+      - `git push --force-with-lease origin <ブランチ名>`
 - [ ] 動作確認済みである。
   - 何らかの理由で本番に取り込まれるまで確認できない場合はその旨を補足に記載する。
 - [ ] prettier によるコード整形を行った、もしくは画面に関係ない変更である。
