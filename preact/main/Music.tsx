@@ -56,7 +56,6 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
       <h3>
         <a
           href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
-          style={{textDecoration: 'none'}}
           target="_blank"
           rel="noopener noreferrer"
           id="preact-music__title"></a>
