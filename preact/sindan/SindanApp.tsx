@@ -122,13 +122,15 @@ const SindanApp: FunctionalComponent = () => {
             はじめる
           </div>
         )}
-        {answers.map((ans) => {
-          return (
-            <div className="start-button" onClick={() => answer(ans)}>
-              {ans['text']}
-            </div>
-          );
-        })}
+        <div className="controle-box__buttons">
+          {answers.map((ans) => {
+            return (
+              <div className="start-button" onClick={() => answer(ans)}>
+                {ans['text']}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       {started == false && (
