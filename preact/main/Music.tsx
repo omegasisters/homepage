@@ -11,12 +11,12 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
   const [playlist, setPlaylist] = useState(thumbs);
-
+  const [selected, setSelect] = useState('');
   const [move, setMove] = useState(0);
 
   useEffect(() => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
-      width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
+      width: window.innerWidth < 500 ? window.innerWidth - (100 + 10 * 2) : 500,
     });
     setMusic(playlist[0]);
     if (window.innerWidth > 769) {
@@ -25,6 +25,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   }, []);
 
   const setMusic = (url: string) => {
+    setSelect(url);
     const id = url.replace('https://i.ytimg.com/vi/', '').split('/')[0];
     const youtube = youtubeRef.current;
     if (!youtube) return;
@@ -51,7 +52,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   };
 
   return (
-    <div>
+    <div style={{background: 'rgba(0 0 0 / 0.2)', padding: 10}}>
       <h3>
         <a
           href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
@@ -70,7 +71,20 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
         <Button className="fas fa-arrow-left" onClick={left} />
         <List>
           {playlist.map((url, i) => (
-            <Card src={url} key={i} onClick={() => setMusic(url)} move={move} />
+            <Card
+              key={i}
+              onClick={() => setMusic(url)}
+              move={move}
+              select={url === selected}>
+              <picture>
+                <source type="image/webp" srcset={url} />
+                <img src={url.split('?')[0]} width={175} />
+              </picture>
+              <PlayButton
+                className="fas fa-play-circle"
+                select={url === selected}
+              />
+            </Card>
           ))}
         </List>
         <Button
@@ -111,14 +125,29 @@ const Button = styled('div')`
   }
 `;
 
-const Card = styled('img')`
-  cursor: pointer;
+const Card = styled('div')`
+  cursor: ${(props: any) => (props.select ? 'default' : 'pointer')};
   margin: 10px 5px;
   width: 200px;
 
   transition: ${(props: any) => (props.move === 0 ? `all 0.3s` : 'none')};
-  transform: ${(props: any) => `translateX(${props.move - 180}px)`};
+  @media (min-width: 769px) {
+    transform: ${(props: any) => `translateX(${props.move - 180}px)`};
+  }
   @media (max-width: 769px) {
     transform: translateX(0px);
   }
+
+  :hover > i {
+    visibility: visible;
+  }
+`;
+
+const PlayButton = styled('i')`
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  color: black;
+  opacity: 0.8;
+  visibility: ${(props: any) => (props.select ? 'visible' : 'hidden')};
 `;
