@@ -16,7 +16,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   useEffect(() => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
-      width: window.innerWidth < 500 ? window.innerWidth - 100 : 500,
+      width: window.innerWidth < 500 ? window.innerWidth - (100 + 10 * 2) : 500,
     });
     setMusic(playlist[0]);
     if (window.innerWidth > 769) {
@@ -52,7 +52,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   };
 
   return (
-    <div>
+    <div style={{background: 'rgba(0 0 0 / 0.2)', padding: 10}}>
       <h3>
         <a
           href="https://www.youtube.com/watch?v=jis7E_mbwPw&list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
@@ -80,7 +80,10 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
                 <source type="image/webp" srcset={url} />
                 <img src={url.split('?')[0]} width={175} />
               </picture>
-              <PlayButton className="fas fa-play-circle" />
+              <PlayButton
+                className="fas fa-play-circle"
+                select={url === selected}
+              />
             </Card>
           ))}
         </List>
@@ -136,7 +139,7 @@ const Card = styled('div')`
   }
 
   :hover > i {
-    visibility: ${(props: any) => (props.select ? 'hidden' : 'visible')};
+    visibility: visible;
   }
 `;
 
@@ -146,5 +149,5 @@ const PlayButton = styled('i')`
   right: 0px;
   color: black;
   opacity: 0.8;
-  visibility: hidden;
+  visibility: ${(props: any) => (props.select ? 'visible' : 'hidden')};
 `;
