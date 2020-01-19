@@ -18,20 +18,19 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
       width: window.innerWidth < 500 ? window.innerWidth - (100 + 10 * 2) : 500,
     });
-    setMusic(playlist[0]);
+    setSelect(playlist[0]);
     if (window.innerWidth > 769) {
       left();
     }
   }, []);
 
-  const setMusic = (url: string) => {
-    setSelect(url);
-    const id = url.replace('https://i.ytimg.com/vi/', '').split('/')[0];
+  useEffect(() => {
+    const id = selected.replace('https://i.ytimg.com/vi/', '').split('/')[0];
     const youtube = youtubeRef.current;
     if (!youtube) return;
     youtube.loadVideoById(id);
     youtube.stopVideo();
-  };
+  }, [selected]);
 
   const right = () => {
     const arr = [...playlist];
@@ -73,7 +72,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
           {playlist.map((url, i) => (
             <Card
               key={i}
-              onClick={() => setMusic(url)}
+              onClick={() => setSelect(url)}
               move={move}
               select={url === selected}>
               <picture>
