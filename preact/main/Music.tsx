@@ -134,6 +134,10 @@ const Card = styled('div')`
   @media (max-width: 769px) {
     transform: translateX(0px);
   }
+
+  :hover > i {
+    visibility: ${(props: any) => (props.select ? 'hidden' : 'visible')};
+  }
 `;
 
 const PlayButton = styled('i')`
@@ -142,4 +146,5 @@ const PlayButton = styled('i')`
   right: 0px;
   color: black;
   opacity: 0.8;
+  visibility: hidden;
 `;
