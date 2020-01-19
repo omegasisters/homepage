@@ -76,12 +76,11 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
               onClick={() => setMusic(url)}
               move={move}
               select={url === selected}>
-              <source type="image/webp" srcset={url} />
-              <img
-                src={url.split('?')[0]}
-                width={175}
-                style={{opacity: url === selected ? 1 : 0.6}}
-              />
+              <picture>
+                <source type="image/webp" srcset={url} />
+                <img src={url.split('?')[0]} width={175} />
+              </picture>
+              <PlayButton className="fas fa-play-circle" />
             </Card>
           ))}
         </List>
@@ -123,7 +122,7 @@ const Button = styled('div')`
   }
 `;
 
-const Card = styled('picture')`
+const Card = styled('div')`
   cursor: ${(props: any) => (props.select ? 'default' : 'pointer')};
   margin: 10px 5px;
   width: 200px;
@@ -133,4 +132,12 @@ const Card = styled('picture')`
   @media (max-width: 769px) {
     transform: translateX(0px);
   }
+`;
+
+const PlayButton = styled('i')`
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  color: black;
+  opacity: 0.8;
 `;
