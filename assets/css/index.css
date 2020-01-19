@@ -704,7 +704,9 @@ a.share-button:hover {
 うんちゃん
 */
 .fukidashi {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  line-height: 1.5em;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.1s linear;
@@ -716,7 +718,6 @@ a.share-button:hover {
   padding: 0 5px;
   width: 100px;
   height: 100px;
-  line-height: 100px;
   text-align: center;
   color: #fff;
   font-size: 14px;
