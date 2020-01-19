@@ -128,7 +128,9 @@ const Card = styled('div')`
   width: 200px;
 
   transition: ${(props: any) => (props.move === 0 ? `all 0.3s` : 'none')};
-  transform: ${(props: any) => `translateX(${props.move - 180}px)`};
+  @media (min-width: 769px) {
+    transform: ${(props: any) => `translateX(${props.move - 180}px)`};
+  }
   @media (max-width: 769px) {
     transform: translateX(0px);
   }
