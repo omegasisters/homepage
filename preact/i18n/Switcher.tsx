@@ -41,9 +41,9 @@ const Switcher: FunctionalComponent = () => {
 };
 
 const ClickSpan = styled('span')`
-  cursor: ${(props: any) => (props.select ? '' : 'pointer')};
+  cursor: ${({select}: any) => (select ? '' : 'pointer')};
   margin: 3px;
-  opacity: ${(props: any) => (props.select ? 1 : 0.4)};
+  opacity: ${({select}: any) => (select ? 1 : 0.4)};
 `;
 
 export default Switcher;
