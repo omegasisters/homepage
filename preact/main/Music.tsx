@@ -11,7 +11,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
   const [playlist, setPlaylist] = useState(thumbs);
-
+  const [selected, setSelect] = useState('');
   const [move, setMove] = useState(0);
 
   useEffect(() => {
@@ -25,6 +25,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
   }, []);
 
   const setMusic = (url: string) => {
+    setSelect(url);
     const id = url.replace('https://i.ytimg.com/vi/', '').split('/')[0];
     const youtube = youtubeRef.current;
     if (!youtube) return;
@@ -70,7 +71,14 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
         <Button className="fas fa-arrow-left" onClick={left} />
         <List>
           {playlist.map((url, i) => (
-            <Card src={url} key={i} onClick={() => setMusic(url)} move={move} />
+            <Card key={i} onClick={() => setMusic(url)} move={move}>
+              <source type="image/webp" srcset={url} />
+              <img
+                src={url.split('?')[0]}
+                width={175}
+                style={{opacity: url === selected ? 1 : 0.5}}
+              />
+            </Card>
           ))}
         </List>
         <Button
@@ -111,7 +119,7 @@ const Button = styled('div')`
   }
 `;
 
-const Card = styled('img')`
+const Card = styled('picture')`
   cursor: pointer;
   margin: 10px 5px;
   width: 200px;
