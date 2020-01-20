@@ -71,12 +71,19 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="../assets/css/index.css" />
     <link rel="stylesheet" href="../assets/css/alpha.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/css/flag-icon.min.css"
+    />
     <title>
       あるブラのホームページ |
     </title>
   </head>
   <body class="drawer drawer--top drawer--navbarTopGutter">
+    <div
+      style="position: fixed;z-index: 9999;left: 1rem;top: 1rem;"
+      id="preact-i18n"
+    ></div>
     <header class="drawer-navbar drawer-navbar--fixed" role="banner">
       <div class="drawer-container">
         <div class="drawer-navbar-header">
@@ -209,6 +216,15 @@
     <script
       type="text/javascript"
       src="../assets/js/ytplaylist.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/preact_build/polyfill.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../assets/preact_build/internationalization.js"
       defer
     ></script>
     <script>
