@@ -28,6 +28,10 @@ There are three ways.
 - Share on Twitter 🎉
 - In addition, let's have fun together👍
 
+## The result of the project came out!
+
+[[Verification] What will happen if i made a homepage with only Pulllik for one month?](https://youtu.be/5h1NoX3my0s)
+
 ## Getting Started
 
 [※Look here at npm](documents/environment/npm.md)

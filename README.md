@@ -28,6 +28,10 @@ https://omegasisters.github.io/homepage
 - Twitter で共有 🎉
 - その他、みんなで盛り上げていきましょう 👍
 
+## 企画の結果が出ました！
+
+[【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
+
 ## 開発のやり方
 
 ### GitHub アカウント

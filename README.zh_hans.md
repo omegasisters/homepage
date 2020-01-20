@@ -27,6 +27,10 @@ https://omegasisters.github.io/homepage
 
 要创建新 Issue，请先 [创建 GitHub 帐户](https://github.com/join?source_repo=omegasisters%2Fhomepage) 再 [创建 Issue](https://github.com/omegasisters/homepage/issues/new)。
 
+## 该项目的结果出来了！
+
+[【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
+
 # 提示
 
 ## 本地预览
