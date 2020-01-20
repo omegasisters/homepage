@@ -17,7 +17,9 @@ This site is a site designed by Omega Sisters called "What happens if I update t
 
 Anyone can participate. 👏
 
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">おめシスのホームページをGithubのプルリクで更新していったらどうなるのか、こっそり検証中です。そのうち動画にします！<a href="https://t.co/rErhv32NNR">https://t.co/rErhv32NNR</a></p>&mdash; おめがレイ@バーチャル双子YouTuber (@omesis_ray) <a href="https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw">December 23, 2019</a></blockquote>
+> おめシスのホームページを Github のプルリクで更新していったらどうなるのか、こっそり検証中です。そのうち動画にします！ https://t.co/rErhv32NNR
+>
+> &mdash; おめがレイ@バーチャル双子 YouTuber ([@omesis_ray](https://twitter.com/omesis_ray)) [December 23, 2019](https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw)
 
 ## How to contribute?
 
