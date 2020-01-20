@@ -56,13 +56,13 @@ GitHub のアカウントは持っていますか？
 
 [こちら](https://nodejs.org/ja/download/)をご確認ください
 
-### ローカルプレビュー (Node.js)
-
-パッケージインストール
+### パッケージインストール
 
 ```
 yarn install
 ```
+
+### ローカルプレビュー
 
 コマンドを実行すると、 http://localhost:8080 にホストされます
 
@@ -70,7 +70,7 @@ yarn install
 yarn start
 ```
 
-### コード整形(Node.js 環境必須)
+### コード整形
 
 ```
 yarn format
@@ -84,7 +84,7 @@ yarn format
 yarn build
 ```
 
-### テストコードを実行する (Node.js)
+### テストコードを実行する
 
 ```
 yarn test
