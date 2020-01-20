@@ -1,10 +1,12 @@
+const base = process.env['BASE' as any] as string;
+
 export default class I18n {
   language = 'ja';
   languageData: any;
   constructor(private onChange?: (lang: string) => void) {}
 
   async load() {
-    const i18nFileData = await fetch('/assets/i18n/resource.json');
+    const i18nFileData = await fetch(base + 'assets/i18n/resource.json');
     this.languageData = await i18nFileData.json();
     this.setLanguage('ja');
   }

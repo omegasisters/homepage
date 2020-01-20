@@ -1,7 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 
-module.exports = {
+module.exports = (env) => ({
   devtool: 'source-map',
   entry: {
     polyfill: '@babel/polyfill',
@@ -36,7 +37,13 @@ module.exports = {
       },
     ],
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        BASE: JSON.stringify(env.BASE),
+      },
+    }),
+  ],
   devServer: {
     publicPath: '/assets/preact_build/',
     disableHostCheck: true,
@@ -53,4 +60,4 @@ module.exports = {
       }),
     ],
   },
-};
+});
