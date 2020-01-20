@@ -2,7 +2,7 @@ import {FunctionalComponent, h} from 'preact';
 
 //@ts-ignore
 import sindanQuestions from '../../config/sindanQuestions.js';
-import {useState} from 'preact/hooks';
+import {useState, useEffect} from 'preact/hooks';
 
 interface Question {
   text: string;
@@ -32,9 +32,8 @@ const SindanApp: FunctionalComponent = () => {
     unchan: 0,
   });
 
-  const startSindan = async (start: boolean) => {
-    setStarted(start);
-    if (start === true) {
+  useEffect(() => {
+    if (started === true) {
       try {
         const q = sindanQuestions['questions'] as Question[];
         setQuestions(q);
@@ -45,7 +44,7 @@ const SindanApp: FunctionalComponent = () => {
         alert(`設定ファイルに問題があります。 ${e}`);
       }
     }
-  };
+  }, [started])
 
   const readNext = (
     questions: Question[],
@@ -118,18 +117,48 @@ const SindanApp: FunctionalComponent = () => {
       </div>
       <div className="controle-box">
         {started == false && (
-          <div className="start-button" onClick={() => startSindan(true)}>
+          <div className="start-button" onClick={() => setStarted(true)}>
             はじめる
           </div>
         )}
-        {answers.map((ans) => {
-          return (
-            <div className="start-button" onClick={() => answer(ans)}>
-              {ans['text']}
-            </div>
-          );
-        })}
+        <div className="controle-box__buttons">
+          {answers.map((ans) => {
+            return (
+              <div className="start-button" onClick={() => answer(ans)}>
+                {ans['text']}
+              </div>
+            );
+          })}
+        </div>
       </div>
+
+      {started == false && (
+        <a href="/homepage" className="c-unchan c-unchan--fixedBottom">
+          <div className="fukidashi" id="unchan_fukidashi">
+            ホームページに戻る
+          </div>
+          <div className="c-unchan__inner">
+            <div className="c-unchan__tsuno">
+              <div className="c-unchan__tsuno__inner"></div>
+            </div>
+            <div className="c-unchan__toguro c-unchan__toguro--top"></div>
+            <div className="c-unchan__toguro c-unchan__toguro--middle">
+              <div className="c-unchan__eye c-unchan__eye--left">
+                <div></div>
+              </div>
+              <div className="c-unchan__eye c-unchan__eye--right">
+                <div></div>
+              </div>
+            </div>
+            <div className="c-unchan__toguro c-unchan__toguro--bottom"></div>
+            <div className="c-unchan__mouth">
+              <div className="c-unchan__mouth__inner">
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </a>
+      )}
     </div>
   );
 };

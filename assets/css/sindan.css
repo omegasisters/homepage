@@ -86,6 +86,12 @@
   flex-direction: column;
 }
 
+.controle-box__buttons {
+  width: 300px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
 .sindan-result-image {
   width: 200px;
   height: 200px;
