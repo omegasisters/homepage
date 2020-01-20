@@ -13,11 +13,17 @@ https://omegasisters.github.io/homepage
 
 [![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
+## 现在欧米茄姐妹的主页是什么样的？
+
+该站点是由 Omega Sisters 设计的站点，名为“如果仅通过 PR 更新 Ome-sis 主页会发生什么？”。
+
+任何人都可以参加。 👏
+
+> おめシスのホームページを Github のプルリクで更新していったらどうなるのか、こっそり検証中です。そのうち動画にします！ https://t.co/rErhv32NNR
+>
+> &mdash; おめがレイ@バーチャル双子 YouTuber ([@omesis_ray](https://twitter.com/omesis_ray)) [December 23, 2019](https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw)
+
 ## 不知道这是什么的人请看这里
-
-### 现在欧米茄姐妹的主页是什么样的？
-
-单击 [这里](https://omegasisters.github.io/homepage) 查看欧米茄姐妹主页的状态
 
 ### 我想把这里改成这样或那样，但是我不懂编程
 
@@ -26,6 +32,10 @@ https://omegasisters.github.io/homepage
 这就像一个普通的论坛留言板。您在里面的留言有可能会实现。
 
 要创建新 Issue，请先 [创建 GitHub 帐户](https://github.com/join?source_repo=omegasisters%2Fhomepage) 再 [创建 Issue](https://github.com/omegasisters/homepage/issues/new)。
+
+## 该项目的结果出来了！
+
+[【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
 
 # 提示
 
