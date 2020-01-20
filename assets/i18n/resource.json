@@ -89,6 +89,11 @@
     "en": "3D model",
     "cn": "3D模型"
   },
+  "section_contributors": {
+    "ja": "製作者について",
+    "en": "Contributors",
+    "cn": "Contributors"
+  },
   "header_section_description": {
     "ja": "おめシスって？",
     "en": "What is Ome-sis?",
@@ -118,6 +123,11 @@
     "ja": "おめが診断",
     "en": "Omega Diagnosis",
     "cn": "欧米茄诊断"
+  },
+  "header_contributors": {
+    "ja": "製作者",
+    "en": "Contributors",
+    "cn": "Contributors"
   },
   "header_contact": {
     "ja": "お問い合わせ",
