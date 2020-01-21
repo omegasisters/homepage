@@ -41,20 +41,20 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit --allow-empty -m "deploy"          
-          git push https://"${GITHUB_ACTOR}":"${GITHUB_TOKEN}"@github.com/"${GITHUB_REPOSITORY}".git HEAD:test/oss-action-push
+          git commit --allow-empty -m "deploy from $GITHUB_SHA"
+          git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/"$GITHUB_REPOSITORY".git HEAD:"$GITHUB_REF"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: deploy-force
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'master'
-          force: true
-      - name: deploy
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'master'
+      # - name: deploy-force
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: 'master'
+      #     force: true
+      # - name: deploy
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: 'master'
     env:
       CI: true
