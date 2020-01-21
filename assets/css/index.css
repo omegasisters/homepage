@@ -90,6 +90,16 @@ header a.drawer-menu-item:hover {
   color: #06ffd2;
   text-decoration: none;
 }
+
+.drawer-dropdown-menu-item {
+  color: white !important;
+}
+
+.drawer-dropdown .drawer-dropdown-menu {
+  background-color: transparent;
+  border: none !important;
+}
+
 /*上部ヘッダーここまで*/
 h2.section_title {
   /* ヘッダからのジャンプ用タイトル */
