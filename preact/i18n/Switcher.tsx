@@ -41,7 +41,7 @@ const Switcher: FunctionalComponent = () => {
           </a>
         </li>
         <li>
-          <a class="drawer-dropdown-menu-item" onClick={setLanguage('cn')}>
+          <a class="drawer-dropdown-menu-item" onClick={setLanguage('zh')}>
             中文
           </a>
         </li>
