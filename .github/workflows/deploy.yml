@@ -47,7 +47,7 @@ jobs:
       - name: Create Pull Request
         uses: gr2m/create-or-update-pull-request-action@v1.x
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           author: "GitHubActions <action@github.com>"
     env:
       CI: true
