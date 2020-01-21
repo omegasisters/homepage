@@ -41,9 +41,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit --allow-empty -m "deploy"
-          git pull
-          git push https://"${GITHUB_ACTOR}":"${GITHUB_TOKEN}"@github.com/"${GITHUB_REPOSITORY}".git HEAD:master
+          git commit --allow-empty -m "deploy"          
+          git push https://"${GITHUB_ACTOR}":"${GITHUB_TOKEN}"@github.com/"${GITHUB_REPOSITORY}".git HEAD:test/oss-action-push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     env:
