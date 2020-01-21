@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-      - 'test/**'      
+      - 'test/**'
 
-jobs:  
+jobs:
   build:
     runs-on: ubuntu-latest
     if: github.actor != 'GitHubActions'
@@ -31,9 +31,9 @@ jobs:
             ${{ runner.os }}-
       - name: prepare
         run: |
-          yarn          
+          yarn
       - name: build
-        run: |          
+        run: |
           yarn build:js
       - name: Commit files
         run: |
@@ -45,5 +45,16 @@ jobs:
           git push https://"${GITHUB_ACTOR}":"${GITHUB_TOKEN}"@github.com/"${GITHUB_REPOSITORY}".git HEAD:test/oss-action-push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: deploy-force
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'master'
+          force: true
+      - name: deploy
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'master'
     env:
       CI: true
