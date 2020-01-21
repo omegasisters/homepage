@@ -8,7 +8,7 @@ on:
 jobs:  
   build:
     runs-on: ubuntu-latest
-    if: github.actor != 'GitHubActions'
+    if: github.actor != 'GitHubAction'
     strategy:
       matrix:
         node-version: [12.x]
@@ -37,7 +37,7 @@ jobs:
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHubActions"
+          git config --local user.name "GitHubAction"
           git add --all
           git commit --allow-empty -m "deploy"
       - name: deploy        
