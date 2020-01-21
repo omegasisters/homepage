@@ -141,10 +141,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     style="background-color: #1e2a55"
     class="drawer drawer--top drawer--navbarTopGutter"
   >
-    <div
-      style="position: fixed;z-index: 9999;left: 1rem;top: 1rem;"
-      id="preact-i18n"
-    ></div>
     <header class="drawer-navbar drawer-navbar--fixed" role="banner">
       <div class="drawer-container">
         <div class="drawer-navbar-header">
@@ -154,7 +150,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
           </button>
         </div>
         <nav class="drawer-nav" role="navigation">
-          <ul id="header_contents" class="drawer-menu drawer-menu--right">
+          <ul id="header_contents" class="drawer-menu">
             <!--      各項目へのジャンプ用ヘッダです。-->
             <!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
             <li>
@@ -223,6 +219,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
                 >お問い合わせ</a
               >
             </li>
+            <div id="preact-i18n" style="display: inline;"></div>
           </ul>
         </nav>
       </div>
@@ -554,6 +551,10 @@ MMMMMMMMMMMMMMMMMMMMMMMMMNNmaggkwkkXuuVVXuuXXkkXuuZuXVuVCXwkwQggggNNMMMMMMMMMMMM
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
       defer
     ></script>
     <script

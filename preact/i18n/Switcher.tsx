@@ -20,23 +20,33 @@ const Switcher: FunctionalComponent = () => {
   }, []);
 
   return (
-    <div style={{display: 'flex'}}>
-      <ClickSpan
-        class="flag-icon flag-icon-jp"
-        onClick={setLanguage('ja')}
-        select={select === 'ja'}
-      />
-      <ClickSpan
-        class="flag-icon flag-icon-gb"
-        onClick={setLanguage('en')}
-        select={select === 'en'}
-      />
-      <ClickSpan
-        class="flag-icon flag-icon-cn"
-        onClick={setLanguage('cn')}
-        select={select === 'cn'}
-      />
-    </div>
+    <li class="drawer-dropdown">
+      <a
+        class="drawer-menu-item"
+        data-toggle="dropdown"
+        role="button"
+        aria-expanded="false">
+        <div id="header_language" style="display: inline;"></div>
+        <span class="drawer-caret"></span>
+      </a>
+      <ul class="drawer-dropdown-menu">
+        <li>
+          <a class="drawer-dropdown-menu-item" onClick={setLanguage('ja')}>
+            日本語
+          </a>
+        </li>
+        <li>
+          <a class="drawer-dropdown-menu-item" onClick={setLanguage('en')}>
+            English
+          </a>
+        </li>
+        <li>
+          <a class="drawer-dropdown-menu-item" onClick={setLanguage('cn')}>
+            中文
+          </a>
+        </li>
+      </ul>
+    </li>
   );
 };
 
