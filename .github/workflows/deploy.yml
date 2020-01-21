@@ -34,13 +34,13 @@ jobs:
           yarn          
       - name: build
         run: |          
-          yarn build
+          yarn build:js
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit -m "deploy"
-          git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/"$GITHUB_REPOSITORY".git HEAD:"$GITHUB_REF"
+          git commit --allow-empty -m "deploy"
+          git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/"$GITHUB_REPOSITORY".git HEAD:master
     env:
       CI: true
