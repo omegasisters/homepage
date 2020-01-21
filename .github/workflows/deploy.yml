@@ -3,7 +3,8 @@ name: deploy
 on:
   push:
     branches:
-      - master      
+      - master
+      - 'test/**'      
 
 jobs:  
   build:
