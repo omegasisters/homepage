@@ -1,4 +1,4 @@
-import {FunctionalComponent, h} from 'preact';
+import {Fragment, FunctionalComponent, h} from 'preact';
 import {useCallback, useEffect, useRef, useState} from 'preact/hooks';
 
 import I18n from './i18n';
@@ -20,34 +20,23 @@ const Switcher: FunctionalComponent = () => {
   }, []);
 
   return (
-    <li class="drawer-dropdown">
-      <a
-        class="drawer-menu-item"
-        data-toggle="dropdown"
-        role="button"
-        aria-expanded="false">
-        <div style="display: inline;">Language</div>
-
-        <span class="drawer-caret"></span>
-      </a>
-      <ul class="drawer-dropdown-menu">
-        <li>
-          <a class="drawer-dropdown-menu-item" onClick={setLanguage('ja')}>
-            日本語
-          </a>
-        </li>
-        <li>
-          <a class="drawer-dropdown-menu-item" onClick={setLanguage('en')}>
-            English
-          </a>
-        </li>
-        <li>
-          <a class="drawer-dropdown-menu-item" onClick={setLanguage('zh')}>
-            中文
-          </a>
-        </li>
-      </ul>
-    </li>
+    <Fragment>
+      <li>
+        <a class="drawer-dropdown-menu-item" onClick={setLanguage('ja')}>
+          日本語
+        </a>
+      </li>
+      <li>
+        <a class="drawer-dropdown-menu-item" onClick={setLanguage('en')}>
+          English
+        </a>
+      </li>
+      <li>
+        <a class="drawer-dropdown-menu-item" onClick={setLanguage('zh')}>
+          中文
+        </a>
+      </li>
+    </Fragment>
   );
 };
 
