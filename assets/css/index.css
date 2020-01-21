@@ -710,6 +710,21 @@ a.share-button:hover {
   opacity: 1;
 }
 
+.section.last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #cf4e7c;
+  padding: 100px 20px 150px 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .section.last {
+    padding: 10px 10px 100px 10px;
+  }
+}
+
 /*
 うんちゃん
 */
