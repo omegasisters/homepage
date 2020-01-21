@@ -21,6 +21,13 @@ https://omegasisters.github.io/homepage
 >
 > &mdash; おめがレイ@バーチャル双子 YouTuber ([@omesis_ray](https://twitter.com/omesis_ray)) [December 23, 2019](https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw)
 
+### 企画は終了しています
+
+企画終了に際して、以下におめシスが検証結果の動画を出しています
+お疲れ様でした 🎉🎉🎉
+
+[【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
+
 ## この企画に参加するにはどうすればいいですか？
 
 大きくわけて 3 つの方法があります
@@ -29,10 +36,6 @@ https://omegasisters.github.io/homepage
 - [PR](https://github.com/omegasisters/homepage/pulls) を投げる・レビューする
 - Twitter で共有 🎉
 - その他、みんなで盛り上げていきましょう 👍
-
-## 企画の結果が出ました！
-
-[【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
 
 ## 開発のやり方
 

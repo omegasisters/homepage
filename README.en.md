@@ -1,17 +1,17 @@
 [English](README.en.md) | [日本語](README.md) | [简体中文](README.zh_hans.md) |
 
-# Let's make "OmegaSisters(Omesis) Homepage"!
+# Let's make "Omega Sisters(Omesis) Homepage"!
 
 [![](https://github.com/omegasisters/homepage/workflows/build/badge.svg)](https://github.com/omegasisters/homepage/actions)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/omegasisters/homepage.svg)](http://isitmaintained.com/project/omegasisters/homepage 'Percentage of issues still open')
 
-A participatory OmegaSisters(Omesis) Homepage creation project.
+A participatory Omega Sisters(Omesis) Homepage creation project.
 
 https://omegasisters.github.io/homepage
 
 [![](assets/images/ogp.png)](https://omegasisters.github.io/homepage)
 
-## What is OmegaSisters/Homepage?
+## What is omegasisters/homepage?
 
 This site is a site designed by Omega Sisters called "What happens if I update the Ome-sis home page with only PR?".
 
@@ -21,6 +21,16 @@ Anyone can participate. 👏
 >
 > &mdash; おめがレイ@バーチャル双子 YouTuber ([@omesis_ray](https://twitter.com/omesis_ray)) [December 23, 2019](https://twitter.com/omesis_ray/status/1209057136992387072?ref_src=twsrc%5Etfw)
 
+### This project finished
+
+PR acceptance has been closed
+At the finish of the project, Omega Sisters has posted a video of the verification result below
+Thank you🎉🎉🎉
+
+[【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
+
+※【Verification】 What happens if you make a homepage only with Pull Request for one month?
+
 ## How to contribute?
 
 There are three ways.
@@ -29,10 +39,6 @@ There are three ways.
 - Throw and review [PR](https://github.com/omegasisters/homepage/pulls)
 - Share on Twitter 🎉
 - In addition, let's have fun together👍
-
-## The result of the project came out!
-
-[[Verification] What will happen if i made a homepage with only Pulllik for one month?](https://youtu.be/5h1NoX3my0s)
 
 ## Getting Started
 
