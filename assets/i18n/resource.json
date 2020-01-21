@@ -91,8 +91,8 @@
   },
   "section_contributors": {
     "ja": "製作者について",
-    "en": "Contributors",
-    "cn": "Contributors"
+    "en": "About the contributors",
+    "cn": "关于网站制作者"
   },
   "header_section_description": {
     "ja": "おめシスって？",
@@ -127,7 +127,7 @@
   "header_contributors": {
     "ja": "製作者",
     "en": "Contributors",
-    "cn": "Contributors"
+    "cn": "网站制作者"
   },
   "header_contact": {
     "ja": "お問い合わせ",
@@ -145,9 +145,9 @@
     "cn": "回到顶部"
   },
   "section_firstview": {
-    "ja": "サイト製作者について",
-    "en": "About the contributors",
-    "cn": "关于网站制作者"
+    "ja": "おめがってるー!?",
+    "en": "Omegatteru!?",
+    "cn": "有在Omega吗~!?"
   },
   "section_contributors_list": {
     "ja": "サイト製作者一覧",
