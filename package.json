@@ -59,8 +59,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
-      "pre-push": "npm run build"
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
