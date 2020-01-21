@@ -26,7 +26,8 @@ const Switcher: FunctionalComponent = () => {
         data-toggle="dropdown"
         role="button"
         aria-expanded="false">
-        <div id="header_language" style="display: inline;"></div>
+        <div style="display: inline;">Language</div>
+
         <span class="drawer-caret"></span>
       </a>
       <ul class="drawer-dropdown-menu">
@@ -41,7 +42,7 @@ const Switcher: FunctionalComponent = () => {
           </a>
         </li>
         <li>
-          <a class="drawer-dropdown-menu-item" onClick={setLanguage('cn')}>
+          <a class="drawer-dropdown-menu-item" onClick={setLanguage('zh')}>
             中文
           </a>
         </li>

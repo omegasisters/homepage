@@ -2,156 +2,151 @@
   "logo-sub--text": {
     "ja": "おめがシスターズ",
     "en": "omega sisters",
-    "cn": "欧米茄姐妹"
+    "zh": "欧米茄姐妹"
   },
   "preact-music__title": {
     "ja": "🎵おめシスの歌ってみたシリーズ",
     "en": "🎵omega sisters cover songs",
-    "cn": "🎵欧米茄姐妹 原创曲&翻唱系列"
+    "zh": "🎵欧米茄姐妹 原创曲&翻唱系列"
   },
   "preact_viewer_otohime": {
     "ja": "おとひめさん",
     "en": "otohime-san",
-    "cn": "音姫"
+    "zh": "音姫"
   },
   "preact_viewer_curling": {
     "ja": "うんちかーりんぐ",
     "en": "poop curling",
-    "cn": "便便冰壶"
+    "zh": "便便冰壶"
   },
   "preact_viewer_stop_rotation": {
     "ja": "回転停止",
     "en": "stop rotation",
-    "cn": "停止旋转"
+    "zh": "停止旋转"
   },
   "preact_viewer_start_rotation": {
     "ja": "回転開始",
     "en": "start rotation",
-    "cn": "开始旋转"
+    "zh": "开始旋转"
   },
   "description": {
     "ja": "おめシスって？",
     "en": "What is Ome-sis?",
-    "cn": "欧米茄姐妹 是什么?"
+    "zh": "欧米茄姐妹 是什么?"
   },
   "section_description_omesis_ray": {
     "ja": "姉が赤いリボンのおめがレイ、",
     "en": "The elder twin sister with red ribbon is Omega Ray,",
-    "cn": "头戴红丝带的双胞胎姐姐是欧米茄蕾伊，"
+    "zh": "头戴红丝带的双胞胎姐姐是欧米茄蕾伊，"
   },
   "section_description_omesis_rio": {
     "ja": "妹が青いリボンのおめがリオ。",
     "en": "and the younger sister with blue ribbon is Omega Rio.",
-    "cn": "头戴蓝丝带的双胞胎妹妹是欧米茄莉欧。"
+    "zh": "头戴蓝丝带的双胞胎妹妹是欧米茄莉欧。"
   },
   "section_description-2": {
     "ja": "バーチャルを武器にした個性的な企画から、歌動画にゲーム実況と幅広いジャンルの動画をYouTubeに投稿し活動している。",
     "en": "They create YouTube videos about their unique VR projects, singing songs, in-game commentaries, etc.",
-    "cn": "她们以虚拟作为武器发布有关自己的独特企划，演唱歌曲，游戏实况等种类众多的YouTube视频。"
+    "zh": "她们以虚拟作为武器发布有关自己的独特企划，演唱歌曲，游戏实况等种类众多的YouTube视频。"
   },
   "section_discography": {
     "ja": "ディスコグラフィー",
     "en": "Discography",
-    "cn": "音乐作品集"
+    "zh": "音乐作品集"
   },
   "section_movie": {
     "ja": "⭐【初心者向け】すごい面白い動画",
     "en": "⭐【Beginners】Recommended Videos",
-    "cn": "⭐【面向新观众】非常有趣的视频"
+    "zh": "⭐【面向新观众】非常有趣的视频"
   },
   "section_movide_more_videos": {
     "ja": "他の動画も見る",
     "en": "Watch More Videos",
-    "cn": "观看更多视频"
+    "zh": "观看更多视频"
   },
   "section_link": {
     "ja": "リンク",
     "en": "Link",
-    "cn": "链接"
+    "zh": "链接"
   },
   "section_link_line_stamp": {
     "ja": "LINEスタンプ",
     "en": "LINE Stamps",
-    "cn": "LINE 表情包"
+    "zh": "LINE 表情包"
   },
   "section_link_contact": {
     "ja": "お問い合わせはこちらから",
     "en": "Contact us from here",
-    "cn": "从这里联系我们"
+    "zh": "从这里联系我们"
   },
   "section_link_github": {
     "ja": "プルリク待ってます！！！！",
     "en": "We are waiting your pull requests !!!!",
-    "cn": "期待您的Pull requests！！！！"
+    "zh": "期待您的Pull requests！！！！"
   },
   "section_3d": {
     "ja": "3Dモデル",
     "en": "3D model",
-    "cn": "3D模型"
+    "zh": "3D模型"
   },
   "section_contributors": {
     "ja": "製作者について",
     "en": "About the contributors",
-    "cn": "关于网站制作者"
+    "zh": "关于网站制作者"
   },
   "header_section_description": {
     "ja": "おめシスって？",
     "en": "What is Ome-sis?",
-    "cn": "欧米茄姐妹 是什么?"
+    "zh": "欧米茄姐妹 是什么?"
   },
   "header_section_movie": {
     "ja": "おすすめ動画",
     "en": "Recommended Videos",
-    "cn": "推荐视频"
+    "zh": "推荐视频"
   },
   "header_section_discography": {
     "ja": "ディスコグラフィー",
     "en": "Discography",
-    "cn": "音乐作品集"
+    "zh": "音乐作品集"
   },
   "header_section_link": {
     "ja": "リンク",
     "en": "Link",
-    "cn": "链接"
+    "zh": "链接"
   },
   "header_section_3d": {
     "ja": "3Dモデル",
     "en": "3D model",
-    "cn": "3D模型"
+    "zh": "3D模型"
   },
   "header_diagnosis": {
     "ja": "おめが診断",
     "en": "Omega Diagnosis",
-    "cn": "欧米茄诊断"
+    "zh": "欧米茄诊断"
   },
   "header_contributors": {
     "ja": "製作者",
     "en": "Contributors",
-    "cn": "网站制作者"
+    "zh": "网站制作者"
   },
   "header_contact": {
     "ja": "お問い合わせ",
     "en": "Contact Us",
-    "cn": "联系我们"
-  },
-  "header_language": {
-    "ja": "日本語",
-    "en": "English",
-    "cn": "中文"
+    "zh": "联系我们"
   },
   "unchan_fukidashi": {
     "ja": "トップに戻る",
     "en": "Back to TOP",
-    "cn": "回到顶部"
+    "zh": "回到顶部"
   },
   "section_firstview": {
     "ja": "おめがってるー!?",
     "en": "Omegatteru!?",
-    "cn": "有在Omega吗~!?"
+    "zh": "有在Omega吗~!?"
   },
   "section_contributors_list": {
     "ja": "サイト製作者一覧",
     "en": "List of contributors",
-    "cn": "网站制作者列表"
+    "zh": "网站制作者列表"
   }
 }
