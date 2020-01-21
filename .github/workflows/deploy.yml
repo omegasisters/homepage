@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit -m "deploy"
+          git commit --allow-empty -m "deploy"
       - name: deploy        
         uses: ad-m/github-push-action@master
         with:
