@@ -14,5 +14,5 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.pull_request.number }}
-          allowed-usernames-regex: ^williamdes$
+          allowed-usernames-regex: ^github-actions$
           filter-label: merge-it
