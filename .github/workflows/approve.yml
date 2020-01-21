@@ -4,8 +4,15 @@ on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.actor == 'github-actions'
     steps:
-    - uses: hmarr/auto-approve-action@v2.0.0
-      if: github.actor == 'GitHubActions'
-      with:
-        github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: hmarr/auto-approve-action@v2.0.0
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: merge pull request
+        uses: sudo-bot/action-pull-request-merge@v1.0.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.pull_request.number }}
+          allowed-usernames-regex: ^williamdes$
+          filter-label: merge-it
