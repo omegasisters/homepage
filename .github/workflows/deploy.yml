@@ -48,7 +48,7 @@ jobs:
         uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{GITHUB_REF}}
+          branch: test/oss-action-push
           title: '[Example] Add report file'
           labels: report, automated pr
           body: |
