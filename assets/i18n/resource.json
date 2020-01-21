@@ -10,8 +10,8 @@
     "cn": "🎵欧米茄姐妹 原创曲&翻唱系列"
   },
   "preact_viewer_otohime": {
-    "ja": "おとひめ",
-    "en": "otohime",
+    "ja": "おとひめさん",
+    "en": "otohime-san",
     "cn": "音姫"
   },
   "preact_viewer_curling": {
@@ -82,12 +82,17 @@
   "section_link_github": {
     "ja": "プルリク待ってます！！！！",
     "en": "We are waiting your pull requests !!!!",
-    "cn": "我们正在等Pull requests！！！！"
+    "cn": "期待您的Pull requests！！！！"
   },
   "section_3d": {
     "ja": "3Dモデル",
     "en": "3D model",
     "cn": "3D模型"
+  },
+  "section_contributors": {
+    "ja": "製作者について",
+    "en": "Contributors",
+    "cn": "Contributors"
   },
   "header_section_description": {
     "ja": "おめシスって？",
@@ -119,6 +124,11 @@
     "en": "Omega Diagnosis",
     "cn": "欧米茄诊断"
   },
+  "header_contributors": {
+    "ja": "製作者",
+    "en": "Contributors",
+    "cn": "Contributors"
+  },
   "header_contact": {
     "ja": "お問い合わせ",
     "en": "Contact Us",
@@ -128,5 +138,15 @@
     "ja": "トップに戻る",
     "en": "Back to TOP",
     "cn": "回到顶部"
+  },
+  "section_firstview": {
+    "ja": "サイト製作者について",
+    "en": "About the contributors",
+    "cn": "关于网站制作者"
+  },
+  "section_contributors": {
+    "ja": "サイト製作者一覧",
+    "en": "List of contributors",
+    "cn": "网站制作者列表"
   }
 }

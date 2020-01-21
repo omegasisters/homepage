@@ -56,7 +56,13 @@ You can create it [here](https://github.com/)
 
 Click [here](https://nodejs.org/ja/download/)
 
-### Local preview (Node.js)
+### Package install
+
+```
+yarn install
+```
+
+### Local preview
 
 When you run the command, you can see http://localhost:8080
 
@@ -64,7 +70,7 @@ When you run the command, you can see http://localhost:8080
 yarn start
 ```
 
-### Formatting (Node.js)
+### Formatting
 
 ```
 yarn format
@@ -78,7 +84,7 @@ After editing the source code, please build before pushing.
 yarn build
 ```
 
-### Testing (Node.js)
+### Testing
 
 ```
 yarn test
