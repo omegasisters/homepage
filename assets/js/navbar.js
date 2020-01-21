@@ -10,9 +10,10 @@ document.onscroll = () => {
 };
 const navbar = () => {
   $('.drawer').drawer();
-
-  $('.drawer-menu-item').click(function() {
-    $('.drawer').drawer('close');
+  $('.drawer-menu-item').click(function(e) {
+    if (!e.target.classList.contains('not-closed-menu-item')) {
+      $('.drawer').drawer('close');
+    }
   });
 };
 
