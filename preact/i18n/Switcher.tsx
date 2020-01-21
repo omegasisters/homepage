@@ -26,7 +26,7 @@ const Switcher: FunctionalComponent = () => {
         data-toggle="dropdown"
         role="button"
         aria-expanded="false">
-        <div style="display: inline;">Language</div>
+        <div style="display: inline;">Language!</div>
 
         <span class="drawer-caret"></span>
       </a>
