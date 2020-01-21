@@ -41,7 +41,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHubActions"
           git add --all
-          git commit --allow-empty -m "deploy from $GITHUB_SHA"
+          git commit --allow-empty -m "Bundled output for commit $GITHUB_SHA"
           git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/"$GITHUB_REPOSITORY".git HEAD:"$GITHUB_REF"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
