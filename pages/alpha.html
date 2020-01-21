@@ -80,10 +80,6 @@
     </title>
   </head>
   <body class="drawer drawer--top drawer--navbarTopGutter">
-    <div
-      style="position: fixed;z-index: 9999;left: 1rem;top: 1rem;"
-      id="preact-i18n"
-    ></div>
     <header class="drawer-navbar drawer-navbar--fixed" role="banner">
       <div class="drawer-container">
         <div class="drawer-navbar-header">
@@ -96,6 +92,16 @@
           <ul id="header_contents" class="drawer-menu drawer-menu--right">
             <!--      各項目へのジャンプ用ヘッダです。-->
             <!--      section_titleクラスを付与したh2要素をジャンプ用タイトルとして使用する想定です。-->
+            <li class="drawer-dropdown">
+              <a
+                class="drawer-menu-item not-closed-menu-item"
+                data-toggle="dropdown"
+                role="button"
+                aria-expanded="false"
+                >Language<span class="drawer-caret"></span
+              ></a>
+              <ul id="preact-i18n" class="drawer-dropdown-menu"></ul>
+            </li>
             <li>
               <a class="drawer-menu-item" href="#section_description"
                 >あるブラって？</a
@@ -208,6 +214,10 @@
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
       defer
     ></script>
     <script
