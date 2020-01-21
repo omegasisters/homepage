@@ -35,7 +35,13 @@ https://omegasisters.github.io/homepage
 
 ## 该项目的结果出来了！
 
+PR acceptance has been closed
+At the end of the project, Omega Sisters has posted a video of the verification result below
+Thank you🎉🎉🎉
+
 [【検証】１ヶ月間、プルリクだけでホームページ作ったらどうなるの？](https://youtu.be/5h1NoX3my0s)
+
+※【Verification】 What happens if you make a homepage only with Pull Request for one month?
 
 # 提示
 
