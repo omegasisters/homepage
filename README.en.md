@@ -82,13 +82,9 @@ yarn start
 yarn format
 ```
 
-### Things to do before pushing
+### Build
 
-After editing the source code, please build before pushing.
-
-```
-yarn build
-```
+ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。
 
 ### Testing
 

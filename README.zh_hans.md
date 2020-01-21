@@ -72,13 +72,6 @@ npm run start # npm
 
 托管在 http://localhost:8080
 
-编辑源代码时，请在 git push 之前进行构建：
-
-```
-For yarn build # yarn
-npm run build # For npm
-```
-
 ## 测试（Node.js）
 
 您可以使用以下命令进行测试。
@@ -89,3 +82,7 @@ npm run test # For npm
 ```
 
 `__tests__`和`preact`有测试用例。
+
+### Build
+
+ビルドは GithubActions 上で行われるので、ローカルで行う必要はありません。

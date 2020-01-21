@@ -1,0 +1,50 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - master      
+
+jobs:  
+  build:
+    runs-on: ubuntu-latest
+    if: github.actor != 'GitHubActions'
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: prepare
+        run: |
+          yarn          
+      - name: build
+        run: |          
+          yarn build
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHubActions"
+          git add --all
+          git commit -m "deploy"
+      - name: deploy        
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: "master"
+          force: true      
+    env:
+      CI: true
