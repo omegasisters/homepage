@@ -44,6 +44,10 @@ export default class ThreeScene {
     } catch (error) {}
 
     const controls = new OrbitControls(this.camera, renderer.domElement);
+
+    controls.enableKeys = true;
+    controls.keyPanSpeed = 20.0;
+
     controls.target.set(0, 1, 0);
     controls.update();
 
