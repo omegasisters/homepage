@@ -7,6 +7,8 @@ import {VRM} from '@pixiv/three-vrm';
 export default class ThreeViewer {
   model: any;
   models: {[key: string]: any} = {};
+  clock: THREE.Clock = new THREE.Clock();
+  currentVrm: any;
 
   constructor(private scene: THREE.Scene) {}
 
@@ -35,9 +37,10 @@ export default class ThreeViewer {
         (gltf) => {
           VRM.from(gltf).then((vrm: VRM) => {
             const mesh = (this.models[address] = this.model = vrm.scene);
-          mesh.scale.set(1, 1, 1);
-          this.scene.add(this.model);
-          r();
+            mesh.scale.set(1, 1, 1);
+            this.scene.add(this.model);
+            this.currentVrm = vrm;
+            r();
           });
         },
         (xhr) => {
@@ -86,4 +89,18 @@ export default class ThreeViewer {
         },
       );
     });
+
+  animate = () => {
+    requestAnimationFrame(this.animate);
+
+    const deltaTime = this.clock.getDelta();
+
+    if (this.currentVrm.humanoid) {
+      const s = 0.125 * Math.PI * Math.sin(Math.PI * this.clock.elapsedTime);
+      this.currentVrm.humanoid.humanBones.neck[0].node.rotation.z = s * 0.25;
+      this.currentVrm.humanoid.humanBones.leftUpperArm[0].node.rotation.z = s;
+      this.currentVrm.humanoid.humanBones.rightUpperArm[0].node.rotation.z = s;
+      this.currentVrm.update(deltaTime);
+    }
+  };
 }
