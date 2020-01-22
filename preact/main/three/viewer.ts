@@ -2,6 +2,7 @@ import * as THREE from 'three';
 
 import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
+import {VRM} from '@pixiv/three-vrm';
 
 export default class ThreeViewer {
   model: any;
@@ -32,10 +33,12 @@ export default class ThreeViewer {
       new GLTFLoader().load(
         address,
         (gltf) => {
-          const mesh = (this.models[address] = this.model = gltf.scene);
+          VRM.from(gltf).then((vrm: VRM) => {
+            const mesh = (this.models[address] = this.model = vrm.scene);
           mesh.scale.set(1, 1, 1);
           this.scene.add(this.model);
           r();
+          });
         },
         (xhr) => {
           const now = (xhr.loaded / xhr.total) * 100;
