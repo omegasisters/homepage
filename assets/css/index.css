@@ -84,31 +84,26 @@ header.scrolled {
 /* shrink header menu item... */
 @media screen and (max-width: 83em) {
   header a.drawer-menu-item {
-    color: white;
     font-size: 0.72em;
   }
 }
 @media screen and (max-width: 75em) {
   header a.drawer-menu-item {
-    color: white;
     font-size: 0.65em;
   }
 }
 @media screen and (max-width: 70em) {
   header a.drawer-menu-item {
-    color: white;
     font-size: 0.58em;
   }
 }
 @media screen and (max-width: 1024px) {
   header a.drawer-menu-item {
-    color: white;
     font-size: 0.5em;
   }
 }
 @media screen and (max-width: 1023px) {
   header a.drawer-menu-item {
-    color: white;
     font-size: 1em;
   }
 }
