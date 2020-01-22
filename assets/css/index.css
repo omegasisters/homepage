@@ -76,6 +76,10 @@ header.scrolled {
     margin-left: auto;
   }
 
+  header nav.drawer-nav {
+    background-color: #22222273;
+  }
+
   .drawer-open header .menu-icon {
     transform: rotate(180deg);
     transition-duration: 0.5s;
