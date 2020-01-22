@@ -38,6 +38,7 @@ const Viewer: FunctionalComponent = () => {
     setModelType('otohime');
     setLoading(true);
     await viewer.loadVrm(setProgress);
+    viewer.animate();
     setLoading(false);
   };
 
