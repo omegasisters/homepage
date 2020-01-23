@@ -60,6 +60,10 @@ export default class ThreeScene {
     const ambient = new THREE.AmbientLight('#85b2cd');
     scene.add(ambient);
 
+    const light = new THREE.DirectionalLight('#ffffff');
+    light.position.set(1, 1, 1).normalize();
+    scene.add(light);
+
     renderer.setAnimationLoop(() => {
       this.onUpdate(this);
       controls.update();

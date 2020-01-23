@@ -882,6 +882,11 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@pixiv/three-vrm@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@pixiv/three-vrm/-/three-vrm-0.2.0.tgz#e78d9828d09e7dfb777c4aa4d520d311add2a18a"
+  integrity sha512-tWlNDz2+gXzXQAC/pCo4huA5Auk2Fws1d+abzhuPukIGcyz88cz9CCaTvMMyoez7COzQHI2cBYl53P2OxKOE4A==
+
 "@types/babel__core@^7.1.0":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.3.tgz#e441ea7df63cd080dfcd02ab199e6d16a735fc30"
