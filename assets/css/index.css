@@ -76,6 +76,10 @@ header.scrolled {
     margin-left: auto;
   }
 
+  div.drawer-overlay {
+    background: rgba(0,0,0,.5);
+  }
+
   .drawer-open header .menu-icon {
     transform: rotate(180deg);
     transition-duration: 0.5s;
