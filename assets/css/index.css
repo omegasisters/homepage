@@ -76,8 +76,8 @@ header.scrolled {
     margin-left: auto;
   }
 
-  header nav.drawer-nav {
-    background-color: #22222273;
+  div.drawer-overlay {
+    background: rgba(0,0,0,.5);
   }
 
   .drawer-open header .menu-icon {
