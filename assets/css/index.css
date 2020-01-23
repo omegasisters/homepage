@@ -77,7 +77,7 @@ header.scrolled {
   }
 
   div.drawer-overlay {
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .drawer-open header .menu-icon {
@@ -114,15 +114,12 @@ header.scrolled {
 
 header a.drawer-menu-item {
   color: white;
+  cursor: pointer;
 }
 
 header a.drawer-menu-item:hover {
   color: #06ffd2;
   text-decoration: none;
-}
-
-.drawer-dropdown-menu-item {
-  color: white !important;
 }
 
 .drawer-dropdown .drawer-dropdown-menu {

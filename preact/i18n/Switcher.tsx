@@ -18,17 +18,23 @@ const Switcher: FunctionalComponent = () => {
   return (
     <Fragment>
       <li>
-        <a class="drawer-dropdown-menu-item" onClick={setLanguage('ja')}>
+        <a
+          class="drawer-dropdown-menu-item drawer-menu-item"
+          onClick={setLanguage('ja')}>
           日本語
         </a>
       </li>
       <li>
-        <a class="drawer-dropdown-menu-item" onClick={setLanguage('en')}>
+        <a
+          class="drawer-dropdown-menu-item drawer-menu-item"
+          onClick={setLanguage('en')}>
           English
         </a>
       </li>
       <li>
-        <a class="drawer-dropdown-menu-item" onClick={setLanguage('zh')}>
+        <a
+          class="drawer-dropdown-menu-item drawer-menu-item"
+          onClick={setLanguage('zh')}>
           中文
         </a>
       </li>
