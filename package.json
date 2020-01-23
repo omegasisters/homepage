@@ -16,6 +16,7 @@
     "unun": "node scripts/unchan_loop.js"
   },
   "dependencies": {
+    "@pixiv/three-vrm": "^0.2.0",
     "preact": "^10.1.1",
     "scoped-style": "^1.4.0",
     "three": "^0.111.0",
