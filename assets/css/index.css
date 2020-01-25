@@ -992,6 +992,34 @@ a.share-button:hover {
   box-shadow: 0 300px 0 300px #ffd700;
 }
 
+.pr_announce {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  margin-top: 20px;
+  padding: 1vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1vw;
+  width: 1200px;
+}
+@media screen and (max-width: 1300px) {
+  .pr_announce {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .pr_announce {
+    width: 600px;
+  }
+}
+
+.pr_announce_item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 @keyframes unchan-show-toguro {
   0% {
     opacity: 0;
