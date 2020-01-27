@@ -995,29 +995,32 @@ a.share-button:hover {
 .pr_announce {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
 
   margin-top: 20px;
   padding: 1vw;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 1vw;
-  width: 1200px;
-}
-@media screen and (max-width: 1300px) {
-  .pr_announce {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .pr_announce {
-    width: 600px;
-  }
+  width: 100%;
+  max-width: 1200px;
 }
 
 .pr_announce_item {
-  margin-left: 5px;
-  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .pr_announce_item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pr_announce_item {
+    width: auto;
+  }
 }
 
 @keyframes unchan-show-toguro {
