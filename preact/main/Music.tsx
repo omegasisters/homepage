@@ -16,7 +16,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   useEffect(() => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
-      width: window.innerWidth < 500 ? window.innerWidth - (100 + 10 * 2) : 500,
+      width: window.innerWidth < 600 ? window.innerWidth - (100 + 10 * 2) : 500,
     });
     setSelect(playlist[0]);
     if (window.innerWidth > 769) {
