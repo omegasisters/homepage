@@ -562,6 +562,22 @@ a:hover {
     linear-gradient(to left, #7995f7, #de7072);
   background-size: cover;
 }
+@media screen and (max-width: 1024px) {
+  .links.normal {
+    background: url(../images/omesis_with_silhouette.narrow.001.png) top center
+        no-repeat,
+      linear-gradient(to left, #7995f7, #de7072);
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .links.normal {
+    background: url(../images/omesis_with_silhouette.narrow.002.png) top center
+        no-repeat,
+      linear-gradient(to left, #7995f7, #de7072);
+    background-size: cover;
+  }
+}
 
 .links.lucky {
   background: url(../images/rayrio.png) top center no-repeat,
