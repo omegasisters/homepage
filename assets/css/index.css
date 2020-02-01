@@ -584,6 +584,20 @@ a:hover {
     linear-gradient(to left, #7995f7, #de7072);
   background-size: cover;
 }
+@media screen and (max-width: 1600px) {
+  .links.lucky {
+    background: url(../images/rayrio.narrow.001.png) top center no-repeat,
+      linear-gradient(to left, #7995f7, #de7072);
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .links.lucky {
+    background: url(../images/rayrio.narrow.002.png) top center no-repeat,
+      linear-gradient(to left, #7995f7, #de7072);
+    background-size: cover;
+  }
+}
 
 .links a.omesis_ray:hover {
   color: #de7072;
