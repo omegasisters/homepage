@@ -385,6 +385,11 @@ a:hover {
     linear-gradient(to left, #7995f7, #de7072);
   padding: 100px 120px 120px;
 }
+@media screen and (max-width: 1024px) {
+  .introduction {
+    padding: 70px 80px 80px;
+  }
+}
 @media screen and (max-width: 700px) {
   .introduction {
     padding: 40px;
