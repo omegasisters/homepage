@@ -400,6 +400,15 @@ a:hover {
   width: 100%;
   padding-top: 5vh;
 }
+.discography .hover-effect img {
+  width: 300px;
+}
+@media screen and (max-width: 380px) {
+  .discography .hover-effect img {
+    width: 100%;
+  }
+}
+
 .playlist {
   width: 100%;
   margin-top: 5vh;
