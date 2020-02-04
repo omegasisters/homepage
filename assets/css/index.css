@@ -1045,6 +1045,15 @@ a.share-button:hover {
   max-width: 1200px;
 }
 
+@media screen and (max-width: 400px) {
+  .pr_announce {
+    display: block;
+  }
+  .twitter-tweet {
+    min-width: auto !important;
+  }
+}
+
 .pr_announce_item {
   padding-left: 5px;
   padding-right: 5px;
