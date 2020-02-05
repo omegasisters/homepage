@@ -170,6 +170,8 @@ const CardItem = styled('div')`
   margin: 10px 5px;
   width: 200px;
   transition: ${(props: any) => (props.move === 0 ? `all 0.3s` : 'none')};
+  ${(props: any) => props.select && `opacity: .8;`}
+
   @media (min-width: 769px) {
     transform: ${(props: any) => `translateX(${props.move - 180}px)`};
   }
