@@ -32,6 +32,7 @@ if (musicMount)
         'https://i.ytimg.com/vi/58al_aq_E2M/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAqQGYzz8issfnlAXWpd4xPSImxZg',
         'https://i.ytimg.com/vi/XAt2lODxz_E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDgKjhUDjVllfbHbVi9ScF496cuYw',
         'https://i.ytimg.com/vi/58TGnNnXT6E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLD36841bBz6htYcX_bJr_Ii_xmpRg',
+        'https://i.ytimg.com/vi/dmloYn5xaqs/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDdsFylg_ULRLvOfqLc9rCV8lSwdA',
       ]}
     />,
     musicMount,
