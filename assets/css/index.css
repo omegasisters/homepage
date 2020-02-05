@@ -385,6 +385,11 @@ a:hover {
     linear-gradient(to left, #7995f7, #de7072);
   padding: 100px 120px 120px;
 }
+@media screen and (max-width: 1024px) {
+  .introduction {
+    padding: 70px 80px 80px;
+  }
+}
 @media screen and (max-width: 700px) {
   .introduction {
     padding: 40px;
@@ -400,6 +405,15 @@ a:hover {
   width: 100%;
   padding-top: 5vh;
 }
+.discography .hover-effect img {
+  width: 300px;
+}
+@media screen and (max-width: 380px) {
+  .discography .hover-effect img {
+    width: 100%;
+  }
+}
+
 .playlist {
   width: 100%;
   margin-top: 5vh;
@@ -1034,6 +1048,15 @@ a.share-button:hover {
   border-radius: 1vw;
   width: 100%;
   max-width: 1200px;
+}
+
+@media screen and (max-width: 400px) {
+  .pr_announce {
+    display: block;
+  }
+  .twitter-tweet {
+    min-width: auto !important;
+  }
 }
 
 .pr_announce_item {

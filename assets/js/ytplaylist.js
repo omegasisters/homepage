@@ -37,14 +37,48 @@ const loadPlayList = (id, dom) => {
         dom.appendChild(container);
       });
       // 必要があれば画角変更時のイベントハンドラで制御
-      const isNarrow = window.matchMedia('(max-width:700px)').matches;
+      /*
+       * const isNarrow = window.matchMedia('(max-width:700px)').matches;
+       */
 
       const swiperParams = {
-        spaceBetween: 5,
-        slidesPerView: isNarrow ? 1 : 3,
+        spaceBetween: 0,
+        slidesPerView: 1,
         loop: true,
         grabCursor: true,
         centeredSlides: true,
+        effect: 'coverflow',
+        coverflowEffect: {
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        },
+        breakpoints: {
+          900: {
+            slidesPerView: 2,
+            coverflowEffect: {
+              modifier: 0.9,
+            },
+          },
+          1300: {
+            slidesPerView: 3,
+            coverflowEffect: {
+              modifier: 0.8,
+        },
+          },
+          1600: {
+            slidesPerView: 4,
+            coverflowEffect: {
+              modifier: 0.7,
+        },
+          },
+          1900: {
+            slidesPerView: 5,
+            coverflowEffect: {
+              modifier: 0.6,
+            },
+          },
+        },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -59,16 +93,6 @@ const loadPlayList = (id, dom) => {
           disableOnInteraction: false,
         },
       };
-      if (!isNarrow) {
-        swiperParams.effect = 'coverflow';
-        swiperParams.coverflowEffect = {
-          coverflowEffect: {
-            depth: 10,
-            modifier: 1,
-            slideShadows: false,
-          },
-        };
-      }
 
       new Swiper('.swiper-container', swiperParams);
       lazyLoad();
