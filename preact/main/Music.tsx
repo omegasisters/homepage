@@ -1,5 +1,6 @@
 import {FunctionalComponent, h} from 'preact';
 import {useEffect, useRef, useState, useMemo} from 'preact/hooks';
+import {songListProps} from './ playlists/songsList';
 
 // @ts-ignore
 import scoped from 'scoped-style';
@@ -45,17 +46,12 @@ const Card: FunctionalComponent<{
   );
 };
 
-export type videoDataProps = {
-  title: string;
-  videoID: string;
-}[];
-
-const MusicPlayer: FunctionalComponent<{videoData: videoDataProps}> = ({
-  videoData,
+const MusicPlayer: FunctionalComponent<{songsList: songListProps}> = ({
+  songsList,
 }) => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
-  const [playlist, setPlaylist] = useState(videoData);
+  const [playlist, setPlaylist] = useState(songsList);
   const [selected, setSelect] = useState('');
   const [move, setMove] = useState(0);
 
@@ -79,7 +75,7 @@ const MusicPlayer: FunctionalComponent<{videoData: videoDataProps}> = ({
 
   const right = () => {
     const arr = [...playlist];
-    if (arr.length > videoData.length) arr.shift();
+    if (arr.length > songsList.length) arr.shift();
     setPlaylist([...arr, arr[0]]);
 
     setMove(180);
@@ -88,7 +84,7 @@ const MusicPlayer: FunctionalComponent<{videoData: videoDataProps}> = ({
 
   const left = () => {
     const arr = [...playlist];
-    if (arr.length > videoData.length) arr.pop();
+    if (arr.length > songsList.length) arr.pop();
     setPlaylist([arr[arr.length - 1], ...arr]);
 
     setMove(-180);
