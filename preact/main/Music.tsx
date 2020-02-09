@@ -92,7 +92,11 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
         />
       </div>
       <br />
-      <div ref={divRef} />
+      <div className="video_box">
+        <div className="video_wrapper">
+          <div ref={divRef} />
+        </div>
+      </div>
     </div>
   );
 };
