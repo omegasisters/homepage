@@ -1,54 +1,14 @@
 {
   "kind": "youtube#playlistItemListResponse",
+  "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/caJP8CTUGVDkltcckoqRivJk1no\"",
+  "pageInfo": {
+    "totalResults": 19,
+    "resultsPerPage": 50
+  },
   "items": [
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_3pJu1WSGq7DWM-gSnMqPCJQZ0A\"",
-      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wMTcyMDhGQUE4NTIzM0Y5",
-      "snippet": {
-        "publishedAt": "2018-11-13T07:23:34.000Z",
-        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
-        "title": "【ドッキリ】ぴょこぴょこが少しずつ大きくなったらいつ気づくのか！？",
-        "description": "おめがってる！！初ドッキリ！！リオちゃんに仕掛けました！！笑\nめっちゃ楽しかったー！꒰*´꒳`*꒱\n\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/6ypI7knvORA/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/6ypI7knvORA/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/6ypI7knvORA/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/6ypI7knvORA/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/6ypI7knvORA/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "おめがシスターズ [Ω Sisters]",
-        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 0,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "6ypI7knvORA"
-        }
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/zq6Vy7ILagu9LlNn9ywEvr3e2D8\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/eLzi0oVHtYk6DzDslYnT86fgi0s\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yODlGNEE0NkRGMEEzMEQy",
       "snippet": {
         "publishedAt": "2018-11-13T07:23:10.000Z",
@@ -84,7 +44,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 1,
+        "position": 0,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "pXcCAJ_pDw4"
@@ -93,7 +53,52 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/V-sMLoJAQaTRq4IXRXJQCXJkl_s\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/OvWh9NgauZiXIHSpKn2RmDq1938\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2018-11-13T07:23:34.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "【ドッキリ】ぴょこぴょこが少しずつ大きくなったらいつ気づくのか！？",
+        "description": "おめがってる！！初ドッキリ！！リオちゃんに仕掛けました！！笑\nめっちゃ楽しかったー！꒰*´꒳`*꒱\n\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6ypI7knvORA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "6ypI7knvORA"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/V-sMLoJAQaTRq4IXRXJQCXJkl_s\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wOTA3OTZBNzVEMTUzOTMy",
       "snippet": {
         "publishedAt": "2018-11-13T07:26:32.000Z",
@@ -138,52 +143,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/9-wG3IfUS4rdOAAFh4pCJBqFtXc\"",
-      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41MzJCQjBCNDIyRkJDN0VD",
-      "snippet": {
-        "publishedAt": "2018-11-13T07:27:19.000Z",
-        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
-        "title": "【実写ゲーム実況】モノマネしながらクラッシュアイスゲームやってみた【ゴリラ】",
-        "description": "おめがってるー！！\nモノマネしながら、クラッシュアイス遊んでみたよー！！\n\n▼クラッシュアイスゲームはこちら\nhttps://amzn.to/2Hs1Cw3\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n\n【Twitter】\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/Dts34CM-r3Y/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "おめがシスターズ [Ω Sisters]",
-        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 3,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "Dts34CM-r3Y"
-        }
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/h9McG2EUhnC_0EIS7AlRiyrAZTI\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/O-WoAIZLhEk-FTFqSCICMI1RAto\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5DQUNERDQ2NkIzRUQxNTY1",
       "snippet": {
         "publishedAt": "2018-11-13T07:32:16.000Z",
@@ -219,7 +179,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 4,
+        "position": 3,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "K5vEgW2xf7s"
@@ -228,7 +188,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/ENCqkihMsMMmHA3wDv6wOyK9hxs\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/OrVS2j3lHIxM7LTtLS5S2XWxJHs\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5GNjNDRDREMDQxOThCMDQ2",
       "snippet": {
         "publishedAt": "2018-11-16T11:20:40.000Z",
@@ -264,7 +224,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 5,
+        "position": 4,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "n7u7lYbQhDg"
@@ -273,7 +233,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/dO0nzifvrq3KcjVK3TzVqmDKWZ8\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/E3cX5MgPCZgo2b_UNHxFnyeLIso\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41MjE1MkI0OTQ2QzJGNzNG",
       "snippet": {
         "publishedAt": "2018-11-13T07:24:09.000Z",
@@ -309,7 +269,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 6,
+        "position": 5,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "mIz56iZT31Q"
@@ -318,7 +278,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/Hfj_yB9hbW9Dt7z8gE6mUVxrSoI\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/5lRRQOqh8y8OPj-XwaM1pilBb-c\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41NkI0NEY2RDEwNTU3Q0M2",
       "snippet": {
         "publishedAt": "2018-11-13T07:22:41.000Z",
@@ -354,7 +314,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 7,
+        "position": 6,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "77CbFiqV-hE"
@@ -363,52 +323,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/nT6hlPXcAU_3MmzkDbK2y_V5ObQ\"",
-      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4xMkVGQjNCMUM1N0RFNEUx",
-      "snippet": {
-        "publishedAt": "2018-11-13T07:27:19.000Z",
-        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
-        "title": "【コエステ】声をAIで作るアプリでアニメを作ってみた【おめシス昔ばなし】",
-        "description": "おめがってる･･･！\n声を自動生成して、オリジナルアニメを作ったよ！！꒰*´꒳`*꒱\n\nチャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n* コエステ\nhttps://coestation.jp/\n【Twitter】\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/ZUWbTBidx9g/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "おめがシスターズ [Ω Sisters]",
-        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 8,
-        "resourceId": {
-          "kind": "youtube#video",
-          "videoId": "ZUWbTBidx9g"
-        }
-      }
-    },
-    {
-      "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_GKndhOjJwg8Sjew4OFeuEAxARU\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/jqwopX7xIPc0BuGS5gQNnZ0PbBg\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45NDk1REZENzhEMzU5MDQz",
       "snippet": {
         "publishedAt": "2018-11-13T07:33:15.000Z",
@@ -444,7 +359,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 9,
+        "position": 7,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "fEnUaxBUG2A"
@@ -453,7 +368,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/M8LMTSM29HGsZS-WZmWfpoGUI3I\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/mRfrnw_XM_tol0TwXJx9zGQM78U\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS40NzZCMERDMjVEN0RFRThB",
       "snippet": {
         "publishedAt": "2018-12-03T21:19:39.000Z",
@@ -489,7 +404,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 10,
+        "position": 8,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "2W2_0S4Glvg"
@@ -498,7 +413,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/IVZk1izpCJT9anJrc9astl4fG8k\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/n6JLbJwsHt2LZEZWuCXKi5z_gIY\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5EMEEwRUY5M0RDRTU3NDJC",
       "snippet": {
         "publishedAt": "2018-12-23T11:13:09.000Z",
@@ -534,7 +449,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 11,
+        "position": 9,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "AlN9TZ8dOlY"
@@ -543,7 +458,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/Sfvc8X8lyaF0aPshIIxyGTVdm0k\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/5S3GcCV7r9Q_gp65Ee4M5EvwTdo\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45ODRDNTg0QjA4NkFBNkQy",
       "snippet": {
         "publishedAt": "2019-02-27T11:23:12.000Z",
@@ -579,7 +494,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 12,
+        "position": 10,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "zwOR_bb3iDk"
@@ -588,7 +503,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/vVS1bRp9uwnNVbAfK5gZQrYgzQs\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/AqiUdxch-gT8twhQ3W3eE1WaN0I\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4zMDg5MkQ5MEVDMEM1NTg2",
       "snippet": {
         "publishedAt": "2019-05-13T10:55:13.000Z",
@@ -624,7 +539,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 13,
+        "position": 11,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "WNrRF36Z3ag"
@@ -633,7 +548,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/mCNxBxKS3xnngJH94u7FObRqi0g\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/9gL0bH3Db_2hTgizUWuQNjJl1_Y\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41Mzk2QTAxMTkzNDk4MDhF",
       "snippet": {
         "publishedAt": "2019-06-26T21:54:27.000Z",
@@ -669,7 +584,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 14,
+        "position": 12,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "9QhH-WT9uhk"
@@ -678,7 +593,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/_XX2vThO0vzRiU3Gtcd9BOvPMvM\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/CA9S33E_yKxvPBzLFb3XjRg_YT0\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5EQUE1NTFDRjcwMDg0NEMz",
       "snippet": {
         "publishedAt": "2019-08-12T12:22:42.000Z",
@@ -714,7 +629,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 15,
+        "position": 13,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "6uirskrr6mU"
@@ -723,7 +638,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/orN4dwGImpUVqQ28lPMtrAv6iuI\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/TCUWR-KQKWxmBV5sxKPqQmtp0Wk\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41QTY1Q0UxMTVCODczNThE",
       "snippet": {
         "publishedAt": "2019-10-15T10:02:48.000Z",
@@ -759,7 +674,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 16,
+        "position": 14,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "dGflJW97Sfg"
@@ -768,7 +683,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/Us4ZV8tQZ9sq_jvWfAlDQndRWFY\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/m-wQew3l-zh-ticszzYRiB3tByU\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yMUQyQTQzMjRDNzMyQTMy",
       "snippet": {
         "publishedAt": "2019-10-22T08:50:33.000Z",
@@ -804,7 +719,7 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 17,
+        "position": 15,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "68xnCUR5vn0"
@@ -813,7 +728,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"p4VTdlkQv3HQeTEaXgvLePAydmU/45obxChx1axpYruEZSANGAyplo0\"",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/5UPYd6QgJPQ7PVII2lv-_vj3O3U\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45RTgxNDRBMzUwRjQ0MDhC",
       "snippet": {
         "publishedAt": "2019-11-06T20:11:15.000Z",
@@ -849,10 +764,100 @@
         },
         "channelTitle": "おめがシスターズ [Ω Sisters]",
         "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
-        "position": 18,
+        "position": 16,
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "_ugJVKCHk20"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/8fEclSGD_5dopi8TA94-H7qN8mI\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5ENDU4Q0M4RDExNzM1Mjcy",
+      "snippet": {
+        "publishedAt": "2020-01-12T12:30:12.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "レイちゃんの笑顔を取り戻せ！台本しりとり！！！",
+        "description": "レイちゃんの笑顔が失われたって！？リオちゃん考案の「台本しりとり」で、レイちゃんの笑顔を取り戻すことができるのか・・・！？\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/m8-DWSPFzak/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/m8-DWSPFzak/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/m8-DWSPFzak/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/m8-DWSPFzak/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/m8-DWSPFzak/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 17,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "m8-DWSPFzak"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/X2dI4EIhfmDkSpmmqDzy6f8n_iM\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yMDhBMkNBNjRDMjQxQTg1",
+      "snippet": {
+        "publishedAt": "2020-01-23T13:33:28.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "おめシスの質問コーナーがヤバすぎる件。",
+        "description": "1年ぶりの質問コーナーがカオス！たくさんの質問ありがとうございます！！\n\n▼質問募集した動画\nhttps://www.youtube.com/watch?v=1EqOsxZ0HKI\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM / SE\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/\nOtoLogic by https://otologic.jp/free/license.html\n\n▼画像\n画像素材：PIXTA\n\n▼Shader\n© Unity Technologies Japan/UCL",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VQsPKwwR8rI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VQsPKwwR8rI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VQsPKwwR8rI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VQsPKwwR8rI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VQsPKwwR8rI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 18,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "VQsPKwwR8rI"
         }
       }
     }
