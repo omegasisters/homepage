@@ -1,5 +1,6 @@
 import {FunctionalComponent, h} from 'preact';
-import {useEffect, useRef, useState} from 'preact/hooks';
+import {useEffect, useRef, useState, useMemo} from 'preact/hooks';
+import {songListProps} from './ playlists/songsList';
 
 // @ts-ignore
 import scoped from 'scoped-style';
@@ -7,10 +8,50 @@ import youTubePlayer from 'youtube-player';
 
 const styled = scoped(h);
 
-const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
+const getYouTubeThumbnail = (videoID: string) => (
+  extension: string = 'webp',
+) => {
+  const api = extension === 'webp' ? 'vi_webp' : 'vi';
+  return `https://i.ytimg.com/${api}/${videoID}/hqdefault.${extension}`;
+};
+
+const ThumbSize = 175;
+
+const Card: FunctionalComponent<{
+  videoID: string;
+  videoTitle: string;
+  isSelected: boolean;
+  move: number;
+  onClick: () => void;
+}> = ({videoID, videoTitle, isSelected, move, onClick}) => {
+  const thumb = useMemo(() => {
+    return {
+      webp: getYouTubeThumbnail(videoID)('webp'),
+      jpg: getYouTubeThumbnail(videoID)('jpg'),
+    };
+  }, [videoID]);
+
+  return (
+    <CardItem
+      onClick={onClick}
+      move={move}
+      select={isSelected}
+      title={videoTitle}>
+      <picture>
+        <source type="image/webp" srcset={thumb.webp} />
+        <img src={thumb.jpg} alt={videoTitle} width={ThumbSize} />
+      </picture>
+      <PlayButton className="fas fa-play-circle" select={isSelected} />
+    </CardItem>
+  );
+};
+
+const MusicPlayer: FunctionalComponent<{songsList: songListProps}> = ({
+  songsList,
+}) => {
   const divRef = useRef<HTMLDivElement>();
   const youtubeRef = useRef<ReturnType<typeof youTubePlayer>>();
-  const [playlist, setPlaylist] = useState(thumbs);
+  const [playlist, setPlaylist] = useState(songsList);
   const [selected, setSelect] = useState('');
   const [move, setMove] = useState(0);
 
@@ -18,14 +59,14 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
     (youtubeRef as any).current = youTubePlayer(divRef.current!, {
       width: window.innerWidth < 600 ? window.innerWidth - (100 + 10 * 2) : 500,
     });
-    setSelect(playlist[0]);
+    setSelect(playlist[0].videoID);
     if (window.innerWidth > 769) {
       left();
     }
   }, []);
 
   useEffect(() => {
-    const id = selected.replace('https://i.ytimg.com/vi/', '').split('/')[0];
+    const id = selected;
     const youtube = youtubeRef.current;
     if (!youtube) return;
     youtube.loadVideoById(id);
@@ -34,7 +75,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   const right = () => {
     const arr = [...playlist];
-    if (arr.length > thumbs.length) arr.shift();
+    if (arr.length > songsList.length) arr.shift();
     setPlaylist([...arr, arr[0]]);
 
     setMove(180);
@@ -43,12 +84,26 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
 
   const left = () => {
     const arr = [...playlist];
-    if (arr.length > thumbs.length) arr.pop();
+    if (arr.length > songsList.length) arr.pop();
     setPlaylist([arr[arr.length - 1], ...arr]);
 
     setMove(-180);
     setTimeout(() => setMove(0), 0);
   };
+
+  const cardList = playlist.map((videoData) => {
+    const videoID = videoData.videoID;
+    return (
+      <Card
+        key={videoID}
+        videoID={videoID}
+        videoTitle={videoData.title}
+        isSelected={videoID === selected}
+        move={move}
+        onClick={() => setSelect(videoID)}
+      />
+    );
+  });
 
   return (
     <div style={{background: 'rgba(0 0 0 / 0.2)', padding: 10}}>
@@ -67,24 +122,7 @@ const MusicPlayer: FunctionalComponent<{thumbs: string[]}> = ({thumbs}) => {
           justifyContent: 'space-between',
         }}>
         <Button className="fas fa-arrow-left" onClick={left} />
-        <List>
-          {playlist.map((url, i) => (
-            <Card
-              key={i}
-              onClick={() => setSelect(url)}
-              move={move}
-              select={url === selected}>
-              <picture>
-                <source type="image/webp" srcset={url} />
-                <img src={url.split('?')[0]} width={175} />
-              </picture>
-              <PlayButton
-                className="fas fa-play-circle"
-                select={url === selected}
-              />
-            </Card>
-          ))}
-        </List>
+        <List>{cardList}</List>
         <Button
           className="fas fa-arrow-right"
           onClick={right}
@@ -127,12 +165,13 @@ const Button = styled('div')`
   }
 `;
 
-const Card = styled('div')`
+const CardItem = styled('div')`
   cursor: ${(props: any) => (props.select ? 'default' : 'pointer')};
   margin: 10px 5px;
   width: 200px;
-
   transition: ${(props: any) => (props.move === 0 ? `all 0.3s` : 'none')};
+  ${(props: any) => props.select && `opacity: .8;`}
+
   @media (min-width: 769px) {
     transform: ${(props: any) => `translateX(${props.move - 180}px)`};
   }
