@@ -134,6 +134,11 @@
     "en": "Contact Us",
     "zh": "联系我们"
   },
+  "header_popularity_poll": {
+    "ja": "人気投票開催中",
+    "en": "Popularity poll",
+    "zh": "正在进行人气调查"
+  },
   "unchan_fukidashi": {
     "ja": "トップに戻る",
     "en": "Back to TOP",
