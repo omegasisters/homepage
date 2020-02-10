@@ -86,29 +86,29 @@ header.scrolled {
   }
 }
 /* shrink header menu item... */
-@media screen and (max-width: 83em) {
+@media screen and (max-width: 130em) {
   header a.drawer-menu-item {
     font-size: 0.72em;
   }
 }
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 84em) {
   header a.drawer-menu-item {
     font-size: 0.65em;
   }
 }
-@media screen and (max-width: 70em) {
+@media screen and (max-width: 78em) {
   header a.drawer-menu-item {
     font-size: 0.58em;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1153px) {
   header a.drawer-menu-item {
     font-size: 0.5em;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1046px) {
   header a.drawer-menu-item {
-    font-size: 1em;
+    font-size: 0.48em;
   }
 }
 
