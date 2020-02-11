@@ -86,11 +86,11 @@ header.scrolled {
   }
 }
 /* shrink header menu item... */
-@media screen and (max-width: 130em) {
-  header a.drawer-menu-item {
-    font-size: 0.72em;
-  }
+
+header a.drawer-menu-item {
+  font-size: 0.72em;
 }
+
 @media screen and (max-width: 84em) {
   header a.drawer-menu-item {
     font-size: 0.65em;
