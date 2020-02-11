@@ -814,6 +814,35 @@ a.share-button:hover {
   }
 }
 
+.section.ppp,
+.section.ppp.normal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: url(../images/ppp_unchan.png) top center no-repeat, #404040;
+  background-size: cover;
+  padding: 100px 20px 150px 20px;
+}
+
+.section.ppp.lucky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: url(../images/ppp_rario.png) top center no-repeat, #404040;
+  background-size: cover;
+  padding: 100px 20px 150px 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .section.ppp,
+  .section.ppp.normal,
+  .section.ppp.lucky {
+    padding: 10px 10px 100px 10px;
+  }
+}
+
 /*
 うんちゃん
 */
