@@ -33,7 +33,6 @@ body.drawer--navbarTopGutter {
 header.drawer-navbar .drawer-navbar-header {
   background-color: rgba(0, 0, 0, 0);
   border-bottom: none;
-  padding: 0 1.5rem;
 }
 
 header.drawer-navbar {
@@ -69,11 +68,21 @@ header.scrolled {
     border: solid 3px rgba(255, 255, 255, 0.2);
   }
 
+  header .drawer-navbar-header {
+    padding: 0 1.5rem;
+    z-index: unset;
+  }
+
   header .drawer-hamburger {
     padding: 0;
     height: 3.75rem;
     position: relative;
     margin-left: auto;
+  }
+
+  header.drawer-navbar .drawer-nav {
+    padding-top: 0;
+    z-index: 3;
   }
 
   div.drawer-overlay {
@@ -85,30 +94,32 @@ header.scrolled {
     transition-duration: 0.5s;
   }
 }
+
 /* shrink header menu item... */
 
 header a.drawer-menu-item {
-  font-size: 0.72em;
+  font-size: 0.8em;
 }
 
-@media screen and (max-width: 84em) {
+@media screen and (min-width: 64em) {
+  /*override drawer*/
+  header.drawer-navbar .drawer-menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  header.drawer-navbar .drawer-menu > li {
+    float: none;
+  }
+
   header a.drawer-menu-item {
-    font-size: 0.65em;
+    font-size: 1.2vw;
   }
 }
-@media screen and (max-width: 78em) {
+
+@media screen and (min-width: 84em) {
   header a.drawer-menu-item {
-    font-size: 0.58em;
-  }
-}
-@media screen and (max-width: 1153px) {
-  header a.drawer-menu-item {
-    font-size: 0.5em;
-  }
-}
-@media screen and (max-width: 1046px) {
-  header a.drawer-menu-item {
-    font-size: 0.48em;
+    font-size: 0.78em;
   }
 }
 
