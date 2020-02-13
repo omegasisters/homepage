@@ -861,16 +861,15 @@ a.share-button:hover {
   display: flex;
   align-items: center;
   line-height: 1.5em;
-  pointer-events: none;
-  opacity: 0;
   transition: opacity 0.1s linear;
   position: absolute;
   bottom: 140px;
   left: 0;
   right: 0;
+  justify-content: center;
   margin: 1.5em auto;
   padding: 0 5px;
-  width: 100px;
+  width: 130px;
   height: 100px;
   text-align: center;
   color: #fff;
@@ -879,6 +878,10 @@ a.share-button:hover {
   background: #70a6ff;
   border-radius: 50%;
   box-sizing: border-box;
+  animation-name: unchan-show-fukidashi;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-duration: 6s;
+  animation-fill-mode: backwards;
 }
 
 .fukidashi:before {
@@ -889,12 +892,6 @@ a.share-button:hover {
   margin-left: -15px;
   border: 15px solid transparent;
   border-top: 15px solid #70a6ff;
-}
-
-.c-unchan:hover > .fukidashi,
-.c-unchan:focus > .fukidashi {
-  pointer-events: unset;
-  opacity: 1;
 }
 
 .c-unchan--fixedBottom {
@@ -1147,6 +1144,21 @@ a.share-button:hover {
 }
 
 @keyframes unchan-show-other {
+  0% {
+    will-change: opacity;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes unchan-show-fukidashi {
   0% {
     will-change: opacity;
     opacity: 0;
