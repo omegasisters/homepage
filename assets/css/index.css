@@ -133,16 +133,6 @@ header a.drawer-menu-item:hover {
   text-decoration: none;
 }
 
-#header_popularity_poll {
-  color: #fbff06;
-  cursor: pointer;
-}
-
-#header_popularity_poll:hover {
-  color: #06ffd2;
-  text-decoration: none;
-}
-
 .drawer-dropdown .drawer-dropdown-menu {
   background-color: transparent;
   border: none !important;
