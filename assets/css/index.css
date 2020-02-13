@@ -115,11 +115,20 @@ header a.drawer-menu-item {
   header a.drawer-menu-item {
     font-size: 1.2vw;
   }
+
+  .lang-en header a.drawer-menu-item {
+    font-size: 1.2vw;
+    padding: 0 0.5em;
+  }
 }
 
 @media screen and (min-width: 84em) {
   header a.drawer-menu-item {
     font-size: 0.78em;
+  }
+
+  .lang-en header a.drawer-menu-item {
+    font-size: 0.7em;
   }
 }
 
