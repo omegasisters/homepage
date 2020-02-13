@@ -3,17 +3,35 @@ import {useCallback, useEffect, useRef, useState} from 'preact/hooks';
 
 import I18n from './i18n';
 
+const setLangClassToBody = (oldLang: string) => (newLang: string) => {
+  const classname = document.body.classList;
+  const prefix = 'lang-';
+  classname.remove(`${prefix}${oldLang}`);
+  classname.add(`${prefix}${newLang}`);
+};
+
 const Switcher: FunctionalComponent = () => {
   const [select, setSelect] = useState('ja');
-  const i18n = useRef(new I18n(setSelect)).current;
+  const [prev, setPrev] = useState('');
+  const i18n = useRef(new I18n()).current;
   const setLanguage = useCallback(
-    (s: string) => (_: any) => i18n.setLanguage(s),
+    (s: string) => (_: any) => {
+      return setSelect((selected) => {
+        setPrev(selected);
+        i18n.setLanguage(s);
+        return s;
+      });
+    },
     [],
   );
 
   useEffect(() => {
     i18n.load();
   }, []);
+
+  useEffect(() => {
+    setLangClassToBody(prev)(select);
+  }, [select, prev]);
 
   return (
     <Fragment>
