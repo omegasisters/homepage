@@ -1225,3 +1225,59 @@ https://www.tam-tam.co.jp/tipsnote/html_css/post11618.html
 /*
 うんちゃんここまで
  */
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--left {
+  text-align: left;
+}
+
+img.respoinsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.link-banner {
+  opacity: 1;
+  transition: 0.25s opacity;
+}
+
+.link-banner:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.d-flex {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.d-col {
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 400px) {
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+  }
+
+  .d-col {
+    flex-grow: 1;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .d-col--half {
+    width: 50%;
+  }
+}
