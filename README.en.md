@@ -70,7 +70,7 @@ yarn install
 
 ### Local preview
 
-When you run the command, you can see http://localhost:8080
+When you run the command, you can see http://localhost:8080/homepage/
 
 ```
 yarn start

@@ -67,7 +67,7 @@ yarn install
 
 ### ローカルプレビュー
 
-コマンドを実行すると、 http://localhost:8080 にホストされます
+コマンドを実行すると、 http://localhost:8080/homepage/ にホストされます
 
 ```
 yarn start
