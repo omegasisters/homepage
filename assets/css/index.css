@@ -50,7 +50,7 @@ header.scrolled {
   box-shadow: 0 0 8px #00000050;
 }
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 63.999em) {
   header.scrolled {
     background-color: transparent;
     box-shadow: none;
