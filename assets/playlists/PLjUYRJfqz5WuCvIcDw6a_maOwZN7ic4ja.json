@@ -1,14 +1,14 @@
 {
   "kind": "youtube#playlistItemListResponse",
-  "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/caJP8CTUGVDkltcckoqRivJk1no\"",
+  "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/GXTWeITwW-x5yhEMkmyIkiehr9Y\"",
   "pageInfo": {
-    "totalResults": 19,
+    "totalResults": 21,
     "resultsPerPage": 50
   },
   "items": [
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/eLzi0oVHtYk6DzDslYnT86fgi0s\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/eLzi0oVHtYk6DzDslYnT86fgi0s\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yODlGNEE0NkRGMEEzMEQy",
       "snippet": {
         "publishedAt": "2018-11-13T07:23:10.000Z",
@@ -53,7 +53,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/OvWh9NgauZiXIHSpKn2RmDq1938\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/OvWh9NgauZiXIHSpKn2RmDq1938\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wMTcyMDhGQUE4NTIzM0Y5",
       "snippet": {
         "publishedAt": "2018-11-13T07:23:34.000Z",
@@ -98,7 +98,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/V-sMLoJAQaTRq4IXRXJQCXJkl_s\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/V-sMLoJAQaTRq4IXRXJQCXJkl_s\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4wOTA3OTZBNzVEMTUzOTMy",
       "snippet": {
         "publishedAt": "2018-11-13T07:26:32.000Z",
@@ -143,7 +143,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/O-WoAIZLhEk-FTFqSCICMI1RAto\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/O-WoAIZLhEk-FTFqSCICMI1RAto\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5DQUNERDQ2NkIzRUQxNTY1",
       "snippet": {
         "publishedAt": "2018-11-13T07:32:16.000Z",
@@ -188,7 +188,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/OrVS2j3lHIxM7LTtLS5S2XWxJHs\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/OrVS2j3lHIxM7LTtLS5S2XWxJHs\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5GNjNDRDREMDQxOThCMDQ2",
       "snippet": {
         "publishedAt": "2018-11-16T11:20:40.000Z",
@@ -233,7 +233,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/E3cX5MgPCZgo2b_UNHxFnyeLIso\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/E3cX5MgPCZgo2b_UNHxFnyeLIso\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41MjE1MkI0OTQ2QzJGNzNG",
       "snippet": {
         "publishedAt": "2018-11-13T07:24:09.000Z",
@@ -278,7 +278,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/5lRRQOqh8y8OPj-XwaM1pilBb-c\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/5lRRQOqh8y8OPj-XwaM1pilBb-c\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41NkI0NEY2RDEwNTU3Q0M2",
       "snippet": {
         "publishedAt": "2018-11-13T07:22:41.000Z",
@@ -323,7 +323,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/jqwopX7xIPc0BuGS5gQNnZ0PbBg\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/jqwopX7xIPc0BuGS5gQNnZ0PbBg\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45NDk1REZENzhEMzU5MDQz",
       "snippet": {
         "publishedAt": "2018-11-13T07:33:15.000Z",
@@ -368,7 +368,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/mRfrnw_XM_tol0TwXJx9zGQM78U\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/mRfrnw_XM_tol0TwXJx9zGQM78U\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS40NzZCMERDMjVEN0RFRThB",
       "snippet": {
         "publishedAt": "2018-12-03T21:19:39.000Z",
@@ -413,7 +413,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/n6JLbJwsHt2LZEZWuCXKi5z_gIY\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/n6JLbJwsHt2LZEZWuCXKi5z_gIY\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5EMEEwRUY5M0RDRTU3NDJC",
       "snippet": {
         "publishedAt": "2018-12-23T11:13:09.000Z",
@@ -458,7 +458,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/5S3GcCV7r9Q_gp65Ee4M5EvwTdo\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/5S3GcCV7r9Q_gp65Ee4M5EvwTdo\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45ODRDNTg0QjA4NkFBNkQy",
       "snippet": {
         "publishedAt": "2019-02-27T11:23:12.000Z",
@@ -503,7 +503,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/AqiUdxch-gT8twhQ3W3eE1WaN0I\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/AqiUdxch-gT8twhQ3W3eE1WaN0I\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4zMDg5MkQ5MEVDMEM1NTg2",
       "snippet": {
         "publishedAt": "2019-05-13T10:55:13.000Z",
@@ -548,7 +548,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/9gL0bH3Db_2hTgizUWuQNjJl1_Y\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/9gL0bH3Db_2hTgizUWuQNjJl1_Y\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41Mzk2QTAxMTkzNDk4MDhF",
       "snippet": {
         "publishedAt": "2019-06-26T21:54:27.000Z",
@@ -593,7 +593,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/CA9S33E_yKxvPBzLFb3XjRg_YT0\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/CA9S33E_yKxvPBzLFb3XjRg_YT0\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5EQUE1NTFDRjcwMDg0NEMz",
       "snippet": {
         "publishedAt": "2019-08-12T12:22:42.000Z",
@@ -638,7 +638,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/TCUWR-KQKWxmBV5sxKPqQmtp0Wk\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/TCUWR-KQKWxmBV5sxKPqQmtp0Wk\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS41QTY1Q0UxMTVCODczNThE",
       "snippet": {
         "publishedAt": "2019-10-15T10:02:48.000Z",
@@ -683,7 +683,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/m-wQew3l-zh-ticszzYRiB3tByU\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/m-wQew3l-zh-ticszzYRiB3tByU\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yMUQyQTQzMjRDNzMyQTMy",
       "snippet": {
         "publishedAt": "2019-10-22T08:50:33.000Z",
@@ -728,7 +728,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/5UPYd6QgJPQ7PVII2lv-_vj3O3U\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/5UPYd6QgJPQ7PVII2lv-_vj3O3U\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS45RTgxNDRBMzUwRjQ0MDhC",
       "snippet": {
         "publishedAt": "2019-11-06T20:11:15.000Z",
@@ -773,7 +773,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/8fEclSGD_5dopi8TA94-H7qN8mI\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/8fEclSGD_5dopi8TA94-H7qN8mI\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5ENDU4Q0M4RDExNzM1Mjcy",
       "snippet": {
         "publishedAt": "2020-01-12T12:30:12.000Z",
@@ -818,7 +818,7 @@
     },
     {
       "kind": "youtube#playlistItem",
-      "etag": "\"Fznwjl6JEQdo1MGvHOGaz_YanRU/X2dI4EIhfmDkSpmmqDzy6f8n_iM\"",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/X2dI4EIhfmDkSpmmqDzy6f8n_iM\"",
       "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4yMDhBMkNBNjRDMjQxQTg1",
       "snippet": {
         "publishedAt": "2020-01-23T13:33:28.000Z",
@@ -858,6 +858,96 @@
         "resourceId": {
           "kind": "youtube#video",
           "videoId": "VQsPKwwR8rI"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/TFmLMqaxFqMHwBYNYN_ZpOomih0\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS5GM0Q3M0MzMzY5NTJFNTdE",
+      "snippet": {
+        "publishedAt": "2020-02-24T06:49:17.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "ジャンケンの演出を盛りまくったらどうなるの？",
+        "description": "ジャンケンを全力で演出して射幸心を煽りまくったら、どうなるのか・・・！？\n検証していきます！！！\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM / SE\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/\nOtoLogic by https://otologic.jp/free/license.html\n\n▼画像\n画像素材：PIXTA\n\n▼Shader\n© Unity Technologies Japan/UCL",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/m2r4qjJbkNQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/m2r4qjJbkNQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/m2r4qjJbkNQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/m2r4qjJbkNQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/m2r4qjJbkNQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 19,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "m2r4qjJbkNQ"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "\"SJZWTG6xR0eGuCOh2bX6w3s4F94/L1e6fTwCkrfnr0trwMquffc3Z_8\"",
+      "id": "UExqVVlSSmZxejVXdUN2SWNEdzZhX21hT3daTjdpYzRqYS4zRjM0MkVCRTg0MkYyQTM0",
+      "snippet": {
+        "publishedAt": "2020-02-26T09:49:26.000Z",
+        "channelId": "UCNjTjd2-PMC8Oo_-dCEss7A",
+        "title": "イヤホンガンガン状態でも、しりとりって成立するの？",
+        "description": "リオちゃん考案ゲーム「イヤホンガンガンしりとりゲーム」をやってみた結果・・・すごい奇跡が起こる！？\n\n▼チャンネル登録よろしくね～！\nhttps://goo.gl/zpQrPq\n\n▼Twitter\nおめがレイ　@omesis_ray\nおめがリオ    @omesis_rio\nhttps://twitter.com/omesis_ray\nhttps://twitter.com/omesis_rio\n\n▼PIXIV FANBOX\nhttps://www.pixiv.net/fanbox/creator/31737746\n\n▼BOOTH\nhttps://omesis-shop.booth.pm/\n\n\n***** PLEASE TRANSLATE OUR VIDEO *****\nThank you for watching our video!\nIf possible, translate the video in your language from the link below.\nhttps://www.youtube.com/timedtext_cs_panel?tab=2&c=UCNjTjd2-PMC8Oo_-dCEss7A\n\n\n▼BGM / SE\nMusic Atelier Amacha by http://amachamusic.chagasi.com/\nDOVA-SYNDROME by http://dova-s.jp/\nOtoLogic by https://otologic.jp/free/license.html\n\n▼画像\n画像素材：PIXTA\n\n▼Shader\n© Unity Technologies Japan/UCL",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zFqS6_JK_fQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zFqS6_JK_fQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zFqS6_JK_fQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zFqS6_JK_fQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zFqS6_JK_fQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "おめがシスターズ [Ω Sisters]",
+        "playlistId": "PLjUYRJfqz5WuCvIcDw6a_maOwZN7ic4ja",
+        "position": 20,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "zFqS6_JK_fQ"
         }
       }
     }
