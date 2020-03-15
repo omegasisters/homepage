@@ -181,6 +181,11 @@ a:hover {
   color: #06ffd2;
 }
 
+.pass_200k_sss {
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+}
+
 .video_wrapper {
   position: relative;
   padding-top: 56.25%; /* 16:9 */
