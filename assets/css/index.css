@@ -187,6 +187,10 @@ a:hover {
   width: 100%;
 }
 
+.video_link2backup {
+  padding-top: 1rem;
+}
+
 .video_wrapper iframe {
   position: absolute;
   top: 0;
