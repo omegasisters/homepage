@@ -199,14 +199,17 @@
               return response.json();
             })
             .then((result) => {
-              this.contributors = result.reverse().map((contributor) => {
-                return {
-                  name: contributor.author.login,
-                  url: contributor.author.html_url,
-                  image: contributor.author.avatar_url,
-                  commits: contributor.total,
-                };
-              });
+              this.contributors = result
+                .reverse()
+                .filter((contributor) => contributor.author != null)
+                .map((contributor) => {
+                  return {
+                    name: contributor.author.login,
+                    url: contributor.author.html_url,
+                    image: contributor.author.avatar_url,
+                    commits: contributor.total,
+                  };
+                });
             });
         },
       });
