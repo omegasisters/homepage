@@ -1262,17 +1262,17 @@ img.respoinsive {
   text-decoration: none;
 }
 
-.d-flex {
+.div-flex {
   margin-top: 1em;
   width: 100%;
 }
 
-.d-col {
+.div-col {
   margin-bottom: 1em;
 }
 
 @media screen and (min-width: 400px) {
-  .d-flex {
+  .div-flex {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -1280,13 +1280,13 @@ img.respoinsive {
     margin-right: -0.5em;
   }
 
-  .d-col {
+  .div-col {
     flex-grow: 1;
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
 
-  .d-col--half {
+  .div-col--half {
     width: 50%;
   }
 }
