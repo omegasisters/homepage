@@ -16,6 +16,7 @@ if (musicMount)
         'https://i.ytimg.com/vi/FkyotXkl-CI/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBjgfB89PAmOqOQt0JjGg5_37iQoQ',
         'https://i.ytimg.com/vi/owl2ZtgDRHI/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLD0tcHy7wZ-zKyzx-Y7tKwT08BCYA',
         'https://i.ytimg.com/vi/-YLyVDOJnFc/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLApDrPcstG4CqzdMG7hTyQNfzNLpg',
+        'https://i.ytimg.com/vi/SV_ag_cq9Jg/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAYt24TemnHQLT5Q6rODneTkq7REg',
         'https://i.ytimg.com/vi/3JAeD-9FE8I/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLA8x6yUUIJtL9ZlHSxvOFwIBjUsDw',
         'https://i.ytimg.com/vi/KQPr8Qde22w/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBjH8nBGhQlFL2ydqyJuEe0NBJ_7A',
         'https://i.ytimg.com/vi/IfYODh82hTo/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDLrSuU4eehrghGgAVZDk-cXuYbqg',
@@ -32,6 +33,7 @@ if (musicMount)
         'https://i.ytimg.com/vi/58al_aq_E2M/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAqQGYzz8issfnlAXWpd4xPSImxZg',
         'https://i.ytimg.com/vi/XAt2lODxz_E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDgKjhUDjVllfbHbVi9ScF496cuYw',
         'https://i.ytimg.com/vi/58TGnNnXT6E/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLD36841bBz6htYcX_bJr_Ii_xmpRg',
+        'https://i.ytimg.com/vi/dmloYn5xaqs/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDdsFylg_ULRLvOfqLc9rCV8lSwdA',
       ]}
     />,
     musicMount,
