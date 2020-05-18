@@ -100,6 +100,10 @@ const songList: songListProps = [
       '点描の唄 / Mrs. GREEN APPLE (feat.井上苑子) covered by おめがシスターズ',
     videoID: 'dmloYn5xaqs',
   },
+  {
+    title: '砂の惑星 / covered by おめがシスターズ',
+    videoID: 'xCcWSD4SKJo',
+  },
 ];
 
 export default songList;
