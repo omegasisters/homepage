@@ -11,7 +11,7 @@
     "dev": "browser-sync start --server --files '*.js' .",
     "format": "prettier --write \"**/*.{css,html,json,md}\"",
     "start": "webpack-dev-server --mode development --open --hot --env.BASE=/",
-    "start:docker": "npm run build && concurrently 'npm run ts:watch' 'serve -s ./'",
+    "start:docker": "npm run build && serve -s ./",
     "test": "jest",
     "unun": "node scripts/unchan_loop.js"
   },
@@ -34,7 +34,6 @@
     "@types/youtube-player": "^5.5.1",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.7",
-    "concurrently": "^5.0.0",
     "copyfiles": "^2.1.1",
     "express": "^4.17.1",
     "husky": "^3.1.0",
