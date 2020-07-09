@@ -1,4 +1,6 @@
 const loadPlayList = (id, dom) => {
+  if (dom === null) return;
+
   fetch(`/homepage/assets/playlists/${id}.json`)
     .then((response) => response.json())
     .then((MoviesData) => {
@@ -64,13 +66,13 @@ const loadPlayList = (id, dom) => {
             slidesPerView: 3,
             coverflowEffect: {
               modifier: 0.8,
-        },
+            },
           },
           1600: {
             slidesPerView: 4,
             coverflowEffect: {
               modifier: 0.7,
-        },
+            },
           },
           1900: {
             slidesPerView: 5,
