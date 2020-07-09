@@ -104,6 +104,10 @@ const songList: songListProps = [
     title: '砂の惑星 / covered by おめがシスターズ',
     videoID: 'xCcWSD4SKJo',
   },
+  {
+    title: '夜に駆ける ／YOASOBI covered by おめがシスターズ',
+    videoID: 'vNYev-RNNDs',
+  },
 ];
 
 export default songList;
