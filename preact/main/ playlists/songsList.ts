@@ -108,6 +108,10 @@ const songList: songListProps = [
     title: '夜に駆ける ／YOASOBI covered by おめがシスターズ',
     videoID: 'vNYev-RNNDs',
   },
+  {
+    title: '香水 ／瑛人 covered by おめがシスターズ',
+    videoID: 'OQggCK-lfOk',
+  },
 ];
 
 export default songList;
