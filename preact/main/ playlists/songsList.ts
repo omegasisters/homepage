@@ -112,6 +112,10 @@ const songList: songListProps = [
     title: '香水 ／瑛人 covered by おめがシスターズ',
     videoID: 'OQggCK-lfOk',
   },
+  {
+    title: 'うっせぇわ / Ado by おめがシスターズ',
+    videoID: 'fdpWxx9sqnc',
+  },
 ];
 
 export default songList;
