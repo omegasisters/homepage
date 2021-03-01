@@ -19,7 +19,7 @@
     "@pixiv/three-vrm": "^0.2.0",
     "preact": "^10.1.1",
     "scoped-style": "^1.4.0",
-    "three": "^0.111.0",
+    "three": "^0.125.0",
     "youtube-player": "^5.5.2"
   },
   "devDependencies": {
