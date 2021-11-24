@@ -13,7 +13,9 @@
     "start": "webpack-dev-server --mode development --open --hot --env.BASE=/",
     "start:docker": "npm run build && serve -s ./",
     "test": "jest",
-    "unun": "node scripts/unchan_loop.js"
+    "unun": "node scripts/unchan_loop.js",
+    "genSongsList": "node scripts/gen_songs_list.js",
+    "buildScripts": "tsc --resolveJsonModule -esModuleInterop scripts/**.ts"
   },
   "dependencies": {
     "@pixiv/three-vrm": "^0.2.0",
@@ -32,6 +34,7 @@
     "@babel/preset-typescript": "^7.1.0",
     "@types/jest": "^24.0.25",
     "@types/youtube-player": "^5.5.1",
+    "axios": "^0.24.0",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.7",
     "copyfiles": "^2.1.1",
