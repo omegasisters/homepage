@@ -1,6 +1,6 @@
 import {FunctionalComponent, h} from 'preact';
 import {useEffect, useRef, useState, useMemo} from 'preact/hooks';
-import {songListProps} from './ playlists/songsList';
+import {songListProps} from './playlists/songsList';
 
 // @ts-ignore
 import scoped from 'scoped-style';
