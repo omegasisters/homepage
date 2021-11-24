@@ -2,6 +2,10 @@
 gen_songs_list.ts updates songsList.ts based on data given by YoutubeAPI.
 
 How to run:
+$ export YOUTUBE_API_KEY='put your youtube api key'
+# SEE how to get youtube API key
+#   - here: https://qiita.com/iroiro_bot/items/1016a6a439dfb8d21eca
+#   - or here: https://developers.google.com/youtube/registering_an_application
 $ yarn buildScripts
 $ yarn genSongsList
 */
@@ -18,8 +22,7 @@ const PART = "id,contentDetails,snippet,status"
 // This is omesis's official playlist for their "Utattemita"
 // SEE: https://www.youtube.com/playlist?list=PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej
 const PLAYLIST_ID = "PLjUYRJfqz5WsaAcHvdt6Qv5gaERy75fej"
-// const YOUTUBE_API_KEY='put_yours'
-const YOUTUBE_API_KEY='AIzaSyBxfFCz722xtpQ7fKCUwu1z5-N86f-q8iY'
+const YOUTUBE_API_KEY=process.env.YOUTUBE_API_KEY
 
 const SYNCHRONICITY_VIDEO_ID = "jis7E_mbwPw"
 const JSON_FILE_PATH = `${__dirname}/../preact/main/playlists/songsList.json`
@@ -47,6 +50,7 @@ async function getSongList(): Promise<songListProps> {
   let songList: YoutubeVideoItem[] = []
 
   let pageToken = ""
+  let sum = 0
   while(true) {
     console.log("fetching a page of playlist...")
     let response = await axios.get(`${API_ENDPOINT}?part=${PART}&playlistId=${PLAYLIST_ID}&key=${YOUTUBE_API_KEY}&pageToken=${pageToken}`, {
@@ -58,7 +62,8 @@ async function getSongList(): Promise<songListProps> {
     if(response.status !== 200) {
       throw "failed to retrieve response"
     } else {
-      console.log(`retrieved a page successfully. totalResults: ${response.data.pageInfo.totalResults}, num of items in this page: ${response.data.items.length}`)
+      sum += response.data.items.length
+      console.log(`retrieved a page successfully. num of items in this page: ${response.data.items.length}, (sum:${sum} / total:${response.data.pageInfo.totalResults})`)
     }
 
     songList = [...songList, ...response.data.items.map((item: any) => {
@@ -102,7 +107,9 @@ function sortOmesisSongs(a: YoutubeVideoItem, b: YoutubeVideoItem): number {
 }
 
 function writeToJsonFile(path: string, songList: songListProps) {
-  fs.writeFile(path, JSON.stringify(songList, null, 2), {flag: 'w'}, (err) => {
+  // Don't forget to add last linebreak
+  const content = JSON.stringify(songList, null, 2) + "\n"
+  fs.writeFile(path, content, {flag: 'w'}, (err) => {
     if (err) throw err
     console.log(`finished writing song list into ${path}`)
   })
